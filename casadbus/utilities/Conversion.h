@@ -30,11 +30,7 @@
 #include <map>
 #include <string>
 #include <casa/Containers/Record.h>
-#if defined(DBUS_CPP)
-#include <dbus-cpp/dbus.h>
-#else
-#include <dbus-c++/dbus.h>
-#endif
+#include <dbus-c++-1/dbus-c++/dbus.h>
 #include <casadbus/types/variant.h>
 #include <casadbus/types/record.h>
 #include <casa/Arrays/Vector.h>

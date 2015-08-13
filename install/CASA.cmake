@@ -53,9 +53,13 @@ macro( casa_add_dbus_proxy _header _interface)
     get_filename_component(_infile ${_interface} ABSOLUTE)
     get_filename_component(_out_path ${_header} PATH)
 
+    message(STATUS "casa_add_dbus_proxy called with header: ${_header} and interface: ${_interface}")
+    message(STATUS "${_out_path}")
+    message(STATUS "${dbus-xml-2-cxx} ${_infile} --proxy=${_header}")
+
     # The output directory needs to exist, 
     # or dbus-xml2cpp will silently fail
-    add_custom_command( 
+    add_custom_command(
       OUTPUT ${_header}
       COMMAND mkdir -p ${_out_path}
       COMMAND ${dbus-xml-2-cxx} ${_infile} --proxy=${_header}

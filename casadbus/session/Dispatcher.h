@@ -39,14 +39,9 @@
 
 #ifndef DBUS_DISPATCHER_H_
 #define DBUS_DISPATCHER_H_
+#include <dbus-c++-1/dbus-c++/dbus.h>
+#include <dbus-c++-1/dbus-c++/connection.h>
 
-#if defined(DBUS_CPP)
-#include <dbus-cpp/dbus.h>
-#include <dbus-cpp/connection.h>
-#else
-#include <dbus-c++/dbus.h>
-#include <dbus-c++/connection.h>
-#endif
 
 namespace casa {
     namespace dbus {
