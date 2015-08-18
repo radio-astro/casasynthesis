@@ -475,14 +475,14 @@ namespace casa { //# NAMESPACE CASA - BEGIN
      }  
   }
 
-  void SDMaskHandler::copyAllMasks(const Vector< ImageInterface<Float> >& inImageMasks, ImageInterface<Float>& outImageMask)
+  void SDMaskHandler::copyAllMasks(const Vector< SHARED_PTR<ImageInterface<Float> > > inImageMasks, ImageInterface<Float>& outImageMask)
   {
      LogIO os( LogOrigin("SDMaskHandler", "copyAllMasks", WHERE) );
 
      TempImage<Float> tempoutmask(outImageMask.shape(), outImageMask.coordinates());
-     
+
      for (uInt i = 0; i < inImageMasks.nelements(); i++) {
-       copyMask(inImageMasks(i), tempoutmask);
+       copyMask(*inImageMasks(i), tempoutmask);
         outImageMask.copyData( (LatticeExpr<Float>)(tempoutmask+outImageMask) );
      }
   }

@@ -84,7 +84,7 @@ public:
   static void regionTextToImageRegion(const String& text, const ImageInterface<Float>& regionImage, ImageRegion*& imageRegion);
 
   // merge mask images to outimage
-  void copyAllMasks(const Vector< ImageInterface<Float> >& inimage, ImageInterface<Float>& outimage);
+  void copyAllMasks(const Vector< SHARED_PTR<ImageInterface<Float> > > inImageMasks, ImageInterface<Float>& outImageMask);
   // copy and regrid a mask image to outimage
   void copyMask(const ImageInterface<Float>& inimage, ImageInterface<Float>& outimage);
   // expand smaller chan mask image to larger one. - currently only works for a single channel (continuum) input mask 
