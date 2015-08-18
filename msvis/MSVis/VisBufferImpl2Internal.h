@@ -13,7 +13,7 @@
 namespace casa {
 
 namespace ms {
-    class Vbi2MsRow;
+class Vbi2MsRow;
 }
 
 namespace vi {
@@ -108,7 +108,7 @@ public:
     typedef void (VisBufferImpl2::* Filler) (T &) const;
 
     VbCacheItem ()
-    : VbCacheItemBase (), isPresent_p (False)
+        : VbCacheItemBase (), isPresent_p (False)
     {}
 
     virtual ~VbCacheItem () {}
@@ -308,39 +308,39 @@ protected:
     }
 
 
-//    virtual void
-//    copy (const VbCacheItemBase * otherRaw, Bool markAsCached)
-//    {
-//        // Convert generic pointer to one pointint to this
-//        // cache item type.
-//
-//        const VbCacheItem * other = dynamic_cast <const VbCacheItem *> (otherRaw);
-//        Assert (other != 0);
-//
-//        // Capture the cached status of the other item
-//
-//        isPresent_p = other->isPresent_p;
-//
-//        // If the other item was cached then copy it over
-//        // otherwise clear out this item.
-//
-//        if (isPresent_p){
-//            item_p = other->item_p;
-//        }
-//        else {
-//            item_p = T ();
-//
-//            if (markAsCached){
-//                isPresent_p = True;
-//            }
-//        }
-//    }
+    //    virtual void
+    //    copy (const VbCacheItemBase * otherRaw, Bool markAsCached)
+    //    {
+    //        // Convert generic pointer to one pointint to this
+    //        // cache item type.
+    //
+    //        const VbCacheItem * other = dynamic_cast <const VbCacheItem *> (otherRaw);
+    //        Assert (other != 0);
+    //
+    //        // Capture the cached status of the other item
+    //
+    //        isPresent_p = other->isPresent_p;
+    //
+    //        // If the other item was cached then copy it over
+    //        // otherwise clear out this item.
+    //
+    //        if (isPresent_p){
+    //            item_p = other->item_p;
+    //        }
+    //        else {
+    //            item_p = T ();
+    //
+    //            if (markAsCached){
+    //                isPresent_p = True;
+    //            }
+    //        }
+    //    }
 
     virtual void
     copy (const VbCacheItemBase * otherRaw, Bool fetchIfNeeded)
     {
         const VbCacheItem<T, IsComputed> * other =
-            dynamic_cast <const VbCacheItem<T, IsComputed> *> (otherRaw);
+                dynamic_cast <const VbCacheItem<T, IsComputed> *> (otherRaw);
         copyAux (other, fetchIfNeeded);
     }
 
@@ -438,30 +438,21 @@ public:
             }
 
             desiredShape.last() = nRows;
-            this->getItem().reformOrResize (desiredShape, True, shapeOk, 20);
-                // add storage for 20% more rows.
 
-//            if (! shapeOk){
-//
-//                // Need to completely resize this.  Since we're reshaping, there's
-//                // no usable values to copy.
-//
-//                desiredShape.last() = nRows;
-//                this->getItem().resize (desiredShape, False);
-//                capacity_p = nRows;
-//            }
-//            else if (nRows > capacity_p){ // need more storage
-//                resizeRows (nRows); // preserves data
-//                capacity_p = nRows;
-//            }
-//            else{
-//
-//                // There's extra capacity in the array; just adjust the shape so it's
-//                // as big as desired
-//
-//                shape.last() = nRows;
-//                this->getItem().reformOrReshape (shape, False);
-//            }
+            if (shapeOk){
+
+                // Only the number of rows differs from the current shape.
+                // This call will preserve any existing data.
+
+                this->getItem().adjustLastAxis (desiredShape, 20);
+            }
+            else {
+
+                // Since the core shape is changing, the existing data is
+                // not useful; this call will not preserve it.
+
+                this->getItem().reformOrResize (desiredShape);
+            }
         }
     }
 
@@ -496,7 +487,7 @@ public:
         // with the expected shape.
 
         Bool result = shapePattern_p == NoCheck ||
-                      this->getItem().shape() == this->getVb()->getValidShape (shapePattern_p);
+                this->getItem().shape() == this->getVb()->getValidShape (shapePattern_p);
 
         return result;
     }
@@ -554,7 +545,7 @@ public:
 
         IPosition itemShape = newItem.shape();
         Bool parameterShapeOk = shapePattern_p == NoCheck ||
-                                itemShape == this->getVb()->getValidShape (shapePattern_p);
+                itemShape == this->getVb()->getValidShape (shapePattern_p);
         ThrowIf (! parameterShapeOk,
                  "Invalid parameter shape:: " + shapeErrorMessage (& itemShape));
 
@@ -640,7 +631,7 @@ protected:
             for (Int i = 0; i < nI; i++){
                 for (Int j = 0; j < nJ; j++){
                     array (IPosition (4, j, i, h, destinationRow)) =
-                        array (IPosition (4, j, i, h, sourceRow));
+                            array (IPosition (4, j, i, h, sourceRow));
                 }
             }
         }
@@ -678,7 +669,7 @@ public:
     VbCacheItemArray <Vector<Int> > arrayId_p;
     VbCacheItemArray <Vector<SquareMatrix<Complex, 2> >, True> cjones_p;
     VbCacheItemArray <Cube<Complex> > correctedVisCube_p;
-//    VbCacheItemArray <Matrix<CStokesVector> > correctedVisibility_p;
+    //    VbCacheItemArray <Matrix<CStokesVector> > correctedVisibility_p;
     VbCacheItemArray <Vector<Int> > corrType_p;
     VbCacheItem <Int> dataDescriptionId_p;
     VbCacheItemArray <Vector<Int> > dataDescriptionIds_p;
@@ -690,14 +681,14 @@ public:
     VbCacheItemArray <Vector<Int> > feed2_p;
     VbCacheItemArray <Vector<Float> > feed2Pa_p;
     VbCacheItemArray <Vector<Int> > fieldId_p;
-//    VbCacheItemArray <Matrix<Bool> > flag_p;
+    //    VbCacheItemArray <Matrix<Bool> > flag_p;
     VbCacheItemArray <Array<Bool> > flagCategory_p;
     VbCacheItemArray <Cube<Bool> > flagCube_p;
     VbCacheItemArray <Vector<Bool> > flagRow_p;
     VbCacheItemArray <Cube<Float> > floatDataCube_p;
     VbCacheItemArray <Matrix<Float> > imagingWeight_p;
     VbCacheItemArray <Cube<Complex> > modelVisCube_p;
-//    VbCacheItemArray <Matrix<CStokesVector> > modelVisibility_p;
+    //    VbCacheItemArray <Matrix<CStokesVector> > modelVisibility_p;
     VbCacheItem <Int> nAntennas_p;
     VbCacheItem <Int> nChannels_p;
     VbCacheItem <Int> nCorrelations_p;
@@ -718,7 +709,7 @@ public:
     VbCacheItemArray <Vector<Double> > timeInterval_p;
     VbCacheItemArray <Matrix<Double> > uvw_p;
     VbCacheItemArray <Cube<Complex> > visCube_p;
-//    VbCacheItemArray <Matrix<CStokesVector> > visibility_p;
+    //    VbCacheItemArray <Matrix<CStokesVector> > visibility_p;
     VbCacheItemArray <Matrix<Float> > weight_p;
     //VbCacheItemArray <Matrix<Float> > weightMat_p;
     VbCacheItemArray <Cube<Float> > weightSpectrum_p;
@@ -775,11 +766,11 @@ public:
         typedef Vector<T> (VisibilityIterator2::* Updater) (Double, Int, Int, Int) const;
 
         FrequencyCache (Updater updater)
-        : frame_p (-1),
-          msId_p (-1),
-          spectralWindowId_p (-1),
-          time_p (-1),
-          updater_p (updater)
+            : frame_p (-1),
+              msId_p (-1),
+              spectralWindowId_p (-1),
+              time_p (-1),
+              updater_p (updater)
         {}
 
         Int frame_p;
@@ -806,7 +797,7 @@ public:
             Double time = vb->time()(rowInBuffer);
 
             if (time == time_p && frame == frame_p && msId == msId_p &&
-                spectralWindowId == spectralWindowId_p){
+                    spectralWindowId == spectralWindowId_p){
                 return;
             }
 
@@ -820,27 +811,27 @@ public:
     };
 
     VisBufferState ()
-    : appendCapacity_p (0),
-      appendSize_p (0),
-      areCorrelationsSorted_p (False),
-      channelNumbers_p (& VisibilityIterator2::getChannels),
-      dirtyComponents_p (),
-      frequencies_p (& VisibilityIterator2::getFrequencies),
-      isAttached_p (False),
-      isFillable_p (False),
-      isNewMs_p (False),
-      isNewArrayId_p (False),
-      isNewFieldId_p (False),
-      isNewSpectralWindow_p (False),
-      isRekeyable_p (False),
-      isWritable_p (False),
-      msId_p (-1),
-      pointingTableLastRow_p (-1),
-      validShapes_p (N_ShapePatterns),
-      vi_p (0),
-      viC_p (0),
-      visModelData_p (0),
-      weightScaling_p ( )
+        : appendCapacity_p (0),
+          appendSize_p (0),
+          areCorrelationsSorted_p (False),
+          channelNumbers_p (& VisibilityIterator2::getChannels),
+          dirtyComponents_p (),
+          frequencies_p (& VisibilityIterator2::getFrequencies),
+          isAttached_p (False),
+          isFillable_p (False),
+          isNewMs_p (False),
+          isNewArrayId_p (False),
+          isNewFieldId_p (False),
+          isNewSpectralWindow_p (False),
+          isRekeyable_p (False),
+          isWritable_p (False),
+          msId_p (-1),
+          pointingTableLastRow_p (-1),
+          validShapes_p (N_ShapePatterns),
+          vi_p (0),
+          viC_p (0),
+          visModelData_p (0),
+          weightScaling_p ( )
     {}
 
     Int appendCapacity_p;

@@ -906,16 +906,7 @@ else( )
   set( DBUS_LIBRARIES ${DBUSPP_LIBRARIES} )
 endif( )
 
-## ATM
-#casa_find( ATM
-#  VERSION 0.5
-#  INCLUDES ATMEnumerations.h ATMVersion.h
-#  INCLUDES_SUFFIXES ATM
-#  LIBS aatm
-#  CPP_VERSION ATM_VERSION
-#  RUN_VERSION "atm::getVersion()" 
-#  PREFIX_HINTS ${ATM_ROOT_DIR}
-#)
+
 
 # XML2
 casa_find( LIBXML2
@@ -928,16 +919,6 @@ casa_find( LIBXML2
   RUN_VERSION "LIBXML_DOTTED_VERSION; LIBXML_TEST_VERSION;" 
   )
 
-# XSLT
-#casa_find( LIBXSLT
-#  VERSION 1.1.17
-#  PREFIX_HINTS ${LIBXSLT_ROOT_DIR}
-#  INCLUDES libxslt/xsltconfig.h
-#  INCLUDES_SUFFIXES libxslt
-#  LIBS xslt
-#  CPP_VERSION LIBXSLT_DOTTED_VERSION 
-#  RUN_VERSION "LIBXSLT_DOTTED_VERSION; LIBXSLT_VERSION;" 
-#  )
 
 # Do not reuse FindLibXml2.cmake, except this excerpt
 IF (NOT WIN32)
@@ -948,73 +929,6 @@ IF (NOT WIN32)
    SET(LIBXML2_DEFINITIONS ${LIBXML2_DEFINITIONS} ${PC_LIBXML_CFLAGS_OTHER})
 ENDIF (NOT WIN32)
 
-#find_package( OpenGL REQUIRED )
-#set( OPENGL_INCLUDE_DIRS ${OPENGL_INCLUDE_DIR} CACHE PATH "OpenGL include directories" FORCE )
-
-
-# QT4  4.3.4 or 4.5.1
-
-#if( ${qt4} STREQUAL casa-qt )
-#### cmake is so lame...
-#set( QT_QMAKE_EXECUTABLE /usr/lib64/casa/01/bin/qmake )
-#message( STATUS "Explicitly setting qmake: ${QT_QMAKE_EXECUTABLE}" )
-#set( qt4-version 4.8.5 )
-#else()
-#set( qt4-version 4.3.4 )
-#endif()
-#
-#find_package(
-#Qt4 ${qt4-version}
-#COMPONENTS QtCore QtGui QtDBus QtXml QtUiTools ) #QtOpenGL )
-#
-#if( NOT QT4_FOUND )
-#message( FATAL_ERROR "Qt4 could not be found. Please check!" )
-#endif()
-#
-#set( QT4_INCLUDE_DIRS ${QT_INCLUDES} CACHE PATH "QT4 include directories" FORCE )
-#set( QT4_DEFINITIONS ${QT_DEFINITIONS} -DQT_NO_DEBUG CACHE STRING "QT4 preprocessor flags" FORCE )
-#set( QT4_LIBRARIES 
-#${QT_QTCORE_LIBRARY} 
-#${QT_QTGUI_LIBRARY} 
-#${QT_QTDBUS_LIBRARY} 
-#${QT_QTXML_LIBRARY} ${QT_QTUITOOLS_LIBRARY}
-## ${QT_QTOPENGL_LIBRARY}
-#CACHE FILEPATH "QT4 libraries" FORCE )
-#list( REMOVE_ITEM QT4_LIBRARIES "optimized" )
-#list( REMOVE_ITEM QT4_LIBRARIES "debug" )
-#set( QT4_FOUND TRUE CACHE BOOL "Was QT4 found?" )
-#
-## Detecting QT4 takes a bit of time, but does not seem possible to skip.
-## If doing so, then "include( ${QT_USE_FILE} )" does not work (because QT_USE_FILE is not cached?).
-#
-#
-## QWT (requires Qt)
-#casa_find( QWT
-#VERSION 5.1.1
-#INCLUDES qwt_global.h
-#INCLUDES_SUFFIXES qwt qwt-qt4
-#PREFIX_HINTS 
-#${QWT_ROOT_DIR}
-#${casa_packages}/qwt-5.2.0
-#${casa_packages}/qwt-5.2.1-svn
-#${casa_packages}/qwt-5.2.3-svn
-#LIBS qwt
-#CPP_VERSION QWT_VERSION_STR
-#DEPENDS QT4 )
-#
-# Xerces
-#casa_find( XERCES
-#VERSION 2.7.0
-#PREFIX_HINTS ${XERCES_ROOT_DIR}
-#INCLUDES xercesc/util/XercesVersion.hpp
-#LIBS xerces-c
-#CPP_VERSION XERCES_FULLVERSIONDOT 
-#RUN_VERSION "gXercesMajVersion << '.' << gXercesMinVersion << '.' << gXercesRevision" 
-#)
-#if( XERCES_VERSION VERSION_EQUAL   3.2 OR
-#XERCES_VERSION VERSION_GREATER 3.2 )
-#message( FATAL_ERROR "Xerces version (${XERCES_VERSION}) is too recent! Must be earlier than 3.0." )
-#endif()
 
 #
 # Sqlite3
@@ -1087,35 +1001,13 @@ else()
     casa_add_module( graphics CASACORE X11 WCSLIB Boost)
   endif()
 endif()
-#casa_add_module( atmosphere )
-#casa_add_module( stdcasa CASACORE )
-#casa_add_module( parallel CASACORE )
+
+
 casa_add_module( casadbus CASACORE DBUS Boost)
-#casa_add_module( casaqt CASACORE QT4 QWT XERCES graphics stdcasa Boost)
-#casa_add_module( components stdcasa CASACORE GSL)
-#casa_add_module( imageanalysis CASACORE Boost components)
-##casa_add_module( display3d CASACORE QT4 OPENGL display )
-#casa_add_module( asdmstman CASACORE )
-#casa_add_module( msvis CASACORE Boost asdmstman )
-#casa_add_module( mstransform CASACORE stdcasa imageanalysis msvis)
-#casa_add_module( synthesis CASACORE atmosphere stdcasa casadbus asdmstman Boost SQLITE imageanalysis msvis mstransform)
-casa_add_module( synthesis CASACORE)
-#casa_add_module( flagging CASACORE Boost stdcasa casadbus synthesis casaqt QT4 msvis)
-#casa_add_module( spectrallines CASACORE imageanalysis Boost SQLITE)
-#casa_add_module( guitools CASACORE QT4 QWT synthesis)
-#casa_add_module( display CASACORE WCSLIB QT4 casaqt guitools synthesis imageanalysis Boost stdcasa casadbus spectrallines components)
-#casa_add_module( plotms CASACORE QT4 casaqt synthesis Boost )
-#casa_add_module( calanalysis CASACORE synthesis Boost)
-#casa_add_module( alma CASACORE LIBXML2 LIBXSLT Boost synthesis msvis)
-#casa_add_module( alma_v3 CASACORE LIBXML2 LIBXSLT Boost synthesis)
-#casa_add_module( oldalma CASACORE LIBXML2 Boost )
-#casa_add_module( dish CASACORE Boost)
-#casa_add_module( nrao CASACORE Boost)
-#casa_add_module( miriad CASACORE Boost components)
-#casa_add_module( casa_sakura CASACORE LIBSAKURA)
-#casa_add_module( singledish CASACORE casa_sakura msvis mstransform)
-#casa_add_module( bnmin1 Boost GSL GSLCBLAS CASACORE )
-#casa_add_module( air_casawvr CASACORE bnmin1 Boost synthesis WCSLIB CFITSIO LAPACK )
+casa_add_module( asdmstman CASACORE )
+casa_add_module( msvis CASACORE Boost asdmstman )
+casa_add_module( synthesis CASACORE msvis casadbus )
+
 
 #
 # ASAP's build depends on something called a makedefs file. Fake one of those.
