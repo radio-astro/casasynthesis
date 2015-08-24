@@ -18,6 +18,45 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+
+# How to generate .h from .xml for DBUS
+#
+
+macro( casa_add_dbus_proxy _header _interface)
+    get_filename_component(_infile ${_interface} ABSOLUTE)
+    get_filename_component(_out_path ${_header} PATH)
+
+    message(STATUS "casa_add_dbus_proxy called with header: ${_header} and interface: ${_interface}")
+    message(STATUS "${_out_path}")
+    message(STATUS "${dbus-xml-2-cxx} ${_infile} --proxy=${_header}")
+
+    # The output directory needs to exist,
+    # or dbus-xml2cpp will silently fail
+    add_custom_command(
+      OUTPUT ${_header}
+      COMMAND mkdir -p ${_out_path}
+      COMMAND ${dbus-xml-2-cxx} ${_infile} --proxy=${_header}
+      DEPENDS ${_infile}
+      )
+endmacro()
+
+macro( casa_add_dbus_adaptor _header _interface)
+    get_filename_component(_infile ${_interface} ABSOLUTE)
+    get_filename_component(_out_path ${_header} PATH)
+
+    # The output directory needs to exist,
+    # or dbus-xml2cpp will silently fail
+    add_custom_command(
+      OUTPUT ${_header}
+      COMMAND mkdir -p ${_out_path}
+      COMMAND ${dbus-xml-2-cxx} ${_infile} --adaptor=${_header}
+      DEPENDS ${_infile}
+      )
+endmacro()
+
+
+
+
 casa_add_dbus_proxy( plotserver/PlotServerProxy.proxy.h xml/PlotServerProxy.interface.xml )
 casa_add_dbus_proxy( session/DBusSession.proxy.h xml/DBusSession.interface.xml )
 casa_add_dbus_proxy( viewer/ViewerProxy.proxy.h xml/ViewerProxy.interface.xml )
@@ -26,10 +65,6 @@ casa_add_dbus_proxy( viewer/ViewerProxy.proxy.h xml/ViewerProxy.interface.xml )
 ###
 ### who know what is the right way to do this with C-MINUS-MAKE...
 ###
-add_custom_target(install-dbus-session ALL
-    COMMAND mkdir -p ${CMAKE_INSTALL_PREFIX}/../etc/dbus/session.d
-    COMMAND cp -f ${CMAKE_CURRENT_SOURCE_DIR}/etc/casa.conf ${CMAKE_INSTALL_PREFIX}/../etc/dbus
-)
 
 if (INTERACTIVE_ITERATION)
    casa_add_dbus_proxy( interfaces/SynthImager.proxy.h xml/SynthImager.interface.xml )

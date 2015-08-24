@@ -19,27 +19,7 @@
 #
 
 
-# Macros for defining libraries, executables, tests, etc
 
-
-#
-# In CASA, it does not make sense to build without also installing
-# the build products. Therefore...
-#
-# Create a target which ensures that the install target is 
-# always run as part of all. 
-#
-# For this to work, all other targets must be added as dependencies
-# of this "inst" target. This is done in the macro's below using add_dependencies()
-macro( casa_always_install )
-  add_custom_target( inst ALL ${CMAKE_BUILD_TOOL} install/fast )
-endmacro()
-
-
-#
-# Setup definitions and include directories for this module,
-# and create a dynamic library
-#
 
 macro( casa_add_library module )
 
@@ -55,9 +35,6 @@ macro( casa_add_library module )
   add_library( lib${module} ${ARGN} )
   set_target_properties( lib${module} PROPERTIES OUTPUT_NAME ${module} )
 
-  add_dependencies( inst lib${module} )
-  add_custom_target( lib${module}_fast ${CMAKE_BUILD_TOOL} lib${module}/fast )
-  add_dependencies( ${module}_fast lib${module}_fast )
 
   target_link_libraries( lib${module} ${${module}_LINK_TO} )
 
@@ -65,7 +42,9 @@ macro( casa_add_library module )
       set_target_properties( lib${module} PROPERTIES SOVERSION ${casa_soversion} )
   endif()
 
-  install( TARGETS lib${module} LIBRARY DESTINATION lib )
+  install( TARGETS lib${module}
+            LIBRARY DESTINATION lib
+            ARCHIVE DESTINATION lib )
 
 endmacro()
 
@@ -79,18 +58,10 @@ macro( casa_add_executable module name )
   set( _sources ${ARGN} )
 
   add_executable( ${name} ${_sources} )
-  add_dependencies( inst ${name} )
-  add_custom_target( ${name}_fast ${CMAKE_BUILD_TOOL} ${name}/fast )
-  add_dependencies( ${module}_fast ${name}_fast )
 
   target_link_libraries( ${name} lib${module} )
 
   install( TARGETS ${name} RUNTIME DESTINATION bin )
-
-  if( APPLE )
-    # On Mac, things are installed here too.
-    install( TARGETS ${name} RUNTIME DESTINATION apps/${name}.app/Contents/MacOS )
-  endif()
 
 endmacro()
 
@@ -160,13 +131,6 @@ macro( casa_add_module module )
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/${module}
     )
 
-  # Target to update and install this module, excluding dependencies
-  add_custom_target( 
-    ${module}_fast
-    COMMAND ${CMAKE_BUILD_TOOL} install/fast
-    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/${module}
-    COMMENT "Updating ${module} (fast)..."
-    )
 
   # Target to update and install this module, including dependency modules
   add_custom_target( ${module} COMMENT "Updating ${module}..." )
@@ -243,24 +207,7 @@ macro( casa_add_module module )
 
     endif()
 
-    # Special case for (old)alma(_v3)
-    if( ${module} STREQUAL "alma" OR
-        ${module} STREQUAL "oldalma" OR
-	${module} STREQUAL "alma_v3")
-
-      set( ${module}_INCLUDE_DIRS 
-        ${${module}_INCLUDE_DIRS}
-        ${CMAKE_SOURCE_DIR}/${module}/ASDM
-        ${CMAKE_SOURCE_DIR}/${module}/ASDMBinaries
-        ${CMAKE_SOURCE_DIR}/${module}/Enumtcl
-        ${CMAKE_SOURCE_DIR}/${module}/Enumerations
-        )
-
-    endif()
-
   endforeach()
-
-  #dump( ${module}_DEFINITIONS ${module}_INCLUDE_DIRS ${module}_LINK_TO )
 
   set( all_modules ${all_modules} ${module} )
 
@@ -269,46 +216,3 @@ macro( casa_add_module module )
 endmacro()
 
 
-
-#
-# casa_add_python( module
-#                  target_name
-#                  installation_directory 
-#                  source1 [source2 ...]
-#                )
-#
-# Creates target for python files
-#
-
-MACRO( casa_add_python module  _target _install_dir )
-
-  install( PROGRAMS ${ARGN}
-           DESTINATION ${_install_dir} )
-
-endmacro()
-
-
-
-
-
-#
-#   casa_add_pymodule( module name source1 [source2 ...] )
-#
-# Creates a python module. 
-# The module is always linked to libxmlcasa and ${xmlcasa_LINK_TO}.
-#
-
-macro( casa_add_pymodule name )
-
-  set( _sources ${ARGN} )
-
-  add_library( ${name} MODULE ${_sources} )
-  add_dependencies( inst ${name} )
-  add_custom_target( ${name}_fast ${CMAKE_BUILD_TOOL} ${name}/fast )
-  add_dependencies( xmlcasa_fast ${name}_fast )
-
-  set_target_properties( ${name} PROPERTIES PREFIX "" )
-  target_link_libraries( ${name} libxmlcasa ${xmlcasa_LINK_TO} )
-  install( TARGETS ${name} LIBRARY DESTINATION python/${PYTHONV} )
-
-endmacro()

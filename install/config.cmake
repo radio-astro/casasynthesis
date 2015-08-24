@@ -194,6 +194,16 @@ endmacro()
 
 set( casa_find_found "" )  # Accumulated list of libraries and executables found by casa_find
 
+
+macro( casa_append l x )
+
+  list( FIND ${l} ${x} _exists )
+  if( _exists EQUAL -1 )
+    set( ${l} ${${l}} ${x} ${ARGN} )
+  endif()
+
+endmacro()
+
 macro( casa_find package )
   
   # Parse arguments
