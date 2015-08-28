@@ -433,4 +433,5 @@ casa_add_module( casadbus CASACORE DBUS Boost)
 casa_add_module( asdmstman CASACORE )
 casa_add_module( msvis CASACORE Boost asdmstman )
 casa_add_module( synthesis CASACORE msvis casadbus )
-
+casa_add_module( stdcasa CASACORE )
+casa_add_module( components stdcasa CASACORE GSL)
