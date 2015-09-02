@@ -653,6 +653,7 @@ install (FILES
 install (FILES
 	Utilities/AppRC.h
 	Utilities/FixVis.h
+	Utilities/SigHandler.h
 	Utilities/ThreadCoordinator.h
 	DESTINATION include/casacode/synthesis/Utilities
 	)
