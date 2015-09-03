@@ -155,7 +155,7 @@ endif()
 
 # PGPLOT (FORTRAN plotting package).
 # depends on X11
-if( NOT SKIP_PGPLOT )
+if( FALSE )
   if( APPLE )
     set( _deps FORTRAN )
   else()
@@ -179,7 +179,7 @@ if( NOT SKIP_PGPLOT )
 endif()
 
 # WCSLIB
-if( NOT SKIP_PGPLOT )
+if( FALSE )
   casa_find( WCSLIB
     VERSION 4.3
     PREFIX_HINTS ${WCSLIB_ROOT_DIR}
@@ -198,6 +198,7 @@ if( NOT SKIP_PGPLOT )
 else()
   casa_find( WCSLIB
     VERSION 4.3
+    PREFIX_HINTS ${WCSLIB_ROOT_DIR}
     INCLUDES wcslib/wcsconfig.h
     LIBS wcs
     # WCSLIB does "#define WCSLIB_VERSION 4.3.4" without quotes,
@@ -420,12 +421,12 @@ casa_config_end()
 # for linux RPM & binary distros libgraphics contains pgplot (linked in)...
 if( APPLE )
   casa_add_module( graphics CASACORE PGPLOT WCSLIB Boost)
-else()
-  if( NOT SKIP_PGPLOT )
-    casa_add_module( graphics CASACORE PGPLOT X11 WCSLIB Boost)
-  else()
-    casa_add_module( graphics CASACORE X11 WCSLIB Boost)
-  endif()
+#else()
+#  if( NOT SKIP_PGPLOT )
+#    casa_add_module( graphics CASACORE PGPLOT X11 WCSLIB Boost)
+#  else()
+#    casa_add_module( graphics CASACORE X11 WCSLIB Boost)
+#  endif()
 endif()
 
 casa_add_module( atmosphere )
