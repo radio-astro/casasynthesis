@@ -153,49 +153,6 @@ if( NOT FORTRAN_LIBRARIES )
   endif()
 endif()
 
-# PGPLOT (FORTRAN plotting package).
-# depends on X11
-if( FALSE )
-  if( APPLE )
-    set( _deps FORTRAN )
-  else()
-    set( _deps X11 FORTRAN )
-  endif()
-  if (CMAKE_SYSTEM MATCHES ^Darwin-11 AND NOT LLVMCOMPILER )
-     set( CMAKE_SHARED_LINKER_FLAGS "-Wl,-undefined -Wl,error -framework AppKit -lgfortran" )
-  else()
-     if (APPLE) 
-        set( CMAKE_SHARED_LINKER_FLAGS "-Wl,-undefined -Wl,error -framework AppKit" )
-     else()
-        set( CMAKE_SHARED_LINKER_FLAGS "-Wl,-undefined -Wl,error" )
-     endif()
-  endif()
-  casa_find( PGPLOT
-    VERSION 5.3.1
-    PREFIX_HINTS ${PGPLOT_ROOT_DIR}
-    INCLUDES cpgplot.h
-    LIBS pgplot${pgplot_ext} cpgplot${pgplot_ext}
-    DEPENDS ${_deps} )
-endif()
-
-# WCSLIB
-if( FALSE )
-  casa_find( WCSLIB
-    VERSION 4.3
-    PREFIX_HINTS ${WCSLIB_ROOT_DIR}
-    INCLUDES wcslib/wcsconfig.h
-    LIBS wcs
-         pgsbox${pgplot_ext}
-    # WCSLIB does "#define WCSLIB_VERSION 4.3.4" without quotes,
-    # hence "cout << WCSLIB_VERSION" would not work. The following
-    # code makes a string out of WCSLIB_VERSION.
-    CPP_VERSION "\"\";
-#define CASA_STRINGIFY(x) #x
-#define CASA_TOSTRING(x) CASA_STRINGIFY(x)
-    std::cout << CASA_TOSTRING(WCSLIB_VERSION)"
-    DEFINITIONS -DSIGNBIT 
-    DEPENDS PGPLOT )
-else()
   casa_find( WCSLIB
     VERSION 4.3
     PREFIX_HINTS ${WCSLIB_ROOT_DIR}
@@ -209,7 +166,6 @@ else()
 #define CASA_TOSTRING(x) CASA_STRINGIFY(x)
     std::cout << CASA_TOSTRING(WCSLIB_VERSION)"
     DEFINITIONS -DSIGNBIT )
-endif()
 
 # FFTW
 # Does not provide its version number in a header nor
