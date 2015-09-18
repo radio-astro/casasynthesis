@@ -71,16 +71,8 @@ set( boost_components regex program_options filesystem thread serialization syst
 find_package( Boost REQUIRED ${boost_components} )
 
 
-# CFITSIO
-casa_find( CFITSIO
-  VERSION 3.006
-  INCLUDES fitsio.h fitsio2.h
-  INCLUDES_SUFFIXES cfitsio
-  LIBS cfitsio
-  PREFIX_HINTS ${CFITSIO_ROOT_DIR}
-  DEPENDS Boost
-  CPP_VERSION CFITSIO_VERSION
-  RUN_VERSION "(ffvers(&v), v)" )
+find_package(CFITSIO 3.006 REQUIRED) # Should pad to three decimal digits
+
 
 # X11.
 if( NOT APPLE )
@@ -178,55 +170,13 @@ if( NOT SKIP_PGPLOT )
     DEPENDS ${_deps} )
 endif()
 
-# WCSLIB
-if( NOT SKIP_PGPLOT )
-  casa_find( WCSLIB
-    VERSION 4.3
-    PREFIX_HINTS ${WCSLIB_ROOT_DIR}
-    INCLUDES wcslib/wcsconfig.h
-    LIBS wcs
-         pgsbox${pgplot_ext}
-    # WCSLIB does "#define WCSLIB_VERSION 4.3.4" without quotes,
-    # hence "cout << WCSLIB_VERSION" would not work. The following
-    # code makes a string out of WCSLIB_VERSION.
-    CPP_VERSION "\"\";
-#define CASA_STRINGIFY(x) #x
-#define CASA_TOSTRING(x) CASA_STRINGIFY(x)
-    std::cout << CASA_TOSTRING(WCSLIB_VERSION)"
-    DEFINITIONS -DSIGNBIT 
-    DEPENDS PGPLOT )
-else()
-  casa_find( WCSLIB
-    VERSION 4.3
-    INCLUDES wcslib/wcsconfig.h
-    LIBS wcs
-    # WCSLIB does "#define WCSLIB_VERSION 4.3.4" without quotes,
-    # hence "cout << WCSLIB_VERSION" would not work. The following
-    # code makes a string out of WCSLIB_VERSION.
-    CPP_VERSION "\"\";
-#define CASA_STRINGIFY(x) #x
-#define CASA_TOSTRING(x) CASA_STRINGIFY(x)
-    std::cout << CASA_TOSTRING(WCSLIB_VERSION)"
-    DEFINITIONS -DSIGNBIT )
-endif()
+find_package(WCSLIB 4.3)
+# TODO: add check for pgsbox (probably don't need it though)
 
-# FFTW
-# Does not provide its version number in a header nor
-# in the library, which is a pity because CASACore needs
-# version >= 3.2.2 and is subject to a bug in fftw 3.2.1
-casa_find( FFTW3
-           PREFIX_HINTS ${FFTW3_ROOT_DIR}
-           INCLUDES fftw3.h
-           LIBS fftw3_threads fftw3f_threads fftw3f fftw3 )
+find_package(FFTW components single double threads)
 
-# BLAS
-casa_find( BLAS
-           LIBS blas )
-
-# LAPACK
-casa_find( LAPACK
-           LIBS lapack 
-           DEPENDS BLAS )
+find_package(BLAS REQUIRED)
+find_package(LAPACK REQUIRED)
 
 # DL
 set( DL_LIBRARIES ${CMAKE_DL_LIBS} CACHE STRING "dl libraries" FORCE )
@@ -267,20 +217,7 @@ else()
        casa_tables )
 endif()
 
-casa_find( CASACORE
-           VERSION 2.0.0
-           PREFIX_HINTS ${CASACORE_ROOT_DIR} ${Boost_INCLUDE_DIR}
-           INCLUDES casa/aips.h
-                    casa/version.h
-                    scimath/Mathematics/MatrixMathLA.h  # declares symbols defined in LAPACK
-           INCLUDES_SUFFIXES casacore
-           LIBS ${casacore_libs}
-           PREFIX_HINTS ${casacore_prefix}
-           CPP_VERSION CASACORE_VERSION
-           RUN_VERSION "casa::getVersionCASA()"
-           DEPENDS LAPACK CFITSIO WCSLIB FFTW3 DL Boost)
-# Listing explicitly CASACore's dependency libraries is not necessary if the CASACore libraries 
-# were built with correct linking information, which they are not.
+find_package(CasaCore REQUIRED)
 
 set( CASACORE_DEFINITIONS ${CASACORE_DEFINITIONS}
   -DCASA_USECASAPATH
@@ -296,13 +233,9 @@ if( CMAKE_SYSTEM_NAME STREQUAL Linux )
     )
 endif()
 
-casa_find( GSLCBLAS	  
-              LIBS gslcblas )
+find_package(GSLCBLAS)
 
-casa_find( GSL 
-	      LIBS gsl
-   	      DEPENDS GSLCBLAS
-            )
+find_package(GSL)
 
 ## Java
 #casa_find( Java
@@ -368,18 +301,7 @@ else( )
 endif( )
 
 
-
-# XML2
-casa_find( LIBXML2
-  VERSION 2.6.16
-  PREFIX_HINTS ${LIBXML2_ROOT_DIR}
-  INCLUDES libxml/xmlversion.h
-  INCLUDES_SUFFIXES libxml2
-  LIBS xml2
-  CPP_VERSION LIBXML_DOTTED_VERSION 
-  RUN_VERSION "LIBXML_DOTTED_VERSION; LIBXML_TEST_VERSION;" 
-  )
-
+find_package(LIBXML2 2.6.16)
 
 # Do not reuse FindLibXml2.cmake, except this excerpt
 IF (NOT WIN32)
@@ -391,16 +313,7 @@ IF (NOT WIN32)
 ENDIF (NOT WIN32)
 
 
-
-# Readline
-casa_find( READLINE 
-  VERSION 4.3
-  INCLUDES readline/readline.h #depends on <cstdio> to compile
-  LIBS readline ncurses
-  PREFIX_HINTS ${READLINE_ROOT_DIR}
-  CPP_VERSION "RL_VERSION_MAJOR << '.' << RL_VERSION_MINOR"
-  RUN_VERSION rl_library_version
-)
+find_package(READLINE 4.3)
 
 #GSL
 find_package ( GSL 1.13)
