@@ -173,7 +173,7 @@ endif()
 find_package(WCSLIB 4.3)
 # TODO: add check for pgsbox (probably don't need it though)
 
-find_package(FFTW components single double threads)
+find_package(FFTW COMPONENTS single double threads)
 
 find_package(BLAS REQUIRED)
 find_package(LAPACK REQUIRED)
