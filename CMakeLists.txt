@@ -67,7 +67,7 @@ set( qt4 system-qt )
 
 
 
-set( boost_components regex program_options filesystem thread serialization system)
+set( boost_components regex filesystem thread serialization system)
 find_package( Boost REQUIRED ${boost_components} )
 
 
@@ -76,7 +76,7 @@ find_package(CFITSIO 3.006 REQUIRED) # Should pad to three decimal digits
 
 # X11.
 if( NOT APPLE )
-  find_package( X11 REQUIRED )
+  find_package( X11 )
   # Rename
   set( X11_INCLUDE_DIRS ${X11_INCLUDE_DIR} )
 endif()
