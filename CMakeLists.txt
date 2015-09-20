@@ -301,16 +301,16 @@ else( )
 endif( )
 
 
-find_package(LIBXML2 2.6.16)
+find_package(LibXml2 2.6.16)
 
 # Do not reuse FindLibXml2.cmake, except this excerpt
-IF (NOT WIN32)
-   # use pkg-config to get the directories and then use these values
-   # in the FIND_PATH() and FIND_LIBRARY() calls
-   FIND_PACKAGE(PkgConfig)
-   PKG_CHECK_MODULES(PC_LIBXML libxml-2.0)
-   SET(LIBXML2_DEFINITIONS ${LIBXML2_DEFINITIONS} ${PC_LIBXML_CFLAGS_OTHER})
-ENDIF (NOT WIN32)
+#IF (NOT WIN32)
+#   # use pkg-config to get the directories and then use these values
+#   # in the FIND_PATH() and FIND_LIBRARY() calls
+#   FIND_PACKAGE(PkgConfig)
+#   PKG_CHECK_MODULES(PC_LIBXML libxml-2.0)
+#   SET(LIBXML2_DEFINITIONS ${LIBXML2_DEFINITIONS} ${PC_LIBXML_CFLAGS_OTHER})
+#ENDIF (NOT WIN32)
 
 
 find_package(READLINE 4.3)
