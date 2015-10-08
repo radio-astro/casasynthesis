@@ -16,8 +16,8 @@ https://svn.cv.nrao.edu/svn/casa/branches/release-4_4/code/
 ```
 $ mkdir build
 $ cd build
-$ cmake ..
-$ make -DCMAKE_INSTALL_PREFIX=/opt/casasynthesis
+$ cmake -DCMAKE_INSTALL_PREFIX=/opt/casasynthesis ..
+$ make 
 $ make install
 ```
 
