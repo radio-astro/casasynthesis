@@ -9,7 +9,7 @@ https://svn.cv.nrao.edu/svn/casa/branches/release-4_4/code/
 ## requirements
 
  * Cmake
- * Casacore 2.0+
+ * Casacore >= 2.0.3
 
 ## Compilation
 
