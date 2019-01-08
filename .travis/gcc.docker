@@ -1,0 +1,36 @@
+FROM kernsuite/base:dev
+RUN docker-apt-install \
+	build-essential \
+        cmake \                        
+        casacore-dev \                 
+        casacore-tools \               
+        casacore-data \                
+        gfortran \                     
+        libboost-dev \                 
+        libboost-regex-dev \           
+        libboost-program-options-dev \ 
+        libboost-filesystem-dev \      
+        libboost-thread-dev \          
+        libboost-serialization-dev \   
+        libboost-system-dev \          
+        libcfitsio-dev \               
+        libx11-dev \                   
+        libfftw3-dev \                 
+        libblas-dev \                  
+        liblapack-dev \                
+        libgsl-dev \                   
+        pkg-config \                   
+        libxml2-dev \                  
+        libncurses5-dev \              
+        libdbus-c++-dev \              
+        libdbus-1-dev \                
+        libreadline-dev \              
+        wcslib-dev \                   
+        pgplot5                        
+ADD . /code
+RUN mkdir /code/build
+WORKDIR /code/build
+RUN cmake .. \
+      -DBUILD_TESTING=ON
+RUN make -j4 
+RUN make install
