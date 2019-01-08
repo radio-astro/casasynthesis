@@ -21,3 +21,6 @@ $ make
 $ make install
 ```
 
+## development
+
+[![Build Status](https://travis-ci.org/radio-astro/casasynthesis.svg?branch=master)](https://travis-ci.org/radio-astro/casasynthesis)
