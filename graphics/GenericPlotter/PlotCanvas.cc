@@ -32,7 +32,7 @@
 
 
 
-namespace casa {
+namespace casacore {
 
 ////////////////////////////
 // PLOTCANVAS DEFINITIONS //

@@ -32,34 +32,34 @@
  */
 
 //#include <boost/math/special_functions/round.hpp>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/Array.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/Cube.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/OS/HostInfo.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/Array.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/Cube.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/OS/HostInfo.h>
 
-#include <casa/System/ProgressMeter.h>
-#include <casa/Quanta/QuantumHolder.h>
-#include <casa/Utilities/CompositeNumber.h>
-#include <measures/Measures/MeasTable.h>
-#include <ms/MeasurementSets/MSPolColumns.h>
-#include <ms/MeasurementSets/MSPolarization.h>
+#include <casacore/casa/System/ProgressMeter.h>
+#include <casacore/casa/Quanta/QuantumHolder.h>
+#include <casacore/casa/Utilities/CompositeNumber.h>
+#include <casacore/measures/Measures/MeasTable.h>
+#include <casacore/ms/MeasurementSets/MSPolColumns.h>
+#include <casacore/ms/MeasurementSets/MSPolarization.h>
 #include <mstransform/MSTransform/MSUVBin.h>
 #include <mstransform/MSTransform/MSTransformDataHandler.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
-#include <coordinates/Coordinates/StokesCoordinate.h>
-#include <images/Images/PagedImage.h>
-#include <images/Images/TempImage.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/coordinates/Coordinates/StokesCoordinate.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/images/Images/TempImage.h>
 #include <msvis/MSVis/MSUtil.h>
 #include <msvis/MSVis/VisBuffer.h>
 #include <msvis/MSVis/VisBuffer2Adapter.h>
 #include <imageanalysis/Utilities/SpectralImageUtil.h>
 #include <msvis/MSVis/VisibilityIterator2.h>
-#include <scimath/Mathematics/FFTPack.h>
-#include <scimath/Mathematics/ConvolveGridder.h>
+#include <casacore/scimath/Mathematics/FFTPack.h>
+#include <casacore/scimath/Mathematics/ConvolveGridder.h>
 #include <wcslib/wcsconfig.h>  /** HAVE_SINCOS **/
 #include <math.h>
 #ifdef _OPENMP
@@ -75,7 +75,7 @@
 
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 MSUVBin::MSUVBin():nx_p(0), ny_p(0), nchan_p(0), npol_p(0),existOut_p(False){
 	outMsPtr_p=NULL;
@@ -1719,9 +1719,9 @@ Bool MSUVBin::String2MDirection(const String& theString,
 
   if(str.nelements()==3){
 	  qh.fromString(error, str[1]);
-	  casa::Quantity val1=qh.asQuantity();
+	  casacore::Quantity val1=qh.asQuantity();
       qh.fromString(error, str[2]);
-      casa::Quantity val2=qh.asQuantity();
+      casacore::Quantity val2=qh.asQuantity();
       MDirection::Types tp;
       if(!MDirection::getType(tp, str[0])){
     	  ostringstream oss;
@@ -1734,16 +1734,16 @@ Bool MSUVBin::String2MDirection(const String& theString,
   }
   else if(str.nelements()==2){
 	  qh.fromString(error, str[0]);
-      casa::Quantity val1=qh.asQuantity();
+      casacore::Quantity val1=qh.asQuantity();
       qh.fromString(error, str[1]);
-      casa::Quantity val2=qh.asQuantity();
+      casacore::Quantity val2=qh.asQuantity();
       theMeas=MDirection(val1, val2);
       return True;
  }
   else if(str.nelements()==1){
       //Must be a string like sun, moon, jupiter
-	  casa::Quantity val1(0.0, "deg");
-      casa::Quantity val2(90.0, "deg");
+	  casacore::Quantity val1(0.0, "deg");
+      casacore::Quantity val2(90.0, "deg");
       theMeas=MDirection(val1, val2);
       MDirection::Types ref;
       Int numAll;
@@ -2192,7 +2192,7 @@ Int MSUVBin::sepCommaEmptyToVectorStrings(Vector<String>& lesStrings,
     String oneStr=str;
     Int nsep=0;
     // decide if its comma seperated or empty space seperated
-    casa::String sep;
+    casacore::String sep;
     if((nsep=oneStr.freq(",")) > 0){
       sep=",";
     }
@@ -2229,5 +2229,5 @@ Int MSUVBin::sepCommaEmptyToVectorStrings(Vector<String>& lesStrings,
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

@@ -11,7 +11,7 @@
 
 using namespace std;
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 

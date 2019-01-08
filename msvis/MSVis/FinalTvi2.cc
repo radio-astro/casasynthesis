@@ -1,15 +1,15 @@
-#include <casa/aips.h>
-#include <casa/Arrays.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Arrays.h>
 #include <msvis/MSVis/VisibilityIterator2.h>
 #include <msvis/MSVis/FinalTvi2.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
-#include <tables/Tables/RefRows.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/tables/Tables/RefRows.h>
 #include <msvis/MSVis/UtilJ.h>
 #include <msvis/MSVis/VisBuffer2.h>
 
-using namespace casa::utilj;
+using namespace casacore::utilj;
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 
@@ -260,7 +260,7 @@ FinalTvi2::writeModel(const RecordInterface& /*rec*/, Bool /*iscomponentlist*/,
 
 } // end namespace vi
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 
 

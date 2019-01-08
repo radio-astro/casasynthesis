@@ -31,11 +31,11 @@
 #include <imageanalysis/ImageAnalysis/ImageTask.h>
 #include <memory>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 #include <memory>
 
-namespace casa {
+namespace casacore {
 
 class ImagePrimaryBeamCorrector : public ImageTask<Float> {
 	// <summary>

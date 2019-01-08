@@ -27,63 +27,63 @@
 #include <boost/math/special_functions/round.hpp>
 
 
-#include <casa/Quanta/Quantum.h>
-#include <casa/Quanta/UnitMap.h>
-#include <casa/Quanta/UnitVal.h>
-#include <measures/Measures/Stokes.h>
-#include <casa/Quanta/Euler.h>
-#include <casa/Quanta/RotMatrix.h>
-#include <measures/Measures/MFrequency.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
-#include <coordinates/Coordinates/StokesCoordinate.h>
-#include <coordinates/Coordinates/Projection.h>
-#include <ms/MeasurementSets/MSColumns.h>
-#include <casa/BasicSL/Constants.h>
+#include <casacore/casa/Quanta/Quantum.h>
+#include <casacore/casa/Quanta/UnitMap.h>
+#include <casacore/casa/Quanta/UnitVal.h>
+#include <casacore/measures/Measures/Stokes.h>
+#include <casacore/casa/Quanta/Euler.h>
+#include <casacore/casa/Quanta/RotMatrix.h>
+#include <casacore/measures/Measures/MFrequency.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/coordinates/Coordinates/StokesCoordinate.h>
+#include <casacore/coordinates/Coordinates/Projection.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
+#include <casacore/casa/BasicSL/Constants.h>
 #include <synthesis/TransformMachines2/FTMachine.h>
 #include <synthesis/TransformMachines2/SkyJones.h>
-#include <scimath/Mathematics/RigidVector.h>
+#include <casacore/scimath/Mathematics/RigidVector.h>
 #include <synthesis/TransformMachines/StokesImageUtil.h>
 #include <synthesis/TransformMachines/Utils.h>
 #include <msvis/MSVis/VisibilityIterator2.h>
 #include <msvis/MSVis/VisBuffer2.h>
 #include <msvis/MSVis/StokesVector.h>
 #include <msvis/MSVis/MSUtil.h>
-#include <images/Images/ImageInterface.h>
-#include <images/Images/PagedImage.h>
-#include <images/Images/ImageUtilities.h>
-#include <casa/Containers/Block.h>
-#include <casa/Containers/Record.h>
-#include <casa/Arrays/ArrayIter.h>
-#include <casa/Arrays/ArrayLogical.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/MatrixMath.h>
-#include <casa/Arrays/MaskedArray.h>
-#include <casa/Arrays/Array.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/MatrixIter.h>
-#include <casa/BasicSL/String.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/Utilities/BinarySearch.h>
-#include <casa/Exceptions/Error.h>
-#include <scimath/Mathematics/NNGridder.h>
-#include <scimath/Mathematics/ConvolveGridder.h>
-#include <measures/Measures/UVWMachine.h>
+#include <casacore/images/Images/ImageInterface.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/images/Images/ImageUtilities.h>
+#include <casacore/casa/Containers/Block.h>
+#include <casacore/casa/Containers/Record.h>
+#include <casacore/casa/Arrays/ArrayIter.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/MatrixMath.h>
+#include <casacore/casa/Arrays/MaskedArray.h>
+#include <casacore/casa/Arrays/Array.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/MatrixIter.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/Utilities/BinarySearch.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/scimath/Mathematics/NNGridder.h>
+#include <casacore/scimath/Mathematics/ConvolveGridder.h>
+#include <casacore/measures/Measures/UVWMachine.h>
 
-#include <casa/System/ProgressMeter.h>
+#include <casacore/casa/System/ProgressMeter.h>
 
-#include <casa/OS/Timer.h>
-#include <casa/sstream.h>
-#include <casa/iostream.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/casa/sstream.h>
+#include <casacore/casa/iostream.h>
 
 namespace casa{//# CASA namespace
 namespace refim {//# namespace refactor imaging
   
-using namespace casa;
-using namespace casa::refim;
-using namespace casa::vi;
+using namespace casacore;
+using namespace casacore::refim;
+using namespace casacore::vi;
   FTMachine::FTMachine() : image(0), uvwMachine_p(0), 
 			   tangentSpecified_p(False), fixMovingSource_p(False),
 			   distance_p(0.0), lastFieldId_p(-1),lastMSId_p(-1), 
@@ -148,7 +148,7 @@ using namespace casa::vi;
       if(uvwMachine_p)
     	  delete uvwMachine_p;
       if(other.uvwMachine_p)
-	uvwMachine_p=new casa::UVWMachine(*other.uvwMachine_p);
+	uvwMachine_p=new casacore::UVWMachine(*other.uvwMachine_p);
       else
 	uvwMachine_p=0;
       doUVWRotation_p=other.doUVWRotation_p;
@@ -246,7 +246,7 @@ using namespace casa::vi;
 
       // First get the CoordinateSystem for the image and then find
       // the DirectionCoordinate
-      casa::CoordinateSystem coords=image->coordinates();
+      casacore::CoordinateSystem coords=image->coordinates();
       Int directionIndex=coords.findCoordinate(Coordinate::DIRECTION);
       AlwaysAssert(directionIndex>=0, AipsError);
       DirectionCoordinate
@@ -308,11 +308,11 @@ using namespace casa::vi;
       String observatory=ROMSColumns(vb.getVi()->ms()).observation().telescopeName()(0);
       if(observatory.contains("ATCA") || observatory.contains("DRAO")
          || observatory.contains("WSRT")){
-        uvwMachine_p=new casa::UVWMachine(mImage_p, vb.phaseCenter(), mFrame_p,
+        uvwMachine_p=new casacore::UVWMachine(mImage_p, vb.phaseCenter(), mFrame_p,
   				  True, False);
       }
       else{
-        uvwMachine_p=new casa::UVWMachine(mImage_p, vb.phaseCenter(), mFrame_p,
+        uvwMachine_p=new casacore::UVWMachine(mImage_p, vb.phaseCenter(), mFrame_p,
   				  False, tangentSpecified_p);
       }
       AlwaysAssert(uvwMachine_p, AipsError);
@@ -1573,7 +1573,7 @@ using namespace casa::vi;
   //------------  Also, Correlation / Stokes conversions and gS/ggS normalizations.
  
 \
-  void FTMachine::setSkyJones(Vector<CountedPtr<casa::refim::SkyJones> >& sj){
+  void FTMachine::setSkyJones(Vector<CountedPtr<casacore::refim::SkyJones> >& sj){
     sj_p.resize();
     sj_p=sj;
     cout << "FTM : Set Sky Jones of length " << sj_p.nelements() << " and types ";

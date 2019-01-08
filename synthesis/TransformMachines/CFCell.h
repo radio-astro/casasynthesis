@@ -29,12 +29,12 @@
 #define SYNTHESIS_CFCELL_H
 #include <synthesis/TransformMachines/CFDefs.h>
 #include <synthesis/TransformMachines/SynthesisError.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <casa/Logging/LogIO.h>
-#include <casa/Logging/LogSink.h>
-#include <casa/Logging/LogOrigin.h>
-#include <casa/Utilities/CountedPtr.h>
-#include <images/Images/ImageInterface.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/casa/Logging/LogSink.h>
+#include <casacore/casa/Logging/LogOrigin.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
+#include <casacore/images/Images/ImageInterface.h>
 #include <msvis/MSVis/VisBuffer.h>
 //
 // <summary> 
@@ -71,7 +71,7 @@
 // </motivation>
 //
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   typedef Complex TT;
 
   struct  CFCStruct{
@@ -142,5 +142,5 @@ namespace casa { //# NAMESPACE CASA - BEGIN
     Quantity pa_p;
     Vector<Int> cfShape_p;
   };
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 #endif

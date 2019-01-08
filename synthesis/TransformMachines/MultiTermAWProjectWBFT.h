@@ -33,7 +33,7 @@
 
 #include <synthesis/MeasurementComponents/AWProjectWBFT.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   
   class MultiTermAWProjectWBFT : public AWProjectWBFT {
 
@@ -116,6 +116,6 @@ namespace casa { //# NAMESPACE CASA - BEGIN
     void normalizeAvgPB(ImageInterface<Complex>& inImage, ImageInterface<Float>& outImage) 
     {throw(AipsError("MTAWPWBFT::normalizeAvgPB(Complex,Float)"));}
   };
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

@@ -27,10 +27,10 @@
 //----------------------------------------------------------------------------
 
 #include <synthesis/CalTables/GJonesMBuf.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <tables/Tables/RefRows.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/tables/Tables/RefRows.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------------
 
@@ -922,5 +922,5 @@ Array<Double>& GJonesSplineMBuf::splineKnotsPhase()
 //----------------------------------------------------------------------------
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

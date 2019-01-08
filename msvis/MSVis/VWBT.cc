@@ -22,10 +22,10 @@
 
 #include <msvis/MSVis/VWBT.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 VWBT::VWBT(VisibilityIterator *visibilityIterator,
-		   casa::async::Mutex * msAccessMutex,
+		   casacore::async::Mutex * msAccessMutex,
            bool groupRows)
 {
    visibilityIterator_p = visibilityIterator;
@@ -104,7 +104,7 @@ VWBT::run ()
 void
 VWBT::start()
 {
-	casa::async::Thread::startThread();
+	casacore::async::Thread::startThread();
 
 	return;
 }
@@ -117,7 +117,7 @@ VWBT::terminate ()
 	{
 		sched_yield();
 	}
-	casa::async::Thread::terminate();
+	casacore::async::Thread::terminate();
 
 	return;
 }
@@ -176,6 +176,6 @@ VWBT::setFlag(Cube<Bool> flagCube)
 }
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 

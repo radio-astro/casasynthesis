@@ -30,14 +30,14 @@
 #define SYNTHESIS_IPLATCONVEQUATION_H
 
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <synthesis/MeasurementEquations/LatConvEquation.h>
-#include <lattices/LatticeMath/LatticeConvolver.h>
-#include <lattices/Lattices/Lattice.h>
-#include <casa/Arrays/IPosition.h>
-#include <casa/Arrays/Array.h>
+#include <casacore/lattices/LatticeMath/LatticeConvolver.h>
+#include <casacore/lattices/Lattices/Lattice.h>
+#include <casacore/casa/Arrays/IPosition.h>
+#include <casacore/casa/Arrays/Array.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 template <class Domain> class LinearModel;
 
@@ -153,6 +153,6 @@ private:
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

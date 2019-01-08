@@ -1,7 +1,7 @@
 #if ! defined (MSVIS_VisBufferComponents_H)
 #define MSVIS_VisBufferComponents_H
 
-namespace casa {
+namespace casacore {
 
 // <summary>
 //

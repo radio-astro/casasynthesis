@@ -34,7 +34,7 @@
 
 #include <synthesis/TransformMachines/AWProjectWBFT.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   
   class AWProjectWBFTNew : public AWProjectWBFT {
 
@@ -76,6 +76,6 @@ namespace casa { //# NAMESPACE CASA - BEGIN
   private:
 
   };
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

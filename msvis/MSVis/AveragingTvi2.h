@@ -1,12 +1,12 @@
 #if ! defined (Msvis_AveragingTvi2_H_121211_1236)
 #define Msvis_AveragingTvi2_H_121211_1236
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <msvis/MSVis/TransformingVi2.h>
 #include <msvis/MSVis/VisibilityIterator2.h>
 #include <msvis/MSVis/AveragingVi2Factory.h>
 
-namespace casa {
+namespace casacore {
 
 namespace ms {
 

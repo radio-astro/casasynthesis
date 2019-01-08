@@ -31,9 +31,9 @@
 
 // Implementation returned by the factory method
 #include <mstransform/MSTransform/MSTransformIterator.h>
-#include <casa/Utilities/CountedPtr.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
 
-namespace casa {
+namespace casacore {
 
 // <summary>
 // A top level class defining the data handling interface for the MSTransform module
@@ -161,7 +161,7 @@ private:
 	MrsEligibility eligibleSubTables_p;
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 
 #endif /* MSTransformIteratorFactory_H_ */

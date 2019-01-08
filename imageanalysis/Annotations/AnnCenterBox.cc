@@ -17,7 +17,7 @@
 
 #include <imageanalysis/Annotations/AnnCenterBox.h>
 
-namespace casa {
+namespace casacore {
 
 AnnCenterBox::AnnCenterBox(
 	const Quantity& xcenter,

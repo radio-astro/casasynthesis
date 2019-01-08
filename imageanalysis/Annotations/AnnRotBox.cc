@@ -16,7 +16,7 @@
 
 #include <imageanalysis/Annotations/AnnRotBox.h>
 
-namespace casa {
+namespace casacore {
 
 AnnRotBox::AnnRotBox(
 	const Quantity& xcenter,

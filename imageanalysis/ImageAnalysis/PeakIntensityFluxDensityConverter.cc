@@ -28,9 +28,9 @@
 #include <imageanalysis/ImageAnalysis/PeakIntensityFluxDensityConverter.h>
 
 #include <components/ComponentModels/SkyCompRep.h>
-#include <images/Images/ImageUtilities.h>
+#include <casacore/images/Images/ImageUtilities.h>
 
-namespace casa {
+namespace casacore {
 
 PeakIntensityFluxDensityConverter::PeakIntensityFluxDensityConverter(
 		const SPCIIF  image

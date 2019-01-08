@@ -32,7 +32,7 @@
 #include <casadbus/types/variant.h>
 #include <casadbus/types/record.h>
 
-namespace casa {
+namespace casacore {
     namespace dbus {
 
 	typedef std::string std_string;

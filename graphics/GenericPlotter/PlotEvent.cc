@@ -26,7 +26,7 @@
 //# $Id: $
 #include <graphics/GenericPlotter/PlotEvent.h>
 
-namespace casa {
+namespace casacore {
 
 /////////////////////////////////
 // PLOTSELECTEVENT DEFINITIONS //

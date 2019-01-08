@@ -31,24 +31,24 @@
 #define IMAGES_ANTENNARESPONSES_H
 
 //# Includes
-#include <casa/aips.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Exceptions/Error.h>
-#include <measures/Measures/MPosition.h>
-#include <measures/Measures/MDirection.h>
-#include <measures/Measures/MEpoch.h>
-#include <measures/Measures/MFrequency.h>
-#include <measures/Measures/MeasFrame.h>
-#include <measures/Measures/MeasRef.h>
-#include <measures/Measures/MeasTable.h>
-#include <images/Images/TempImage.h>
-#include <casa/OS/Time.h>
-#include <casa/Quanta/MVAngle.h>
-#include <casa/System/AipsrcValue.h>
-#include <casa/BasicSL/String.h>
-#include <casa/iostream.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/measures/Measures/MPosition.h>
+#include <casacore/measures/Measures/MDirection.h>
+#include <casacore/measures/Measures/MEpoch.h>
+#include <casacore/measures/Measures/MFrequency.h>
+#include <casacore/measures/Measures/MeasFrame.h>
+#include <casacore/measures/Measures/MeasRef.h>
+#include <casacore/measures/Measures/MeasTable.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/casa/OS/Time.h>
+#include <casacore/casa/Quanta/MVAngle.h>
+#include <casacore/casa/System/AipsrcValue.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/iostream.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 
 // <summary>
@@ -354,6 +354,6 @@ private:
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

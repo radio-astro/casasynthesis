@@ -26,7 +26,7 @@
 //#
 //# $Id$
 #include <synthesis/TransformMachines/ConvolutionFunction.h>
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   ConvolutionFunction::~ConvolutionFunction() {};
   Matrix<Int> ConvolutionFunction::makeBaselineList(const Vector<Int>& antList)
   {

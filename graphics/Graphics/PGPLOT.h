@@ -28,7 +28,7 @@
 #ifndef GRAPHICS_PGPLOT_H
 #define GRAPHICS_PGPLOT_H
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
 #if !defined(NEED_FORTRAN_UNDERSCORES)
 #define NEED_FORTRAN_UNDERSCORES 1
@@ -52,7 +52,7 @@
  #define MAIN   MAIN_
 #endif
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 
 // <summary>PGPLOT interface calls</summary>
@@ -83,6 +83,6 @@ extern "C" {
 };
 // </group>
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

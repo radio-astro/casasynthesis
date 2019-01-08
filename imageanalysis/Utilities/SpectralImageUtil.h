@@ -28,10 +28,10 @@
 #ifndef SYNTHESIS_SPECTRALIMAGEUTIL_H
 #define SYNTHESIS_SPECTRALIMAGEUTIL_H
 
-#include <images/Images/ImageInterface.h>
-#include <images/Images/SubImage.h>
+#include <casacore/images/Images/ImageInterface.h>
+#include <casacore/images/Images/SubImage.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 class SpectralImageUtil {
 
@@ -45,7 +45,7 @@ class SpectralImageUtil {
 
 };//end of class
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
 

@@ -30,7 +30,7 @@
 #include <string>
 #include <stdarg.h>
 
-namespace casa {
+namespace casacore {
 	namespace dbus {
 
 		class Diagnostic {

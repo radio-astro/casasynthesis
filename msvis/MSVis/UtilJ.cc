@@ -10,10 +10,10 @@
 #include <cstring>
 #include <errno.h>
 
-#include <casa/aips.h>
-#include <casa/aipstype.h>
-#include <casa/BasicSL/String.h>
-#include <casa/Utilities/CountedPtr.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/aipstype.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
 #include <sys/time.h>
 #include <execinfo.h>
 #include <algorithm>
@@ -26,12 +26,12 @@
 using std::max;
 using std::min;
 
-using namespace casa;
+using namespace casacore;
 using namespace std;
 
 #include "UtilJ.h"
 
-namespace casa {
+namespace casacore {
 
 namespace utilj {
 

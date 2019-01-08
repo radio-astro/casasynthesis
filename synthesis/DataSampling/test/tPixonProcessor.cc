@@ -25,11 +25,11 @@
 //#
 //# $Id$
 
-#include <casa/iostream.h>
-#include <casa/aips.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/aips.h>
 #include <synthesis/DataSampling/PixonProcessor.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 int main()
 {
 #ifdef HAVE_IDL_LIB

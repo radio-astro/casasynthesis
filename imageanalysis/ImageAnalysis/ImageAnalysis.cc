@@ -29,38 +29,38 @@
 // PLEASE DO *NOT* ADD ADDITIONAL METHODS TO THIS CLASS
 
 
-#include <casa/aips.h>
-#include <casa/iostream.h>
-#include <casa/sstream.h>
-#include <casa/BasicSL/String.h>
-#include <casa/Arrays/ArrayIO.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/ArrayUtil.h>
-#include <casa/Arrays/MaskedArray.h>
-#include <casa/Arrays/MaskArrMath.h>
-#include <casa/BasicMath/Random.h>
-#include <casa/BasicSL/String.h>
-#include <casa/Containers/Record.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/fstream.h>
-#include <casa/Logging/LogIO.h>
-#include <casa/Logging/LogOrigin.h>
-#include <casa/OS/Directory.h>
-#include <casa/OS/EnvVar.h>
-#include <casa/OS/File.h>
-#include <casa/OS/HostInfo.h>
-#include <casa/OS/RegularFile.h>
-#include <casa/OS/SymLink.h>
-#include <casa/Quanta/QuantumHolder.h>
-#include <casa/Quanta/Quantum.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/Utilities/Regex.h>
-#include <measures/Measures/MeasureHolder.h>
-#include <measures/Measures/MDirection.h>
-#include <measures/Measures/MEpoch.h>
-#include <measures/Measures/MDoppler.h>
-#include <measures/Measures/MFrequency.h>
-#include <measures/Measures/MPosition.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/sstream.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Arrays/ArrayIO.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayUtil.h>
+#include <casacore/casa/Arrays/MaskedArray.h>
+#include <casacore/casa/Arrays/MaskArrMath.h>
+#include <casacore/casa/BasicMath/Random.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Containers/Record.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/fstream.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/casa/Logging/LogOrigin.h>
+#include <casacore/casa/OS/Directory.h>
+#include <casacore/casa/OS/EnvVar.h>
+#include <casacore/casa/OS/File.h>
+#include <casacore/casa/OS/HostInfo.h>
+#include <casacore/casa/OS/RegularFile.h>
+#include <casacore/casa/OS/SymLink.h>
+#include <casacore/casa/Quanta/QuantumHolder.h>
+#include <casacore/casa/Quanta/Quantum.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/Utilities/Regex.h>
+#include <casacore/measures/Measures/MeasureHolder.h>
+#include <casacore/measures/Measures/MDirection.h>
+#include <casacore/measures/Measures/MEpoch.h>
+#include <casacore/measures/Measures/MDoppler.h>
+#include <casacore/measures/Measures/MFrequency.h>
+#include <casacore/measures/Measures/MPosition.h>
 #include <components/ComponentModels/ComponentList.h>
 #include <components/ComponentModels/ComponentShape.h>
 #include <components/ComponentModels/GaussianShape.h>
@@ -68,62 +68,62 @@
 #include <components/ComponentModels/SkyCompRep.h>
 #include <components/ComponentModels/TwoSidedShape.h>
 #include <components/SpectralComponents/SpectralElement.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <coordinates/Coordinates/StokesCoordinate.h>
-#include <coordinates/Coordinates/CoordinateUtil.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
-#include <coordinates/Coordinates/GaussianConvert.h>
-#include <coordinates/Coordinates/LinearCoordinate.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/coordinates/Coordinates/StokesCoordinate.h>
+#include <casacore/coordinates/Coordinates/CoordinateUtil.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/coordinates/Coordinates/GaussianConvert.h>
+#include <casacore/coordinates/Coordinates/LinearCoordinate.h>
 #include <imageanalysis/ImageAnalysis/ComponentImager.h>
 #include <imageanalysis/ImageAnalysis/ImageConvolver.h>
-#include <images/Images/ImageExprParse.h>
-#include <images/Images/ImageFITSConverter.h>
-#include <images/Regions/WCEllipsoid.h>
+#include <casacore/images/Images/ImageExprParse.h>
+#include <casacore/images/Images/ImageFITSConverter.h>
+#include <casacore/images/Regions/WCEllipsoid.h>
 #include <imageanalysis/ImageAnalysis/ImageHistograms.h>
 #include <imageanalysis/ImageAnalysis/ImageMoments.h>
-#include <images/Images/ImageOpener.h>
-#include <images/Regions/ImageRegion.h>
-#include <images/Images/ImageRegrid.h>
-#include <images/Images/ImageStatistics.h>
+#include <casacore/images/Images/ImageOpener.h>
+#include <casacore/images/Regions/ImageRegion.h>
+#include <casacore/images/Images/ImageRegrid.h>
+#include <casacore/images/Images/ImageStatistics.h>
 #include <imageanalysis/ImageAnalysis/ImageTwoPtCorr.h>
-#include <images/Images/ImageUtilities.h>
-#include <images/Images/LELImageCoord.h>
-#include <images/Images/PagedImage.h>
-#include <images/Regions/RegionManager.h>
+#include <casacore/images/Images/ImageUtilities.h>
+#include <casacore/images/Images/LELImageCoord.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/images/Regions/RegionManager.h>
 #include <imageanalysis/ImageAnalysis/SepImageConvolver.h>
 #include <imageanalysis/ImageAnalysis/SubImageFactory.h>
-#include <images/Images/TempImage.h>
-#include <images/Regions/WCLELMask.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/images/Regions/WCLELMask.h>
 #include <imageanalysis/ImageAnalysis/ImageAnalysis.h>
 #include <imageanalysis/ImageAnalysis/ImageDecomposer.h>
 #include <imageanalysis/ImageAnalysis/ImageFactory.h>
 #include <imageanalysis/ImageAnalysis/ImageSourceFinder.h>
 #include <imageanalysis/ImageAnalysis/PixelValueManipulator.h>
-#include <lattices/LatticeMath/LatticeFit.h>
-#include <lattices/LatticeMath/LatticeAddNoise.h>
-#include <lattices/LEL/LatticeExprNode.h>
-#include <lattices/LEL/LatticeExprNode.h>
-#include <lattices/Lattices/LatticeIterator.h>
-#include <lattices/LRegions/LatticeRegion.h>
-#include <lattices/LatticeMath/LatticeSlice1D.h>
-#include <lattices/Lattices/LatticeUtilities.h>
-#include <lattices/LRegions/LCBox.h>
-#include <lattices/LRegions/LCSlicer.h>
-#include <lattices/Lattices/MaskedLatticeIterator.h>
-#include <lattices/Lattices/PixelCurve1D.h>
-#include <lattices/LRegions/RegionType.h>
-#include <lattices/Lattices/TiledLineStepper.h>
-#include <scimath/Fitting/LinearFitSVD.h>
-#include <scimath/Functionals/Polynomial.h>
-#include <scimath/Mathematics/VectorKernel.h>
-#include <tables/LogTables/NewFile.h>
-#include <images/Images/FITSImage.h>
-#include <images/Images/MIRIADImage.h>
+#include <casacore/lattices/LatticeMath/LatticeFit.h>
+#include <casacore/lattices/LatticeMath/LatticeAddNoise.h>
+#include <casacore/lattices/LEL/LatticeExprNode.h>
+#include <casacore/lattices/LEL/LatticeExprNode.h>
+#include <casacore/lattices/Lattices/LatticeIterator.h>
+#include <casacore/lattices/LRegions/LatticeRegion.h>
+#include <casacore/lattices/LatticeMath/LatticeSlice1D.h>
+#include <casacore/lattices/Lattices/LatticeUtilities.h>
+#include <casacore/lattices/LRegions/LCBox.h>
+#include <casacore/lattices/LRegions/LCSlicer.h>
+#include <casacore/lattices/Lattices/MaskedLatticeIterator.h>
+#include <casacore/lattices/Lattices/PixelCurve1D.h>
+#include <casacore/lattices/LRegions/RegionType.h>
+#include <casacore/lattices/Lattices/TiledLineStepper.h>
+#include <casacore/scimath/Fitting/LinearFitSVD.h>
+#include <casacore/scimath/Functionals/Polynomial.h>
+#include <casacore/scimath/Mathematics/VectorKernel.h>
+#include <casacore/tables/LogTables/NewFile.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/images/Images/MIRIADImage.h>
 
-#include <casa/OS/PrecTimer.h>
+#include <casacore/casa/OS/PrecTimer.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 #include <memory>
 
@@ -131,7 +131,7 @@
 using namespace std;
 #include <boost/math/constants/constants.hpp>
 
-namespace casa { //# name space casa begins
+namespace casacore { //# name space casa begins
 
 ImageAnalysis::ImageAnalysis() :
 	_imageFloat(), _imageComplex(), _histograms(),
@@ -682,7 +682,7 @@ void ImageAnalysis::calc(const String& expr, Bool verbose) {
 	_makeRegionBlock(tempRegs, regions);
 	LatticeExprNode node = ImageExprParse::command(newexpr, temps, tempRegs);
 	DataType type = node.dataType();
-	Bool isReal = casa::isReal(type);
+	Bool isReal = casacore::isReal(type);
 	ostringstream os;
 	os << type;
 	ThrowIf(

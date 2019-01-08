@@ -22,7 +22,7 @@ using namespace CppUnit;
 
 int main (int argc, char * args []);
 
-namespace casa {
+namespace casacore {
 
 namespace vpf {
 
@@ -48,7 +48,7 @@ public:
 
     static VpTests & singleton ();
 
-    static const casa::String Visibility;
+    static const casacore::String Visibility;
 
 protected:
 

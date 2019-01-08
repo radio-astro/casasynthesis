@@ -26,11 +26,11 @@
 //# $Id: tImageMetaData.cc 20749 2009-09-30 14:24:05Z gervandiepen $
 
 #include <imageanalysis/ImageAnalysis/ImageMetaData.h>
-#include <images/Images/FITSImage.h>
-#include <casa/OS/Path.h>
-#include <casa/OS/EnvVar.h>
-#include <casa/namespace.h>
-#include <casa/OS/File.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/casa/OS/Path.h>
+#include <casacore/casa/OS/EnvVar.h>
+#include <casacore/casa/namespace.h>
+#include <casacore/casa/OS/File.h>
 
 int main() {
     try {

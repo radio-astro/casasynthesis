@@ -27,12 +27,12 @@
 
 #include <imageanalysis/ImageAnalysis/ImageTransposer.h>
 
-#include <casa/OS/Directory.h>
-#include <casa/OS/EnvVar.h>
-#include <images/Images/FITSImage.h>
-#include <images/Images/PagedImage.h>
+#include <casacore/casa/OS/Directory.h>
+#include <casacore/casa/OS/EnvVar.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/images/Images/PagedImage.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 #include <memory>
 #include <sys/types.h>

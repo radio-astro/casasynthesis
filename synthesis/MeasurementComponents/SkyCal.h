@@ -29,9 +29,9 @@
 #ifndef _SYNTHESIS_SKY_CAL_H_
 #define _SYNTHESIS_SKY_CAL_H_
 
-#include <casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/Matrix.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary>
 //#! A one line summary of the class.   This summary (shortened a bit
@@ -294,7 +294,7 @@ private:
   SkyCal(const SkyCal<DataType, CalDataType>& mat);
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 //#include <synthesis/MeasurementComponents/SkyCal.tcc>
 

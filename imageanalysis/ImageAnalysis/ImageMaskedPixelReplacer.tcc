@@ -29,7 +29,7 @@
 
 #include <imageanalysis/ImageAnalysis/SubImageFactory.h>
 
-namespace casa {
+namespace casacore {
 
 template <class T>
 const String ImageMaskedPixelReplacer<T>::_class = "ImageMaskedPixelReplacer";
@@ -92,7 +92,7 @@ void ImageMaskedPixelReplacer<T>::replace(
 	_makeRegionBlock(tempRegs, Record());
 	// Create the LEL expression we need.  It's like  replace(lattice, pixels)
 	// where pixels is an expression itself.
-	LatticeExprNode node2 = casa::replace(subImage, node);
+	LatticeExprNode node2 = casacore::replace(subImage, node);
 	// Do it
 	subImage.copyData(LatticeExpr<T> (node2));
 

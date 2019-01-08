@@ -28,10 +28,10 @@
 #ifndef SYNTHESIS_SIMPLEPBCONVFUNC_H
 #define SYNTHESIS_SIMPLEPBCONVFUNC_H
 
-#include <casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/Vector.h>
 #include <synthesis/TransformMachines/PBMathInterface.h>
-#include <casa/Containers/Block.h>
-#include <casa/Utilities/CountedPtr.h>
+#include <casacore/casa/Containers/Block.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
 #include <msvis/MSVis/VisBufferUtil.h>
 
 #include <wcslib/wcsconfig.h>  /** HAVE_SINCOS **/

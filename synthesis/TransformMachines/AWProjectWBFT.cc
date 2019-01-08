@@ -29,20 +29,20 @@
 #include <synthesis/TransformMachines/AWProjectWBFT.h>
 #include <synthesis/TransformMachines/AWVisResampler.h>
 #include <synthesis/TransformMachines/StokesImageUtil.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <scimath/Mathematics/FFTServer.h>
-#include <scimath/Mathematics/Convolver.h>
-#include <lattices/LatticeMath/LatticeFFT.h>
-#include <images/Images/ImageInterface.h>
-#include <images/Images/PagedImage.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/scimath/Mathematics/FFTServer.h>
+#include <casacore/scimath/Mathematics/Convolver.h>
+#include <casacore/lattices/LatticeMath/LatticeFFT.h>
+#include <casacore/images/Images/ImageInterface.h>
+#include <casacore/images/Images/PagedImage.h>
 #include <msvis/MSVis/VisBuffer.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Arrays/Slice.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/Array.h>
-#include <casa/OS/HostInfo.h>
-#include <casa/sstream.h>
-#include <casa/Utilities/CompositeNumber.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/Slice.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/Array.h>
+#include <casacore/casa/OS/HostInfo.h>
+#include <casacore/casa/sstream.h>
+#include <casacore/casa/Utilities/CompositeNumber.h>
 
 #define CONVSIZE (1024*4)
 #define OVERSAMPLING 10
@@ -51,7 +51,7 @@
 #define MAXPOINTINGERROR 250.0 // Max. pointing error in arcsec used to
 // determine the resolution of the
 // tabulated exp() function.
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   //
   //---------------------------------------------------------------
   //
@@ -1473,4 +1473,4 @@ namespace casa { //# NAMESPACE CASA - BEGIN
   };
   //  void AWProjectWBFT::resampleGridToData(VBStore& vbs, const VisBuffer& vb) {};
   
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END

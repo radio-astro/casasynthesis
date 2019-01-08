@@ -29,9 +29,9 @@
 
 #include <graphics/GenericPlotter/PlotEventHandler.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 // Abstract superclass for any widget that goes on a PlotPanel.
 class PlotWidget {

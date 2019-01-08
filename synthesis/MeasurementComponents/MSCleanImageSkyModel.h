@@ -30,9 +30,9 @@
 #define SYNTHESIS_MSCLEANIMAGESKYMODEL_H
 
 #include <synthesis/MeasurementComponents/CleanImageSkyModel.h>
-#include <lattices/LatticeMath/LatticeCleanProgress.h>
+#include <casacore/lattices/LatticeMath/LatticeCleanProgress.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //forward
 class SkyEquation;
@@ -125,7 +125,7 @@ private:
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
 

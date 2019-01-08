@@ -27,15 +27,15 @@
 #ifndef PLOTOPERATION_H_
 #define PLOTOPERATION_H_
 
-#include <casa/BasicSL/String.h>
-#include <casa/Utilities/CountedPtr.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
 
 #include <vector>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 using namespace std;
 
-namespace casa {
+namespace casacore {
 
 //# Forward Declarations
 class PlotOperationWatcher;

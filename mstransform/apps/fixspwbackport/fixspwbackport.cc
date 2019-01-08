@@ -32,18 +32,18 @@
  *  Created on: Oct 06, 2014
  *      Author: kgolap
  */
-#include <casa/Inputs/Input.h>
-#include <casa/aips.h>
-#include <casa/Containers/Record.h>
-#include <casa/Containers/RecordInterface.h>
-#include <casa/IO/AipsIO.h>
-#include <tables/Tables/TableProxy.h>
-#include <tables/Tables/TableIter.h>
-#include <tables/Tables/TableColumn.h>
-#include <tables/Tables/TableRecord.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <casa/namespace.h>
+#include <casacore/casa/Inputs/Input.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Containers/Record.h>
+#include <casacore/casa/Containers/RecordInterface.h>
+#include <casacore/casa/IO/AipsIO.h>
+#include <casacore/tables/Tables/TableProxy.h>
+#include <casacore/tables/Tables/TableIter.h>
+#include <casacore/tables/Tables/TableColumn.h>
+#include <casacore/tables/Tables/TableRecord.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/casa/namespace.h>
 #include <iomanip>
 using namespace std;
 

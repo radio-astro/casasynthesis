@@ -28,10 +28,10 @@
 #include <boost/thread/locks.hpp>
 
 /* Records Interface */
-#include <casa/Containers/Record.h>
+#include <casacore/casa/Containers/Record.h>
 #include <math.h>						// For FLT_MAX
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 	////////////////////////////////////
 	/// SIIterBot_callback implementation ///
@@ -580,7 +580,7 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 		  {
 		    Quantity thresh; 
 		    // If it cannot be converted to a Quantity.... complain, and use zero.
-		    if( ! casa::Quantity::read( thresh, recordIn.asString( RecordFieldId(id) ) ) )
+		    if( ! casacore::Quantity::read( thresh, recordIn.asString( RecordFieldId(id) ) ) )
 		      {os << LogIO::WARN << "Cannot parse threshold value. Setting to zero." << LogIO::POST;  
 			fthresh=0.0;}
 		    // If converted to Quantity, get value in Jy. 
@@ -654,5 +654,5 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 #endif
 	}
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

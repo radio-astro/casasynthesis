@@ -33,7 +33,7 @@
 #include <msvis/MSVis/UtilJ.h>
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 namespace vi { //# NAMESPACE VI - BEGIN
 
 
@@ -107,6 +107,6 @@ vi::ViImplementation2 * LayeredVi2Factory::createVi (vi::VisibilityIterator2 * v
 }
 
 } //# NAMESPACE VI - END
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 

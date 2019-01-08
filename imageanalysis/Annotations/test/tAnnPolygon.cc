@@ -25,14 +25,14 @@
 //#
 //# $Id: tWCLELMask.cc 20567 2009-04-09 23:12:39Z gervandiepen $
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <imageanalysis/Annotations/AnnPolygon.h>
 
-#include <coordinates/Coordinates/CoordinateUtil.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/coordinates/Coordinates/CoordinateUtil.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 #include <iomanip>
 
 

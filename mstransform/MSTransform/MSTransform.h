@@ -36,7 +36,7 @@
 #include <casacore/casa/Quanta/Quantum.h>
 #include <mstransform/MSTransform/MSTransformManager.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary>
 // MSTransform: Apply transformations to data on the fly
@@ -165,7 +165,7 @@ private:
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
 

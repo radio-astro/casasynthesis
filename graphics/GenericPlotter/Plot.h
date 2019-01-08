@@ -30,11 +30,11 @@
 #include <graphics/GenericPlotter/PlotData.h>
 #include <graphics/GenericPlotter/PlotItem.h>
 
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/BasicSL/String.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 // A Plot basically consists of data and customization information.  The data
 // is held by the base class whereas any customization should be handled in

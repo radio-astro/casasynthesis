@@ -26,16 +26,16 @@
 //# $Id: tImageRegrid.cc 20567 2009-04-09 23:12:39Z gervandiepen $
 
 //# Includes
-#include <coordinates/Coordinates/CoordinateUtil.h>
-#include <images/Images/TempImage.h>
+#include <casacore/coordinates/Coordinates/CoordinateUtil.h>
+#include <casacore/images/Images/TempImage.h>
 #include <imageanalysis/ImageAnalysis/Image2DConvolver.h>
 #include <imageanalysis/ImageAnalysis/ImageMoments.h>
-#include <casa/Arrays/ArrayLogical.h>
-#include <casa/Logging/LogIO.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/iostream.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/iostream.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 int main () {
 
 	try {

@@ -28,11 +28,11 @@
 #ifndef IMAGESANALYSIS_SUBIMAGEFACTORY_H
 #define IMAGESANALYSIS_SUBIMAGEFACTORY_H
 
-#include <images/Images/SubImage.h>
+#include <casacore/images/Images/SubImage.h>
 
 #include <imageanalysis/ImageTypedefs.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary>
 // Static methods for subimage creation
@@ -88,7 +88,7 @@ public:
 	  CountedPtr<ImageRegion>& outRegion, CountedPtr<ImageRegion>& outMask,
       ImageInterface<T>& inImage, const Record& region,
       const String& mask, LogIO *const &os, Bool writableIfPossible,
-      const AxesSpecifier& axesSpecifier=casa::AxesSpecifier(),
+      const AxesSpecifier& axesSpecifier=casacore::AxesSpecifier(),
       Bool extendMask=False, Bool preserveAxesOrder=False
   );
 
@@ -97,7 +97,7 @@ public:
   static SubImage<T> createSubImage(
       ImageInterface<T>& inImage, const Record& region,
       const String& mask, LogIO *const &os, Bool writableIfPossible,
-      const AxesSpecifier& axesSpecifier=casa::AxesSpecifier(),
+      const AxesSpecifier& axesSpecifier=casacore::AxesSpecifier(),
       Bool extendMask=False, Bool preserveAxesOrder=False
   );
 
@@ -130,7 +130,7 @@ public:
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #ifndef CASACORE_NO_AUTO_TEMPLATES
 #include <imageanalysis/ImageAnalysis/SubImageFactory.tcc>

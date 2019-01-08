@@ -29,11 +29,11 @@
 #define SYNTHESIS_SYNTHESISERROR_H
 
 //# Includes
-#include <casa/aips.h>
-#include <casa/Exceptions/Error.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Exceptions/Error.h>
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
   //# This header file defines the error classes thrown by the
   //# Synthesis module and related classes.
@@ -104,6 +104,6 @@ namespace casa { //# NAMESPACE CASA - BEGIN
     CFNotCached(const String& message, Category c=GENERAL);
     ~CFNotCached() throw();
   };
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

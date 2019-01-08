@@ -28,14 +28,14 @@
 #ifndef MSVIS_GROUPWORKER_H
 #define MSVIS_GROUPWORKER_H
 
-#include <casa/aips.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
-#include <ms/MeasurementSets/MSColumns.h>
+#include <casacore/casa/aips.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
 #include <msvis/MSVis/VisibilityIterator.h>
 #include <msvis/MSVis/VisBufferComponents.h>
 #include <msvis/MSVis/VBRemapper.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //# forward decl
 class VisBuffGroup;
@@ -219,7 +219,7 @@ private:
   GroupWriteToNewMS();
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
 

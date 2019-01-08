@@ -29,11 +29,11 @@
 #define IMAGES_PVGENERATOR_H
 
 #include <imageanalysis/ImageAnalysis/ImageTask.h>
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 class MDirection;
 
-namespace casa {
+namespace casacore {
 
 class PVGenerator : public ImageTask<Float> {
 	// <summary>

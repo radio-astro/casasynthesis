@@ -28,9 +28,9 @@
 
 #include <imageanalysis/ImageAnalysis/PixelValueManipulator.h>
 #include <imageanalysis/ImageAnalysis/ImageCollapserData.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <images/Images/TempImage.h>
-#include <casa/namespace.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/casa/namespace.h>
 
 void writeTestString(const String& test) {
     cout << "\n" << "*** " << test << " ***" << endl;

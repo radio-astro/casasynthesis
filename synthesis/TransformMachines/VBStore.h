@@ -30,7 +30,7 @@
 #include <synthesis/TransformMachines/Utils.h>
 #include <synthesis/TransformMachines/CFBuffer.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   class VBStore
   {
   public:
@@ -105,5 +105,5 @@ namespace casa { //# NAMESPACE CASA - BEGIN
     Matrix<uInt> BLCXi, BLCYi, TRCXi, TRCYi;
   };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 #endif

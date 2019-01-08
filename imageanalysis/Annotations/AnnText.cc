@@ -26,7 +26,7 @@
 
 #include <imageanalysis/Annotations/AnnText.h>
 
-namespace casa {
+namespace casacore {
 
 AnnText::AnnText(
 	const Quantity& xPos, const Quantity& yPos,

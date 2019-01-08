@@ -32,7 +32,7 @@
 #include <synthesis/CalTables/SolvableVJTable.h>
 #include <synthesis/CalTables/GJonesDesc.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> 
 // GJonesPolyTable: GJonesPoly calibration table access/creation
@@ -139,7 +139,7 @@ class GJonesSplineTable : public GJonesPolyTable
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
    

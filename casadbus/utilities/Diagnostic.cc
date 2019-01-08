@@ -40,7 +40,7 @@
 extern "C" char **environ;
 #endif
 
-namespace casa {
+namespace casacore {
 	namespace dbus {
 
 		unsigned long init_diagnostic_object_t::count = 0;

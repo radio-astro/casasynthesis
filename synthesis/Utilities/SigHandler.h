@@ -26,7 +26,7 @@
 //#
 //# $Id$
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <iostream>
 #include <signal.h>
 
@@ -38,7 +38,7 @@
 #define SYNTHESIS_SIGHANDLER_H
 
 
-namespace casa {
+namespace casacore {
 
 
 class SigHandler  {

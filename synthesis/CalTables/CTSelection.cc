@@ -26,21 +26,21 @@
 //# $Id$
 //----------------------------------------------------------------------------
 
-#include <ms/MSSel/MSObservationGram.h>
-#include <ms/MSSel/MSScanGram.h>
+#include <casacore/ms/MSSel/MSObservationGram.h>
+#include <casacore/ms/MSSel/MSScanGram.h>
 #include <synthesis/CalTables/CTSelection.h>
-#include <ms/MeasurementSets/MSColumns.h>
-#include <ms/MSSel/MSAntennaGram.h>
-#include <ms/MSSel/MSCorrGram.h>
-#include <ms/MSSel/MSFieldGram.h>
-#include <ms/MSSel/MSSpwGram.h>
-#include <ms/MSSel/MSTimeGram.h>
-#include <ms/MSSel/MSPolnGram.h>
-//#include <casa/Containers/Record.h>
-#include <tables/TaQL/RecordGram.h>
-#include <ms/MSSel/MSAntennaParse.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
+#include <casacore/ms/MSSel/MSAntennaGram.h>
+#include <casacore/ms/MSSel/MSCorrGram.h>
+#include <casacore/ms/MSSel/MSFieldGram.h>
+#include <casacore/ms/MSSel/MSSpwGram.h>
+#include <casacore/ms/MSSel/MSTimeGram.h>
+#include <casacore/ms/MSSel/MSPolnGram.h>
+//#include <casacore/casa/Containers/Record.h>
+#include <casacore/tables/TaQL/RecordGram.h>
+#include <casacore/ms/MSSel/MSAntennaParse.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
   //
   //----------------------------------------------------------------------------
@@ -278,5 +278,5 @@ namespace casa { //# NAMESPACE CASA - BEGIN
     deleteNodes();
     return condition;
   };
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

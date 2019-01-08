@@ -30,13 +30,13 @@
 
 #include <imageanalysis/ImageTypedefs.h>
 
-#include <casa/Arrays/Array.h>
-#include <casa/BasicSL/String.h>
-#include <casa/Logging/LogOrigin.h>
-#include <casa/namespace.h>
+#include <casacore/casa/Arrays/Array.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Logging/LogOrigin.h>
+#include <casacore/casa/namespace.h>
 #include <utility>
 #include <vector>
-namespace casa {
+namespace casacore {
 
 class CoordinateSystem;
 class IPosition;
@@ -137,8 +137,8 @@ private:
 
     // Convert a Record to a CoordinateSystem
     static CoordinateSystem* _makeCoordinateSystem(
-        const casa::Record& cSys,
-        const casa::IPosition& shape
+        const casacore::Record& cSys,
+        const casacore::IPosition& shape
     );
 };
 }

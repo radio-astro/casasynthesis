@@ -1,9 +1,9 @@
 #include <imageanalysis/ImageAnalysis/ImageCollapserData.h>
 
-#include <casa/BasicSL/String.h>
-#include <casa/Exceptions/Error.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Exceptions/Error.h>
 
-namespace casa {
+namespace casacore {
 
 std::map<uInt, String> *ImageCollapserData::_funcNameMap = 0;
 std::map<uInt, String> *ImageCollapserData::_minMatchMap = 0;

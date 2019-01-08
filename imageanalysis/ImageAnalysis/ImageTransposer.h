@@ -32,7 +32,7 @@
 #include <imageanalysis/ImageAnalysis/ImageTask.h>
 #include <memory>
 
-namespace casa {
+namespace casacore {
 class ImageTransposer : public ImageTask<Float> {
     // <summary>
       // Top level interface for transposing image axes

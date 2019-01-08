@@ -27,17 +27,17 @@
 
 
 namespace {
-  casa::vi::CalibratingVi2FactoryI* generateCViFac(casa::MeasurementSet* ms, 
-						   const casa::Record& calrec,
-						   const casa::vi::IteratingParameters& iterpar) {
-    return new casa::vi::CalibratingVi2Factory(ms,calrec,iterpar);  // A concrete one from the synthesis side
+  casacore::vi::CalibratingVi2FactoryI* generateCViFac(casacore::MeasurementSet* ms, 
+						   const casacore::Record& calrec,
+						   const casacore::vi::IteratingParameters& iterpar) {
+    return new casacore::vi::CalibratingVi2Factory(ms,calrec,iterpar);  // A concrete one from the synthesis side
   }
 
-  bool initCViFacGenerator = casa::vi::CalibratingVi2FactoryI::setGenerator(generateCViFac);
+  bool initCViFacGenerator = casacore::vi::CalibratingVi2FactoryI::setGenerator(generateCViFac);
 
 }
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 namespace vi { //# NAMESPACE VI - BEGIN
 
 
@@ -118,6 +118,6 @@ vi::ViImplementation2 * CalibratingVi2Factory::createVi (vi::VisibilityIterator2
 }
 
 } //# NAMESPACE VI - END
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 

@@ -27,15 +27,15 @@
 
 #include <imageanalysis/IO/LogFile.h>
 
-#include <casa/Exceptions/Error.h>
-#include <casa/OS/File.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/OS/File.h>
 #include <imageanalysis/IO/OutputDestinationChecker.h>
 
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 
-namespace casa {
+namespace casacore {
 
 LogFile::LogFile(const String& filename) :
 	_filename(filename), _append(False), _fileHandle(-1),

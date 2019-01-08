@@ -23,17 +23,17 @@
 //#                        Charlottesville, VA 22903-2475 USA
 //#
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <imageanalysis/Annotations/AnnRectBox.h>
 #include <imageanalysis/Annotations/RegionTextList.h>
 
-#include <coordinates/Coordinates/CoordinateUtil.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/coordinates/Coordinates/CoordinateUtil.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
 
-#include <images/Images/PagedImage.h>
+#include <casacore/images/Images/PagedImage.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 #include <iomanip>
 

@@ -41,12 +41,12 @@
 
 #include <map>
 
-//using namespace casa::async;
-using casa::asyncio::RoviaModifiers;
-using casa::utilj::ThreadTimes;
-using casa::utilj::DeltaThreadTimes;
+//using namespace casacore::async;
+using casacore::asyncio::RoviaModifiers;
+using casacore::utilj::ThreadTimes;
+using casacore::utilj::DeltaThreadTimes;
 
-namespace casa {
+namespace casacore {
 
 template<typename T> class Block;
 class MeasurementSet;
@@ -210,7 +210,7 @@ VlatFunctor1<Ret, Arg> * vlatFunctor1 (Ret (VisBuffer::* f) (Arg), Arg i)
 // <todo asof="yyyy/mm/dd">
 // </todo>
 
-class VLAT : public casa::async::Thread {
+class VLAT : public casacore::async::Thread {
 
 public:
 

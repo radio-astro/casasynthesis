@@ -17,10 +17,10 @@
 #ifndef ANNOTATIONS_ANNCIRCLE_H
 #define ANNOTATIONS_ANNCIRCLE_H
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <imageanalysis/Annotations/AnnRegion.h>
 
-namespace casa {
+namespace casacore {
 
 // <summary>
 // This class represents an annotation for a circular (in position coordinates) region specified

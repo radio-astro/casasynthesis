@@ -11,7 +11,7 @@
 
 namespace edu {
 namespace nrao {
-namespace casa {
+namespace casacore {
 
 class plotserver_proxy
 : public ::DBus::InterfaceProxy

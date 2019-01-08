@@ -1,7 +1,7 @@
-#include <casa/Inputs/Input.h>
-#include <images/Images/ImageUtilities.h>
+#include <casacore/casa/Inputs/Input.h>
+#include <casacore/images/Images/ImageUtilities.h>
 #include <imageanalysis/ImageAnalysis/ImageCollapser.h>
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 Int main(Int argc, char *argv[]) {
 	Input input(1);

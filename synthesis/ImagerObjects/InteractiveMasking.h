@@ -27,15 +27,15 @@
 //# $Id$
 #ifndef SYNTHESIS_INTERACTIVEMASKING_H
 #define SYNTHESIS_INTERACTIVEMASKING_H
-#include <casa/Logging/LogIO.h>
-#include <casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/casa/Logging/LogMessage.h>
 
 #include <casadbus/viewer/ViewerProxy.h>
 #include <casadbus/plotserver/PlotServerProxy.h>
 #include <casadbus/utilities/BusAccess.h>
 #include <casadbus/session/DBusSession.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   Bool clone(const String& imageName, const String& newImageName);
   class ViewerProxy;
   
@@ -43,7 +43,7 @@ namespace casa { //# NAMESPACE CASA - BEGIN
   {
   public:
     new_interactive_clean_callback( ) { }
-    casa::dbus::variant result( ) { return casa::dbus::toVariant(result_); }
+    casacore::dbus::variant result( ) { return casacore::dbus::toVariant(result_); }
     bool callback( const DBus::Message & msg );
   private:
     DBus::Variant result_;

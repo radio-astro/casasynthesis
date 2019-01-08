@@ -17,9 +17,9 @@
 
 #include <imageanalysis/Annotations/AnnRectBox.h>
 
-#include <coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
 
-namespace casa {
+namespace casacore {
 
 AnnRectBox::AnnRectBox(
 	const Quantity& blcx,

@@ -27,9 +27,9 @@
 
 #include <imageanalysis/ImageAnalysis/ImageFactory.h>
 
-#include <images/Images/ImageUtilities.h>
+#include <casacore/images/Images/ImageUtilities.h>
 
-namespace casa {
+namespace casacore {
 
 SPIIF ImageFactory::floatImageFromShape(
 		const String& outfile, const Vector<Int>& shape,

@@ -29,17 +29,17 @@
 #include <msvis/MSVis/VisBuffer.h>
 #include <msvis/MSVis/VisBufferAsyncWrapper.h>
 #include <msvis/MSVis/UtilJ.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/ArrayLogical.h>
-#include <casa/Arrays/MaskedArray.h>
-#include <casa/Arrays/MaskArrMath.h>
-#include <casa/Arrays/ArrayUtil.h>
-#include <casa/OS/Path.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Arrays/MaskedArray.h>
+#include <casacore/casa/Arrays/MaskArrMath.h>
+#include <casacore/casa/Arrays/ArrayUtil.h>
+#include <casacore/casa/OS/Path.h>
 #include <components/ComponentModels/ComponentList.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/Utilities/GenSort.h>
-#include <casa/OS/Timer.h>
-#include <ms/MeasurementSets/MSColumns.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/Utilities/GenSort.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
 
 #define CheckVisIter() checkVisIter (__func__, __FILE__, __LINE__)
 #define CheckVisIter1(s) checkVisIter (__func__, __FILE__, __LINE__,s)
@@ -52,7 +52,7 @@
 //    {if (VlaData::loggingInitialized_p && level <= VlaData::logLevel_p) \
 //         Logger::log (__VA_ARGS__);};
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 VisBuffer::VisBuffer()
     : corrSorted_p(False),
@@ -3143,5 +3143,5 @@ VbDirtyComponents::these (VisBufferComponents::EnumType component, ...)
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

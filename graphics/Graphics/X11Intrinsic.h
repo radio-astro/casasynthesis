@@ -51,7 +51,7 @@
 #endif
 #include <X11/Intrinsic.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> Make sure some definitions ok</summary>
 // <reviewed reviewer="UNKNOWN" date="before2004/08/25" tests="" demos="">
@@ -65,6 +65,6 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 // </group>
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

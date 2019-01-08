@@ -26,7 +26,7 @@
 #include <components/ComponentModels/GaussianDeconvolver.h>
 #include <imageanalysis/ImageAnalysis/CasaImageBeamSet.h>
 
-namespace casa {
+namespace casacore {
 
 CasaImageBeamSet::CasaImageBeamSet() : ImageBeamSet() {}
 

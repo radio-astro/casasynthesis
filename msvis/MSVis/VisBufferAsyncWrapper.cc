@@ -1,10 +1,10 @@
 #include <msvis/MSVis/VisBufferAsyncWrapper.h>
 
 #include "AsynchronousTools.h"
-using namespace casa::async;
+using namespace casacore::async;
 
 #include "UtilJ.h"
-using namespace casa::utilj;
+using namespace casacore::utilj;
 
 #include <msvis/MSVis/AsynchronousInterface.h>
 #include <msvis/MSVis/VisibilityIteratorImplAsync.h>
@@ -16,10 +16,10 @@ using namespace casa::utilj;
         }
 
 #define Log(level, ...) \
-    {if (casa::asyncio::AsynchronousInterface::logThis (level)) \
+    {if (casacore::asyncio::AsynchronousInterface::logThis (level)) \
          Logger::get()->log (__VA_ARGS__);};
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 VisBufferAsyncWrapper::VisBufferAsyncWrapper ()
  : wrappedVba_p (NULL),

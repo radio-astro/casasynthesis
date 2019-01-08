@@ -29,7 +29,7 @@
 
 #include <graphics/GenericPlotter/PlotOptions.h>
 
-namespace casa {
+namespace casacore {
 
 //# Forward Declarations
 class PlotCanvas;

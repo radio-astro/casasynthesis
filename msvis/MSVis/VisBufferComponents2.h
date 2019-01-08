@@ -1,10 +1,10 @@
 #if ! defined (MSVIS_VisBufferComponents2_H)
 #define MSVIS_VisBufferComponents2_H
 
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/BasicSL/String.h>
 #include <set>
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 

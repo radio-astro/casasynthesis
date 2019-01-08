@@ -29,10 +29,10 @@
 #ifndef SYNTHESIS_PBMATH1D_H
 #define SYNTHESIS_PBMATH1D_H
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <synthesis/TransformMachines/PBMathInterface.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //#forward
 class Table;
@@ -324,6 +324,6 @@ private:
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

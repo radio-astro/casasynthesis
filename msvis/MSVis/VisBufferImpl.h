@@ -27,18 +27,18 @@
 #ifndef MSVIS_VISBUFFERIMPL_H
 #define MSVIS_VISBUFFERIMPL_H
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
 #warning "Remove next line later"
 #    include <msvis/MSVis/VisBuffer.h>
 
-#include <casa/Arrays/Cube.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/BasicSL/Complex.h>
+#include <casacore/casa/Arrays/Cube.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/BasicSL/Complex.h>
 #include <msvis/MSVis/VisBufferComponents.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 namespace asyncio {
     class VLAT;
@@ -167,7 +167,7 @@ using vi::VisBufferState;
 
 class VisBufferImpl {
 
-    friend class casa::asyncio::VLAT; // for async i/o
+    friend class casacore::asyncio::VLAT; // for async i/o
     friend class VbCacheItemBase;
     friend class VisBufferCache;
     friend class VisBufferState;

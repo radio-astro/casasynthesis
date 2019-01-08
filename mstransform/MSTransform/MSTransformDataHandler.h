@@ -24,27 +24,27 @@
 #define MSTransformDataHandler_H_
 
 // Measurement Set
-#include <ms/MeasurementSets.h>
+#include <casacore/ms/MeasurementSets.h>
 
 // Measurement Set Selection
-#include <ms/MSSel/MSSelection.h>
-#include <ms/MSSel/MSSelectionTools.h>
+#include <casacore/ms/MSSel/MSSelection.h>
+#include <casacore/ms/MSSel/MSSelectionTools.h>
 
 // Needed by setupMS
-#include <tables/Tables.h>
-#include <ms/MeasurementSets/MSTileLayout.h>
+#include <casacore/tables/Tables.h>
+#include <casacore/ms/MeasurementSets/MSTileLayout.h>
 #include <asdmstman/AsdmStMan.h>
 
 // Needed by copyTable
-#include <tables/Tables/PlainTable.h>
+#include <casacore/tables/Tables/PlainTable.h>
 
 // OS methods needed by fillSubTables
-#include <casa/OS/Timer.h>
-#include <casa/OS/Path.h>
-#include <casa/OS/Directory.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/casa/OS/Path.h>
+#include <casacore/casa/OS/Directory.h>
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //  MSTransformDataHandler definition
 class MSTransformDataHandler
@@ -371,6 +371,6 @@ protected:
 
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif /* MSTransformDataHandler_H_ */

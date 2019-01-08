@@ -48,7 +48,7 @@
 **** example like:                                                                       ****
 **** --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ****
 **** ostream &operator<<( ostream &out, const std::pair<std::string,                     ****
-****                      casa::dbus::variant> &p );                                     ****
+****                      casacore::dbus::variant> &p );                                     ****
 **** --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ****
 **** ONLY works if this operator is added to the "std" namespace. Instead, these         ****
 **** functions for converting arbitrary types to strings are inteded to be used with the ****
@@ -65,7 +65,7 @@
 ****	                toString );                                                      ****
 *********************************************************************************************
 ********************************************************************************************/
-namespace casa {
+namespace casacore {
 	namespace dbus {
 
 		std::string asString( const variant &v );

@@ -32,11 +32,11 @@
 
 
 //# Includes
-#include <casa/aips.h>
-#include <casa/vector.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/vector.h>
 #include <ostream>
 
-namespace casa {
+namespace casacore {
 
 //# Forward declaration.
 class AipsIO;

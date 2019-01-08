@@ -29,7 +29,7 @@
 #ifndef SYNTHESIS_ILLUMINATIONCONVFUNC_H
 #define SYNTHESIS_ILLUMINATIONCONVFUNC_H
 
-#include <casa/Exceptions.h>
+#include <casacore/casa/Exceptions.h>
 #include <synthesis/MeasurementComponents/TabulatedConvFunc.h>
 #include <synthesis/MeasurementComponents/ExpCache.h>
 #include <synthesis/MeasurementComponents/CExp.new3.h>
@@ -80,18 +80,18 @@ namespace casa{
 			     Double& currentCFPA
 			     //		  ,Double lsigma
 			     );
-    int getVisParams(const casa::VisBuffer& vb, const CoordinateSystem& skyCoord=CoordinateSystem()) 
+    int getVisParams(const casacore::VisBuffer& vb, const CoordinateSystem& skyCoord=CoordinateSystem()) 
     {(void)vb;(void)skyCoord;return 0;};
-    void makeConvFunction(const casa::ImageInterface<std::complex<float> >&, 
-			  const casa::VisBuffer&, casa::Int, 
+    void makeConvFunction(const casacore::ImageInterface<std::complex<float> >&, 
+			  const casacore::VisBuffer&, casacore::Int, 
 			  const CountedPtr<PolOuterProduct>& ,//pop,
-			  casa::Float, casa::Float,
+			  casacore::Float, casacore::Float,
 			  const Vector<Double>& /*uvScale*/, const Vector<Double>& /*uvOffset*/,
 			  const Matrix<Double>& /*freqSelection*/,
-			  casa::CFStore2&, casa::CFStore2&, Bool fillCF=True) {};
-    void setPolMap(const casa::Vector<int>&polMap) {(void)polMap;};
-    void setFeedStokes(const casa::Vector<int>&feedStokes) {(void)feedStokes;};
-    void setParams(const casa::Vector<int>& polMap, const casa::Vector<int>& feedStokes)
+			  casacore::CFStore2&, casacore::CFStore2&, Bool fillCF=True) {};
+    void setPolMap(const casacore::Vector<int>&polMap) {(void)polMap;};
+    void setFeedStokes(const casacore::Vector<int>&feedStokes) {(void)feedStokes;};
+    void setParams(const casacore::Vector<int>& polMap, const casacore::Vector<int>& feedStokes)
     {(void)polMap;(void)feedStokes;};
 
     Bool findSupport(Array<Complex>&, Float& ,Int&, Int&) 

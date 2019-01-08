@@ -29,11 +29,11 @@
 #include <imageanalysis/ImageAnalysis/ImageTask.h>
 
 #include <components/ComponentModels/ComponentList.h>
-#include <lattices/LatticeMath/Fit2D.h>
+#include <casacore/lattices/LatticeMath/Fit2D.h>
 
 #include <imageanalysis/IO/ImageFitterResults.h>
 
-namespace casa {
+namespace casacore {
 
 class ImageFitter : public ImageTask<Float> {
 	// <summary>

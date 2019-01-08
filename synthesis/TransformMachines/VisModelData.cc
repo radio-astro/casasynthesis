@@ -27,19 +27,19 @@
 //# $Id$
 
 
-#include <casa/Utilities/CountedPtr.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/OS/Timer.h>
-#include <casa/Containers/Record.h>
-#include <casa/Logging/LogIO.h>
-#include <tables/Tables/ScaRecordColDesc.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/casa/Containers/Record.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/tables/Tables/ScaRecordColDesc.h>
 #include <components/ComponentModels/ComponentList.h>
-#include <ms/MSSel/MSSelection.h>
-#include <ms/MSSel/MSSelectionTools.h>
-#include <ms/MeasurementSets/MSSource.h>
-#include <ms/MSSel/MSSourceIndex.h>
-#include <ms/MeasurementSets/MSSourceColumns.h>
+#include <casacore/ms/MSSel/MSSelection.h>
+#include <casacore/ms/MSSel/MSSelectionTools.h>
+#include <casacore/ms/MeasurementSets/MSSource.h>
+#include <casacore/ms/MSSel/MSSourceIndex.h>
+#include <casacore/ms/MeasurementSets/MSSourceColumns.h>
 
 #include <msvis/MSVis/VisBuffer.h>
 #include <msvis/MSVis/VisBuffer2.h>
@@ -57,16 +57,16 @@
 
 namespace {
 
-  casa::VisModelDataI * createVisModelData (){
-    return new casa::VisModelData ();
+  casacore::VisModelDataI * createVisModelData (){
+    return new casacore::VisModelData ();
   }
 
-  bool initializeVisModelDataFactory = casa::VisModelDataI::setFactory (createVisModelData);
+  bool initializeVisModelDataFactory = casacore::VisModelDataI::setFactory (createVisModelData);
 
 }
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 
 VisModelData::VisModelData(): clholder_p(0), ftholder_p(0), flatholder_p(0){
@@ -1016,5 +1016,5 @@ void VisModelData::addModel(const RecordInterface& rec,  const Vector<Int>& /*ms
 
 
 
-}//# NAMESPACE CASA - END
+}//# NAMESPACE CASACORE - END
 

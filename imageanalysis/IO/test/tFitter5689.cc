@@ -27,16 +27,16 @@
 
 #include <imageanalysis/IO/FitterEstimatesFileParser.h>
 
-#include <casa/Utilities/Assert.h>
-#include <casa/OS/File.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/OS/File.h>
 #include <components/ComponentModels/GaussianShape.h>
-#include <images/Images/FITSImage.h>
-#include <images/Regions/WCEllipsoid.h>
-#include <images/Regions/WCExtension.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/images/Regions/WCEllipsoid.h>
+#include <casacore/images/Regions/WCExtension.h>
 #include <imageanalysis/ImageAnalysis/ImageProfileFitter.h>
 #include <imageanalysis/Annotations/AnnEllipse.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 void test1(){
 	String pixelBox("100,100,115,115");

@@ -5,9 +5,9 @@
 
 #include <imageanalysis/ImageAnalysis/ImageDecimatorData.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 template <class T> class Image1DSmoother : public ImageTask<T> {
 	// <summary>

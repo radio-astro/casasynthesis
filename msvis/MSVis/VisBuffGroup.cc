@@ -26,10 +26,10 @@
 //----------------------------------------------------------------------------
 
 #include <msvis/MSVis/VisBuffGroup.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Logging/LogIO.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Logging/LogIO.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 VisBuffGroup::VisBuffGroup() :
     nBuf_p(0),
@@ -129,5 +129,5 @@ Bool VisBuffGroup::applyChanMask(Cube<Bool>& chanmaskedflags,
   return retval;
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

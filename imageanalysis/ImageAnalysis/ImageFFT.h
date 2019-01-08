@@ -28,11 +28,11 @@
 #ifndef IMAGES_IMAGEFFT_H
 #define IMAGES_IMAGEFFT_H
 
-#include <casa/aips.h>
-#include <images/Images/ImageInterface.h>
+#include <casacore/casa/aips.h>
+#include <casacore/images/Images/ImageInterface.h>
 #include <imageanalysis/ImageTypedefs.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 class CoordinateSystem;
 class IPosition;
@@ -246,6 +246,6 @@ private:
 );
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

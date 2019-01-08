@@ -1,7 +1,7 @@
 #ifndef IMAGEANALYSIS_IMAGETASK_H
 #define IMAGEANALYSIS_IMAGETASK_H
 
-#include <casa/Containers/Record.h>
+#include <casacore/casa/Containers/Record.h>
 
 #include <imageanalysis/ImageTypedefs.h>
 #include <imageanalysis/IO/OutputDestinationChecker.h>
@@ -11,7 +11,7 @@ namespace casac {
 class variant;
 }
 
-namespace casa {
+namespace casacore {
 class LogFile;
 template <class T> class ArrayLattice;
 

@@ -6,18 +6,18 @@
  */
 
 
-//#include <casa/Arrays/ArrayLogical.h>
-//#include <casa/Arrays/ArrayMath.h>
-//#include <casa/Arrays/ArrayUtil.h>
-//#include <casa/Arrays/MaskArrMath.h>
-//#include <casa/Arrays/MaskedArray.h>
-#include <casa/OS/Path.h>
-#include <casa/OS/Timer.h>
-#include <casa/Utilities.h>
-#include <casa/aipstype.h>
+//#include <casacore/casa/Arrays/ArrayLogical.h>
+//#include <casacore/casa/Arrays/ArrayMath.h>
+//#include <casacore/casa/Arrays/ArrayUtil.h>
+//#include <casacore/casa/Arrays/MaskArrMath.h>
+//#include <casacore/casa/Arrays/MaskedArray.h>
+#include <casacore/casa/OS/Path.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/casa/Utilities.h>
+#include <casacore/casa/aipstype.h>
 #include <typeinfo>
 #include <components/ComponentModels/ComponentList.h>
-#include <ms/MeasurementSets/MSColumns.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
 #include <msvis/MSVis/UtilJ.h>
 #include <msvis/MSVis/VisBufferAsyncWrapper2.h>
 #include <msvis/MSVis/VisBufferComponents2.h>
@@ -38,9 +38,9 @@
 
 using namespace std;
 
-namespace casa {
+namespace casacore {
 
-using namespace casa::ms;
+using namespace casacore::ms;
 
 namespace vi {
 
@@ -102,7 +102,7 @@ VisBufferCache::initialize (VisBufferImpl2 * vb)
     //sigmaMat_p.initialize (this, vb, &VisBufferImpl2::fillSigmaMat, SigmaMat);
     spectralWindows_p.initialize (this, vb, &VisBufferImpl2::fillSpectralWindows, SpectralWindows, Nr);
     stateId_p.initialize (this, vb, &VisBufferImpl2::fillStateId, StateId, Nr);
-    time_p.initialize (this, vb, &VisBufferImpl2::fillTime, casa::vi::Time, Nr);
+    time_p.initialize (this, vb, &VisBufferImpl2::fillTime, casacore::vi::Time, Nr);
     timeCentroid_p.initialize (this, vb, &VisBufferImpl2::fillTimeCentroid, TimeCentroid, Nr);
     timeInterval_p.initialize (this, vb, &VisBufferImpl2::fillTimeInterval, TimeInterval, Nr);
     uvw_p.initialize (this, vb, &VisBufferImpl2::fillUvw, Uvw, I3Nr);
@@ -469,7 +469,7 @@ VisBufferImpl2::copyCoordinateInfo (const VisBuffer2 * vb, Bool dirDependent,
 
     VisBufferComponents2 components =
         VisBufferComponents2::these (Antenna1, Antenna2, ArrayId, DataDescriptionIds,
-                                     FieldId, SpectralWindows, casa::vi::Time,
+                                     FieldId, SpectralWindows, casacore::vi::Time,
                                      NRows, Feed1, Feed2, Unknown);
 
     copyComponents (* vb, components, allowShapeChange, fetchIfNeeded);

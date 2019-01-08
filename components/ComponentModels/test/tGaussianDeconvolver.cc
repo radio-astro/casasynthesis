@@ -25,9 +25,9 @@
 
 #include <components/ComponentModels/GaussianDeconvolver.h>
 
-#include <scimath/Mathematics/GaussianBeam.h>
+#include <casacore/scimath/Mathematics/GaussianBeam.h>
 
-using namespace casa;
+using namespace casacore;
 
 int main() {
 	typedef GaussianBeam Angular2DGaussian;

@@ -33,7 +33,7 @@
 #include <synthesis/CalTables/CalTable.h>
 #include <synthesis/CalTables/CalHistoryColumns.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> 
 // CalHistoryBuffer: Calibration table cal_history buffer
@@ -131,7 +131,7 @@ class CalHistoryBuffer
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
    

@@ -17,14 +17,14 @@
 
 #include <imageanalysis/Annotations/AnnAnnulus.h>
 
-#include <casa/Arrays/ArrayLogical.h>
-#include <casa/Quanta/MVAngle.h>
-#include <coordinates/Coordinates/CoordinateUtil.h>
-#include <images/Regions/WCDifference.h>
-#include <images/Regions/WCEllipsoid.h>
-#include <casa/Quanta/QLogical.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Quanta/MVAngle.h>
+#include <casacore/coordinates/Coordinates/CoordinateUtil.h>
+#include <casacore/images/Regions/WCDifference.h>
+#include <casacore/images/Regions/WCEllipsoid.h>
+#include <casacore/casa/Quanta/QLogical.h>
 
-namespace casa {
+namespace casacore {
 
 AnnAnnulus::AnnAnnulus()
 	: AnnRegion(

@@ -27,20 +27,20 @@
 
 #include <imageanalysis/ImageAnalysis/ImageMetaData.h>
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
-#include <casa/Quanta/QuantumHolder.h>
-#include <images/Images/ImageSummary.h>
-#include <images/Images/ImageStatistics.h>
-#include <measures/Measures/MeasureHolder.h>
-#include <casa/Utilities/DataType.h>
+#include <casacore/casa/Quanta/QuantumHolder.h>
+#include <casacore/images/Images/ImageSummary.h>
+#include <casacore/images/Images/ImageStatistics.h>
+#include <casacore/measures/Measures/MeasureHolder.h>
+#include <casacore/casa/Utilities/DataType.h>
 
 #include <iostream>
 #include <iomanip>
 
 #include <boost/regex.hpp>
 
-namespace casa {
+namespace casacore {
 
 ImageMetaData::ImageMetaData(
 	SHARED_PTR<const ImageInterface<Float> > imagef
@@ -248,5 +248,5 @@ String ImageMetaData::_getTelescope() const {
 	return _telescope;
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

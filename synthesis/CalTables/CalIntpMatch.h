@@ -29,15 +29,15 @@
 #ifndef CALIBRATION_CALINTPMATCH_H
 #define CALIBRATION_CALINTPMATCH_H
 
-#include <casa/aips.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Arrays/LogiArray.h>
-#include <casa/Containers/Record.h>
-#include <ms/MSSel/MSSelection.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/LogiArray.h>
+#include <casacore/casa/Containers/Record.h>
+#include <casacore/ms/MSSel/MSSelection.h>
 #include <msvis/MSVis/VisBuffer.h>
 #include <synthesis/CalTables/CalMainBuffer.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> 
 // CalIntpMatch: a class to hold calibration interpolation index maps
@@ -171,7 +171,7 @@ class CalIntpMatch
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
    

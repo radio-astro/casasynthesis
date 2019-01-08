@@ -27,19 +27,19 @@
 
 #include <imageanalysis/ImageAnalysis/ImageCollapser.h>
 
-#include <casa/Arrays/ArrayLogical.h>
-#include <casa/BasicSL/STLIO.h>
-#include <images/Images/ImageStatistics.h>
-#include <images/Images/ImageUtilities.h>
-#include <images/Images/PagedImage.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/BasicSL/STLIO.h>
+#include <casacore/images/Images/ImageStatistics.h>
+#include <casacore/images/Images/ImageUtilities.h>
+#include <casacore/images/Images/PagedImage.h>
 #include <imageanalysis/ImageAnalysis/SubImageFactory.h>
-#include <images/Images/TempImage.h>
-#include <lattices/Lattices/LatticeUtilities.h>
-#include <lattices/LatticeMath/LatticeMathUtil.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/lattices/Lattices/LatticeUtilities.h>
+#include <casacore/lattices/LatticeMath/LatticeMathUtil.h>
 
 #include <memory>
 
-namespace casa {
+namespace casacore {
 
 template<class T> map<uInt, T (*)(const Array<T>&)> ImageCollapser<T>::_funcMap;
 
@@ -513,17 +513,17 @@ template<class T> void ImageCollapser<T>::_attachOutputMask(
 
 template<class T> const map<uInt, T (*)(const Array<T>&)>& ImageCollapser<T>::_getFuncMap() {
 	if (_funcMap.size() == 0) {
-		_funcMap[(uInt)ImageCollapserData::MAX] = casa::max;
-		_funcMap[(uInt)ImageCollapserData::MEAN] = casa::mean;
-		_funcMap[(uInt)ImageCollapserData::MEDIAN] = casa::median;
-		_funcMap[(uInt)ImageCollapserData::MIN] = casa::min;
-		_funcMap[(uInt)ImageCollapserData::RMS] = casa::rms;
-		_funcMap[(uInt)ImageCollapserData::SQRTSUM] = casa::sum;
-		_funcMap[(uInt)ImageCollapserData::SQRTSUM_NPIX] = casa::sum;
-		_funcMap[(uInt)ImageCollapserData::SQRTSUM_NPIX_BEAM] = casa::sum;
-		_funcMap[(uInt)ImageCollapserData::STDDEV] = casa::stddev;
-		_funcMap[(uInt)ImageCollapserData::SUM] = casa::sum;
-		_funcMap[(uInt)ImageCollapserData::VARIANCE] = casa::variance;
+		_funcMap[(uInt)ImageCollapserData::MAX] = casacore::max;
+		_funcMap[(uInt)ImageCollapserData::MEAN] = casacore::mean;
+		_funcMap[(uInt)ImageCollapserData::MEDIAN] = casacore::median;
+		_funcMap[(uInt)ImageCollapserData::MIN] = casacore::min;
+		_funcMap[(uInt)ImageCollapserData::RMS] = casacore::rms;
+		_funcMap[(uInt)ImageCollapserData::SQRTSUM] = casacore::sum;
+		_funcMap[(uInt)ImageCollapserData::SQRTSUM_NPIX] = casacore::sum;
+		_funcMap[(uInt)ImageCollapserData::SQRTSUM_NPIX_BEAM] = casacore::sum;
+		_funcMap[(uInt)ImageCollapserData::STDDEV] = casacore::stddev;
+		_funcMap[(uInt)ImageCollapserData::SUM] = casacore::sum;
+		_funcMap[(uInt)ImageCollapserData::VARIANCE] = casacore::variance;
 	}
 	return _funcMap;
 }

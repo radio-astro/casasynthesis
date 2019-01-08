@@ -29,24 +29,24 @@
 #include <synthesis/CalTables/CTInterface.h>
 #include <synthesis/CalTables/CTIter.h>
 
-#include <scimath/Mathematics/InterpolateArray1D.h>
-#include <casa/Utilities/GenSort.h>
+#include <casacore/scimath/Mathematics/InterpolateArray1D.h>
+#include <casacore/casa/Utilities/GenSort.h>
 
-#include <ms/MSSel/MSSelectableTable.h>
-#include <ms/MSSel/MSSelection.h>
-#include <ms/MSSel/MSSelectionTools.h>
+#include <casacore/ms/MSSel/MSSelectableTable.h>
+#include <casacore/ms/MSSel/MSSelection.h>
+#include <casacore/ms/MSSel/MSSelectionTools.h>
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
 #define CTPATCHPANELVERB False
 
-//#include <casa/BasicSL/Constants.h>
-//#include <casa/OS/File.h>
-#include <casa/Logging/LogMessage.h>
-#include <casa/Logging/LogSink.h>
-#include <casa/Logging/LogIO.h>
+//#include <casacore/casa/BasicSL/Constants.h>
+//#include <casacore/casa/OS/File.h>
+#include <casacore/casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging/LogSink.h>
+#include <casacore/casa/Logging/LogIO.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 CalPatchKey::CalPatchKey(IPosition keyids) :
   cpk_(keyids.asVector())
@@ -1560,4 +1560,4 @@ InterpolateArray1D<Double,Float>::InterpolationMethod CLPatchPanel::ftype(String
 }
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END

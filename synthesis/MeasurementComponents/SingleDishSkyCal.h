@@ -43,7 +43,7 @@
 #include <synthesis/MeasurementComponents/SolvableVisCal.h>
 #include <synthesis/MeasurementComponents/SkyCal.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //# Forward Declarations
 
@@ -400,7 +400,7 @@ public:
   virtual String configureSelection();
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif /* _SYNTHESIS_SINGLEDISH_SKY_CAL_H_ */
 

@@ -27,7 +27,7 @@
 #include <casadbus/utilities/Conversion.h>
 
 
-namespace casa {
+namespace casacore {
     namespace dbus {
 
 #define LOCAL_FILE_DEBUG 0

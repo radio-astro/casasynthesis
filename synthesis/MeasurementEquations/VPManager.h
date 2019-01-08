@@ -30,7 +30,7 @@
 
 #include <imageanalysis/ImageAnalysis/AntennaResponses.h>
 
-namespace casa {
+namespace casacore {
   //Forward declarations
   class Record;
 
@@ -229,5 +229,5 @@ namespace casa {
 
     };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 #endif

@@ -31,7 +31,7 @@
 
 #include <synthesis/MeasurementComponents/ImageSkyModel.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> 
 // Image Sky Model: Image-based Model for the Sky Brightness
@@ -142,7 +142,7 @@ protected:
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
 

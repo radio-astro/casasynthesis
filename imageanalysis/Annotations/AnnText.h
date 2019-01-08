@@ -30,7 +30,7 @@
 
 #include <imageanalysis/Annotations/AnnotationBase.h>
 
-namespace casa {
+namespace casacore {
 
 // <summary>Represents a text annotation</summary>
 

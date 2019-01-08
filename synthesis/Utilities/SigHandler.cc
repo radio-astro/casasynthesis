@@ -27,13 +27,13 @@
 //# $Id$
 
 #include <synthesis/Utilities/SigHandler.h>
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/BasicSL/String.h>
 
 //DEDICATED TO HONGLIN YE 
 
 
 
-namespace casa { 
+namespace casacore { 
   bool SigHandler::killOn_p = False;
   SigHandler::SigHandler()
   {

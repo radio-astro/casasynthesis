@@ -27,19 +27,19 @@
 //# $Id$
 
 
-#include <casa/Utilities/CountedPtr.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/OS/Timer.h>
-#include <casa/Containers/Record.h>
-#include <casa/Logging/LogIO.h>
-#include <tables/Tables/ScaRecordColDesc.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/casa/Containers/Record.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/tables/Tables/ScaRecordColDesc.h>
 #include <components/ComponentModels/ComponentList.h>
-#include <ms/MSSel/MSSelection.h>
-#include <ms/MSSel/MSSelectionTools.h>
-#include <ms/MeasurementSets/MSSource.h>
-#include <ms/MSSel/MSSourceIndex.h>
-#include <ms/MeasurementSets/MSSourceColumns.h>
+#include <casacore/ms/MSSel/MSSelection.h>
+#include <casacore/ms/MSSel/MSSelectionTools.h>
+#include <casacore/ms/MeasurementSets/MSSource.h>
+#include <casacore/ms/MSSel/MSSourceIndex.h>
+#include <casacore/ms/MeasurementSets/MSSourceColumns.h>
 
 #include <msvis/MSVis/VisBuffer2.h>
 #include <synthesis/TransformMachines2/VisModelData.h>
@@ -55,23 +55,23 @@
 
 namespace {
 
-  casa::VisModelDataI * createRefImVisModelData (){
-    return new casa::refim::VisModelData ();
+  casacore::VisModelDataI * createRefImVisModelData (){
+    return new casacore::refim::VisModelData ();
   }
 
-  bool initializeVisModelDataFactory = casa::VisModelDataI::setFactory (createRefImVisModelData, 1);
+  bool initializeVisModelDataFactory = casacore::VisModelDataI::setFactory (createRefImVisModelData, 1);
 
 }
 
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 namespace refim {//namespace for refactor
 
-using namespace casa;
-using namespace casa::refim;
-using namespace casa::vi;
+using namespace casacore;
+using namespace casacore::refim;
+using namespace casacore::vi;
 VisModelData::VisModelData(): clholder_p(0), ftholder_p(0), flatholder_p(0){
   
   cft_p=new SimpleComponentFTMachine();
@@ -996,5 +996,5 @@ void VisModelData::putModel(const MeasurementSet& thems, const RecordInterface& 
 
 
 }// end namespace refim
-}//# NAMESPACE CASA - END
+}//# NAMESPACE CASACORE - END
 

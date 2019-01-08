@@ -31,7 +31,7 @@
 #include <string>
 #include <stdio.h>
 
-namespace casa {
+namespace casacore {
 
     namespace memory {
 	template <class T> class cptr {

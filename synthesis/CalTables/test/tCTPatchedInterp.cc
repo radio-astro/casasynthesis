@@ -28,13 +28,13 @@
 #include <synthesis/CalTables/NewCalTable.h>
 #include <synthesis/CalTables/CTPatchedInterp.h>
 #include <synthesis/CalTables/VisCalEnum.h>
-#include <scimath/Mathematics/InterpolateArray1D.h>
-#include <casa/OS/Timer.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/iostream.h>
-#include <casa/BasicMath/Math.h>
-#include <casa/namespace.h>
-#include <casa/Arrays/ArrayMath.h>
+#include <casacore/scimath/Mathematics/InterpolateArray1D.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/casa/namespace.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
 
 // <summary>
 // Test program for CTInterp class.

@@ -32,7 +32,7 @@
 #include <synthesis/CalTables/SolvableVJMCol.h>
 #include <synthesis/CalTables/BJonesTable.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> 
 // ROBJonesMCol: Read-only BJones cal_main column access
@@ -307,7 +307,7 @@ class BJonesPolyMCol : public BJonesMCol
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
    

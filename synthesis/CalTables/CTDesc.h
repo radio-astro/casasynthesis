@@ -29,11 +29,11 @@
 #ifndef CALIBRATION_CTDESC_H
 #define CALIBRATION_CTDESC_H
 
-#include <casa/aips.h>
-#include <tables/Tables/Table.h>
-#include <tables/Tables/TableDesc.h>
+#include <casacore/casa/aips.h>
+#include <casacore/tables/Tables/Table.h>
+#include <casacore/tables/Tables/TableDesc.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> 
 // CTDesc: Define the format of calibration tables
@@ -130,6 +130,6 @@ class CTDesc
  };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

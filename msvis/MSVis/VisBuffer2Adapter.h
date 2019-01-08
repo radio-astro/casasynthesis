@@ -10,12 +10,12 @@
 
 #include <msvis/MSVis/VisBuffer.h>
 #include <msvis/MSVis/VisBuffer2.h>
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/BasicSL/String.h>
 #include <msvis/MSVis/UtilJ.h>
 #include <msvis/MSVis/VisibilityIterator2.h>
 #include <msvis/MSVis/VisibilityIteratorImpl2.h>
 
-using casa::utilj::toStdError;
+using casacore::utilj::toStdError;
 
 #define IllegalOperation() \
     Throw (String::format ("Illegal operation: %s", __func__));
@@ -23,7 +23,7 @@ using casa::utilj::toStdError;
 #define CheckWritability() \
     ThrowIf (vb2Rw_p == 0, String::format ("VB is not writable in %s", __func__));
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 

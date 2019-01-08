@@ -27,24 +27,24 @@
 
 #include <synthesis/MeasurementComponents/BPoly.h>
 #include <synthesis/MeasurementEquations/VisEquation.h>
-#include <casa/Logging/LogIO.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/ArrayLogical.h>
-#include <ms/MeasurementSets/MSColumns.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
 #include <msvis/MSVis/VisBuffAccumulator.h>
 #include <msvis/MSVis/VisBuffGroupAcc.h>
-#include <casa/sstream.h>
-#include <casa/math.h>
-#include <casa/OS/Memory.h>
-#include <casa/System/PGPlotter.h>
+#include <casacore/casa/sstream.h>
+#include <casacore/casa/math.h>
+#include <casacore/casa/OS/Memory.h>
+#include <casacore/casa/System/PGPlotter.h>
 #include <synthesis/CalTables/BJonesMBuf.h>
 #include <synthesis/CalTables/BJonesMCol.h>
 #include <synthesis/CalTables/NewCalTable.h>
-#include <ms/MSSel/MSSpWindowIndex.h>
+#include <casacore/ms/MSSel/MSSpWindowIndex.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // Define external CLIC solvers
 #define NEED_UNDERSCORES
@@ -1563,5 +1563,5 @@ void BJonesPoly::plotsolve2(const Vector<Double>& x,
 
 //---------------------------------------------------------------------------
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

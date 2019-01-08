@@ -17,10 +17,10 @@
 #ifndef REGIONS_ANNANNULUS_H
 #define REGIONS_ANNANNULUS_H
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <imageanalysis/Annotations/AnnRegion.h>
 
-namespace casa {
+namespace casacore {
 
 // <summary>
 // This class represents an annotation for an annular (in position coordinates) region specified

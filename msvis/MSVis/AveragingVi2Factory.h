@@ -10,7 +10,7 @@
 
 #include <msvis/MSVis/VisibilityIterator2.h>
 
-namespace casa {
+namespace casacore {
 
 class MeasurementSet2;
 

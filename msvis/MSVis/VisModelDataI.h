@@ -1,9 +1,9 @@
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
 #if ! defined (MSVIS_VisModelDataI_H)
 #define MSVIS_VisModelDataI_H
 
-namespace casa {
+namespace casacore {
 
   class MeasurementSet;
   class RecordInterface;

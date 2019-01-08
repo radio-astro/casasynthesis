@@ -28,7 +28,7 @@
 #include <iostream>
 
 int main( int /*argc*/, char */*argv*/[] ) {
-	casa::DBusSession &session = casa::DBusSession::instance( );
+	casacore::DBusSession &session = casacore::DBusSession::instance( );
 	typedef std::vector<std::string> namelist_t;
 	namelist_t names = session.listNames( );
 	unsigned int count = 0;

@@ -21,7 +21,7 @@
 //# $Id: $
 #include <ctime>
 #include <mstransform/MSTransform/MSTransformIteratorFactory.h>
-#include <casa/Utilities/CountedPtr.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
 namespace casa
 {
 
@@ -206,6 +206,6 @@ vi::ViImplementation2 * MSTransformIteratorFactory::createVi(vi::VisibilityItera
 	return outputVI;
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 

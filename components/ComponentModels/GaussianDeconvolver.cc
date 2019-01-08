@@ -27,9 +27,9 @@
 
 #include <components/ComponentModels/GaussianDeconvolver.h>
 
-#include <scimath/Mathematics/GaussianBeam.h>
+#include <casacore/scimath/Mathematics/GaussianBeam.h>
 
-namespace casa {
+namespace casacore {
 
 Bool GaussianDeconvolver::deconvolve(
 	Angular2DGaussian& deconvolvedSize,
@@ -103,5 +103,5 @@ Bool GaussianDeconvolver::deconvolve(
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

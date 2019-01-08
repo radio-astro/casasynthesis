@@ -26,11 +26,11 @@
 //#include <boost/thread/locks.hpp>
 
 /* Records Interface */
-#include <casa/Containers/Record.h>
+#include <casacore/casa/Containers/Record.h>
 
 #include <math.h> // For FLT_MAX
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   
   
   SIMinorCycleController::SIMinorCycleController(): 
@@ -264,5 +264,5 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 
   }// end of addSummaryMinor
  
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

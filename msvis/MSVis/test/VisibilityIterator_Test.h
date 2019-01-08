@@ -1,19 +1,19 @@
 #if ! defined (VisibilityIterator_Test_H_20120912_1001)
 #define VisibilityIterator_Test_H_20120912_1001
 
-#include <casa/aips.h>
-#include <casa/aipstype.h>
-#include <casa/BasicSL/String.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/aipstype.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
 #include <msvis/MSVis/UtilJ.h>
-#include <tables/Tables/ArrayColumn.h>
-#include <tables/Tables/ScalarColumn.h>
+#include <casacore/tables/Tables/ArrayColumn.h>
+#include <casacore/tables/Tables/ScalarColumn.h>
 #include <boost/tuple/tuple.hpp>
 
 #include <map>
 #include <set>
 
-namespace casa {
+namespace casacore {
 
     class MeasurementSet;
     class NewMSSimulator;
@@ -28,7 +28,7 @@ namespace casa {
     }
 }
 
-namespace casa {
+namespace casacore {
 namespace vi {
 namespace test {
 

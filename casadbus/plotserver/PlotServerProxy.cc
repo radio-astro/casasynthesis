@@ -29,7 +29,7 @@
 #include <casadbus/utilities/BusAccess.h>
 #include <casadbus/utilities/Conversion.h>
 
-namespace casa {
+namespace casacore {
 
 
     std::list<std::string> PlotServerProxy::execArgs( const std::list<std::string> &args ) {

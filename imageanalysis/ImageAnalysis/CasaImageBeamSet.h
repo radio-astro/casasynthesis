@@ -26,9 +26,9 @@
 #ifndef IMAGEANALYSIS_CASACasaImageBeamSet
 #define IMAGEANALYSIS_CASACasaImageBeamSet
 
-#include <images/Images/ImageBeamSet.h>
+#include <casacore/images/Images/ImageBeamSet.h>
 
-namespace casa {
+namespace casacore {
 
 // <summary>
 // Represents a set of restoring beams associated with an image. Implements getCommonBeam()

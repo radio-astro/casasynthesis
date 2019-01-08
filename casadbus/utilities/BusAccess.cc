@@ -36,7 +36,7 @@
 #define CASA_PATH "/casa/"
 #define CACHE_INTERVAL 5
 
-namespace casa {
+namespace casacore {
     namespace dbus {
 
 	// also in display/QtViewer/QtDisplayPanelGui.cc (base62)
@@ -89,7 +89,7 @@ namespace casa {
 	}
 
 	std::string address::generate_name( const std::string &base, bool unique ) {
-        casa::DBusSession &session = casa::DBusSession::instance( );
+        casacore::DBusSession &session = casacore::DBusSession::instance( );
 		std::string result;
 		const int suffix_length = 3;
 		char *buffer = new char[ strlen(CASA_PREFIX) + base.size( ) + suffix_length + 2 ];
@@ -115,7 +115,7 @@ namespace casa {
 	}
 
 	address::~address( ) {
-        casa::DBusSession &session = casa::DBusSession::instance( );
+        casacore::DBusSession &session = casacore::DBusSession::instance( );
 #if defined(DBUS_CPP)
 		session.connection( ).release_name(name_.c_str( ));
 #endif
@@ -183,7 +183,7 @@ namespace casa {
 		double current_time = (double) tv.tv_sec + (double) tv.tv_usec / (double) 1000000000;
 		if ( current_time > (cache_time + double(CACHE_INTERVAL)) || cache_input != name ) {
 
-			casa::DBusSession &session = casa::DBusSession::instance( );
+			casacore::DBusSession &session = casacore::DBusSession::instance( );
 			std::vector<std::string> objects;
 			std::string prefix( CASA_PREFIX + name );
 			for ( int retries=0; retries < 10; ++retries ) {
@@ -216,7 +216,7 @@ namespace casa {
 	}
 
 	std::string adaptor_object( const std::string &name, const std::string &path ) {
-        casa::DBusSession &session = casa::DBusSession::instance( );
+        casacore::DBusSession &session = casacore::DBusSession::instance( );
 		std::string result;
 		const int suffix_length = 3;
 		char *buffer = new char[ strlen(CASA_PREFIX) + name.size( ) + suffix_length + 2 ];

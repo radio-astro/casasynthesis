@@ -28,14 +28,14 @@
 #ifndef SYNTHESIS_APPRC_H
 #define SYNTHESIS_APPRC_H
 
-#include <casa/aips.h>
-#include <casa/System/Casarc.h>
-#include <casa/sstream.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/System/Casarc.h>
+#include <casacore/casa/sstream.h>
 #include <iostream.h>
 
 using namespace std;
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   class AppRC
   {
   public:
@@ -74,6 +74,6 @@ namespace casa { //# NAMESPACE CASA - BEGIN
     void setPID() {/*myTID_p = gettid_p ();*/ myPID_p = getpid ();}
   };
   
-}; //# NAMESPACE CASA - END
+}; //# NAMESPACE CASACORE - END
 
 #endif // 

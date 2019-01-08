@@ -28,7 +28,7 @@
 
 #include <casadbus/types/record.h>
 
-namespace casa {
+namespace casacore {
     namespace dbus {
 
 	record::record() : rec_map() { }

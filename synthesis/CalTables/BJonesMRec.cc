@@ -28,7 +28,7 @@
 
 #include <synthesis/CalTables/BJonesMRec.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------------
 
@@ -52,5 +52,5 @@ BJonesMRec::BJonesMRec (const Record& inpRec) :
 //----------------------------------------------------------------------------
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

@@ -27,8 +27,8 @@
 
 #include <imageanalysis/ImageAnalysis/ImageStatsCalculator.h>
 
-#include <casa/BasicSL/String.h>
-#include <images/Images/ImageUtilities.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/images/Images/ImageUtilities.h>
 #include <imageanalysis/ImageAnalysis/ImageCollapser.h>
 #include <imageanalysis/ImageAnalysis/SubImageFactory.h>
 
@@ -36,7 +36,7 @@
 
 #include <iomanip>
 
-namespace casa {
+namespace casacore {
 
 const String ImageStatsCalculator::_class = "ImageStatsCalculator";
 

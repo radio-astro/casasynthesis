@@ -32,7 +32,7 @@
 #include <synthesis/CalTables/SolvableVJMCol.h>
 #include <synthesis/CalTables/TJonesTable.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> 
 // ROTJonesPolyMCol: Read-only TJonesPoly cal_main column access
@@ -328,7 +328,7 @@ class TJonesSplineMCol : public TJonesPolyMCol
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
    

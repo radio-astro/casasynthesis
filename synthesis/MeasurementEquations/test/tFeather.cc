@@ -25,17 +25,17 @@
 //#
 //# $Id$
  
-#include <casa/iostream.h>
-#include <casa/aips.h>
-#include <images/Images/PagedImage.h>
-#include <casa/Arrays/IPosition.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Arrays/ArrayLogical.h>
-#include <coordinates/Coordinates/CoordinateUtil.h>
-#include <lattices/Lattices/TempLattice.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/aips.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/casa/Arrays/IPosition.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/coordinates/Coordinates/CoordinateUtil.h>
+#include <casacore/lattices/Lattices/TempLattice.h>
 #include <synthesis/MeasurementEquations/Feather.h> 
  
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 int main(int argc, char **argv)
 {
   cout << "Tests Feather function" << endl;

@@ -28,9 +28,9 @@
 #include <synthesis/MeasurementComponents/Calibrater.h>
 #include <synthesis/MeasurementEquations/VisEquation.h>
 
-#include <casa/Containers/Record.h>
+#include <casacore/casa/Containers/Record.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 namespace vi { //# NAMESPACE VI - BEGIN
 
 class CalibratingParameters {
@@ -116,7 +116,7 @@ private:
 };
 
 } //# NAMESPACE VI - END
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 
 #endif /* CalibratingVi2_H_ */

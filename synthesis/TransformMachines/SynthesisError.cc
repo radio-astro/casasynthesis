@@ -27,7 +27,7 @@
 
 #include <synthesis/TransformMachines/SynthesisError.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 SynthesisError::SynthesisError (Category c)
 : AipsError("Synthesis Error",c)
@@ -66,5 +66,5 @@ CFNotCached::CFNotCached(const String& str, Category c)
 CFNotCached::~CFNotCached() throw()
 {};
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

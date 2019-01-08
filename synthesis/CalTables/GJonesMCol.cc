@@ -28,7 +28,7 @@
 
 #include <synthesis/CalTables/GJonesMCol.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------------
 
@@ -145,5 +145,5 @@ GJonesSplineMCol::GJonesSplineMCol (GJonesSplineTable& gjsTable) :
 //----------------------------------------------------------------------------
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

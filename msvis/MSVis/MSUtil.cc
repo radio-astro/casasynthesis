@@ -25,15 +25,15 @@
 //#
 //#
 //# $Id$
-#include <casa/Utilities/Sort.h>
-#include <measures/Measures/MeasTable.h>
-#include <ms/MeasurementSets/MSColumns.h>
-#include <ms/MSSel/MSSpwIndex.h>
-#include <ms/MSSel/MSDataDescIndex.h>
+#include <casacore/casa/Utilities/Sort.h>
+#include <casacore/measures/Measures/MeasTable.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
+#include <casacore/ms/MSSel/MSSpwIndex.h>
+#include <casacore/ms/MSSel/MSDataDescIndex.h>
 #include <msvis/MSVis/MSUtil.h>
-#include <casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
   MSUtil::MSUtil(){};
   void MSUtil::getSpwInFreqRange(Vector<Int>& spw, Vector<Int>& start,
@@ -332,4 +332,4 @@ namespace casa { //# NAMESPACE CASA - BEGIN
   }
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END

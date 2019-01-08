@@ -28,31 +28,31 @@
 #include <synthesis/MSVis/VisibilityIterator.h>
 #include <synthesis/MSVis/VisBufferAsync.h>
 #include <synthesis/MSVis/UtilJ.h>
-#include <tables/Tables.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/iostream.h>
-#include <casa/iomanip.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/BasicSL/Constants.h>
-#include <casa/System/Aipsrc.h>
+#include <casacore/tables/Tables.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/iomanip.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/BasicSL/Constants.h>
+#include <casacore/casa/System/Aipsrc.h>
 #include <memory>
 #include <mcheck.h>
 #include <boost/tuple/tuple.hpp>
 #include <boost/tuple/tuple_comparison.hpp>
 
 using namespace std;
-using namespace casa::utilj;
-using namespace casa;
-using namespace casa::asyncio;
+using namespace casacore::utilj;
+using namespace casacore;
+using namespace casacore::asyncio;
 using namespace boost;
 
-#include <tables/DataMan/ForwardCol.h>
+#include <casacore/tables/DataMan/ForwardCol.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 class BufferInfo {
 public:
@@ -221,7 +221,7 @@ main(int argc, char **argv)
     return 0;
 }
 
-namespace casa {
+namespace casacore {
 
 #define CheckScalar(x, y) \
     (!(rtc.vbAsync->x != y &&  (cout << "*** Scalar check failed; " << #x << " unitialized." << endl)))

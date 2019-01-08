@@ -26,46 +26,46 @@
 //# $Id: WBCleanImageSkyModel.cc 13615 2010-12-20 14:04:00 UrvashiRV$
 //# v2.6 : Added psf-patch support to reduce memory footprint.
 
-#include <casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
 #include <synthesis/MeasurementComponents/WBCleanImageSkyModel.h>
 #include <synthesis/MeasurementEquations/CubeSkyEquation.h>
-#include <casa/OS/File.h>
+#include <casacore/casa/OS/File.h>
 #include <synthesis/MeasurementEquations/SkyEquation.h>
 #include <synthesis/TransformMachines/StokesImageUtil.h>
 #include <synthesis/MeasurementEquations/LatticeModel.h>
 #include <synthesis/MeasurementEquations/LatConvEquation.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/BasicSL/String.h>
-#include <casa/Utilities/Assert.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Utilities/Assert.h>
 
-#include <images/Images/PagedImage.h>
+#include <casacore/images/Images/PagedImage.h>
 #include <imageanalysis/ImageAnalysis/ImageAnalysis.h>
-#include <images/Images/SubImage.h>
-#include <images/Regions/ImageRegion.h>
-#include <images/Regions/RegionManager.h>
+#include <casacore/images/Images/SubImage.h>
+#include <casacore/images/Regions/ImageRegion.h>
+#include <casacore/images/Regions/RegionManager.h>
 
-#include <images/Regions/WCBox.h>
+#include <casacore/images/Regions/WCBox.h>
 
-#include <measures/Measures/Quality.h>
-#include <coordinates/Coordinates/QualityCoordinate.h>
-#include <images/Images/ImageUtilities.h>
+#include <casacore/measures/Measures/Quality.h>
+#include <casacore/coordinates/Coordinates/QualityCoordinate.h>
+#include <casacore/images/Images/ImageUtilities.h>
 
-#include <scimath/Mathematics/MatrixMathLA.h>
+#include <casacore/scimath/Mathematics/MatrixMathLA.h>
 
 #include <msvis/MSVis/VisSet.h>
 #include <msvis/MSVis/VisSetUtil.h>
 
-#include <ms/MeasurementSets/MSColumns.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
 
-#include <casa/sstream.h>
+#include <casacore/casa/sstream.h>
 
-#include <casa/Logging/LogMessage.h>
-#include <casa/Logging/LogSink.h>
+#include <casacore/casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging/LogSink.h>
 
-#include <casa/OS/HostInfo.h>
+#include <casacore/casa/OS/HostInfo.h>
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 #define TMR(a) "[User: " << a.user() << "] [System: " << a.system() << "] [Real: " << a.real() << "]"
 	
 #define MIN(a,b) ((a)<=(b) ? (a) : (b))
@@ -349,7 +349,7 @@ Bool WBCleanImageSkyModel::solve(SkyEquation& se)
 	    os << "**** Major Cycle " << numbermajorcycles_p << LogIO::POST;
 	    thiscycleniter=0;
 	    /* Compute stopping threshold for this major cycle */
-	    stopflag = static_cast<casa::Int>(computeFluxLimit(fractionOfPsf));
+	    stopflag = static_cast<casacore::Int>(computeFluxLimit(fractionOfPsf));
 	    /* If the peak residual is already less than the user-threshold, stop */
 	    if(stopflag==1) break;
 	    /* If we detect divergence across major cycles, stop */
@@ -1377,5 +1377,5 @@ Bool WBCleanImageSkyModel::mergeDataError(ImageInterface<Float> &data, ImageInte
        return True;
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

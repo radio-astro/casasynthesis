@@ -22,7 +22,7 @@
 
 #include <mstransform/MSTransform/MSTransformRegridder.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 /////////////////////////////////////////////
 /// MSTransformRegridder implementation ///
@@ -964,7 +964,7 @@ Bool MSTransformRegridder::convertGridPars(	LogIO& os,
 
 	try {
 
-		casa::QuantumHolder qh;
+		casacore::QuantumHolder qh;
 		String error;
 
 		t_mode = mode;
@@ -2740,4 +2740,4 @@ Bool MSTransformRegridder::regridChanBounds(	Vector<Double>& newChanLoBound,
 	} // end if (regridQuant== ...
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END

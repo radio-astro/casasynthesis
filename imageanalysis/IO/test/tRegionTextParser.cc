@@ -25,16 +25,16 @@
 //# $Id: $
 
 #include <imageanalysis/IO/RegionTextParser.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/OS/EnvVar.h>
-#include <coordinates/Coordinates/CoordinateUtil.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/OS/EnvVar.h>
+#include <casacore/coordinates/Coordinates/CoordinateUtil.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
 #include <imageanalysis/Annotations/AnnSymbol.h>
 #include <imageanalysis/Annotations/AnnCircle.h>
 #include <imageanalysis/Annotations/AnnEllipse.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 int main() {
 	try {

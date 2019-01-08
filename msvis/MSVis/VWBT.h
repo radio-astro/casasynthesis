@@ -25,16 +25,16 @@
 
 #include <msvis/MSVis/VisibilityIterator.h>
 #include <msvis/MSVis/AsynchronousTools.h>
-using namespace casa::async;
+using namespace casacore::async;
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
-class VWBT : public casa::async::Thread {
+class VWBT : public casacore::async::Thread {
 
 public:
 
 	VWBT(VisibilityIterator *visibilityIterator,
-         casa::async::Mutex * msAccessMutex,
+         casacore::async::Mutex * msAccessMutex,
          bool groupRows);
 
 	~VWBT ();
@@ -63,14 +63,14 @@ private:
 
 	// Writing members
 	VisibilityIterator * visibilityIterator_p;
-	casa::async::Mutex * msAccessMutex_p;
+	casacore::async::Mutex * msAccessMutex_p;
 	Cube<Bool> * flagCube_p;
 
 	// Configuration parameters
 	Bool groupRows_p;
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif /* VWBT_H_ */
 

@@ -16,12 +16,12 @@
 
 #include <imageanalysis/Annotations/AnnPolygon.h>
 
-#include <casa/Quanta/QMath.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <images/Regions/WCPolygon.h>
-#include <scimath/Mathematics/Geometry.h>
+#include <casacore/casa/Quanta/QMath.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/images/Regions/WCPolygon.h>
+#include <casacore/scimath/Mathematics/Geometry.h>
 
-namespace casa {
+namespace casacore {
 
 AnnPolygon::AnnPolygon(
 	const Vector<Quantity>& xPositions,
@@ -291,8 +291,8 @@ void AnnPolygon::_initCenterRectCorners(
 		widthx.getUnit() == "pix"
 		&& ! getCsys().directionCoordinate().hasSquarePixels()
 		&& (
-			! casa::near(fmod(positionAngle.getValue("rad"), C::pi), 0.0)
-			&& ! casa::near(fmod(fabs(positionAngle.getValue("rad")), C::pi), C::pi_2)
+			! casacore::near(fmod(positionAngle.getValue("rad"), C::pi), 0.0)
+			&& ! casacore::near(fmod(fabs(positionAngle.getValue("rad")), C::pi), C::pi_2)
 		),
 		"When pixels are not square and units are expressed in "
 		"pixels, position angle must be zero"

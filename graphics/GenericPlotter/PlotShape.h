@@ -31,10 +31,10 @@
 
 #include <vector>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 using namespace std;
 
-namespace casa {
+namespace casacore {
 
 // Abstract class for any shape which contains common functionality.
 class PlotShape : public virtual PlotItem {

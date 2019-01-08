@@ -26,31 +26,31 @@
 //# $Id: tImageFit1D.cc 20622 2009-06-11 13:52:35Z gervandiepen $
 
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include<imageanalysis/ImageAnalysis/ImageFit1D.h>
 
-#include<casa/Arrays/Vector.h>
-#include<casa/Arrays/ArrayMath.h>
-#include<casa/Arrays/ArrayLogical.h>
-#include<casa/Arrays/ArrayIO.h>
-#include<casa/Arrays/IPosition.h>
-#include <casa/Inputs/Input.h>
-#include<lattices/Lattices/TiledShape.h>
-#include<lattices/Lattices/ArrayLattice.h>
-#include<lattices/Lattices/LatticeUtilities.h>
-#include<lattices/LRegions/LCSlicer.h>
-#include<coordinates/Coordinates/CoordinateSystem.h>
-#include<coordinates/Coordinates/SpectralCoordinate.h>
+#include<casacore/casa/Arrays/Vector.h>
+#include<casacore/casa/Arrays/ArrayMath.h>
+#include<casacore/casa/Arrays/ArrayLogical.h>
+#include<casacore/casa/Arrays/ArrayIO.h>
+#include<casacore/casa/Arrays/IPosition.h>
+#include <casacore/casa/Inputs/Input.h>
+#include<casacore/lattices/Lattices/TiledShape.h>
+#include<casacore/lattices/Lattices/ArrayLattice.h>
+#include<casacore/lattices/Lattices/LatticeUtilities.h>
+#include<casacore/lattices/LRegions/LCSlicer.h>
+#include<casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include<casacore/coordinates/Coordinates/SpectralCoordinate.h>
 #include<components/SpectralComponents/SpectralList.h>
 #include<components/SpectralComponents/SpectralElement.h>
-#include<images/Images/TempImage.h>
-#include<images/Images/ImageInterface.h>
-#include<images/Regions/ImageRegion.h>
-#include<casa/Utilities/Assert.h>
+#include<casacore/images/Images/TempImage.h>
+#include<casacore/images/Images/ImageInterface.h>
+#include<casacore/images/Regions/ImageRegion.h>
+#include<casacore/casa/Utilities/Assert.h>
 
-#include <casa/iostream.h>
+#include <casacore/casa/iostream.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 
 

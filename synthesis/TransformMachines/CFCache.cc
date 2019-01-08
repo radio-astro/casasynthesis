@@ -28,14 +28,14 @@
 #include <synthesis/TransformMachines/SynthesisError.h>
 #include <synthesis/TransformMachines/CFCache.h>
 #include <synthesis/TransformMachines/Utils.h>
-#include <lattices/LEL/LatticeExpr.h>
-#include <casa/System/ProgressMeter.h>
-#include <casa/Exceptions/Error.h>
+#include <casacore/lattices/LEL/LatticeExpr.h>
+#include <casacore/casa/System/ProgressMeter.h>
+#include <casacore/casa/Exceptions/Error.h>
 #include <fstream>
 #include <algorithm>
-// #include <tables/Tables/TableDesc.h>
-// #include <tables/Tables/SetupNewTab.h>
-// #include <tables/Tables/Table.h>
+// #include <casacore/tables/Tables/TableDesc.h>
+// #include <casacore/tables/Tables/SetupNewTab.h>
+// #include <casacore/tables/Tables/Table.h>
 
 namespace casa{
   CFCache::~CFCache()  {}
@@ -458,7 +458,7 @@ namespace casa{
 	Int index= thisCF.coordinates().findCoordinate(Coordinate::SPECTRAL);
 	coordSys = thisCF.coordinates();
 	SpectralCoordinate spCS = coordSys.spectralCoordinate(index);
-	fVal=static_cast<casa::Float>(spCS.referenceValue()(0));
+	fVal=static_cast<casacore::Float>(spCS.referenceValue()(0));
       }
     catch(AipsError& x)
       {

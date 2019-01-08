@@ -29,7 +29,7 @@
 #include <imageanalysis/ImageAnalysis/ImageFactory.h>
 #include <imageanalysis/ImageAnalysis/ImageRegridder.h>
 
-namespace casa {
+namespace casacore {
 
 const String  ComplexImageRegridder::_class = "ComplexImageRegridder";
 

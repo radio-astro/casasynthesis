@@ -27,26 +27,26 @@
 //
 #include <imageanalysis/ImageAnalysis/SepImageConvolver.h>
 
-#include <casa/aips.h>
-#include <scimath/Functionals/Gaussian1D.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/ArrayIO.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Inputs/Input.h>
-#include <casa/Logging.h>
-#include <casa/BasicSL/Constants.h>
-#include <scimath/Mathematics/VectorKernel.h>
-#include <tables/Tables/Table.h>
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/aips.h>
+#include <casacore/scimath/Functionals/Gaussian1D.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayIO.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Inputs/Input.h>
+#include <casacore/casa/Logging.h>
+#include <casacore/casa/BasicSL/Constants.h>
+#include <casacore/scimath/Mathematics/VectorKernel.h>
+#include <casacore/tables/Tables/Table.h>
+#include <casacore/casa/BasicSL/String.h>
 
 
-#include <images/Images/PagedImage.h>
-#include <casa/iostream.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/casa/iostream.h>
 
 
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 int main (int argc, const char* argv[])
 {
 

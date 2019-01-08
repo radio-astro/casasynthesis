@@ -28,10 +28,10 @@
 
 #include <imageanalysis/ImageAnalysis/ImageRegridderBase.h>
 
-#include <scimath/Mathematics/Interpolate2D.h>
-#include <casa/namespace.h>
+#include <casacore/scimath/Mathematics/Interpolate2D.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 template <class T> class SubImage;
 template <class T> class TempImage;

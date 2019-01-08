@@ -1,9 +1,9 @@
 #ifndef IMAGESANALYSIS_IMAGEMASKATTACHER_H
 #define IMAGESANALYSIS_IMAGEMASKATTACHER_H
 
-#include <images/Images/ImageInterface.h>
+#include <casacore/images/Images/ImageInterface.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary>
 // Contains tatic method to attach a mask to an image
@@ -45,7 +45,7 @@ private:
     ImageMaskAttacher operator=(ImageMaskAttacher);
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #ifndef AIPS_NO_TEMPLATE_SRC
 #include <imageanalysis/ImageAnalysis/ImageMaskAttacher.tcc>

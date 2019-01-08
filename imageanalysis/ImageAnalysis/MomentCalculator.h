@@ -29,17 +29,17 @@
 #define IMAGES_MOMENTCALCULATOR_H
 
 //# Includes
-#include <casa/aips.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
-#include <lattices/LatticeMath/LineCollapser.h>
-#include <scimath/Functionals/Gaussian1D.h>
-#include <scimath/Mathematics/NumericTraits.h>
-#include <casa/System/PGPlotter.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Logging/LogIO.h>
+#include <casacore/casa/aips.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/lattices/LatticeMath/LineCollapser.h>
+#include <casacore/scimath/Functionals/Gaussian1D.h>
+#include <casacore/scimath/Mathematics/NumericTraits.h>
+#include <casacore/casa/System/PGPlotter.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Logging/LogIO.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //# Forward Declarations
 template <class T> class MomentsBase;
@@ -1181,7 +1181,7 @@ inline Double MomentCalcBase<T>::getMomentCoord(const MomentsBase<T>& iMom,
    return worldOut(iMom.worldMomentAxis_p);
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #ifndef CASACORE_NO_AUTO_TEMPLATES
 #include <imageanalysis/ImageAnalysis/MomentCalculator.tcc>

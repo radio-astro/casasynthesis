@@ -1,7 +1,7 @@
 #include <msvis/MSVis/VisModelDataI.h>
-#include <casa/Exceptions.h>
+#include <casacore/casa/Exceptions.h>
 
-namespace casa {
+namespace casacore {
 
 VisModelDataI::Factory VisModelDataI::factory_p = 0;
 VisModelDataI::Factory VisModelDataI::factory2_p = 0;

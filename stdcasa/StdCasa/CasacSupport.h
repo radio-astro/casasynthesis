@@ -1,19 +1,19 @@
 #include <string>
 #include <vector>
-#include <casa/Arrays/Vector.h>
-#include <casa/BasicSL/String.h>
-#include <casa/Quanta/Quantum.h>
-#include <measures/Measures/MDirection.h>
-#include <measures/Measures/MPosition.h>
-#include <measures/Measures/MFrequency.h>
-#include <measures/Measures/MRadialVelocity.h>
-#include <measures/Measures/MEpoch.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Quanta/Quantum.h>
+#include <casacore/measures/Measures/MDirection.h>
+#include <casacore/measures/Measures/MPosition.h>
+#include <casacore/measures/Measures/MFrequency.h>
+#include <casacore/measures/Measures/MRadialVelocity.h>
+#include <casacore/measures/Measures/MEpoch.h>
 #include <stdcasa/Quantity.h>
 #include <stdcasa/record.h>
 
 // Conversions utilities
 
-namespace casa {
+namespace casacore {
 
 class Record;
 class ValueHolder;
@@ -37,7 +37,7 @@ Quantity          casaQuantity(const casac::variant &);
 ::casac::record  *fromRecord(const Record &);
 // makes a Vector of Quantity out of strings or vector of such or later records
  Bool toCasaVectorQuantity(const ::casac::variant& theval, 
-			   casa::Vector<casa::Quantity>& theQuants);
+			   casacore::Vector<casacore::Quantity>& theQuants);
 
 ::casac::record* recordFromQuantity(const Quantity q);
 ::casac::record* recordFromQuantity(const Quantum<Vector<Double> >& q);
@@ -47,7 +47,7 @@ ValueHolder      *toValueHolder(const casac::variant&);
 ::casac::variant *fromValueHolder(const ValueHolder &);
 Bool             casaMDirection(const ::casac::variant& theVar, 
 				            MDirection& theMeas);
-Bool             ang_as_formatted_str(string& out, const casa::Quantity& qang,
+Bool             ang_as_formatted_str(string& out, const casacore::Quantity& qang,
                                       const std::string& format, const Int precision);
 Bool             MDirection2str(const MDirection& in, std::string& out);
 Bool             casaMFrequency(const ::casac::variant& theVar, 

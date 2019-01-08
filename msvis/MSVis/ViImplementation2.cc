@@ -1,16 +1,16 @@
 
 #include <msvis/MSVis/VisibilityIterator2.h>
 #include <msvis/MSVis/ViImplementation2.h>
-#include <measures/Measures/MDirection.h>
-#include <measures/Measures/MEpoch.h>
-#include <casa/Quanta/MVTime.h>
-#include <ms/MSOper/MSDerivedValues.h>
-#include <casa/Arrays.h>
+#include <casacore/measures/Measures/MDirection.h>
+#include <casacore/measures/Measures/MEpoch.h>
+#include <casacore/casa/Quanta/MVTime.h>
+#include <casacore/ms/MSOper/MSDerivedValues.h>
+#include <casacore/casa/Arrays.h>
 
 #include <algorithm>
 using namespace std;
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 

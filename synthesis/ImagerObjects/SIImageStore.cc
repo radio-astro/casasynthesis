@@ -25,41 +25,41 @@
 //#
 //# $Id$
 
-#include <casa/Exceptions/Error.h>
-#include <casa/iostream.h>
-#include <casa/sstream.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/sstream.h>
 
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
 
-#include <casa/Logging.h>
-#include <casa/Logging/LogIO.h>
-#include <casa/Logging/LogMessage.h>
-#include <casa/Logging/LogSink.h>
-#include <casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging/LogSink.h>
+#include <casacore/casa/Logging/LogMessage.h>
 
-#include <casa/OS/DirectoryIterator.h>
-#include <casa/OS/File.h>
-#include <casa/OS/Path.h>
+#include <casacore/casa/OS/DirectoryIterator.h>
+#include <casacore/casa/OS/File.h>
+#include <casacore/casa/OS/Path.h>
 
-#include <casa/OS/HostInfo.h>
-#include <images/Images/TempImage.h>
-#include <images/Images/PagedImage.h>
-#include <ms/MeasurementSets/MSHistoryHandler.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/casa/OS/HostInfo.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/ms/MeasurementSets/MSHistoryHandler.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
 
 #include <synthesis/ImagerObjects/SIImageStore.h>
 #include <synthesis/TransformMachines/StokesImageUtil.h>
 #include <synthesis/ImagerObjects/SynthesisUtilMethods.h>
-#include <images/Images/ImageRegrid.h>
+#include <casacore/images/Images/ImageRegrid.h>
 
 
 #include <sys/types.h>
 #include <unistd.h>
 using namespace std;
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
   //
   //===========================================================================
@@ -2171,43 +2171,43 @@ void SIImageStore::regridToModelImage( ImageInterface<Float> &inputimage )
     String itsName;
     try 
       {
-	itsName=itsImageName+imageExts(PSF);casa::openImage(itsName,      itsPsf);
+	itsName=itsImageName+imageExts(PSF);casacore::openImage(itsName,      itsPsf);
 	if (coordSysLoaded==False) {itsCoordSys=itsPsf->coordinates(); itsMiscInfo=itsPsf->miscInfo();coordSysLoaded=True;}
       } catch (AipsIO& x) {logIO << "\"" << itsName << "\" not found." << LogIO::WARN;};
     try 
       {
-	itsName=itsImageName+imageExts(MASK);casa::openImage(itsName,     itsMask);
+	itsName=itsImageName+imageExts(MASK);casacore::openImage(itsName,     itsMask);
 	if (coordSysLoaded==False) {itsCoordSys=itsMask->coordinates(); itsMiscInfo=itsImage->miscInfo();coordSysLoaded=True;}
       } catch (AipsIO& x) {logIO << "\"" << itsName << "\" not found." << LogIO::WARN;};
     try 
       {
-	itsName=itsImageName+imageExts(MODEL);casa::openImage(itsName,    itsModel);
+	itsName=itsImageName+imageExts(MODEL);casacore::openImage(itsName,    itsModel);
 	if (coordSysLoaded==False) {itsCoordSys=itsModel->coordinates(); itsMiscInfo=itsModel->miscInfo();coordSysLoaded=True;}
       } catch (AipsIO& x) {logIO << "\"" << itsName << "\" not found." << LogIO::WARN;};
     try 
       {
-	itsName=itsImageName+imageExts(RESIDUAL);casa::openImage(itsName, itsResidual);
+	itsName=itsImageName+imageExts(RESIDUAL);casacore::openImage(itsName, itsResidual);
 	if (coordSysLoaded==False) {itsCoordSys=itsResidual->coordinates(); itsMiscInfo=itsResidual->miscInfo();coordSysLoaded=True;}
       } catch (AipsIO& x) {logIO << "\"" << itsName << "\" not found." << LogIO::WARN;};
     try 
       {
-	itsName=itsImageName+imageExts(WEIGHT);casa::openImage(itsName,   itsWeight);
+	itsName=itsImageName+imageExts(WEIGHT);casacore::openImage(itsName,   itsWeight);
 	if (coordSysLoaded==False) {itsCoordSys=itsWeight->coordinates(); itsMiscInfo=itsWeight->miscInfo();coordSysLoaded=True;}
       } catch (AipsIO& x) {logIO << "\"" << itsName << "\" not found." << LogIO::WARN;};
     try 
       {
-	itsName=itsImageName+imageExts(IMAGE);casa::openImage(itsName,    itsImage);
+	itsName=itsImageName+imageExts(IMAGE);casacore::openImage(itsName,    itsImage);
 	if (coordSysLoaded==False) {itsCoordSys=itsImage->coordinates(); itsMiscInfo=itsImage->miscInfo();coordSysLoaded=True;}
       } catch (AipsIO& x) {logIO << "\"" << itsName << "\" not found." << LogIO::WARN;};
     try 
       {
-	itsName=itsImageName+imageExts(SUMWT);casa::openImage(itsName,    itsSumWt);
+	itsName=itsImageName+imageExts(SUMWT);casacore::openImage(itsName,    itsSumWt);
 	if (coordSysLoaded==False) {itsCoordSys=itsSumWt->coordinates(); itsMiscInfo=itsSumWt->miscInfo();coordSysLoaded=True;}
       } catch (AipsIO& x) {logIO << "\"" << itsName << "\" not found." << LogIO::WARN;};
     try
       {
-	casa::openImage(itsImageName+imageExts(FORWARDGRID),  itsForwardGrid);
-	casa::openImage(itsImageName+imageExts(BACKWARDGRID), itsBackwardGrid);
+	casacore::openImage(itsImageName+imageExts(FORWARDGRID),  itsForwardGrid);
+	casacore::openImage(itsImageName+imageExts(BACKWARDGRID), itsBackwardGrid);
       }
     catch (AipsError& x)
       {
@@ -2220,5 +2220,5 @@ void SIImageStore::regridToModelImage( ImageInterface<Float> &inputimage )
   //////////////////////////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

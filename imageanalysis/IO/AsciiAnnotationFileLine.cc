@@ -26,7 +26,7 @@
 
 #include <imageanalysis/IO/AsciiAnnotationFileLine.h>
 
-namespace casa {
+namespace casacore {
 
 AsciiAnnotationFileLine::AsciiAnnotationFileLine()
 	: _type(UNKNOWN_TYPE),

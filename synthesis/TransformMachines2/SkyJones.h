@@ -29,12 +29,12 @@
 #ifndef SYNTHESIS_TRANSFORM2_SKYJONES_H
 #define SYNTHESIS_TRANSFORM2_SKYJONES_H
 
-#include <casa/aips.h>
-#include <casa/BasicSL/Complex.h>
-#include <images/Images/ImageInterface.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/BasicSL/Complex.h>
+#include <casacore/images/Images/ImageInterface.h>
 #include <components/ComponentModels/ComponentList.h>
 #include <components/ComponentModels/SkyComponent.h>
-#include <casa/Utilities/CompositeNumber.h>
+#include <casacore/casa/Utilities/CompositeNumber.h>
 #include <msvis/MSVis/VisBuffer2.h>
 #include <synthesis/TransformMachines/SkyJones.h>
 
@@ -171,7 +171,7 @@ class SkyJones {
 public:
  
   // Allowed types of VisJones matrices
-	//we should use the namespace casa ones
+	//we should use the namespace casacore ones
   //enum Type{E,T,F,D};
 
   //enum SizeType{COMPOSITE, POWEROF2, ANY};
@@ -228,7 +228,7 @@ public:
   virtual Bool change(const vi::VisBuffer2& vb) = 0;
 
   // Return the type of this Jones matrix (actual type of derived class).
-  virtual ::casa::SkyJones::Type type() = 0;
+  virtual ::casacore::SkyJones::Type type() = 0;
 
   // Apply gradient
   virtual ImageInterface<Complex>& 
@@ -275,13 +275,13 @@ public:
 				const Int irow=-1,                        
 				const Float fPad=1.2,  
 				const Int iChan=0, 
-				const casa::SkyJones::SizeType sizeType=casa::SkyJones::COMPOSITE)=0;
+				const casacore::SkyJones::SizeType sizeType=casacore::SkyJones::COMPOSITE)=0;
   virtual ImageRegion*  extent (const ImageInterface<Float>& im, 
 				const vi::VisBuffer2& vb,
 				const Int irow=-1,
 				const Float fPad=1.2,  
 				const Int iChan=0, 
-				const casa::SkyJones::SizeType sizeType=casa::SkyJones::COMPOSITE)=0;
+				const casacore::SkyJones::SizeType sizeType=casacore::SkyJones::COMPOSITE)=0;
 
   virtual String telescope()=0;
   
@@ -296,13 +296,13 @@ protected:
   // Could be over-ridden if necessary
   virtual String typeName() {
     switch(type()) {
-    case ::casa::SkyJones::E:    // voltage pattern (ie, on-axis terms)
+    case ::casacore::SkyJones::E:    // voltage pattern (ie, on-axis terms)
       return "E Jones";
-    case ::casa::SkyJones::T:    // Tropospheric effects
+    case ::casacore::SkyJones::T:    // Tropospheric effects
       return "T Jones";
-    case ::casa::SkyJones::F:    // Faraday
+    case ::casacore::SkyJones::F:    // Faraday
       return "F Jones";
-    case ::casa::SkyJones::D:    // D Beam (ie, polarization leakage beam; off axis terms)
+    case ::casacore::SkyJones::D:    // D Beam (ie, polarization leakage beam; off axis terms)
       return "D Jones";
     }
     return "Not known";

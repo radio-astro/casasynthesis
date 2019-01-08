@@ -8,9 +8,9 @@
 #include "MsRows.h"
 
 #include <msvis/MSVis/VisBuffer2.h>
-#include <casa/Exceptions.h>
+#include <casacore/casa/Exceptions.h>
 
-namespace casa {
+namespace casacore {
 namespace ms {
 
 using vi::VisBuffer2;

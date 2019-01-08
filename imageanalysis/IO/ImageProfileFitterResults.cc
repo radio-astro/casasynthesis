@@ -26,19 +26,19 @@
 
 #include <imageanalysis/IO/ImageProfileFitterResults.h>
 
-#include <casa/Utilities/Precision.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <coordinates/Coordinates/LinearCoordinate.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
-#include <coordinates/Coordinates/StokesCoordinate.h>
-#include <images/Images/PagedImage.h>
-#include <scimath/Mathematics/Combinatorics.h>
+#include <casacore/casa/Utilities/Precision.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/coordinates/Coordinates/LinearCoordinate.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/coordinates/Coordinates/StokesCoordinate.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/scimath/Mathematics/Combinatorics.h>
 
 #include <imageanalysis/ImageAnalysis/ImageCollapser.h>
 #include <imageanalysis/ImageAnalysis/ProfileFitResults.h>
 #include <imageanalysis/IO/LogFile.h>
 
-namespace casa {
+namespace casacore {
 
 const String ImageProfileFitterResults::_class = "ImageProfileFitterResults";
 const String ImageProfileFitterResults::_CONVERGED = "converged";
@@ -84,7 +84,7 @@ std::auto_ptr<vector<vector<Array<Double> > > > ImageProfileFitterResults::_crea
 	);
 	uInt nSubcomps = 0;
 	uInt compCount = 0;
-	Double fNAN = casa::doubleNaN();
+	Double fNAN = casacore::doubleNaN();
 
 	Array<Double> blank;
     IPosition fShape = _fitters->shape();
@@ -410,7 +410,7 @@ void ImageProfileFitterResults::_writeLogfile(const String& str, Bool open, Bool
 
 void ImageProfileFitterResults::_setResults() {
     LogOrigin logOrigin(_class, __func__);
-    Double fNAN = casa::doubleNaN();
+    Double fNAN = casacore::doubleNaN();
     uInt nComps = _nGaussSinglets + _nGaussMultiplets + _nLorentzSinglets;
     if (_polyOrder >= 0) {
     	nComps++;
@@ -1229,8 +1229,8 @@ String ImageProfileFitterResults::_polynomialToString(
         Double sumsq = 0;
         for (uInt k=j; k<n; k++) {
             Double multiplier = Combinatorics::choose(k, k-j)
-				* casa::pow(x0, Float(k - j))
-				* casa::pow(1/deltaX, Float(k));
+				* casacore::pow(x0, Float(k - j))
+				* casacore::pow(1/deltaX, Float(k));
             if ((k-j) % 2 == 1) {
             	multiplier *= -1;
             }
@@ -1238,7 +1238,7 @@ String ImageProfileFitterResults::_polynomialToString(
             Double errCoeff = multiplier * errs[k];
             sumsq += errCoeff * errCoeff;
         }
-        pCoeffErr[j] = casa::sqrt(sumsq);
+        pCoeffErr[j] = casacore::sqrt(sumsq);
         summary << "         c" << j << " : ";
 		String unit = _subImage->units().getName();
 		if (j > 0 ) {

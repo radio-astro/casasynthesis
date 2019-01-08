@@ -28,13 +28,13 @@
 #include <synthesis/MeasurementEquations/CEMemModel.h>
 #include <synthesis/MeasurementEquations/CEMemProgress.h>
 #include <synthesis/MeasurementEquations/Entropy.h>
-#include <lattices/LEL/LatticeExpr.h>
-#include <lattices/LEL/LatticeExprNode.h>
-#include <lattices/Lattices/LatticeStepper.h>
-#include <lattices/Lattices/LatticeIterator.h>
-#include <casa/BasicMath/Math.h>
+#include <casacore/lattices/LEL/LatticeExpr.h>
+#include <casacore/lattices/LEL/LatticeExprNode.h>
+#include <casacore/lattices/Lattices/LatticeStepper.h>
+#include <casacore/lattices/Lattices/LatticeIterator.h>
+#include <casacore/casa/BasicMath/Math.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------
 Entropy::Entropy()
@@ -1306,5 +1306,5 @@ Bool EntropyEmptiness::testConvergence()
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

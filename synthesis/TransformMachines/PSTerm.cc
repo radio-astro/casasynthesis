@@ -32,7 +32,7 @@
 #include <omp.h>
 #endif
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   //
   //-------------------------------------------------------------------------
   //	       

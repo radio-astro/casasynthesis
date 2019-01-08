@@ -33,21 +33,21 @@
 #include <synthesis/CalTables/CTTimeInterp1.h>
 #include <synthesis/CalTables/RIorAParray.h>
 #include <synthesis/CalTables/VisCalEnum.h>
-#include <scimath/Mathematics/InterpolateArray1D.h>
-#include <casa/Arrays/Array.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/Cube.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
-#include <ms/MeasurementSets/MSField.h>
-#include <ms/MeasurementSets/MSColumns.h>
-#include <casa/aips.h>
+#include <casacore/scimath/Mathematics/InterpolateArray1D.h>
+#include <casacore/casa/Arrays/Array.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/Cube.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/ms/MeasurementSets/MSField.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
+#include <casacore/casa/aips.h>
 
-//#include <casa/BasicSL/Constants.h>
-//#include <casa/OS/File.h>
-//#include <casa/Logging/LogMessage.h>
-//#include <casa/Logging/LogSink.h>
+//#include <casacore/casa/BasicSL/Constants.h>
+//#include <casacore/casa/OS/File.h>
+//#include <casacore/casa/Logging/LogMessage.h>
+//#include <casacore/casa/Logging/LogSink.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 
 // A specialized key class for Calibration patch panel elements
@@ -375,6 +375,6 @@ private:
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

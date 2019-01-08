@@ -29,7 +29,7 @@
 // Class containing the actual transformation logic
 #include <mstransform/MSTransform/MSTransformManager.h>
 
-namespace casa {
+namespace casacore {
 
 class MSTransformBufferImpl : public vi::VisBufferImpl2
 {
@@ -241,7 +241,7 @@ private:
 
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 
 #endif /* MSTransformBufferImpl_H_ */

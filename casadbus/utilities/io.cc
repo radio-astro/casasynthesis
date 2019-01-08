@@ -29,7 +29,7 @@
 #include <casadbus/types/record.h>
 #include <algorithm>
 
-namespace casa {
+namespace casacore {
 	namespace dbus {
 
 		std::string asString( const variant &v ) {
@@ -81,7 +81,7 @@ namespace casa {
 					}
 					break;
 				case variant::RECORD:
-					{	const casa::dbus::record &rec = v.getRecord( );
+					{	const casacore::dbus::record &rec = v.getRecord( );
 						std::ostream_iterator<std::string> o( out, "," );
 						std::transform( rec.begin( ), rec.end( ), o,
 										(std::string (*)(const std::pair<std::string,variant>&)) asString );

@@ -26,11 +26,11 @@
 #ifndef SKYCOMPONENTFACTORY_H_
 #define SKYCOMPONENTFACTORY_H_
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
 #include <components/ComponentModels/SkyComponent.h>
 
-namespace casa {
+namespace casacore {
 
 class GaussianBeam;
 class ImageInfo;
@@ -86,7 +86,7 @@ public:
 	static SkyComponent encodeSkyComponent(
 		LogIO& os, Double& fluxRatio,
 		const ImageInterface<Float>& im,
-		casa::ComponentType::Shape modelType,
+		casacore::ComponentType::Shape modelType,
 		const Vector<Double>& parameters,
 		Stokes::StokesTypes stokes,
 		Bool xIsLong, Bool deconvolveIt,

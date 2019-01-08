@@ -36,15 +36,15 @@
 #include <synthesis/MeasurementComponents/MThWorkIDEnum.h>
 #include <msvis/MSVis/UtilJ.h>
 #include <msvis/MSVis/VisBuffer.h>
-#include <casa/Arrays/Array.h>
-#include <casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/Array.h>
+#include <casacore/casa/Arrays/Vector.h>
 
-#include <casa/Logging/LogIO.h>
-#include <casa/Logging/LogSink.h>
-#include <casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/casa/Logging/LogSink.h>
+#include <casacore/casa/Logging/LogMessage.h>
 #define DEFAULTNOOFCORES -1
 #define FTMachineNumThreadsEnvVar "ftmachine_num_threads"
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   class MultiThreadedVisibilityResampler: public VisibilityResamplerBase
   {
   public: 
@@ -181,14 +181,14 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 
     CountedPtr<ThreadCoordinator<Int> > threadClerk_p;
     Bool threadStarted_p;
-    casa::utilj::DeltaThreadTimes tSetupG, tSendDataG, tWaitForWorkG, tOutsideG;
-    casa::utilj::DeltaThreadTimes tSetupDG, tSendDataDG, tWaitForWorkDG, tOutsideDG;
-    casa::utilj::ThreadTimes t4G_p,t4DG_p;
+    casacore::utilj::DeltaThreadTimes tSetupG, tSendDataG, tWaitForWorkG, tOutsideG;
+    casacore::utilj::DeltaThreadTimes tSetupDG, tSendDataDG, tWaitForWorkDG, tOutsideDG;
+    casacore::utilj::ThreadTimes t4G_p,t4DG_p;
     //    async::Mutex *mutexForResamplers_p;
     CountedPtr<VisibilityResamplerBase> visResamplerCtor_p;
     Int whoLoadedVB_p;
     Int currentVBS_p;
  };
-}; //# NAMESPACE CASA - END
+}; //# NAMESPACE CASACORE - END
 
 #endif // 

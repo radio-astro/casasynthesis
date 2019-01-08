@@ -25,20 +25,20 @@
 //#
 //# $Id$
 
-#include <casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
 #include <components/ComponentModels/ComponentList.h>
 #include <components/ComponentModels/ComponentShape.h>
 #include <components/ComponentModels/Flux.h>
-#include <tables/TaQL/ExprNode.h>
-#include <measures/Measures/MeasTable.h>
+#include <casacore/tables/TaQL/ExprNode.h>
+#include <casacore/measures/Measures/MeasTable.h>
 
 #include <synthesis/TransformMachines/VisModelData.h>
 #include <synthesis/TransformMachines/FTMachine.h>
 #include <synthesis/TransformMachines/GridFT.h>
 #include <msvis/MSVis/VisibilityIterator.h>
 #include <msvis/MSVis/VisBuffer.h>
-#include <casa/OS/Timer.h>
-#include <casa/namespace.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/casa/namespace.h>
 
 
 

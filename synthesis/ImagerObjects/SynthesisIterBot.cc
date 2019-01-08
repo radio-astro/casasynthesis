@@ -25,32 +25,32 @@
 //#
 //# $Id$
 
-#include <casa/Exceptions/Error.h>
-#include <casa/iostream.h>
-#include <casa/sstream.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/sstream.h>
 #include <iomanip>
 
 
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
 
-#include <casa/Logging.h>
-#include <casa/Logging/LogIO.h>
-#include <casa/Logging/LogMessage.h>
-#include <casa/Logging/LogSink.h>
-#include <casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging/LogSink.h>
+#include <casacore/casa/Logging/LogMessage.h>
 
-#include <casa/OS/DirectoryIterator.h>
-#include <casa/OS/File.h>
-#include <casa/OS/Path.h>
+#include <casacore/casa/OS/DirectoryIterator.h>
+#include <casacore/casa/OS/File.h>
+#include <casacore/casa/OS/Path.h>
 
-#include <casa/OS/HostInfo.h>
+#include <casacore/casa/OS/HostInfo.h>
 
 #include<synthesis/ImagerObjects/SIIterBot.h>
 #include <synthesis/ImagerObjects/SynthesisIterBot.h>
-#include <ms/MeasurementSets/MSHistoryHandler.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/ms/MeasurementSets/MSHistoryHandler.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
 #include <casadbus/session/DBusSession.h>
 #include <casadbus/synthesis/ImagerControl.h>
 
@@ -59,7 +59,7 @@
 using namespace std;
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   
 	SynthesisIterBot::SynthesisIterBot() : actionRequestSync(new SIIterBot_callback( )),
 					       itsLoopController(new SIIterBot_state(actionRequestSync)),
@@ -75,13 +75,13 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 
 	void SynthesisIterBot::dbus_thread_launch_pad( ) {
 		SIIterBot_adaptor dbus_adaptor(itsLoopController,ImagerControl::name( ),ImagerControl::object_path( ));
-		casa::DBusSession::instance().dispatcher( ).enter( );
+		casacore::DBusSession::instance().dispatcher( ).enter( );
 		std::cout << "Service Loop Exited: " << time(0) << std::endl;
 	}
 
 	SynthesisIterBot::~SynthesisIterBot() {
 		if ( dbus_thread != NULL ) {
-			casa::DBusSession::instance().dispatcher( ).leave( );
+			casacore::DBusSession::instance().dispatcher( ).leave( );
 			dbus_thread->join( );
 			delete dbus_thread;
 			dbus_thread = NULL;
@@ -333,9 +333,9 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 		  //cout << "ActionCodes : " << itsActionCodes << endl;
 		  
 		  Quantity qa;
-		  casa::Quantity::read(qa,strthresh);
+		  casacore::Quantity::read(qa,strthresh);
 		  threshold = qa.getValue(Unit("Jy"));
-		  casa::Quantity::read(qa,strcycthresh);
+		  casacore::Quantity::read(qa,strcycthresh);
 		  cyclethreshold = qa.getValue(Unit("Jy"));
 
 		  if( itsLoopController ){
@@ -366,5 +366,5 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

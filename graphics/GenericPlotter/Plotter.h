@@ -31,7 +31,7 @@
 #include <graphics/GenericPlotter/PlotLogger.h>
 #include <graphics/GenericPlotter/PlotPanel.h>
 
-namespace casa {
+namespace casacore {
 
 //# Forward Declarations
 class PlotFactory;

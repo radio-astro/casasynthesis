@@ -27,14 +27,14 @@
 
 #include <imageanalysis/IO/FitterEstimatesFileParser.h>
 
-#include <casa/Utilities/Assert.h>
-#include <casa/OS/File.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/OS/File.h>
 #include <components/ComponentModels/GaussianShape.h>
-#include <images/Images/FITSImage.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <casa/OS/EnvVar.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/casa/OS/EnvVar.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 void writeTestString(const String& test) {
     cout << "\n" << "*** " << test << " ***" << endl;

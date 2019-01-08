@@ -26,14 +26,14 @@
 #ifndef SPECTRALLISTFACTORY_H_
 #define SPECTRALLISTFACTORY_H_
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <stdcasa/variant.h>
 
 #include <components/SpectralComponents/SpectralList.h>
 
 using namespace casac;
 
-namespace casa {
+namespace casacore {
 
 // create a SpectralList
 

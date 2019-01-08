@@ -27,7 +27,7 @@
 
 #include <imageanalysis/ImageAnalysis/ProfileFitResults.h>
 
-namespace casa {
+namespace casacore {
 
 ProfileFitResults::ProfileFitResults(const ImageFit1D<Float>& fitter) :
 	_spectralList(fitter.getList(True)), _converged(fitter.converged()),

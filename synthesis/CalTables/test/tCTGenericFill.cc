@@ -26,11 +26,11 @@
 //# $Id: tNewCalTable.cc 18164 2012-02-13 00:55:19Z george.moellenbrock $
 
 #include <synthesis/CalTables/NewCalTable.h>
-#include <casa/Arrays/Cube.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/iostream.h>
-#include <casa/BasicMath/Math.h>
-#include <casa/namespace.h>
+#include <casacore/casa/Arrays/Cube.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/casa/namespace.h>
 // <summary>
 // Test program for NewCalTable class.
 // </summary>

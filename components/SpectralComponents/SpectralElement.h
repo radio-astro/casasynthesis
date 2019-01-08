@@ -29,11 +29,11 @@
 #ifndef COMPONENTS_SPECTRALELEMENT_H
 #define COMPONENTS_SPECTRALELEMENT_H
 
-#include <casa/aips.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Containers/RecordInterface.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Containers/RecordInterface.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 template <class T, class U> class Function;
 
@@ -202,7 +202,7 @@ Bool near(const SpectralElement& s1, const SpectralElement& s2, const Double tol
 Bool nearAbs(const SpectralElement& s1, const SpectralElement& s2, const Double tol);
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
 

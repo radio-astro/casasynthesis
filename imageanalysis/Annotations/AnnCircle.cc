@@ -17,11 +17,11 @@
 
 #include <imageanalysis/Annotations/AnnCircle.h>
 
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <images/Regions/WCEllipsoid.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/images/Regions/WCEllipsoid.h>
 
 
-namespace casa {
+namespace casacore {
 
 AnnCircle::AnnCircle(
 	const Quantity& xcenter,

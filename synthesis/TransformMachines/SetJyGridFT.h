@@ -32,7 +32,7 @@
 #include <synthesis/TransformMachines/GridFT.h>
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary>  An FTMachine for Gridded Fourier transforms specializing in setjy frequency scaling </summary>
 
@@ -140,6 +140,6 @@ protected:
 
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

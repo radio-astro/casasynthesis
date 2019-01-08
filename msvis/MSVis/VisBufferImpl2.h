@@ -27,22 +27,22 @@
 #ifndef MSVIS_VISBUFFERIMPL2_H
 #define MSVIS_VISBUFFERIMPL2_H
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
 //#warning "Remove next line later"
 //#    include <msvis/MSVis/VisBuffer.h>
 
-#include <casa/Arrays/Cube.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/BasicSL/Complex.h>
+#include <casacore/casa/Arrays/Cube.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/BasicSL/Complex.h>
 #include <msvis/MSVis/VisBufferComponents2.h>
 #include <msvis/MSVis/VisBuffer2.h>
 
-using casa::vi::VisBufferComponent2;
-using casa::vi::VisBufferComponents2;
+using casacore::vi::VisBufferComponent2;
+using casacore::vi::VisBufferComponents2;
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 class VisModelDataI;
 
@@ -115,7 +115,7 @@ namespace avg {
 class VisBufferImpl2 : public VisBuffer2 {
 
     friend class VLAT; // for async i/o
-    friend class casa::vi::avg::VbAvg;
+    friend class casacore::vi::avg::VbAvg;
     friend class AveragingTvi2;
     friend class VbCacheItemBase;
     friend class VisBufferCache;
@@ -125,7 +125,7 @@ class VisBufferImpl2 : public VisBuffer2 {
     friend class VisBufferImpl2AsyncWrapper; // for async i/o
     friend class ViReadImpl;
     friend class ViReadImplAsync; // for async I/O
-    friend class casa::ms::Vbi2MsRow;
+    friend class casacore::ms::Vbi2MsRow;
 
 public:
 
@@ -530,7 +530,7 @@ private:
     virtual void fillSigmaSpectrum (Cube<Float>& value) const;
 
     VisBufferCache * cache_p;
-    casa::ms::Vbi2MsRow * msRow_p;
+    casacore::ms::Vbi2MsRow * msRow_p;
     VisBufferState * state_p;
 };
 

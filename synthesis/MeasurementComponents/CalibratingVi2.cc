@@ -22,9 +22,9 @@
 
 #include <synthesis/MeasurementComponents/CalibratingVi2.h>
 #include <synthesis/MeasurementComponents/Calibrater.h>
-#include <casa/Arrays/ArrayPartMath.h>
+#include <casacore/casa/Arrays/ArrayPartMath.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 namespace vi { //# NAMESPACE VI - BEGIN
 
@@ -440,6 +440,6 @@ void CalibratingVi2::correctCurrentVB() const
 
 
 } //# NAMESPACE VI - END
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 

@@ -6,23 +6,23 @@
  */
 
 
-#include <casa/aipstype.h>
+#include <casacore/casa/aipstype.h>
 #include <msvis/MSVis/VisibilityIterator2.h>
 #include <msvis/MSVis/VisBufferImpl.h>
 #include <msvis/MSVis/VisBufferImpl.h>
 #include <msvis/MSVis/VisBufferAsyncWrapper.h>
 #include <msvis/MSVis/UtilJ.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/ArrayLogical.h>
-#include <casa/Arrays/MaskedArray.h>
-#include <casa/Arrays/MaskArrMath.h>
-#include <casa/Arrays/ArrayUtil.h>
-#include <casa/OS/Path.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Arrays/MaskedArray.h>
+#include <casacore/casa/Arrays/MaskArrMath.h>
+#include <casacore/casa/Arrays/ArrayUtil.h>
+#include <casacore/casa/OS/Path.h>
 #include <components/ComponentModels/ComponentList.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/Utilities/GenSort.h>
-#include <casa/OS/Timer.h>
-#include <ms/MeasurementSets/MSColumns.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/Utilities/GenSort.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
 #include <msvis/MSVis/UtilJ.h>
 
 
@@ -30,7 +30,7 @@
 #define CheckVisIter1(s) checkVisIter (__func__, __FILE__, __LINE__,s)
 #define CheckVisIterBase() checkVisIterBase (__func__, __FILE__, __LINE__)
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 

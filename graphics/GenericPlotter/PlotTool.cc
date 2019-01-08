@@ -30,7 +30,7 @@
 
 #include <iomanip>
 
-namespace casa {
+namespace casacore {
 
 //////////////////////////
 // PLOTTOOL DEFINITIONS //

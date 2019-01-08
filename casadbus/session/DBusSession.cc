@@ -26,7 +26,7 @@
 //# $Id: $
 #include <casadbus/session/DBusSession.h>
 
-namespace casa {
+namespace casacore {
 
     static const char *DBUS_SERVER_NAME = "org.freedesktop.DBus";
     static const char *DBUS_SERVER_PATH = "/org/freedesktop/DBus";

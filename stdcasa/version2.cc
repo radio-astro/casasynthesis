@@ -28,10 +28,10 @@
 
 #include <stdcasa/version.h>
 
-#include <casa/iostream.h>
-#include <casa/iomanip.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/iomanip.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 void VersionInfo::report(ostream &os)
 {
@@ -48,5 +48,5 @@ void VersionInfo::report(ostream &os)
     }
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

@@ -29,16 +29,16 @@
 
 #include <graphics/GenericPlotter/PlotOptions.h>
 
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/Vector.h>
 
-#include <casa/BasicSL/String.h>
-#include <casa/Utilities/CountedPtr.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 using namespace std;
 
-namespace casa {
+namespace casacore {
 
 // Typedef for a point, which is two doubles (x and y).
 typedef pair<double, double> ppoint_t;
@@ -886,7 +886,7 @@ typedef PlotErrorDataImpl<float> PlotErrorFloatData;
 typedef PlotErrorDataImpl<double> PlotErrorDoubleData;
 
 
-// Implementation of raster data using casa::Matrix.
+// Implementation of raster data using casacore::Matrix.
 template <class T>
 class PlotRasterMatrixData : public virtual PlotRasterData {
 public:

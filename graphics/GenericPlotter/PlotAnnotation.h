@@ -29,11 +29,11 @@
 
 #include <graphics/GenericPlotter/PlotItem.h>
 
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/BasicSL/String.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 // PlotAnnotation is an abstraction of text written directly on the canvas.  An
 // annotation has text, font, orientation, outline, and background properties.

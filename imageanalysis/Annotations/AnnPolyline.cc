@@ -17,9 +17,9 @@
 
 #include <imageanalysis/Annotations/AnnPolyline.h>
 
-#include <images/Regions/WCPolygon.h>
+#include <casacore/images/Regions/WCPolygon.h>
 
-namespace casa {
+namespace casacore {
 
 AnnPolyline::AnnPolyline(
 	const Vector<Quantity>& xPositions,

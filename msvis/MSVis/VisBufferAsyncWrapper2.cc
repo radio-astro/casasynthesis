@@ -1,10 +1,10 @@
 #include <msvis/MSVis/VisBufferAsyncWrapper2.h>
 
 #include "AsynchronousTools.h"
-using namespace casa::async;
+using namespace casacore::async;
 
 #include "UtilJ.h"
-using namespace casa::utilj;
+using namespace casacore::utilj;
 
 #define CheckWrap() \
         if (wrappedVb_p == NULL){\
@@ -12,10 +12,10 @@ using namespace casa::utilj;
         }
 
 #define Log(level, ...) \
-        {if (casa::asyncio::AsynchronousInterface::logThis (level)) \
+        {if (casacore::asyncio::AsynchronousInterface::logThis (level)) \
     Logger::get()->log (__VA_ARGS__);};
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 namespace vi {
 

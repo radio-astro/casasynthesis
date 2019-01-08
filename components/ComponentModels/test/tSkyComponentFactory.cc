@@ -28,14 +28,14 @@
 
 #include <components/ComponentModels/SkyComponentFactory.h>
 
-#include <casa/Quanta/QLogical.h>
+#include <casacore/casa/Quanta/QLogical.h>
 #include <components/ComponentModels/Flux.h>
 #include <components/ComponentModels/GaussianShape.h>
 #include <components/ComponentModels/SkyComponent.h>
 #include <components/ComponentModels/ConstantSpectrum.h>
-#include <scimath/Mathematics/GaussianBeam.h>
+#include <casacore/scimath/Mathematics/GaussianBeam.h>
 
-using namespace casa;
+using namespace casacore;
 
 int main() {
 	LogIO log;

@@ -3,9 +3,9 @@
 
 #include <imageanalysis/ImageAnalysis/Image1DSmoother.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 template <class T> class ImageBoxcarSmoother : public Image1DSmoother<T> {
 	// <summary>

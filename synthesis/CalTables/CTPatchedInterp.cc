@@ -27,19 +27,19 @@
 
 #include <synthesis/CalTables/CTPatchedInterp.h>
 #include <synthesis/CalTables/CTIter.h>
-#include <scimath/Mathematics/InterpolateArray1D.h>
-#include <casa/OS/Path.h>
-#include <casa/Utilities/GenSort.h>
-#include <casa/aips.h>
+#include <casacore/scimath/Mathematics/InterpolateArray1D.h>
+#include <casacore/casa/OS/Path.h>
+#include <casacore/casa/Utilities/GenSort.h>
+#include <casacore/casa/aips.h>
 
 #define CTPATCHEDINTERPVERB False
 
-//#include <casa/BasicSL/Constants.h>
-//#include <casa/OS/File.h>
-//#include <casa/Logging/LogMessage.h>
-//#include <casa/Logging/LogSink.h>
+//#include <casacore/casa/BasicSL/Constants.h>
+//#include <casacore/casa/OS/File.h>
+//#include <casacore/casa/Logging/LogMessage.h>
+//#include <casacore/casa/Logging/LogSink.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // Ctor
 CTPatchedInterp::CTPatchedInterp(NewCalTable& ct,
@@ -1275,4 +1275,4 @@ InterpolateArray1D<Double,Float>::InterpolationMethod CTPatchedInterp::ftype(Str
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END

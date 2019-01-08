@@ -27,9 +27,9 @@
 
 
 #include <imageanalysis/ImageAnalysis/ImageAnalysis.h>
-#include <images/Images/FITSImage.h>
-#include <casa/namespace.h>
-#include <casa/OS/EnvVar.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/casa/namespace.h>
+#include <casacore/casa/OS/EnvVar.h>
 
 void writeTestString(const String& test) {
     cout << "\n" << "*** " << test << " ***" << endl;
@@ -53,13 +53,13 @@ int main() {
 
             // CAS-2533
 			PagedImage<Float>* img = new PagedImage<Float>(datadir + "/CAS-2533.im");
-			SHARED_PTR<casa::ImageInterface<float> > imgPtr( img );
+			SHARED_PTR<casacore::ImageInterface<float> > imgPtr( img );
 			ImageAnalysis analysis(imgPtr);
 
-			Vector<casa::Double> wxv(2);
-			Vector<casa::Double> wyv(2);
-			Vector<casa::Float> z_xval;
-			Vector<casa::Float> z_yval;
+			Vector<casacore::Double> wxv(2);
+			Vector<casacore::Double> wyv(2);
+			Vector<casacore::Float> z_xval;
+			Vector<casacore::Float> z_yval;
 
 			wxv[0] = 4.63641;
 			wxv[1] = 4.63639;
@@ -97,13 +97,13 @@ int main() {
 		{
 			// CAS-2533
 			PagedImage<Float>* img = new PagedImage<Float>(datadir + "/CAS-2533.im");
-			SHARED_PTR<casa::ImageInterface<float> > imgPtr( img );
+			SHARED_PTR<casacore::ImageInterface<float> > imgPtr( img );
 			ImageAnalysis analysis(imgPtr);
 
-			Vector<casa::Double> wxv(2);
-			Vector<casa::Double> wyv(2);
-			Vector<casa::Float> z_xval;
-			Vector<casa::Float> z_yval;
+			Vector<casacore::Double> wxv(2);
+			Vector<casacore::Double> wyv(2);
+			Vector<casacore::Float> z_xval;
+			Vector<casacore::Float> z_yval;
 
 			wxv[0] = 4.63641;
 			wxv[1] = 4.63639;
@@ -131,13 +131,13 @@ int main() {
 		{
 			// CAS-2533
 			PagedImage<Float>* img = new PagedImage<Float>(datadir + "/CAS-2533.im");
-			SHARED_PTR<casa::ImageInterface<float> > imgPtr( img );
+			SHARED_PTR<casacore::ImageInterface<float> > imgPtr( img );
 			ImageAnalysis analysis(imgPtr);
 
-			Vector<casa::Double> wxv(2);
-			Vector<casa::Double> wyv(2);
-			Vector<casa::Float> z_xval;
-			Vector<casa::Float> z_yval;
+			Vector<casacore::Double> wxv(2);
+			Vector<casacore::Double> wyv(2);
+			Vector<casacore::Float> z_xval;
+			Vector<casacore::Float> z_yval;
 
 			wxv[0] = 4.63641;
 			wxv[1] = 4.63639;
@@ -165,13 +165,13 @@ int main() {
 		{
 			// CAS-2533
 			PagedImage<Float>* img = new PagedImage<Float>(datadir + "/CAS-2533.im");
-			SHARED_PTR<casa::ImageInterface<float> > imgPtr( img );
+			SHARED_PTR<casacore::ImageInterface<float> > imgPtr( img );
 			ImageAnalysis analysis(imgPtr);
 
-			Vector<casa::Double> wxv(2);
-			Vector<casa::Double> wyv(2);
-			Vector<casa::Float> z_xval;
-			Vector<casa::Float> z_yval;
+			Vector<casacore::Double> wxv(2);
+			Vector<casacore::Double> wyv(2);
+			Vector<casacore::Float> z_xval;
+			Vector<casacore::Float> z_yval;
 
 			wxv[0] = 4.63641;
 			wxv[1] = 4.63639;
@@ -209,13 +209,13 @@ int main() {
 		{
 			// wavelength output
 			PagedImage<Float>* img = new PagedImage<Float>(datadir + "/CAS-2533.im");
-			SHARED_PTR<casa::ImageInterface<float> > imgPtr( img );
+			SHARED_PTR<casacore::ImageInterface<float> > imgPtr( img );
 			ImageAnalysis analysis(imgPtr);
 
-			Vector<casa::Double> wxv(2);
-			Vector<casa::Double> wyv(2);
-			Vector<casa::Float> z_xval;
-			Vector<casa::Float> z_yval;
+			Vector<casacore::Double> wxv(2);
+			Vector<casacore::Double> wyv(2);
+			Vector<casacore::Float> z_xval;
+			Vector<casacore::Float> z_yval;
 
 			wxv[0] = 4.63641;
 			wxv[1] = 4.63639;
@@ -271,13 +271,13 @@ int main() {
 		{
 			// wavelength output
 			PagedImage<Float>* img = new PagedImage<Float>(datadir + "/CAS-2533.im");
-			SHARED_PTR<casa::ImageInterface<float> > imgPtr( img );
+			SHARED_PTR<casacore::ImageInterface<float> > imgPtr( img );
 			ImageAnalysis analysis(imgPtr);
 
-			Vector<casa::Double> wxv(2);
-			Vector<casa::Double> wyv(2);
-			Vector<casa::Float> z_xval;
-			Vector<casa::Float> z_yval;
+			Vector<casacore::Double> wxv(2);
+			Vector<casacore::Double> wyv(2);
+			Vector<casacore::Float> z_xval;
+			Vector<casacore::Float> z_yval;
 
 			wxv[0] = 4.63641;
 			wxv[1] = 4.63639;
@@ -323,13 +323,13 @@ int main() {
 		{
 			// wavelength output
 			PagedImage<Float>* img = new PagedImage<Float>(datadir + "/CAS-2533.im");
-			SHARED_PTR<casa::ImageInterface<float> > imgPtr( img );
+			SHARED_PTR<casacore::ImageInterface<float> > imgPtr( img );
 			ImageAnalysis analysis(imgPtr);
 
-			Vector<casa::Double> wxv(2);
-			Vector<casa::Double> wyv(2);
-			Vector<casa::Float> z_xval;
-			Vector<casa::Float> z_yval;
+			Vector<casacore::Double> wxv(2);
+			Vector<casacore::Double> wyv(2);
+			Vector<casacore::Float> z_xval;
+			Vector<casacore::Float> z_yval;
 
 			wxv[0] = 4.63641;
 			wxv[1] = 4.63639;
@@ -509,13 +509,13 @@ int main() {
 		{
 			// Tabular Coordinate Instead of Spectral Coordinate
 			PagedImage<Float>* img = new PagedImage<Float>(datadir + "/18h03m_tabular_axis.image");
-			SHARED_PTR<casa::ImageInterface<float> > imgPtr( img );
+			SHARED_PTR<casacore::ImageInterface<float> > imgPtr( img );
 			ImageAnalysis analysis(imgPtr);
 
-			Vector<casa::Double> wxv(2);
-			Vector<casa::Double> wyv(2);
-			Vector<casa::Float> z_xval;
-			Vector<casa::Float> z_yval;
+			Vector<casacore::Double> wxv(2);
+			Vector<casacore::Double> wyv(2);
+			Vector<casacore::Float> z_xval;
+			Vector<casacore::Float> z_yval;
 
 			wxv[0] = 5.28206;
 			wxv[1] = 4.99135;

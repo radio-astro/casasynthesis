@@ -28,19 +28,19 @@
 
 #include <imageanalysis/ImageAnalysis/ImageMetaDataRW.h>
 
-#include <casa/Containers/ValueHolder.h>
-#include <casa/Quanta/QuantumHolder.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/casa/Containers/ValueHolder.h>
+#include <casacore/casa/Quanta/QuantumHolder.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
 
-#include <tables/Tables/TableRecord.h>
+#include <casacore/tables/Tables/TableRecord.h>
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
 #define _LOCATEA "ImageMetaDataRW" << __func__ << " "
 #define _ORIGINA LogOrigin("ImageMetaDataRW", __func__)
 
-namespace casa {
+namespace casacore {
 
 ImageMetaDataRW::ImageMetaDataRW( SPIIF image ) : ImageMetaDataBase(), _floatImage(image), _complexImage() {}
 
@@ -1157,5 +1157,5 @@ Record ImageMetaDataRW::_getStatistics() const {
 	return _stats;
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

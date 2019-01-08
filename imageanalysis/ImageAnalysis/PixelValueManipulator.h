@@ -7,7 +7,7 @@
 #include <imageanalysis/ImageAnalysis/PixelValueManipulatorData.h>
 
 
-namespace casa {
+namespace casacore {
 
 template <class T> class PixelValueManipulator : public ImageTask<T> {
 	// <summary>

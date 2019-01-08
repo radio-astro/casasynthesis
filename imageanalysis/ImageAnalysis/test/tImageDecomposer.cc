@@ -27,23 +27,23 @@
 
 #include <imageanalysis/ImageAnalysis/ImageDecomposer.h>
 
-#include <casa/iostream.h>
-#include <casa/stdlib.h>
-#include <casa/math.h>
-#include <casa/aips.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/stdlib.h>
+#include <casacore/casa/math.h>
+#include <casacore/casa/aips.h>
 
-#include <images/Images/ImageInterface.h>
+#include <casacore/images/Images/ImageInterface.h>
 
-#include <lattices/Lattices/TiledShape.h>
-#include <images/Images/TempImage.h>
-#include <coordinates/Coordinates/LinearCoordinate.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <coordinates/Coordinates/CoordinateUtil.h>
-#include <scimath/Functionals/Gaussian2D.h> 
-#include <scimath/Functionals/Gaussian3D.h>
-#include <casa/OS/Timer.h>
+#include <casacore/lattices/Lattices/TiledShape.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/coordinates/Coordinates/LinearCoordinate.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/coordinates/Coordinates/CoordinateUtil.h>
+#include <casacore/scimath/Functionals/Gaussian2D.h> 
+#include <casacore/scimath/Functionals/Gaussian3D.h>
+#include <casacore/casa/OS/Timer.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 typedef Double imagetype;
 
 TempImage<imagetype> createtestimage(const Matrix<imagetype>& components,

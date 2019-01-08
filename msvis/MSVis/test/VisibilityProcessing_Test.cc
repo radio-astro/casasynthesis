@@ -8,8 +8,8 @@
 #include "../VisibilityProcessing.h"
 #include "VisibilityProcessing_Test.h"
 
-#include <casa/BasicSL/String.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
 
 #include <cppunit/CompilerOutputter.h>
 #include <cppunit/TestFailure.h>
@@ -21,17 +21,17 @@
 #include <synthesis/MSVis/VisibilityIterator.h>
 
 using namespace std;
-using namespace casa;
-using namespace casa::vpf;
+using namespace casacore;
+using namespace casacore::vpf;
 namespace po = boost::program_options;
 
 int
 main (int argc, char * args [])
 {
-    return casa::vpf::VpTests::singleton().run (argc, args);
+    return casacore::vpf::VpTests::singleton().run (argc, args);
 }
 
-namespace casa {
+namespace casacore {
 
 namespace vpf {
 
@@ -44,7 +44,7 @@ CPPUNIT_TEST_SUITE_REGISTRATION (VisibilityProcessor_Test);
 CPPUNIT_TEST_SUITE_REGISTRATION (VpEngine_Test);
 CPPUNIT_TEST_SUITE_REGISTRATION (VpContainer_Test);
 
-const casa::String VpTests::Visibility = "visibility";
+const casacore::String VpTests::Visibility = "visibility";
 
 void
 reset () {

@@ -29,13 +29,13 @@
 #define CASA_FITTERESTIMATESFILEPARSER_H
 
 //# Includes
-#include <casa/aips.h>
-#include <casa/OS/RegularFile.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/OS/RegularFile.h>
 #include <components/ComponentModels/ComponentList.h>
-#include <images/Images/ImageInterface.h>
+#include <casacore/images/Images/ImageInterface.h>
 #include <memory>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> 
 // Class for parsing a file which holds initial estimates for 2-D components. Used by imfit.
@@ -119,6 +119,6 @@ class FitterEstimatesFileParser {
 		void _createComponentList(const ImageInterface<Float>& image);
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

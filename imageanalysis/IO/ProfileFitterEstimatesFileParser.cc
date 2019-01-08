@@ -26,15 +26,15 @@
 
 #include <imageanalysis/IO/ProfileFitterEstimatesFileParser.h>
 
-#include <casa/aips.h>
-#include <casa/IO/RegularFileIO.h>
-#include <casa/Utilities/Regex.h>
-#include <casa/Containers/Record.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/IO/RegularFileIO.h>
+#include <casacore/casa/Utilities/Regex.h>
+#include <casacore/casa/Containers/Record.h>
 #include <components/SpectralComponents/GaussianSpectralElement.h>
-#include <images/Images/ImageStatistics.h>
+#include <casacore/images/Images/ImageStatistics.h>
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 const String ProfileFitterEstimatesFileParser::_class = "FitterEstimatesFileParser";
 
@@ -168,5 +168,5 @@ void ProfileFitterEstimatesFileParser::_createSpectralList() {
 	}
 
 }
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
