@@ -27,9 +27,9 @@
 
 #include <msvis/MSVis/VisChunkAverager.h>
 
-#include <casa/Arrays/ArrayPartMath.h>
+#include <casacore/casa/Arrays/ArrayPartMath.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------------
   
@@ -755,5 +755,5 @@ Bool VisChunkAverager::checkForBreak(Vector<Int>& firstVals, const Int i,
   return i != firstVals[slotnum];
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

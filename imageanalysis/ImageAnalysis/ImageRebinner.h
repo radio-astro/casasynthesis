@@ -3,9 +3,9 @@
 
 #include <imageanalysis/ImageAnalysis/ImageTask.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 template <class T> class ImageRebinner : public ImageTask<T> {
 	// <summary>

@@ -29,12 +29,12 @@
 
 #include <imageanalysis/ImageAnalysis/Image2DConvolver.h>
 
-#include <casa/OS/EnvVar.h>
-#include <casa/Exceptions/Error.h>
-#include <images/Images/FITSImage.h>
-#include <images/Regions/WCBox.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/namespace.h>
+#include <casacore/casa/OS/EnvVar.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/images/Regions/WCBox.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/namespace.h>
 #include <imageanalysis/ImageAnalysis/SubImageFactory.h>
 
 int main() {

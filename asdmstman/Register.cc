@@ -31,7 +31,7 @@
 #include <asdmstman/Register.h>
 #include <asdmstman/AsdmStMan.h>
 
-using namespace casa;
+using namespace casacore;
 
 void register_asdmstman()
 {

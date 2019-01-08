@@ -28,11 +28,11 @@
 #include <synthesis/CalTables/NewCalTable.h>
 #include <synthesis/CalTables/CTMainColumns.h>
 #include <synthesis/CalTables/CTIter.h>
-#include <casa/Arrays/Cube.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/iostream.h>
-#include <casa/BasicMath/Math.h>
-#include <casa/namespace.h>
+#include <casacore/casa/Arrays/Cube.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/casa/namespace.h>
 
 // <summary>
 // Test program for CTIter class.

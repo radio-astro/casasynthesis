@@ -1,9 +1,9 @@
 #include <imageanalysis/ImageAnalysis/PixelValueManipulatorData.h>
 
-#include <casa/BasicSL/String.h>
-#include <casa/Exceptions/Error.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Exceptions/Error.h>
 
-namespace casa {
+namespace casacore {
 PixelValueManipulatorData::SpectralType PixelValueManipulatorData::spectralType(
 	const String& specString
 ) {

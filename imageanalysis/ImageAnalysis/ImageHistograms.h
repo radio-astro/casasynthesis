@@ -30,13 +30,13 @@
 
 
 //# Includes
-#include <casa/aips.h>
-#include <lattices/LatticeMath/LatticeHistograms.h>
-#include <casa/Logging/LogIO.h>
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/aips.h>
+#include <casacore/lattices/LatticeMath/LatticeHistograms.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/casa/BasicSL/String.h>
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //# Forward Declarations
 template <class T> class ImageInterface;
@@ -209,7 +209,7 @@ protected:
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #ifndef CASACORE_NO_AUTO_TEMPLATES
 #include <imageanalysis/ImageAnalysis/ImageHistograms.tcc>

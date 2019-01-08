@@ -28,14 +28,14 @@
 #include <synthesis/MeasurementEquations/IncCEMemModel.h>
 #include <synthesis/MeasurementEquations/CEMemProgress.h>
 #include <synthesis/MeasurementEquations/IncEntropy.h>
-#include <lattices/LEL/LatticeExpr.h>
-#include <lattices/LEL/LatticeExprNode.h>
-#include <lattices/Lattices/LatticeStepper.h>
-#include <lattices/Lattices/LatticeIterator.h>
-#include <casa/BasicMath/Math.h>
-#include <casa/iostream.h>
+#include <casacore/lattices/LEL/LatticeExpr.h>
+#include <casacore/lattices/LEL/LatticeExprNode.h>
+#include <casacore/lattices/Lattices/LatticeStepper.h>
+#include <casacore/lattices/Lattices/LatticeIterator.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/casa/iostream.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------
 IncEntropy::IncEntropy()
@@ -1370,5 +1370,5 @@ Bool IncEntropyEmptiness::testConvergence()
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

@@ -35,7 +35,7 @@
 #include <casacore/casa/stdio.h>
 #include <casacore/casa/math.h>
 
-namespace casa {
+namespace casacore {
 
 
 // -----------------------------------------------------------------------

@@ -25,18 +25,18 @@
 //#
 
 #include <synthesis/CalTables/CLPatchPanel.h>
-#include <casa/Arrays/Array.h>
-#include <casa/Arrays/ArrayMath.h>
-//#include <casa/Arrays/Vector.h>
-#include <casa/Arrays/ArrayIO.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/iostream.h>
-#include <casa/BasicMath/Math.h>
-#include <casa/namespace.h>
+#include <casacore/casa/Arrays/Array.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+//#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/ArrayIO.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/casa/namespace.h>
 
 #include <synthesis/CalTables/CTInterface.h>
-#include <ms/MSSel/MSSelection.h>
-#include <ms/MSSel/MSSelectionTools.h>
+#include <casacore/ms/MSSel/MSSelection.h>
+#include <casacore/ms/MSSel/MSSelectionTools.h>
 
 // <summary>
 // Test program for RIorAParray class.

@@ -1569,6 +1569,6 @@ void MSTransformBufferImpl::phaseCenterShift(Double dx, Double dy)
 }
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 

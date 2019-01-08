@@ -29,11 +29,11 @@
 #ifndef CALIBRATION_CTMAINRECORD_H
 #define CALIBRATION_CTMAINRECORD_H
 
-#include <casa/aips.h>
-#include <measures/Measures/MEpoch.h>
-#include <casa/Containers/Record.h>
+#include <casacore/casa/aips.h>
+#include <casacore/measures/Measures/MEpoch.h>
+#include <casacore/casa/Containers/Record.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> 
 // CTMainRecord: Calibration table record access and creation
@@ -124,7 +124,7 @@ class CTMainRecord
  };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
    

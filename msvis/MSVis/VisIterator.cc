@@ -28,26 +28,26 @@
 #include <msvis/MSVis/VisIterator.h>
 #include <msvis/MSVis/VisBuffer.h>
 #include <msvis/MSVis/UtilJ.h>
-#include <scimath/Mathematics/InterpolateArray1D.h>
-#include <casa/Arrays/ArrayLogical.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/MaskedArray.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/Utilities/Sort.h>
-#include <ms/MeasurementSets/MSColumns.h>
-#include <casa/Quanta/MVTime.h>
-#include <tables/Tables/TableDesc.h>
-#include <tables/Tables/ColDescSet.h>
-#include <tables/Tables/TableRecord.h>
-#include <tables/Tables/TiledColumnStMan.h>
-#include <tables/Tables/TiledStManAccessor.h>
+#include <casacore/scimath/Mathematics/InterpolateArray1D.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/MaskedArray.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/Utilities/Sort.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
+#include <casacore/casa/Quanta/MVTime.h>
+#include <casacore/tables/Tables/TableDesc.h>
+#include <casacore/tables/Tables/ColDescSet.h>
+#include <casacore/tables/Tables/TableRecord.h>
+#include <casacore/tables/Tables/TiledColumnStMan.h>
+#include <casacore/tables/Tables/TiledStManAccessor.h>
 #include <msvis/MSVis/VisibilityIteratorImpl.h>
 #include <cmath>
 
 using std::ceil;
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 class ROVisIteratorImpl : public VisibilityIteratorReadImpl {
 
@@ -1719,5 +1719,5 @@ VisIteratorImpl::setWeightSpectrum(const Cube<Float>& weightSpectrum)
     }
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

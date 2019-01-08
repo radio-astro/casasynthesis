@@ -29,13 +29,13 @@
 #define DBUS_CONVERSION_H_
 #include <map>
 #include <string>
-#include <casa/Containers/Record.h>
+#include <casacore/casa/Containers/Record.h>
 #include <dbus-c++-1/dbus-c++/dbus.h>
 #include <casadbus/types/variant.h>
 #include <casadbus/types/record.h>
-#include <casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/Vector.h>
 
-namespace casa {
+namespace casacore {
 
     namespace dbus {
 		Record toRecord( const std::map<std::string,DBus::Variant> &mapIn );

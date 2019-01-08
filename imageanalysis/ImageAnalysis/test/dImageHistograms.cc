@@ -95,26 +95,26 @@
 //   add keyword exclude ?  Bit hard as requires restucturing of min/max
 //   storage image
 //
-#include <casa/aips.h>
-#include <casa/Arrays.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Inputs/Input.h>
-#include <casa/Logging.h>
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Arrays.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Inputs/Input.h>
+#include <casacore/casa/Logging.h>
+#include <casacore/casa/BasicSL/String.h>
 
-#include <images/Images/PagedImage.h>
-#include <images/Images/SubImage.h>
-#include <images/Regions/ImageRegion.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/images/Images/SubImage.h>
+#include <casacore/images/Regions/ImageRegion.h>
 #include <imageanalysis/ImageAnalysis/ImageHistograms.h>
-#include <lattices/LRegions/LCSlicer.h>
-#include <lattices/LRegions/LCBox.h>
-#include <casa/System/PGPlotter.h>
-#include <casa/OS/EnvVar.h>
+#include <casacore/lattices/LRegions/LCSlicer.h>
+#include <casacore/lattices/LRegions/LCBox.h>
+#include <casacore/casa/System/PGPlotter.h>
+#include <casacore/casa/OS/EnvVar.h>
 
-#include <casa/iostream.h>
+#include <casacore/casa/iostream.h>
 
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 enum defaults {AXES, REGION, RANGE, NDEFAULTS};
 
 

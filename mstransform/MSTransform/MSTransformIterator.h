@@ -31,9 +31,9 @@
 
 // VisBuffer class only accessible from this class
 #include <mstransform/MSTransform/MSTransformBufferImpl.h>
-#include <casa/Utilities/CountedPtr.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
 
-namespace casa {
+namespace casacore {
 
 class MSTransformIterator : public vi::TransformingVi2
 {
@@ -70,7 +70,7 @@ private:
 	MeasurementSet *transformedMS_p;
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 
 #endif /* MSTransformIterator_H_ */

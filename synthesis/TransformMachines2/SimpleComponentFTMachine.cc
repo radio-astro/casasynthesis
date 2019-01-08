@@ -26,7 +26,7 @@
 //# $Id$
 
 #include <synthesis/TransformMachines2/SimpleComponentFTMachine.h>
-#include <scimath/Mathematics/RigidVector.h>
+#include <casacore/scimath/Mathematics/RigidVector.h>
 #include <components/ComponentModels/ComponentShape.h>
 #include <components/ComponentModels/ComponentList.h>
 #include <components/ComponentModels/ComponentType.h>
@@ -34,17 +34,17 @@
 #include <components/ComponentModels/SkyComponent.h>
 #include <components/ComponentModels/SpectralModel.h>
 #include <msvis/MSVis/VisBuffer2.h>
-#include <ms/MeasurementSets/MSColumns.h>
-#include <ms/MeasurementSets/MSIter.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/ArrayLogical.h>
-#include <casa/Arrays/Cube.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Arrays/IPosition.h>
-#include <casa/BasicSL/Complex.h>
-#include <casa/BasicSL/Constants.h>
-#include <measures/Measures/UVWMachine.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
+#include <casacore/ms/MeasurementSets/MSIter.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Arrays/Cube.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/IPosition.h>
+#include <casacore/casa/BasicSL/Complex.h>
+#include <casacore/casa/BasicSL/Constants.h>
+#include <casacore/measures/Measures/UVWMachine.h>
 #ifdef HAS_OMP
 #include <omp.h>
 #endif
@@ -55,11 +55,11 @@ namespace {
   // release cycle and this approach minimizes the scope of the change.
   // For 4.5 this needs to be done correctly.
 
-  casa::Vector<casa::Int> getSelectedCorrelationTypes (const casa::vi::VisBuffer2 & vb){
-    casa::Vector<casa::Int> allTypes = vb.correlationTypes();
-    casa::Vector<casa::Int> selectedCorrelations = vb.getCorrelationTypes ();
+  casacore::Vector<casacore::Int> getSelectedCorrelationTypes (const casacore::vi::VisBuffer2 & vb){
+    casacore::Vector<casacore::Int> allTypes = vb.correlationTypes();
+    casacore::Vector<casacore::Int> selectedCorrelations = vb.getCorrelationTypes ();
 
-    for (casa::uInt i = 0; i < selectedCorrelations.size(); i++){
+    for (casacore::uInt i = 0; i < selectedCorrelations.size(); i++){
 
       selectedCorrelations [i] = allTypes (selectedCorrelations [i]);
     }
@@ -68,12 +68,12 @@ namespace {
   }
 }
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 namespace refim { // namespace for refactor
-using namespace casa;
-using namespace casa::refim;
-using namespace casa::vi;
+using namespace casacore;
+using namespace casacore::refim;
+using namespace casacore::vi;
 
 void SimpleComponentFTMachine::get(VisBuffer2& vb, SkyComponent& component,
 				   Int row)
@@ -407,5 +407,5 @@ void SimpleComponentFTMachine::get(VisBuffer2& vb, const ComponentList& compList
 
 
 }// end namespace refim
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

@@ -24,13 +24,13 @@
 //#
 //# $Id$
 
-#include <casa/OS/EnvVar.h>
-#include <images/Images/FITSImage.h>
-#include <images/Images/TempImage.h>
+#include <casacore/casa/OS/EnvVar.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/images/Images/TempImage.h>
 
 #include <synthesis/TransformMachines/StokesImageUtil.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 int main() {
 	try {

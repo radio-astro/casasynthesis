@@ -25,23 +25,23 @@
 //#
 //# $Id$
 
-#include <casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
 #include <components/ComponentModels/ComponentList.h>
 #include <components/ComponentModels/ComponentShape.h>
 #include <components/ComponentModels/Flux.h>
-#include <tables/TaQL/ExprNode.h>
-#include <measures/Measures/MeasTable.h>
-#include <ms/MSSel/MSSelection.h>
+#include <casacore/tables/TaQL/ExprNode.h>
+#include <casacore/measures/Measures/MeasTable.h>
+#include <casacore/ms/MSSel/MSSelection.h>
 
 #include <synthesis/TransformMachines2/VisModelData.h>
 #include <synthesis/TransformMachines2/FTMachine.h>
 #include <synthesis/TransformMachines2/GridFT.h>
 #include <msvis/MSVis/VisibilityIterator.h>
 #include <msvis/MSVis/VisBuffer2.h>
-#include <casa/OS/Timer.h>
-#include <casa/namespace.h>
-#include <casa/OS/Directory.h>
-#include <casa/Utilities/Regex.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/casa/namespace.h>
+#include <casacore/casa/OS/Directory.h>
+#include <casacore/casa/Utilities/Regex.h>
 
 int
 main(int argc, char **argv){

@@ -1,7 +1,7 @@
 #include <msvis/MSVis/ViColumns2.h>
-#include <ms/MeasurementSets.h>
+#include <casacore/ms/MeasurementSets.h>
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 

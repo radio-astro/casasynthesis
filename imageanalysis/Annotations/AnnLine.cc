@@ -26,7 +26,7 @@
 
 #include <imageanalysis/Annotations/AnnLine.h>
 
-namespace casa {
+namespace casacore {
 
 AnnLine::AnnLine(
 	const Quantity& xPoint1,

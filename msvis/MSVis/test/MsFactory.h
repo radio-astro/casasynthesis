@@ -1,13 +1,13 @@
 #if ! defined (CASA_VI_TEST_MsFactory_H_130114_1357)
 #define CASA_VI_TEST_MsFactory_H_130114_1357
 
-#include <casa/string.h>
-#include <ms/MeasurementSets.h>
+#include <casacore/casa/string.h>
+#include <casacore/ms/MeasurementSets.h>
 #include <msvis/MSVis/UtilJ.h>
 
 #include <utility>
 
-namespace casa {
+namespace casacore {
 
     class MeasurementSet;
     class NewMSSimulator;

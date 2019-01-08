@@ -27,14 +27,14 @@
 //# $Id$
 #ifndef VISMODELDATA_H
 #define VISMODELDATA_H
-#include <casa/aips.h>
-#include <casa/Containers/Record.h>
-#include <casa/Containers/Block.h>
-#include <casa/Arrays/Cube.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Containers/Record.h>
+#include <casacore/casa/Containers/Block.h>
+#include <casacore/casa/Arrays/Cube.h>
 #include <synthesis/TransformMachines/ComponentFTMachine.h>
 #include <msvis/MSVis/VisModelDataI.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 //#forward
   class VisBuffer;
   namespace vi{ class VisBuffer2;}

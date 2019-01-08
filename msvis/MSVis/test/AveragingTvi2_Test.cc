@@ -1,8 +1,8 @@
-#include <casa/BasicSL.h>
-#include <casa/string.h>
-#include <casa/Logging.h>
-#include <tables/Tables.h>
-#include <ms/MeasurementSets.h>
+#include <casacore/casa/BasicSL.h>
+#include <casacore/casa/string.h>
+#include <casacore/casa/Logging.h>
+#include <casacore/tables/Tables.h>
+#include <casacore/ms/MeasurementSets.h>
 #include <msvis/MSVis/VisBuffer2.h>
 #include <msvis/MSVis/VisibilityIterator2.h>
 #include <msvis/MSVis/test/MsFactory.h>
@@ -16,7 +16,7 @@
 
 using namespace std;
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 
@@ -2839,7 +2839,7 @@ Tester::checkRows (VisBuffer2 * vb, VisibilityIterator2 * vi, Int subchunk,
 } // end namespace vi
 } // end namespace casa
 
-using namespace casa;
+using namespace casacore;
 
 int
 main (int nArgs, char * args [])
@@ -2848,9 +2848,9 @@ main (int nArgs, char * args [])
 
     LogIO os;
 
-    casa::vi::test::Tester tester;
+    casacore::vi::test::Tester tester;
 
-    casa::Bool ok = tester.doTests (nArgs, args);
+    casacore::Bool ok = tester.doTests (nArgs, args);
 
     exit (ok ? 0 : 1);
 }

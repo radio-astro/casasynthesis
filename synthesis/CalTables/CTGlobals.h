@@ -28,11 +28,11 @@
 #ifndef SYNTHESIS_CTGLOBALS_H
 #define SYNTHESIS_CTGLOBALS_H
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <synthesis/CalTables/NewCalTable.h>
-#include <casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/Vector.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // Create a specialized VisCal from VisSet
 void smoothCT(NewCalTable ct,
@@ -47,7 +47,7 @@ void assignCTScanField(NewCalTable& ct, String msName,
 		       Bool doScan=True,
 		       Bool doObs=True);
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
 

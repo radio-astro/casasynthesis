@@ -26,7 +26,7 @@
 //# $Id: $
 #include <graphics/GenericPlotter/PlotFactory.h>
 
-namespace casa {
+namespace casacore {
 
 /////////////////////////////
 // PLOTFACTORY DEFINITIONS //

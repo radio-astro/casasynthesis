@@ -26,10 +26,10 @@
 //#
 //# $Id$
 #include <iostream>
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/BasicSL/String.h>
 #include <msvis/MSVis/SubMS.h>
 
-using namespace casa;
+using namespace casacore;
 
 int main(int argc, char* argv[]) {
   // Parse arguments.

@@ -25,21 +25,21 @@
 //#
 //#
 //# $Id$
-#include <casa/aips.h>
-#include <images/Images/SubImage.h>
+#include <casacore/casa/aips.h>
+#include <casacore/images/Images/SubImage.h>
 
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
-#include <coordinates/Coordinates/StokesCoordinate.h>
-#include <coordinates/Coordinates/Projection.h>
-#include <casa/Logging/LogSink.h>
-#include <casa/Logging/LogMessage.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/coordinates/Coordinates/StokesCoordinate.h>
+#include <casacore/coordinates/Coordinates/Projection.h>
+#include <casacore/casa/Logging/LogSink.h>
+#include <casacore/casa/Logging/LogMessage.h>
 
 #include <imageanalysis/Utilities/SpectralImageUtil.h>
 
-#include <casa/iostream.h>
-namespace casa {
+#include <casacore/casa/iostream.h>
+namespace casacore {
   SubImage<Float>* SpectralImageUtil::getChannel(ImageInterface<Float>& theIm, Int beginchannel, Int endchannel, Bool writeAccess){
     CoordinateSystem csys=theIm.coordinates();
     if(endchannel<0 )

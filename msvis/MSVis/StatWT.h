@@ -28,15 +28,15 @@
 #ifndef MSVIS_STATWT_H
 #define MSVIS_STATWT_H
 
-#include <casa/aips.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/casa/aips.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
 #include <msvis/MSVis/GroupWorker.h>
 #include <msvis/MSVis/VisibilityIterator.h>
 #include <msvis/MSVis/VisBufferComponents.h>
 #include <map>
 #include <set>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //# forward decl
 class VisBuffGroup;
@@ -147,7 +147,7 @@ private:
   std::map<Int, Vector<Bool>*> fitmask_p;      // spw -> a list of flags by chan
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
 

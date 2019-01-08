@@ -28,14 +28,14 @@
 #include <synthesis/CalTables/NewCalTable.h>
 #include <synthesis/CalTables/CTColumns.h>
 #include <synthesis/CalTables/CTInterface.h>
-#include <ms/MSSel/MSSelection.h>
+#include <casacore/ms/MSSel/MSSelection.h>
 //#include <synthesis/CalTables/CTSelection.h>
-#include <ms/MSSel/MSSelectionTools.h>
-#include <casa/OS/Timer.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/iostream.h>
-#include <casa/BasicMath/Math.h>
-#include <casa/namespace.h>
+#include <casacore/ms/MSSel/MSSelectionTools.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/casa/namespace.h>
 
 // <summary>
 // Test program for CTInterp class.

@@ -43,7 +43,7 @@
 #include <dbus-c++-1/dbus-c++/connection.h>
 
 
-namespace casa {
+namespace casacore {
     namespace dbus {
 
 	class Dispatcher;

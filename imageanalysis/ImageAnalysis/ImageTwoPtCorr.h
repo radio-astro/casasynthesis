@@ -28,11 +28,11 @@
 #ifndef IMAGES_IMAGETWOPTCORR_H
 #define IMAGES_IMAGETWOPTCORR_H
 
-#include <casa/aips.h>
-#include <images/Images/ImageInterface.h>
-#include <lattices/LatticeMath/LatticeTwoPtCorr.h>
+#include <casacore/casa/aips.h>
+#include <casacore/images/Images/ImageInterface.h>
+#include <casacore/lattices/LatticeMath/LatticeTwoPtCorr.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 class IPosition;
 
@@ -145,7 +145,7 @@ private:
 
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #ifndef CASACORE_NO_AUTO_TEMPLATES
 #include <imageanalysis/ImageAnalysis/ImageTwoPtCorr.tcc>

@@ -27,7 +27,7 @@
 #include <iostream>
 #include <ctime>
 
-using namespace casa;
+using namespace casacore;
 using namespace std;
 
 #define RESET   "\033[0m"
@@ -234,7 +234,7 @@ Record parseConfiguration(int argc, char **argv)
 			// Get base path
 			String pathStr(pathChar);
 			string res[2];
-			casa::split(pathChar,res,2,string(" "));
+			casacore::split(pathChar,res,2,string(" "));
 
 			// Generate filename
 			string filename(res[0]);

@@ -26,12 +26,12 @@
 #ifndef IMAGEANALYSIS_IMAGEFITTERRESULTS_H
 #define IMAGEANALYSIS_IMAGEFITTERRESULTS_H
 
-#include <casa/Quanta/Quantum.h>
+#include <casacore/casa/Quanta/Quantum.h>
 #include <components/ComponentModels/ComponentList.h>
 
 #include <imageanalysis/ImageTypedefs.h>
 
-namespace casa {
+namespace casacore {
 
 template<class T> class Vector;
 

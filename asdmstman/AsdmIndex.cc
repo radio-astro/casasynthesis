@@ -29,10 +29,10 @@
 
 //# Includes
 #include <asdmstman/AsdmIndex.h>
-#include <tables/DataMan/DataManError.h>
-#include <casa/IO/AipsIO.h>
+#include <casacore/tables/DataMan/DataManError.h>
+#include <casacore/casa/IO/AipsIO.h>
 
-namespace casa {
+namespace casacore {
 
   uInt AsdmIndex::dataSize() const
   {

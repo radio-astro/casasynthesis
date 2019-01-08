@@ -25,7 +25,7 @@
 
 #include <imageanalysis/Annotations/AnnVector.h>
 
-namespace casa {
+namespace casacore {
 
 AnnVector::AnnVector(
 	const Quantity& xStart,

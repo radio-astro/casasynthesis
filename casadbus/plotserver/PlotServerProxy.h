@@ -32,12 +32,12 @@
 #include <string>
 #include <casadbus/plotserver/PlotServerProxy.proxy.h>
 #include <casadbus/utilities/Conversion.h>
-#include <casa/Containers/Record.h>
+#include <casacore/casa/Containers/Record.h>
 #include <stdcasa/variant.h>
 
-namespace casa {
+namespace casacore {
     class PlotServerProxy :
-	private edu::nrao::casa::plotserver_proxy,
+	private edu::nrao::casacore::plotserver_proxy,
 	public DBus::IntrospectableProxy,
 	public DBus::ObjectProxy {
 
@@ -52,48 +52,48 @@ namespace casa {
 			     const std::string &window_title="", const std::vector<int> &size=std::vector<int>( ),
 			     const std::string& legend="bottom", const std::string &zoom="bottom",
 			     const int32_t& with_panel=0, const bool& new_row=false, const bool& hidden=false )
-	  { return dbus::toVariant( edu::nrao::casa::plotserver_proxy::panel(title,xlabel,ylabel,window_title,size,
+	  { return dbus::toVariant( edu::nrao::casacore::plotserver_proxy::panel(title,xlabel,ylabel,window_title,size,
 									     legend,zoom,with_panel,new_row,hidden) ); }
 	std::vector< std::string > colors( )
-			{ return edu::nrao::casa::plotserver_proxy::colors( ); }
+			{ return edu::nrao::casacore::plotserver_proxy::colors( ); }
 	std::vector< std::string > colormaps( )
-			{ return edu::nrao::casa::plotserver_proxy::colormaps( ); }
+			{ return edu::nrao::casacore::plotserver_proxy::colormaps( ); }
 	std::vector< std::string > symbols( )
-			{ return edu::nrao::casa::plotserver_proxy::symbols( ); }
+			{ return edu::nrao::casacore::plotserver_proxy::symbols( ); }
 	dbus::variant line( const std::vector< double >& x, const std::vector< double >& y, const std::string& color="black",
 			    const std::string& label="", const int32_t& panel=0 )
-			{ return dbus::toVariant(edu::nrao::casa::plotserver_proxy::line( x, y, color, label, panel)); }
+			{ return dbus::toVariant(edu::nrao::casacore::plotserver_proxy::line( x, y, color, label, panel)); }
 	dbus::variant scatter( const std::vector< double >& x, const std::vector< double >& y, const std::string& color="black",
 			       const std::string& label="", const std::string& symbol="", const int32_t& symbol_size=-1,
 			       const int32_t& dot_size=-1, const int32_t& panel=0)
-			{ return dbus::toVariant(edu::nrao::casa::plotserver_proxy::scatter( x, y, color, label, symbol,
+			{ return dbus::toVariant(edu::nrao::casacore::plotserver_proxy::scatter( x, y, color, label, symbol,
 											     symbol_size, dot_size, panel)); }
 	dbus::variant histogram( const std::vector< double >& values, int bins=0, const std::string& color="blue",
 				 const std::string& label="", const int panel=0 )
-			{ return dbus::toVariant(edu::nrao::casa::plotserver_proxy::histogram( values, bins, color, label, panel)); }
+			{ return dbus::toVariant(edu::nrao::casacore::plotserver_proxy::histogram( values, bins, color, label, panel)); }
 	dbus::variant raster( const std::vector<double> &matrix, int sizex, int sizey, const std::string &colormap="Rainbow 2", int panel=0 )
-			{ return dbus::toVariant(edu::nrao::casa::plotserver_proxy::raster( matrix, sizex, sizey, colormap, panel )); }
+			{ return dbus::toVariant(edu::nrao::casacore::plotserver_proxy::raster( matrix, sizex, sizey, colormap, panel )); }
 
 	dbus::variant erase(const int32_t& data_or_panel=0)
-			{ return dbus::toVariant(edu::nrao::casa::plotserver_proxy::erase(data_or_panel)); }
+			{ return dbus::toVariant(edu::nrao::casacore::plotserver_proxy::erase(data_or_panel)); }
 
 	dbus::variant setlabel(const std::string& xlabel="", const std::string& ylabel="", const std::string& title="", int panel=0)
-			{ return dbus::toVariant(edu::nrao::casa::plotserver_proxy::setlabel(xlabel,ylabel,title,panel)); }
+			{ return dbus::toVariant(edu::nrao::casacore::plotserver_proxy::setlabel(xlabel,ylabel,title,panel)); }
 
 	dbus::variant close(const int32_t& panel=0)
-			{ return dbus::toVariant(edu::nrao::casa::plotserver_proxy::close(panel)); }
+			{ return dbus::toVariant(edu::nrao::casacore::plotserver_proxy::close(panel)); }
 	dbus::variant release(const int32_t& panel=0)
-			{ return dbus::toVariant(edu::nrao::casa::plotserver_proxy::release(panel)); }
+			{ return dbus::toVariant(edu::nrao::casacore::plotserver_proxy::release(panel)); }
 
 	dbus::variant show(const int32_t& panel=0)
-			{ return dbus::toVariant(edu::nrao::casa::plotserver_proxy::show(panel)); }
+			{ return dbus::toVariant(edu::nrao::casacore::plotserver_proxy::show(panel)); }
 	dbus::variant hide(const int32_t& panel=0)
-			{ return dbus::toVariant(edu::nrao::casa::plotserver_proxy::hide(panel)); }
+			{ return dbus::toVariant(edu::nrao::casacore::plotserver_proxy::hide(panel)); }
 
-	void done() { edu::nrao::casa::plotserver_proxy::done( ); }
+	void done() { edu::nrao::casacore::plotserver_proxy::done( ); }
 
 	dbus::variant loaddock( const std::string &file_or_xml, const std::string &loc="top", const std::vector<std::string> &dockable=std::vector<std::string>( ), const int32_t& panel=0 )
-			{ return dbus::toVariant(edu::nrao::casa::plotserver_proxy::loaddock(file_or_xml, loc, dockable, panel)); }
+			{ return dbus::toVariant(edu::nrao::casacore::plotserver_proxy::loaddock(file_or_xml, loc, dockable, panel)); }
 
 
 	//

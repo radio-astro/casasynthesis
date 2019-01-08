@@ -28,16 +28,16 @@
 #if ! defined (MSVIS_TransformingVi2_H_121115_0950)
 #define MSVIS_TransformingVi2_H_121115_0950
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <msvis/MSVis/ViImplementation2.h>
 
 #include <boost/noncopyable.hpp>
 #include <map>
 #include <vector>
 
-#include <measures/Measures/Stokes.h>
+#include <casacore/measures/Measures/Stokes.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 template <typename T> class Vector;
 
@@ -587,7 +587,7 @@ private:
 
 } // end namespace vi
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif // ! defined (MSVIS_TransformingVi2_H_121115_0950)
 

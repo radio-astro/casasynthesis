@@ -26,14 +26,14 @@
 #ifndef MSVIS_GROUPPROCESSOR_H
 #define MSVIS_GROUPPROCESSOR_H
 
-#include <casa/aips.h>
-//#include <casa/Containers/Stack.h>
-//#include <ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/casa/aips.h>
+//#include <casacore/casa/Containers/Stack.h>
+//#include <casacore/ms/MeasurementSets/MeasurementSet.h>
 //#include <msvis/MSVis/VisBuffGroup.h>
 #include <msvis/MSVis/VisibilityIterator.h>
 #include <msvis/MSVis/GroupWorker.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //# forward decl
 //class Block;
@@ -155,6 +155,6 @@ private:
   Double groupStart_p;
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

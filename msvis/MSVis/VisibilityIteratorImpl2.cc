@@ -26,17 +26,17 @@
 //# $Id: VisibilityIterator2.cc,v 19.15 2006/02/01 01:25:14 kgolap Exp $
 
 #include <boost/tuple/tuple.hpp>
-#include <casa/Arrays.h>
-#include <casa/BasicSL/Constants.h>
-#include <casa/Containers/Record.h>
-#include <casa/Exceptions.h>
-#include <casa/Quanta/MVTime.h>
-#include <casa/Utilities.h>
-#include <ms/MeasurementSets.h>
-#include <ms/MeasurementSets/MSColumns.h>
-#include <ms/MSSel/MSSelection.h>
-#include <ms/MSSel/MSSpwIndex.h>
-#include <scimath/Mathematics/InterpolateArray1D.h>
+#include <casacore/casa/Arrays.h>
+#include <casacore/casa/BasicSL/Constants.h>
+#include <casacore/casa/Containers/Record.h>
+#include <casacore/casa/Exceptions.h>
+#include <casacore/casa/Quanta/MVTime.h>
+#include <casacore/casa/Utilities.h>
+#include <casacore/ms/MeasurementSets.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
+#include <casacore/ms/MSSel/MSSelection.h>
+#include <casacore/ms/MSSel/MSSpwIndex.h>
+#include <casacore/scimath/Mathematics/InterpolateArray1D.h>
 //#include <msvis/MSVis/StokesVector.h>
 #include <msvis/MSVis/MeasurementSet2.h>
 #include <msvis/MSVis/MSUtil.h>
@@ -48,13 +48,13 @@
 #include <msvis/MSVis/VisibilityIterator2.h>
 #include <msvis/MSVis/VisibilityIteratorImpl2.h>
 #include <msvis/MSVis/VisModelDataI.h>
-#include <tables/Tables/ColDescSet.h>
-#include <tables/Tables/ArrayColumn.h>
-#include <tables/DataMan/IncrStManAccessor.h>
-#include <tables/DataMan/StandardStManAccessor.h>
-#include <tables/Tables/TableDesc.h>
-#include <tables/Tables/TableRecord.h>
-#include <tables/DataMan/TiledStManAccessor.h>
+#include <casacore/tables/Tables/ColDescSet.h>
+#include <casacore/tables/Tables/ArrayColumn.h>
+#include <casacore/tables/DataMan/IncrStManAccessor.h>
+#include <casacore/tables/DataMan/StandardStManAccessor.h>
+#include <casacore/tables/Tables/TableDesc.h>
+#include <casacore/tables/Tables/TableRecord.h>
+#include <casacore/tables/DataMan/TiledStManAccessor.h>
 
 #include <cassert>
 #include <algorithm>
@@ -64,10 +64,10 @@
 #include <vector>
 
 using std::make_pair;
-using namespace casa::vi;
+using namespace casacore::vi;
 using namespace std;
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 namespace vi {
 
@@ -3273,7 +3273,7 @@ VisibilityIteratorImpl2::getChannelInformationUsingFrequency (Bool now) const
         // entire number of channels in the selected spectral windows.  This might be overkill
         // but it should not cause false results to the caller.
 
-        casa::ms::SpectralWindows spectralWindows (& measurementSets_p [msId()]);
+        casacore::ms::SpectralWindows spectralWindows (& measurementSets_p [msId()]);
 
         Int i = 0;
         for (set<Int>::iterator j = windows.begin(); j != windows.end(); j++){
@@ -3310,7 +3310,7 @@ VisibilityIteratorImpl2::getChannelInformation (Bool now) const
 
         // No explicit selection, so everything is selected.
 
-        casa::ms::SpectralWindows spectralWindows (& measurementSets_p [msId()]);
+        casacore::ms::SpectralWindows spectralWindows (& measurementSets_p [msId()]);
 
         spectralWindow.resize (spectralWindows.size());
         nChannels.resize (spectralWindows.size());
@@ -3319,7 +3319,7 @@ VisibilityIteratorImpl2::getChannelInformation (Bool now) const
 
         Int i = 0;
 
-        for (casa::ms::SpectralWindows::const_iterator s = spectralWindows.begin();
+        for (casacore::ms::SpectralWindows::const_iterator s = spectralWindows.begin();
              s != spectralWindows.end();
              s ++){
 
@@ -3507,5 +3507,5 @@ VisibilityIteratorImpl2::PendingChanges::setNRowBlocking (Int nRowBlocking)
 
 } // end namespace vi
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

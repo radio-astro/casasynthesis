@@ -28,7 +28,7 @@
 //
 #include <synthesis/TransformMachines/AWConvFunc2.h>
 #include <synthesis/TransformMachines/SynthesisError.h>
-#include <images/Images/ImageInterface.h>
+#include <casacore/images/Images/ImageInterface.h>
 #include <synthesis/TransformMachines/Utils.h>
 #include <synthesis/TransformMachines/BeamCalc.h>
 #include <synthesis/TransformMachines/CFStore.h>
@@ -39,12 +39,12 @@
 #include <synthesis/TransformMachines/VLACalcIlluminationConvFunc.h>
 #include <synthesis/TransformMachines/ConvolutionFunction.h>
 #include <synthesis/TransformMachines/PolOuterProduct.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
-#include <coordinates/Coordinates/StokesCoordinate.h>
-#include <lattices/LatticeMath/LatticeFFT.h>
-#include <casa/Utilities/CompositeNumber.h>
-#include <casa/OS/Timer.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/coordinates/Coordinates/StokesCoordinate.h>
+#include <casacore/lattices/LatticeMath/LatticeFFT.h>
+#include <casacore/casa/Utilities/CompositeNumber.h>
+#include <casacore/casa/OS/Timer.h>
 #include <ostream>
 #ifdef _OPENMP
 #include <omp.h>

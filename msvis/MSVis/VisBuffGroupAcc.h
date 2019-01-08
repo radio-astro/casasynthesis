@@ -28,11 +28,11 @@
 #ifndef MSVIS_VISBUFFGROUPACC_H
 #define MSVIS_VISBUFFGROUPACC_H
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <msvis/MSVis/VisBuffAccumulator.h>
 #include <map>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary>
 // A class to group separately averaged VisBuffers 
@@ -171,7 +171,7 @@ private:
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
 

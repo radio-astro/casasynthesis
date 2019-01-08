@@ -26,11 +26,11 @@
 //# $Id$
 
 
-//#include <casa/namespace.h>
-#include <casa/iostream.h>
+//#include <casacore/casa/namespace.h>
+#include <casacore/casa/iostream.h>
 #include <deque>
 
-#include <casa/Containers/Record.h>
+#include <casacore/casa/Containers/Record.h>
 #include <casadbus/interfaces/SynthImager.proxy.h>
 
 // Include file for the SIIterBot Class
@@ -149,7 +149,7 @@ void SIIterBotTest::testDefaultValues(){
   currentTestExecution = __FUNCTION__;
   /* This test checks to make sure that the getter functions all work
      and that the default values are as expected */
-  casa::SIIterBot siBot("TestSIService");
+  casacore::SIIterBot siBot("TestSIService");
 
   failIf(!compareFloat(siBot.getLoopGain(), 0.1),
          "Initial LoopGain incorrect");
@@ -187,7 +187,7 @@ void SIIterBotTest::testSettingControlValues(){
   currentTestExecution = __FUNCTION__;
   /* Test that the various setter methods we have are working properly */
 
-  casa::SIIterBot siBot("TestSIService");
+  casacore::SIIterBot siBot("TestSIService");
 
   for (int counter=0; counter < 5; ++counter) {
     failIf(siBot.getMajorCycleCount() != counter,
@@ -240,21 +240,21 @@ void SIIterBotTest::testInitializingFromRecord(){
   currentTestExecution = __FUNCTION__;
   /* Check that we can set all variables from a record 
      do this in several parts to make sure we handle missing fields ok*/
-   casa::Record iterRec;
-   iterRec.define( casa::RecordFieldId("niter"), 123);
-   iterRec.define( casa::RecordFieldId("cycleniter"), 456);
-   iterRec.define( casa::RecordFieldId("interactiveniter"), 789);
+   casacore::Record iterRec;
+   iterRec.define( casacore::RecordFieldId("niter"), 123);
+   iterRec.define( casacore::RecordFieldId("cycleniter"), 456);
+   iterRec.define( casacore::RecordFieldId("interactiveniter"), 789);
                                         
-   casa::Record thresholdRec;
-   thresholdRec.define( casa::RecordFieldId("threshold"), 5.67);
-   thresholdRec.define( casa::RecordFieldId("cyclethreshold"), 7.89);
-   thresholdRec.define( casa::RecordFieldId("interactivethreshold"), 8.91);
+   casacore::Record thresholdRec;
+   thresholdRec.define( casacore::RecordFieldId("threshold"), 5.67);
+   thresholdRec.define( casacore::RecordFieldId("cyclethreshold"), 7.89);
+   thresholdRec.define( casacore::RecordFieldId("interactivethreshold"), 8.91);
 
-   casa::Record controlRec;
-   controlRec.define( casa::RecordFieldId("cyclefactor"), 4.56);
-   controlRec.define( casa::RecordFieldId("loopgain"), 6.78);
+   casacore::Record controlRec;
+   controlRec.define( casacore::RecordFieldId("cyclefactor"), 4.56);
+   controlRec.define( casacore::RecordFieldId("loopgain"), 6.78);
 
-   casa::SIIterBot siBot("TestSIService");
+   casacore::SIIterBot siBot("TestSIService");
    /* Start with the basic test */
    failIf(siBot.getNiter() != 0,
           "Niter Threshold value incorrect");
@@ -332,7 +332,7 @@ void SIIterBotTest::testSettingCycleParameters() {
   currentTestExecution = __FUNCTION__;
   /* This tests the ability to modify the cycle dependent parameters and
      get the cycle threshold correctly */
-    casa::SIIterBot siBot("TestSIService"); 
+    casacore::SIIterBot siBot("TestSIService"); 
     
     siBot.setMaxPsfSidelobe(.9);
     failIf(!compareFloat(siBot.getMaxPsfSidelobe(),0.9),
@@ -385,7 +385,7 @@ void SIIterBotTest::testSettingCycleParameters() {
 
 void SIIterBotTest::testIterationBehavior(){
   currentTestExecution = __FUNCTION__;
-  casa::SIIterBot siBot("TestSIService"); 
+  casacore::SIIterBot siBot("TestSIService"); 
   const int     MaxIter    = 15000; // Maximum
   const int     nIter      = 12345;
   const int     cycleNiter = 345;
@@ -429,7 +429,7 @@ void SIIterBotTest::testThresholdBehavior(){
   /* This test checks the threshold dependent behavior assuming that
      the user is controlling it (e.g. never updating the cycle threshold)
   */
-  casa::SIIterBot siBot("TestSIService"); 
+  casacore::SIIterBot siBot("TestSIService"); 
   const float cleanStep = 10.0;
   const float threshold = 35.0;
   float cycleThreshold  = 900;
@@ -478,7 +478,7 @@ void SIIterBotTest::testThresholdBehavior(){
 
 void SIIterBotTest::testExportingToRecord(){
   currentTestExecution = __FUNCTION__;
-  casa::SIIterBot siBot("TestSIService"); 
+  casacore::SIIterBot siBot("TestSIService"); 
 
   siBot.changeNiter(123);
   siBot.changeCycleNiter(456);
@@ -496,79 +496,79 @@ void SIIterBotTest::testExportingToRecord(){
   for (int idx = 0; idx < 12; idx++) siBot.incrementMajorCycleCount();
   for (int idx = 0; idx < 22; idx++) siBot.incrementMinorCycleCount();
 
-  casa::Record recOut = siBot.getDetailsRecord();
+  casacore::Record recOut = siBot.getDetailsRecord();
 
   failIf(!recOut.isDefined("niter"),
          "niter is not defined in the record");
-  failIf(recOut.asInt(casa::RecordFieldId("niter")) != 123,
+  failIf(recOut.asInt(casacore::RecordFieldId("niter")) != 123,
          "niter value incorrect");
   failIf(!recOut.isDefined("cycleniter"),
          "cycleniter is not defined in the record");
-  failIf(recOut.asInt(casa::RecordFieldId("cycleniter")) != 456,
+  failIf(recOut.asInt(casacore::RecordFieldId("cycleniter")) != 456,
          "cycleniter value incorrect");
   failIf(!recOut.isDefined("interactiveniter"),
          "interactiveniter is not defined in the record");
-  failIf(recOut.asInt(casa::RecordFieldId("interactiveniter")) != 789,
+  failIf(recOut.asInt(casacore::RecordFieldId("interactiveniter")) != 789,
          "interactiveniter value incorrect");
 
   failIf(!recOut.isDefined("threshold"),
          "threshold is not defined in the record");
-  failIf(!compareFloat(recOut.asFloat(casa::RecordFieldId("threshold")),1.23),
+  failIf(!compareFloat(recOut.asFloat(casacore::RecordFieldId("threshold")),1.23),
          "incorrect threshold");
   failIf(!recOut.isDefined("cyclethreshold"),
          "cyclethreshold is not defined in the record");
-  failIf(!compareFloat(recOut.asFloat(casa::RecordFieldId("cyclethreshold")),
+  failIf(!compareFloat(recOut.asFloat(casacore::RecordFieldId("cyclethreshold")),
                        4.56), "incorrect threshold");
   failIf(!recOut.isDefined("interactivethreshold"),
          "interactivethreshold is not defined in the record");
   failIf(!compareFloat(recOut.asFloat
-                       (casa::RecordFieldId("interactivethreshold")),7.89),
+                       (casacore::RecordFieldId("interactivethreshold")),7.89),
          "incorrect threshold");
 
 
   failIf(!recOut.isDefined("loopgain"),
          "loopgain is not defined in the record");
-  failIf(!compareFloat(recOut.asFloat(casa::RecordFieldId("loopgain")), 0.2),
+  failIf(!compareFloat(recOut.asFloat(casacore::RecordFieldId("loopgain")), 0.2),
          "incorrect loopgain");
   failIf(!recOut.isDefined("cyclefactor"),
          "cyclefactor is not defined in the record");
-  failIf(!compareFloat(recOut.asFloat(casa::RecordFieldId("cyclefactor")),
+  failIf(!compareFloat(recOut.asFloat(casacore::RecordFieldId("cyclefactor")),
                        2.0), "incorrect cyclefactor");
 
   failIf(!recOut.isDefined("maxpsfsidelobe"),
          "maxpsfsidelobe is not defined in the record");
-  failIf(!compareFloat(recOut.asFloat(casa::RecordFieldId("maxpsfsidelobe")),
+  failIf(!compareFloat(recOut.asFloat(casacore::RecordFieldId("maxpsfsidelobe")),
                        0.75), "incorrect max psf sidelobe");
   failIf(!recOut.isDefined("maxpsffraction"),
          "maxpsffraction is not defined in the record");
-  failIf(!compareFloat(recOut.asFloat(casa::RecordFieldId("maxpsffraction")),
+  failIf(!compareFloat(recOut.asFloat(casacore::RecordFieldId("maxpsffraction")),
                        0.8), "incorrect max psf fraction ");
   failIf(!recOut.isDefined("minpsffraction"),
          "minpsffraction is not defined in the record");
-  failIf(!compareFloat(recOut.asFloat(casa::RecordFieldId("minpsffraction")),
+  failIf(!compareFloat(recOut.asFloat(casacore::RecordFieldId("minpsffraction")),
                        0.2),"incorrect min psf fraction ");
 
   failIf(!recOut.isDefined("nmajordone"),
          "nmajordone is not defined in the record");
-  failIf(recOut.asInt(casa::RecordFieldId("nmajordone")) != 12,
+  failIf(recOut.asInt(casacore::RecordFieldId("nmajordone")) != 12,
          "incorrect number of major cycles reported");
   failIf(!recOut.isDefined("iterdone"),
          "iterdone is not defined in the record");
-  failIf(recOut.asInt(casa::RecordFieldId("iterdone")) != 44,
+  failIf(recOut.asInt(casacore::RecordFieldId("iterdone")) != 44,
          "incorrect number of minor cycles reported");
   failIf(!recOut.isDefined("cycleiterdone"),
          "cycleiterdone is not defined in the record");
-  failIf(recOut.asInt(casa::RecordFieldId("cycleiterdone")) != 22,
+  failIf(recOut.asInt(casacore::RecordFieldId("cycleiterdone")) != 22,
          "incorrect number of minor cycles reported for this cycle");
   failIf(!recOut.isDefined("interactiveiterdone"),
          "interactiveiterdone is not defined in the record");
-  failIf(recOut.asInt(casa::RecordFieldId("interactiveiterdone")) != 44,
+  failIf(recOut.asInt(casacore::RecordFieldId("interactiveiterdone")) != 44,
          "incorrect number of minor cycles reported for interactive cycle");
 }
 
 void SIIterBotTest::testInteractiveMode() {
   currentTestExecution = __FUNCTION__;
-  casa::SIIterBot siBot("TestSIService"); 
+  casacore::SIIterBot siBot("TestSIService"); 
 
   /* Iter Based Test */
   siBot.changeInteractiveMode(true);
@@ -616,7 +616,7 @@ void SIIterBotTest::testInteractiveMode() {
 
 void SIIterBotTest::testInstanciation() {
   currentTestExecution = __FUNCTION__;
-  casa::SIIterBot     iterBot("SITestService");
+  casacore::SIIterBot     iterBot("SITestService");
   /* This could fail because we can't start the service, or because we
      never clean up.
   */
@@ -629,7 +629,7 @@ void SIIterBotTest::testServerSideCleanup() {
   int childPID = 0;
   
   {
-    casa::SIIterBot     iterBot("SITestService");
+    casacore::SIIterBot     iterBot("SITestService");
 
     childPID = spawnController(true, true, false);
     failIf(childPID < 0, "Failed to spawn child process");
@@ -647,7 +647,7 @@ void SIIterBotTest::testServerSideCleanup() {
 
 void SIIterBotTest::testInteractiveCycle() {
   currentTestExecution = __FUNCTION__;
-  casa::SIIterBot     iterBot("SITestService");
+  casacore::SIIterBot     iterBot("SITestService");
   
   int childPID = spawnController(true, true, false);
   failIf(childPID < 0, "Failed to spawn child process");
@@ -669,13 +669,13 @@ void SIIterBotTest::testInteractiveCycle() {
 
 void SIIterBotTest::testGettingDetailsLocal() {
   currentTestExecution = __FUNCTION__;
-  casa::SIIterBot     iterBot("SITestService");
+  casacore::SIIterBot     iterBot("SITestService");
   
   std::map<std::string,DBus::Variant> myMap = iterBot.getDetails();
   failIf(myMap.size() != 15, "Incorrect number of fields in map");
 
   /* Translate back to a CASA record for simplicity (and a bit of testing) */
-  casa::Record record = casa::DBusThreadedBase::toRecord(myMap);
+  casacore::Record record = casacore::DBusThreadedBase::toRecord(myMap);
 
   /* Just make sure the size is correct, we'll check values when we
      send in new ones
@@ -690,7 +690,7 @@ void SIIterBotTest::testSettingDetails() {
   int childPID; 
 
   {
-    casa::SIIterBot     iterBot("SITestService");
+    casacore::SIIterBot     iterBot("SITestService");
     childPID = spawnController(false, true, true);
     failIf(childPID < 0, "Failed to spawn child process");
 
@@ -772,8 +772,8 @@ int SIIterBotTest::checkChildState(int pid) {
 
 /* This is a very simple implemenetaion of a Controller used
    for the testing*/
-class SITestController: public edu::nrao::casa::SynthImager_proxy,
-                        public casa::ServiceProxy
+class SITestController: public edu::nrao::casacore::SynthImager_proxy,
+                        public casacore::ServiceProxy
 {
 public:
   SITestController(const std::string& serviceName,
@@ -801,44 +801,44 @@ public:
   
   void detailUpdate(const std::map<std::string, DBus::Variant>& updatedParams){
     if (checkDetails && checkDetailsFlag) {
-      casa::Record recOut = toRecord(updatedParams);
+      casacore::Record recOut = toRecord(updatedParams);
 
       
       failIf(!recOut.isDefined("niter"),
              "niter is not defined in the record");
-      failIf(recOut.asInt(casa::RecordFieldId("niter")) != 123,
+      failIf(recOut.asInt(casacore::RecordFieldId("niter")) != 123,
              "niter value incorrect");
       failIf(!recOut.isDefined("cycleniter"),
              "cycleniter is not defined in the record");
-      failIf(recOut.asInt(casa::RecordFieldId("cycleniter")) != 456,
+      failIf(recOut.asInt(casacore::RecordFieldId("cycleniter")) != 456,
              "cycleniter value incorrect");
       failIf(!recOut.isDefined("interactiveniter"),
              "interactiveniter is not defined in the record");
-      failIf(recOut.asInt(casa::RecordFieldId("interactiveniter")) != 789,
+      failIf(recOut.asInt(casacore::RecordFieldId("interactiveniter")) != 789,
              "interactiveniter value incorrect");
       
       failIf(!recOut.isDefined("threshold"),
              "threshold is not defined in the record");
-      failIf(!compareFloat(recOut.asFloat(casa::RecordFieldId("threshold")),
+      failIf(!compareFloat(recOut.asFloat(casacore::RecordFieldId("threshold")),
                            5.67), "incorrect threshold");
       failIf(!recOut.isDefined("cyclethreshold"),
              "cyclethreshold is not defined in the record");
-      failIf(!compareFloat(recOut.asFloat(casa::RecordFieldId("cyclethreshold")),
+      failIf(!compareFloat(recOut.asFloat(casacore::RecordFieldId("cyclethreshold")),
                            7.89), "incorrect cyclethreshold");
       failIf(!recOut.isDefined("interactivethreshold"),
              "interactivethreshold is not defined in the record");
       failIf(!compareFloat(recOut.asFloat
-                           (casa::RecordFieldId("interactivethreshold")),8.91),
+                           (casacore::RecordFieldId("interactivethreshold")),8.91),
              "incorrect interactive threshold");
       
       failIf(!recOut.isDefined("loopgain"),
              "loopgain is not defined in the record");
-      failIf(!compareFloat(recOut.asFloat(casa::RecordFieldId("loopgain")),
+      failIf(!compareFloat(recOut.asFloat(casacore::RecordFieldId("loopgain")),
                            6.78),
              "incorrect loopgain");
       failIf(!recOut.isDefined("cyclefactor"),
              "cyclefactor is not defined in the record");
-      failIf(!compareFloat(recOut.asFloat(casa::RecordFieldId("cyclefactor")),
+      failIf(!compareFloat(recOut.asFloat(casacore::RecordFieldId("cyclefactor")),
                            4.56), "incorrect cyclefactor");
 
     }    
@@ -858,17 +858,17 @@ public:
   void sendInteractionComplete() {
     checkDetails = true;
 
-    casa::Record record;
-    record.define( casa::RecordFieldId("niter"), 123);
-    record.define( casa::RecordFieldId("cycleniter"), 456);
-    record.define( casa::RecordFieldId("interactiveniter"), 789);
+    casacore::Record record;
+    record.define( casacore::RecordFieldId("niter"), 123);
+    record.define( casacore::RecordFieldId("cycleniter"), 456);
+    record.define( casacore::RecordFieldId("interactiveniter"), 789);
     
-    record.define( casa::RecordFieldId("threshold"), 5.67);
-    record.define( casa::RecordFieldId("cyclethreshold"), 7.89);
-    record.define( casa::RecordFieldId("interactivethreshold"), 8.91);
+    record.define( casacore::RecordFieldId("threshold"), 5.67);
+    record.define( casacore::RecordFieldId("cyclethreshold"), 7.89);
+    record.define( casacore::RecordFieldId("interactivethreshold"), 8.91);
     
-    record.define( casa::RecordFieldId("cyclefactor"), 4.56);
-    record.define( casa::RecordFieldId("loopgain"), 6.78);
+    record.define( casacore::RecordFieldId("cyclefactor"), 4.56);
+    record.define( casacore::RecordFieldId("loopgain"), 6.78);
 
     std::map<std::string, DBus::Variant> map= fromRecord(record);
     controlUpdate(map);
@@ -918,7 +918,7 @@ protected:
    if arguments are included then we spawn a Controller process for testing
 */
 int main(int argc, char** argv){
-  using namespace casa;
+  using namespace casacore;
 
 
   if (argc == 1) {

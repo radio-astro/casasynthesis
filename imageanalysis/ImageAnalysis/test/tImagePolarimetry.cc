@@ -28,31 +28,31 @@
 //
 #include <imageanalysis/ImageAnalysis/ImagePolarimetry.h>
 
-#include <casa/aips.h>
-#include <casa/Arrays/ArrayLogical.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Exceptions/Error.h>
-#include <coordinates/Coordinates/CoordinateUtil.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
-#include <coordinates/Coordinates/StokesCoordinate.h>
-#include <images/Images/PagedImage.h>
-#include <images/Images/TempImage.h>
-#include <images/Images/ImageExpr.h>
-#include <images/Images/SubImage.h>
-#include <casa/Inputs/Input.h>
-#include <casa/Logging.h>
-#include <casa/BasicMath/Math.h>
-#include <casa/BasicMath/Random.h>
-#include <measures/Measures/MFrequency.h>
-#include <casa/Quanta/QC.h>
-#include <casa/System/PGPlotter.h>
-#include <casa/BasicSL/String.h>
-#include <lattices/LatticeMath/LatticeAddNoise.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/coordinates/Coordinates/CoordinateUtil.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/coordinates/Coordinates/StokesCoordinate.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/images/Images/ImageExpr.h>
+#include <casacore/images/Images/SubImage.h>
+#include <casacore/casa/Inputs/Input.h>
+#include <casacore/casa/Logging.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/casa/BasicMath/Random.h>
+#include <casacore/measures/Measures/MFrequency.h>
+#include <casacore/casa/Quanta/QC.h>
+#include <casacore/casa/System/PGPlotter.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/lattices/LatticeMath/LatticeAddNoise.h>
 
-#include <casa/iostream.h>
+#include <casacore/casa/iostream.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 void addNoise (Array<Float>& slice, Normal& noiseGen);
 ImageInterface<Float>* makeQUImage (Double& sigma, Double pa0, Double rm, 
                                     uInt nchan, Double f0, Double dF);

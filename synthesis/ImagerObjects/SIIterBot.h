@@ -25,10 +25,10 @@
 
 #include <casadbus/utilities/BusAccess.h>
 // .casarc interface
-#include <casa/System/AipsrcValue.h>
+#include <casacore/casa/System/AipsrcValue.h>
 
 // System utilities (for profiling macros)
-#include <casa/OS/HostInfo.h>
+#include <casacore/casa/OS/HostInfo.h>
 #include <sys/time.h>
 #include <dbus-c++-1/dbus-c++/dbus.h>
 
@@ -45,7 +45,7 @@
 #include <casadbus/interfaces/SynthImager.adaptor.h>
 #endif
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 	class Record;
 
@@ -269,7 +269,7 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 	class SIIterBot_adaptor
 #ifdef INTERACTIVE_ITERATION
 		: private dbus::address,
-		  private edu::nrao::casa::SynthesisImager_adaptor,
+		  private edu::nrao::casacore::SynthesisImager_adaptor,
 		  public DBus::IntrospectableAdaptor,
 		  public DBus::ObjectAdaptor
 #endif
@@ -283,7 +283,7 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 
 				void interactionRequired( const bool &val ) {
 #ifdef INTERACTIVE_ITERATION
-					edu::nrao::casa::SynthesisImager_adaptor::interactionRequired( val );
+					edu::nrao::casacore::SynthesisImager_adaptor::interactionRequired( val );
 #endif
 				}
 				void controlUpdate(const std::map< std::string, ::DBus::Variant >& newParams)
@@ -318,6 +318,6 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 
 		};
     
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif /* FLAGDATAHANDLER_H_ */

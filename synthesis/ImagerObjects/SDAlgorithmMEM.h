@@ -29,20 +29,20 @@
 #ifndef SYNTHESIS_SDALGORITHMMEM_H
 #define SYNTHESIS_SDALGORITHMMEM_H
 
-#include <ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
 //#include <synthesis/MeasurementComponents/SkyModel.h>
-#include <casa/Arrays/Matrix.h>
-#include <images/Images/ImageInterface.h>
-#include <images/Images/PagedImage.h>
-#include <images/Images/TempImage.h>
-#include <casa/Logging/LogMessage.h>
-#include <casa/Logging/LogSink.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/images/Images/ImageInterface.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging/LogSink.h>
 
 #include<synthesis/ImagerObjects/SDAlgorithmBase.h>
 
 #include <synthesis/MeasurementEquations/Entropy.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
   /* Forware Declaration */
   class SIMinorCycleController;
@@ -72,6 +72,6 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 
   };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

@@ -24,23 +24,23 @@
 //#                        Charlottesville, VA 22903-2475 USA
 //#
 
-//#include <casa/Arrays/Array.h>
-//#include <casa/Arrays/ArrayMath.h>
-#include <casa/Exceptions/Error.h>
+//#include <casacore/casa/Arrays/Array.h>
+//#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Exceptions/Error.h>
 
 
-#include <measures/Measures.h>
-//#include <measures/Measures/EarthField.h>
-#include <measures/Measures/EarthMagneticMachine.h>
-#include <casa/Quanta/MVTime.h>
-#include <measures/Measures/MDirection.h>
-#include <measures/Measures/MPosition.h>
-#include <measures/Measures/MEpoch.h>
-#include <measures/Measures/MeasTable.h>
+#include <casacore/measures/Measures.h>
+//#include <casacore/measures/Measures/EarthField.h>
+#include <casacore/measures/Measures/EarthMagneticMachine.h>
+#include <casacore/casa/Quanta/MVTime.h>
+#include <casacore/measures/Measures/MDirection.h>
+#include <casacore/measures/Measures/MPosition.h>
+#include <casacore/measures/Measures/MEpoch.h>
+#include <casacore/measures/Measures/MeasTable.h>
 
-#include <casa/iostream.h>
-#include <casa/BasicMath/Math.h>
-#include <casa/namespace.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/casa/namespace.h>
 
 //#include <synthesis/MeasurementComponents/FJones.h>
 

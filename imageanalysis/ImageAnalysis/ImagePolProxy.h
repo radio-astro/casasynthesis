@@ -30,7 +30,7 @@
 
 #include <imageanalysis/ImageAnalysis/ImagePolarimetry.h>
 
-namespace casa {
+namespace casacore {
 
 //# Forward declarations
 class LogIO;

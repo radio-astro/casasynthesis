@@ -27,16 +27,16 @@
 
 #include <imageanalysis/ImageAnalysis/ImagePrimaryBeamCorrector.h>
 
-#include <images/Images/ImageUtilities.h>
-#include <images/Images/FITSImage.h>
-#include <images/Images/PagedImage.h>
+#include <casacore/images/Images/ImageUtilities.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/images/Images/PagedImage.h>
 
-#include <casa/OS/Directory.h>
-#include <casa/OS/EnvVar.h>
+#include <casacore/casa/OS/Directory.h>
+#include <casacore/casa/OS/EnvVar.h>
 
-#include <lattices/LatticeMath/LatticeStatistics.h>
+#include <casacore/lattices/LatticeMath/LatticeStatistics.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 #include <sys/types.h>
 

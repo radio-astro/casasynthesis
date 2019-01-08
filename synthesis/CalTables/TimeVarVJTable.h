@@ -32,7 +32,7 @@
 #include <synthesis/CalTables/VisJonesTable.h>
 #include <synthesis/CalTables/TimeVarVJDesc.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> 
 // TimeVarVisJonesTable: TimeVarVisJones calibration table access and creation
@@ -193,7 +193,7 @@ class CJonesTable : public TimeVarVisJonesTable
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
    

@@ -27,11 +27,11 @@
 //----------------------------------------------------------------------------
 
 #include <synthesis/CalTables/CTIter.h>
-#include <tables/Tables/ScalarColumn.h>
-#include <casa/Arrays.h>
-#include <casa/OS/Timer.h>
+#include <casacore/tables/Tables/ScalarColumn.h>
+#include <casacore/casa/Arrays.h>
+#include <casacore/casa/OS/Timer.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------------
 
@@ -249,4 +249,4 @@ void CTIter::attach() {
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END

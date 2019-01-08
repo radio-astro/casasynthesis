@@ -27,9 +27,9 @@
 
 
 #include <imageanalysis/ImageAnalysis/ImageStatsCalculator.h>
-#include <images/Images/FITSImage.h>
-#include <casa/namespace.h>
-#include <casa/OS/EnvVar.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/casa/namespace.h>
+#include <casacore/casa/OS/EnvVar.h>
 
 void writeTestString(const String& test) {
     cout << "\n" << "*** " << test << " ***" << endl;

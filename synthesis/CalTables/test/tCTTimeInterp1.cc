@@ -28,11 +28,11 @@
 #include <synthesis/CalTables/NewCalTable.h>
 #include <synthesis/CalTables/CTTimeInterp1.h>
 #include <synthesis/CalTables/CTPatchedInterp.h>
-#include <scimath/Mathematics/InterpolateArray1D.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/iostream.h>
-#include <casa/BasicMath/Math.h>
-#include <casa/namespace.h>
+#include <casacore/scimath/Mathematics/InterpolateArray1D.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/casa/namespace.h>
 
 // <summary>
 // Test program for CTInterp class.

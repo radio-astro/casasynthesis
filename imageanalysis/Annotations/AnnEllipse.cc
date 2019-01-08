@@ -16,11 +16,11 @@
 
 #include <imageanalysis/Annotations/AnnEllipse.h>
 
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <casa/Quanta/QLogical.h>
-#include <images/Regions/WCEllipsoid.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/casa/Quanta/QLogical.h>
+#include <casacore/images/Regions/WCEllipsoid.h>
 
-namespace casa {
+namespace casacore {
 
 AnnEllipse::AnnEllipse(
 	const Quantity& xcenter, const Quantity& ycenter,
@@ -132,8 +132,8 @@ void AnnEllipse::_init(
 		_inputSemiMajorAxis.getUnit() == "pix"
 		&& ! getCsys().directionCoordinate().hasSquarePixels()
 		&& (
-			! casa::near(fmod(_inputPositionAngle.getValue("rad"), C::pi), 0.0)
-			&& ! casa::near(fmod(fabs(_inputPositionAngle.getValue("rad")), C::pi), C::pi_2)
+			! casacore::near(fmod(_inputPositionAngle.getValue("rad"), C::pi), 0.0)
+			&& ! casacore::near(fmod(fabs(_inputPositionAngle.getValue("rad")), C::pi), C::pi_2)
 		),
 		"When pixels are not square and units are expressed in "
 		"pixels, position angle must be zero"

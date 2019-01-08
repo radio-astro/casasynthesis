@@ -27,17 +27,17 @@
 #ifndef IMAGETYPEDEFS_H_
 #define IMAGETYPEDEFS_H_
 
-#include <casa/aipstype.h>
-#include <casa/BasicSL/Complexfwd.h>
-#include <casa/Utilities/CountedPtr.h>
+#include <casacore/casa/aipstype.h>
+#include <casacore/casa/BasicSL/Complexfwd.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
 
-#define SPIIT SHARED_PTR<casa::ImageInterface<T> >
-#define SPCIIT SHARED_PTR<const casa::ImageInterface<T> >
+#define SPIIT SHARED_PTR<casacore::ImageInterface<T> >
+#define SPCIIT SHARED_PTR<const casacore::ImageInterface<T> >
 
-#define SPIIU SHARED_PTR<casa::ImageInterface<U> >
-#define SPCIIU SHARED_PTR<const casa::ImageInterface<U> >
+#define SPIIU SHARED_PTR<casacore::ImageInterface<U> >
+#define SPCIIU SHARED_PTR<const casacore::ImageInterface<U> >
 
-namespace casa {
+namespace casacore {
 	template<class T> class ImageInterface;
 
 	typedef SHARED_PTR<const ImageInterface<Float> > SPCIIF;

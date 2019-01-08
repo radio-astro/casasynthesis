@@ -25,9 +25,9 @@
 //#
 //# $Id$
 
-#include <casa/aips.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/iostream.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/iostream.h>
 #include <msvis/MSVis/VisibilityIterator2.h>
 #include <msvis/MSVis/VisibilityIteratorImpl2.h>
 #include <msvis/MSVis/VisBuffer2.h>
@@ -37,13 +37,13 @@
 #include <mstransform/MSTransform/MSTransformIteratorFactory.h>
 #include <synthesis/MeasurementComponents/CalibratingVi2.h>
 #include <synthesis/MeasurementComponents/CalibratingVi2Factory.h>
-#include <casa/Quanta/MVTime.h>
-#include <casa/OS/Timer.h>
-#include <casa/iomanip.h>
-#include <casa/namespace.h>
+#include <casacore/casa/Quanta/MVTime.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/casa/iomanip.h>
+#include <casacore/casa/namespace.h>
 using namespace std;
-using namespace casa;
-using namespace casa::vi;
+using namespace casacore;
+using namespace casacore::vi;
 
 
 //-----------------------------------------------------------------------------
@@ -222,7 +222,7 @@ int main() {
       calrec.define("calfactor",calfactor);
 
       // Construct the VI2
-      CalibratingVi2FactoryI* CViFI = casa::vi::CalibratingVi2FactoryI::generate(&ms,calrec,iterpar);
+      CalibratingVi2FactoryI* CViFI = casacore::vi::CalibratingVi2FactoryI::generate(&ms,calrec,iterpar);
       vi::VisibilityIterator2 *cVi = new vi::VisibilityIterator2(*CViFI);
       delete CViFI;
 

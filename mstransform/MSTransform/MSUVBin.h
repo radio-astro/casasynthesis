@@ -33,14 +33,14 @@
 
 #ifndef MSTRANSFORM_MSUVBIN_H
 #define MSTRANSFORM_MSUVBIN_H
-#include <ms/MeasurementSets/MeasurementSet.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
 #include <msvis/MSVis/VisBuffer2.h>
 #include <msvis/MSVis/VisBuffer.h>
 #include <msvis/MSVis/VisBufferUtil.h>
 #include <msvis/MSVis/VisBuffer.h>
 #include <msvis/MSVis/VisBufferUtil.h>
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 
 class MSUVBin {
@@ -137,5 +137,5 @@ private:
 	Bool doW_p;
 
 }; // end class MSUVBin
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 #endif /* MSTRANSFORM_MSUVBIN_H */

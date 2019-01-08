@@ -1,18 +1,18 @@
 #include "VisibilityIterator_Test.h"
 
-#include <casa/aips.h>
-#include <casa/BasicSL.h>
-#include <ms/MeasurementSets.h>
-#include <tables/Tables.h>
-#include <tables/Tables/SetupNewTab.h>
-#include <tables/Tables/Table.h>
-#include <tables/Tables/TableCopy.h>
-#include <tables/Tables/TableDesc.h>
-#include <tables/DataMan/TiledDataStMan.h>
-#include <tables/DataMan/TiledShapeStMan.h>
-#include <ms/MeasurementSets/MSAntenna.h>
-#include <ms/MSOper/NewMSSimulator.h>
-#include <measures/Measures/MeasTable.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/BasicSL.h>
+#include <casacore/ms/MeasurementSets.h>
+#include <casacore/tables/Tables.h>
+#include <casacore/tables/Tables/SetupNewTab.h>
+#include <casacore/tables/Tables/Table.h>
+#include <casacore/tables/Tables/TableCopy.h>
+#include <casacore/tables/Tables/TableDesc.h>
+#include <casacore/tables/DataMan/TiledDataStMan.h>
+#include <casacore/tables/DataMan/TiledShapeStMan.h>
+#include <casacore/ms/MeasurementSets/MSAntenna.h>
+#include <casacore/ms/MSOper/NewMSSimulator.h>
+#include <casacore/measures/Measures/MeasTable.h>
 #include <msvis/MSVis/UtilJ.h>
 #include <msvis/MSVis/VisBuffer.h>
 #include <msvis/MSVis/ViFrequencySelection.h>
@@ -25,13 +25,13 @@
 #include <boost/tuple/tuple.hpp>
 
 using namespace std;
-using namespace casa;
-using namespace casa::vi;
+using namespace casacore;
+using namespace casacore::vi;
 
 int
 main (int nArgs, char * args [])
 {
-    using namespace casa::vi::test;
+    using namespace casacore::vi::test;
 
     Tester tester;
 
@@ -43,7 +43,7 @@ main (int nArgs, char * args [])
 
 //    MsFactory msf ("test.ms");
 //
-//    casa::MeasurementSet * ms;
+//    casacore::MeasurementSet * ms;
 //    int nRows;
 //    boost::tie (ms, nRows) = msf.createMs ();
 //
@@ -52,7 +52,7 @@ main (int nArgs, char * args [])
     return allPassed ? 0 : 1;
 }
 
-namespace casa {
+namespace casacore {
 namespace vi {
 
 //    VisibilityIteratorImpl2 (VisibilityIterator2 * rovi,
@@ -1431,7 +1431,7 @@ CopyMs::setupNewPointing(MeasurementSet * newMs)
 void
 CopyMs::doit (const String & oldMsName)
 {
-    casa::MeasurementSet oldMs (oldMsName);
+    casacore::MeasurementSet oldMs (oldMsName);
 
     String newMsName = String::format ("%s.copy", oldMsName.c_str());
 
@@ -1463,7 +1463,7 @@ CopyMs::doit (const String & oldMsName)
 
     //SetupNewTable newSetup (newMsName, oldMs.tableDesc(), Table::NewNoReplace);
 
-    //casa::MeasurementSet newMs (newSetup, 0, False);
+    //casacore::MeasurementSet newMs (newSetup, 0, False);
     //newMs.createDefaultSubtables(Table::NewNoReplace);
 
     VisibilityIterator2 * vi = VisibilityIterator2::copyingViFactory (oldMs, newMs);

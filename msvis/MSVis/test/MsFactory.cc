@@ -1,15 +1,15 @@
 #include "MsFactory.h"
 #include <msvis/MSVis/UtilJ.h>
-#include <ms/MSOper/NewMSSimulator.h>
-#include <measures/Measures/MeasTable.h>
-#include <tables/DataMan/TiledShapeStMan.h>
+#include <casacore/ms/MSOper/NewMSSimulator.h>
+#include <casacore/measures/Measures/MeasTable.h>
+#include <casacore/tables/DataMan/TiledShapeStMan.h>
 
 
 #include <cmath>
 
 using namespace std;
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 

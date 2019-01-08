@@ -27,23 +27,23 @@
 #ifndef MSVIS_VISBUFFER2_H
 #define MSVIS_VISBUFFER2_H
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
-//#include <casa/Arrays/Cube.h>
-//#include <casa/Arrays/Vector.h>
-//#include <casa/Arrays/Matrix.h>
-//#include <casa/BasicSL/Complex.h>
-#include <casa/BasicSL/Complexfwd.h>
+//#include <casacore/casa/Arrays/Cube.h>
+//#include <casacore/casa/Arrays/Vector.h>
+//#include <casacore/casa/Arrays/Matrix.h>
+//#include <casacore/casa/BasicSL/Complex.h>
+#include <casacore/casa/BasicSL/Complexfwd.h>
 #include <msvis/MSVis/VisBufferComponents2.h>
 //#include <msvis/MSVis/VisibilityIterator2.h>
-#include <measures/Measures/Stokes.h>
+#include <casacore/measures/Measures/Stokes.h>
 
 #include <boost/utility.hpp>
 
-using casa::vi::VisBufferComponent2;
-using casa::vi::VisBufferComponents2;
+using casacore::vi::VisBufferComponent2;
+using casacore::vi::VisBufferComponents2;
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //#forward
 
@@ -590,7 +590,7 @@ public:
 } // end namespace vi
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 
 #endif

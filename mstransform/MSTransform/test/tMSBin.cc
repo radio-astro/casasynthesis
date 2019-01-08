@@ -31,19 +31,19 @@
  *  Created on: Jan 16, 2014
  *      Author: kgolap
  */
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
-#include <coordinates/Coordinates/StokesCoordinate.h>
-#include <coordinates/Coordinates/Projection.h>
-#include <measures/Measures/MDirection.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/coordinates/Coordinates/StokesCoordinate.h>
+#include <casacore/coordinates/Coordinates/Projection.h>
+#include <casacore/measures/Measures/MDirection.h>
 #include <msvis/MSVis/VisBuffer2.h>
 #include <msvis/MSVis/VisibilityIterator2.h>
-#include <ms/MeasurementSets/MSMainColumns.h>
+#include <casacore/ms/MeasurementSets/MSMainColumns.h>
 #include <mstransform/MSTransform/MSTransformDataHandler.h>
 #include <mstransform/MSTransform/MSUVBin.h>
-#include <tables/Tables/TableIter.h>
-#include <casa/namespace.h>
+#include <casacore/tables/Tables/TableIter.h>
+#include <casacore/casa/namespace.h>
 
 using namespace std;
 

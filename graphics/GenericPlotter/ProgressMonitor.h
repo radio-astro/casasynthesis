@@ -28,9 +28,9 @@
 #ifndef PROGRESSMONITOR_H_
 #define PROGRESSMONITOR_H_
 
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/BasicSL/String.h>
 
-namespace casa {
+namespace casacore {
 
 /**
  * Abstraction for a display widget that can show the progress of an

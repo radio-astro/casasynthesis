@@ -29,24 +29,24 @@
 #ifndef SYNTHESIS_CTSELECTION_H
 #define SYNTHESIS_CTSELECTION_H
 
-#include <casa/aips.h>
-#include <casa/BasicSL/String.h>
-#include <casa/Arrays/Vector.h>
-#include <measures/Measures/MEpoch.h>
-#include <measures/Measures/MRadialVelocity.h>
-#include <tables/TaQL/ExprNode.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
-#include <ms/MSSel/MSSelection.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/Cube.h>
-#include <ms/MSSel/MSSelectionError.h>
-#include <ms/MSSel/MSSelectionErrorHandler.h>
-#include <ms/MSSel/MSSelectableTable.h>
-#include <casa/Containers/OrderedMap.h>
-#include <casa/Containers/MapIO.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/measures/Measures/MEpoch.h>
+#include <casacore/measures/Measures/MRadialVelocity.h>
+#include <casacore/tables/TaQL/ExprNode.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/ms/MSSel/MSSelection.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/Cube.h>
+#include <casacore/ms/MSSel/MSSelectionError.h>
+#include <casacore/ms/MSSel/MSSelectionErrorHandler.h>
+#include <casacore/ms/MSSel/MSSelectableTable.h>
+#include <casacore/casa/Containers/OrderedMap.h>
+#include <casacore/casa/Containers/MapIO.h>
 #include <synthesis/CalTables/NewCalTable.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> 
 // CTSelection: Class to represent a selection on a CASA CalTable
@@ -260,7 +260,7 @@ namespace casa { //# NAMESPACE CASA - BEGIN
     // // void runErrorHandler();
   };
   
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
 

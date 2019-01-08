@@ -17,10 +17,10 @@
 #ifndef ANNOTATIONS_ANNPOLYLINE_H
 #define ANNOTATIONS_ANNPOLYLINE_H
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <imageanalysis/Annotations/AnnRegion.h>
 
-namespace casa {
+namespace casacore {
 
 // <summary>
 // This class represents a single polyline (in position coordinates) annotation specified

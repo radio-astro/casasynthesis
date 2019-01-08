@@ -27,8 +27,8 @@
 //# $Id$
 //
 #include <synthesis/ImagerObjects/InteractiveMasking.h>
-#include <images/Images/PagedImage.h>
-#include <tables/Tables/Table.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/tables/Tables/Table.h>
 
 namespace casa{
   Bool clone(const String& imageName, const String& newImageName)
@@ -54,7 +54,7 @@ namespace casa{
     if (msg.is_signal("edu.nrao.casa.viewer","interact")) {
       DBus::MessageIter ri = msg.reader( );
       ::operator >>(ri,result_);
-      casa::DBusSession::instance( ).dispatcher( ).leave( );
+      casacore::DBusSession::instance( ).dispatcher( ).leave( );
     }
     return true;
   }
@@ -130,7 +130,7 @@ namespace casa{
     }
     
     
-    casa::dbus::record options;
+    casacore::dbus::record options;
     options.insert("niter", niter);
     options.insert("ncycle", ncycles);
     options.insert("threshold", thresh);  
@@ -139,13 +139,13 @@ namespace casa{
     new_interactive_clean_callback *mycb = new new_interactive_clean_callback( );
     DBus::MessageSlot filter;
     filter = new DBus::Callback<new_interactive_clean_callback,bool,const DBus::Message &>( mycb, &new_interactive_clean_callback::callback );
-    casa::DBusSession::instance( ).connection( ).add_filter( filter );
-    casa::dbus::variant res = viewer_p->start_interact( dbus::variant(), clean_panel_p);
+    casacore::DBusSession::instance( ).connection( ).add_filter( filter );
+    casacore::dbus::variant res = viewer_p->start_interact( dbus::variant(), clean_panel_p);
     
-    //casa::DBusSession::instance( ).dispatcher( ).set_responsiveness(10000.0, 10.0);
-    casa::DBusSession::instance( ).dispatcher( ).enter( );
-    casa::DBusSession::instance( ).connection( ).remove_filter( filter );
-    casa::dbus::variant interact_result = mycb->result( );
+    //casacore::DBusSession::instance( ).dispatcher( ).set_responsiveness(10000.0, 10.0);
+    casacore::DBusSession::instance( ).dispatcher( ).enter( );
+    casacore::DBusSession::instance( ).connection( ).remove_filter( filter );
+    casacore::dbus::variant interact_result = mycb->result( );
     delete mycb;
     
     
@@ -301,7 +301,7 @@ namespace casa{
     }
     
     
-    casa::dbus::record options;
+    casacore::dbus::record options;
     options.insert("niter", niter);
     options.insert("cycleniter", cycleniter);
     options.insert("threshold", thresh);  
@@ -311,13 +311,13 @@ namespace casa{
     new_interactive_clean_callback *mycb = new new_interactive_clean_callback( );
     DBus::MessageSlot filter;
     filter = new DBus::Callback<new_interactive_clean_callback,bool,const DBus::Message &>( mycb, &new_interactive_clean_callback::callback );
-    casa::DBusSession::instance( ).connection( ).add_filter( filter );
-    casa::dbus::variant res = viewer_p->start_interact( dbus::variant(), clean_panel_p);
+    casacore::DBusSession::instance( ).connection( ).add_filter( filter );
+    casacore::dbus::variant res = viewer_p->start_interact( dbus::variant(), clean_panel_p);
     
-    //casa::DBusSession::instance( ).dispatcher( ).set_responsiveness(10000.0, 10.0);
-    casa::DBusSession::instance( ).dispatcher( ).enter( );
-    casa::DBusSession::instance( ).connection( ).remove_filter( filter );
-    casa::dbus::variant interact_result = mycb->result( );
+    //casacore::DBusSession::instance( ).dispatcher( ).set_responsiveness(10000.0, 10.0);
+    casacore::DBusSession::instance( ).dispatcher( ).enter( );
+    casacore::DBusSession::instance( ).connection( ).remove_filter( filter );
+    casacore::dbus::variant interact_result = mycb->result( );
     delete mycb;
     
     

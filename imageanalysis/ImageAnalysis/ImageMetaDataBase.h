@@ -28,11 +28,11 @@
 #ifndef IMAGES_IMAGEMETADATABASE_H
 #define IMAGES_IMAGEMETADATABASE_H
 
-#include <images/Images/ImageInterface.h>
+#include <casacore/images/Images/ImageInterface.h>
 #include <imageanalysis/ImageTypedefs.h>
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
-namespace casa {
+namespace casacore {
 
 // <summary>
 // Base class for image metadata access.
@@ -206,6 +206,6 @@ private:
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

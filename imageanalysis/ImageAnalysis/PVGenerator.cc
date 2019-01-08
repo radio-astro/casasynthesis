@@ -26,9 +26,9 @@
 
 #include <imageanalysis/ImageAnalysis/PVGenerator.h>
 
-#include <casa/Quanta/Quantum.h>
-#include <measures/Measures/MDirection.h>
-#include <tables/Tables/PlainTable.h>
+#include <casacore/casa/Quanta/Quantum.h>
+#include <casacore/measures/Measures/MDirection.h>
+#include <casacore/tables/Tables/PlainTable.h>
 
 #include <imageanalysis/ImageAnalysis/ImageAnalysis.h>
 #include <imageanalysis/ImageAnalysis/ImageCollapser.h>
@@ -38,7 +38,7 @@
 
 #include <iomanip>
 
-namespace casa {
+namespace casacore {
 
 const String PVGenerator::_class = "PVGenerator";
 

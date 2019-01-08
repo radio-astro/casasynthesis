@@ -31,11 +31,11 @@
 
 
 //# Includes
-#include <casa/aips.h>
-#include <measures/Measures/Stokes.h>      
+#include <casacore/casa/aips.h>
+#include <casacore/measures/Measures/Stokes.h>      
 #include <components/ComponentModels/ComponentType.h>      
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //# Forward Declarations
 template <class T> class ImageInterface;
@@ -137,7 +137,7 @@ private:
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #ifndef CASACORE_NO_AUTO_TEMPLATES
 #include <imageanalysis/ImageAnalysis/ImageSourceFinder.tcc>

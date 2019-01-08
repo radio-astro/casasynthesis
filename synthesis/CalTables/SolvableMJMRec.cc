@@ -28,7 +28,7 @@
 
 #include <synthesis/CalTables/SolvableMJMRec.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------------
 
@@ -70,5 +70,5 @@ MIfrMRec::MIfrMRec (const Record& inpRec) :
 
 //----------------------------------------------------------------------------
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

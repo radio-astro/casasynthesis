@@ -29,14 +29,14 @@
 #ifndef SYNTHESIS_EVLAAPERTURE_H
 #define SYNTHESIS_EVLAAPERTURE_H
 
-#include <images/Images/ImageInterface.h>
+#include <casacore/images/Images/ImageInterface.h>
 //#include <synthesis/MeasurementComponents/ATerm.h>
 #include <synthesis/TransformMachines/AzElAperture.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
 //
 //---------------------------------------------------------------------
 //
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   template<class T> class ImageInterface;
   template<class T> class Matrix;
   class VisBuffer;

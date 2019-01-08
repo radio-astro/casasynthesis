@@ -3,10 +3,10 @@
 #include <casadbus/utilities/BusAccess.h>
 #include <casadbus/utilities/Conversion.h>
 #define DEBUG 1
-namespace casa {
+namespace casacore {
     ImagerControl::ImagerControl( const std::string &connection_name_, const std::string &object_path_ )
 #ifdef INTERACTIVE_ITERATION
-			: DBus::ObjectProxy( casa::DBusSession::instance().connection( ), object_path_.c_str(), connection_name_.c_str( ) )
+			: DBus::ObjectProxy( casacore::DBusSession::instance().connection( ), object_path_.c_str(), connection_name_.c_str( ) )
 #endif
 	{
 #if DEBUG

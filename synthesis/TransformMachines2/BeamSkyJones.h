@@ -29,12 +29,12 @@
 #ifndef SYNTHESIS_TRANSFORM2_BEAMSKYJONES_H
 #define SYNTHESIS_TRANSFORM2_BEAMSKYJONES_H
 
-#include <casa/aips.h>
-#include <casa/Containers/Block.h>
-#include <casa/Exceptions/Error.h>
-#include <measures/Measures/MDirection.h>
-#include <measures/Measures.h>
-#include <measures/Measures/Stokes.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Containers/Block.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/measures/Measures/MDirection.h>
+#include <casacore/measures/Measures.h>
+#include <casacore/measures/Measures/Stokes.h>
 #include <synthesis/TransformMachines2/SkyJones.h>
 #include <synthesis/TransformMachines/PBMath.h>
 
@@ -166,7 +166,7 @@ public:
   // </group>
 
   // Return the type of this Jones matrix (actual type of derived class).
-  virtual casa::SkyJones::Type type() {return casa::SkyJones::E;};
+  virtual casacore::SkyJones::Type type() {return casacore::SkyJones::E;};
 
   // Apply gradient
   virtual ImageInterface<Complex>& 
@@ -247,12 +247,12 @@ public:
 			const Int irow=-1,			
 			const Float fPad=1.2,  
 			const Int iChan=0, 
-			const casa::SkyJones::SizeType sizeType=casa::SkyJones::COMPOSITE);
+			const casacore::SkyJones::SizeType sizeType=casacore::SkyJones::COMPOSITE);
 
   ImageRegion*  extent (const ImageInterface<Float>& im, 
 			const vi::VisBuffer2& vb,  const Int irow=-1,
 			const Float fPad=1.2,  const Int iChan=0, 
-			const casa::SkyJones::SizeType sizeType=casa::SkyJones::COMPOSITE);
+			const casacore::SkyJones::SizeType sizeType=casacore::SkyJones::COMPOSITE);
 
   // summarize the PBMaths contained here.
   // n = -1 => terse table
@@ -264,7 +264,7 @@ public:
   String telescope();
 
   //Get an idea of the support of the PB in number of pixels
-  virtual Int support(const vi::VisBuffer2& vb, const casa::CoordinateSystem& cs);
+  virtual Int support(const vi::VisBuffer2& vb, const casacore::CoordinateSystem& cs);
 
 private:  
 

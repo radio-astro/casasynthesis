@@ -25,17 +25,17 @@
 //#
 //# $Id$
 
-#include <casa/iostream.h>
-#include <casa/aips.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/Vector.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/Vector.h>
 #include <synthesis/IDL/IDL.h>
 
 #ifdef HAVE_IDL_LIB
 #include <trial/IDL/IDLexport.h>
 #endif
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 int main()
 {

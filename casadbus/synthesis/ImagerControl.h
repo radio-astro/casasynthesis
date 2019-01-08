@@ -47,11 +47,11 @@
 #endif
 #include <casadbus/utilities/Conversion.h>
 
-namespace casa {
+namespace casacore {
 
 	class ImagerControl
 #ifdef INTERACTIVE_ITERATION
-							: private edu::nrao::casa::SynthesisImager_proxy,
+							: private edu::nrao::casacore::SynthesisImager_proxy,
 							public DBus::IntrospectableProxy,
 							public DBus::ObjectProxy
 #endif
@@ -67,14 +67,14 @@ namespace casa {
 
 		    bool incrementController( ) {
 #ifdef INTERACTIVE_ITERATION
-					return edu::nrao::casa::SynthesisImager_proxy::incrementController( );
+					return edu::nrao::casacore::SynthesisImager_proxy::incrementController( );
 #else
 					return false;
 #endif
 			}
 		    bool decrementController( ) {
 #ifdef INTERACTIVE_ITERATION
-					return edu::nrao::casa::SynthesisImager_proxy::decrementController( );
+					return edu::nrao::casacore::SynthesisImager_proxy::decrementController( );
 #else
 					return false;
 #endif
@@ -82,13 +82,13 @@ namespace casa {
 
 		    void changePauseFlag( const bool &state ) {
 #ifdef INTERACTIVE_ITERATION
-					edu::nrao::casa::SynthesisImager_proxy::changePauseFlag( state );
+					edu::nrao::casacore::SynthesisImager_proxy::changePauseFlag( state );
 #endif
 			}
 
 		    void changeStopFlag(const bool& state) {
 #ifdef INTERACTIVE_ITERATION
-					edu::nrao::casa::SynthesisImager_proxy::changeStopFlag( state );
+					edu::nrao::casacore::SynthesisImager_proxy::changeStopFlag( state );
 #endif
 			}
 
@@ -100,7 +100,7 @@ namespace casa {
 
 			std::string getDescription( ) {
 #ifdef INTERACTIVE_ITERATION
-					return edu::nrao::casa::SynthesisImager_proxy::getDescription( );
+					return edu::nrao::casacore::SynthesisImager_proxy::getDescription( );
 #else
 					return std::string( );
 #endif
@@ -108,7 +108,7 @@ namespace casa {
 			std::map<std::string,dbus::variant> getDetails( )
 				{
 #ifdef INTERACTIVE_ITERATION
-					return dbus::toStdMap( edu::nrao::casa::SynthesisImager_proxy::getDetails( ) );
+					return dbus::toStdMap( edu::nrao::casacore::SynthesisImager_proxy::getDetails( ) );
 #else
 					return std::map<std::string,dbus::variant>( );
 #endif
@@ -116,7 +116,7 @@ namespace casa {
 
 		    void controlUpdate(const std::map<std::string,dbus::variant>& newParams) {
 #ifdef INTERACTIVE_ITERATION
-				edu::nrao::casa::SynthesisImager_proxy::controlUpdate( dbus::fromStdMap(newParams) );
+				edu::nrao::casacore::SynthesisImager_proxy::controlUpdate( dbus::fromStdMap(newParams) );
 #endif
 			}
 
@@ -139,17 +139,17 @@ namespace casa {
 			void sendInteractionComplete() {
 				checkDetails = true;
 
-				casa::Record record;
-				record.define( casa::RecordFieldId("niter"), 123);
-				record.define( casa::RecordFieldId("cycleniter"), 456);
-				record.define( casa::RecordFieldId("interactiveniter"), 789);
+				casacore::Record record;
+				record.define( casacore::RecordFieldId("niter"), 123);
+				record.define( casacore::RecordFieldId("cycleniter"), 456);
+				record.define( casacore::RecordFieldId("interactiveniter"), 789);
 				
-				record.define( casa::RecordFieldId("threshold"), 5.67);
-				record.define( casa::RecordFieldId("cyclethreshold"), 7.89);
-				record.define( casa::RecordFieldId("interactivethreshold"), 8.91);
+				record.define( casacore::RecordFieldId("threshold"), 5.67);
+				record.define( casacore::RecordFieldId("cyclethreshold"), 7.89);
+				record.define( casacore::RecordFieldId("interactivethreshold"), 8.91);
 
-				record.define( casa::RecordFieldId("cyclefactor"), 4.56);
-				record.define( casa::RecordFieldId("loopgain"), 6.78);
+				record.define( casacore::RecordFieldId("cyclefactor"), 4.56);
+				record.define( casacore::RecordFieldId("loopgain"), 6.78);
 
 				std::map<std::string, DBus::Variant> map= fromRecord(record);
 				controlUpdate(map);

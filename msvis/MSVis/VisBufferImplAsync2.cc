@@ -6,9 +6,9 @@
  */
 
 #include "UtilJ.h"
-using namespace casa::utilj;
+using namespace casacore::utilj;
 
-#include <casa/Containers/Record.h>
+#include <casacore/casa/Containers/Record.h>
 
 #include <msvis/MSVis/VisBufferImplAsync2.h>
 #include <msvis/MSVis/VisBufferAsyncWrapper2.h>
@@ -20,14 +20,14 @@ using namespace casa::utilj;
 
 using std::transform;
 
-#include <ms/MeasurementSets/MSColumns.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
 #include <typeinfo>
 
 #define Log(level, ...) \
-    {if (casa::asyncio::AsynchronousInterface::logThis (level)) \
-         casa::async::Logger::get()->log (__VA_ARGS__);};
+    {if (casacore::asyncio::AsynchronousInterface::logThis (level)) \
+         casacore::async::Logger::get()->log (__VA_ARGS__);};
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 

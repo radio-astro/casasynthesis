@@ -28,11 +28,11 @@
 
 // PLEASE DO *NOT* ADD ADDITIONAL METHODS TO THIS CLASS
 
-#include <casa/Quanta/Quantum.h>
+#include <casacore/casa/Quanta/Quantum.h>
 
 #include <imageanalysis/ImageTypedefs.h>
 
-namespace casa {
+namespace casacore {
 
 class CoordinateSystem;
 class ImageMomentsProgressMonitor;
@@ -356,11 +356,11 @@ public:
 
    
     // Center refpix apart from STokes
-    void centreRefPix (casa::CoordinateSystem& cSys,
-                       const casa::IPosition& shape) const;
+    void centreRefPix (casacore::CoordinateSystem& cSys,
+                       const casacore::IPosition& shape) const;
     
     // Convert types
-    //casa::ComponentType::Shape convertModelType (casa::Fit2D::Types typeIn) const;
+    //casacore::ComponentType::Shape convertModelType (casacore::Fit2D::Types typeIn) const;
    
     // Delete private ImageHistograms objects
     void deleteHist();
@@ -371,9 +371,9 @@ public:
     );
 
 // Convert a Record to a CoordinateSystem
-    casa::CoordinateSystem*
-      makeCoordinateSystem(const casa::Record& cSys,
-                           const casa::IPosition& shape) const;
+    casacore::CoordinateSystem*
+      makeCoordinateSystem(const casacore::Record& cSys,
+                           const casacore::IPosition& shape) const;
     
     // Make a block of regions from a Record
     static void _makeRegionBlock(

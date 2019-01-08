@@ -20,9 +20,9 @@
 #include <imageanalysis/Annotations/AnnRegion.h>
 
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
-namespace casa {
+namespace casacore {
 
 // <summary>
 // This class represents an annotation of an elliptical (in position coordinates) region specified

@@ -32,12 +32,12 @@
 
 //# Includes
 #include <asdmstman/AsdmIndex.h>
-#include <tables/DataMan/DataManager.h>
-#include <casa/IO/LargeFiledesIO.h>
-#include <casa/Containers/Block.h>
-#include <casa/Containers/Record.h>
+#include <casacore/tables/DataMan/DataManager.h>
+#include <casacore/casa/IO/LargeFiledesIO.h>
+#include <casacore/casa/Containers/Block.h>
+#include <casacore/casa/Containers/Record.h>
 
-namespace casa {
+namespace casacore {
 
 //# Forward Declarations.
 class AsdmColumn;
@@ -215,7 +215,7 @@ private:
 
   // Resync the storage manager with the new file contents.
   // It does nothing.
-  virtual void resync (casa::uInt nrrow);
+  virtual void resync (casacore::uInt nrrow);
 
   // Reopen the storage manager files for read/write.
   // It does nothing.

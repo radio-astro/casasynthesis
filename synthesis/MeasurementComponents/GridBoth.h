@@ -32,7 +32,7 @@
 #include <synthesis/TransformMachines/GridFT.h>
 #include <synthesis/MeasurementComponents/SDGrid.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> An FTMachine for Gridding Single Dish data
 // </summary>
@@ -214,6 +214,6 @@ private:
 
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

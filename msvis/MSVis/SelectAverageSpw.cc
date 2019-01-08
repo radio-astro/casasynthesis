@@ -28,11 +28,11 @@
 
 
 #include <msvis/MSVis/SelectAverageSpw.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/Slice.h>
-#include <measures/Measures/MeasTable.h>
-//#include <casa/OS/Timer.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/Slice.h>
+#include <casacore/measures/Measures/MeasTable.h>
+//#include <casacore/casa/OS/Timer.h>
 
 #include <graphics/X11/X_enter.h>
 #include <stdio.h>
@@ -45,7 +45,7 @@
 
 #define LOG2 0
 
-namespace casa { 
+namespace casacore { 
 
 const Int SelectAverageSpw::maxChan = 100000; 
 

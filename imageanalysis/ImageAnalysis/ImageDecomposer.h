@@ -28,19 +28,19 @@
 #ifndef IMAGES_IMAGEDECOMPOSER_H
 #define IMAGES_IMAGEDECOMPOSER_H
 
-#include <casa/iostream.h>
-#include <casa/math.h>
-#include <casa/aips.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Containers/Block.h>
-#include <scimath/Functionals/Function1D.h>
-#include <lattices/Lattices/TempLattice.h>
-#include <lattices/Lattices/SubLattice.h>
-#include <images/Images/ImageInterface.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/math.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Containers/Block.h>
+#include <casacore/scimath/Functionals/Function1D.h>
+#include <casacore/lattices/Lattices/TempLattice.h>
+#include <casacore/lattices/Lattices/SubLattice.h>
+#include <casacore/images/Images/ImageInterface.h>
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary>
 // A tool to separate a complex image into individual components.
@@ -464,7 +464,7 @@ private:
 
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #ifndef CASACORE_NO_AUTO_TEMPLATES
 #include <imageanalysis/ImageAnalysis/ImageDecomposer.tcc>

@@ -26,9 +26,9 @@
 // Where ViFactory interface is defined
 #include <msvis/MSVis/VisibilityIterator2.h>
 
-#include <casa/Containers/Record.h>
+#include <casacore/casa/Containers/Record.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 namespace vi { //# NAMESPACE VI - BEGIN
 
 class IteratingParameters;
@@ -156,7 +156,7 @@ private:
 };
 
 } //# NAMESPACE VI - END
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 
 #endif /* LayeredVi2Factory_H_ */

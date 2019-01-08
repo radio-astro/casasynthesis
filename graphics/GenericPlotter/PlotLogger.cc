@@ -26,16 +26,16 @@
 //# $Id: $
 #include <graphics/GenericPlotter/PlotLogger.h>
 
-#include <casa/Logging/LogFilter.h>
-#include <casa/Logging/LogSink.h>
-#include <casa/Logging/StreamLogSink.h>
-#include <casa/OS/Memory.h>
+#include <casacore/casa/Logging/LogFilter.h>
+#include <casacore/casa/Logging/LogSink.h>
+#include <casacore/casa/Logging/StreamLogSink.h>
+#include <casacore/casa/OS/Memory.h>
 #include <graphics/GenericPlotter/Plotter.h>
 
 #include <fstream>
 #include <ctime>
 
-namespace casa {
+namespace casacore {
 
 ////////////////////////////////
 // PLOTLOGMESSAGE DEFINITIONS //

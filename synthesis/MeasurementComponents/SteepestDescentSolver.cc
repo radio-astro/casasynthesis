@@ -28,8 +28,8 @@
 
 #include <synthesis/MeasurementComponents/SteepestDescentSolver.h>
 #include <synthesis/TransformMachines/Utils.h>
-#include <casa/Arrays/MatrixMath.h>
-namespace casa {
+#include <casacore/casa/Arrays/MatrixMath.h>
+namespace casacore {
 
   SteepestDescentSolver::SteepestDescentSolver(Int nParams,Vector<Int> polMap,
 					       Int nIter, Double tol):

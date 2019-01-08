@@ -28,9 +28,9 @@
 
 #include <synthesis/CalTables/CTMainRecord.h>
 #include <synthesis/CalTables/CTEnums.h>
-#include <casa/Arrays.h>
+#include <casacore/casa/Arrays.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------------
 
@@ -432,5 +432,5 @@ void CTMainRecord::getWeight (Array<Float>& weight)
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

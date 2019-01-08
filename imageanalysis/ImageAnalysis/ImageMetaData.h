@@ -30,10 +30,10 @@
 
 #include <imageanalysis/ImageAnalysis/ImageMetaDataBase.h>
 
-#include <images/Images/ImageInterface.h>
-#include <casa/aips.h>
+#include <casacore/images/Images/ImageInterface.h>
+#include <casacore/casa/aips.h>
 
-namespace casa {
+namespace casacore {
 
 // <summary>
 // A class in which to store and allow read-only access to image metadata.
@@ -161,6 +161,6 @@ private:
 	mutable Record _stats;
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

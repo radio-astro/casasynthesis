@@ -26,28 +26,28 @@
 
 #include <imageanalysis/Regions/CasacRegionManager.h>
 
-#include <casa/Containers/Record.h>
-#include <casa/OS/File.h>
-#include <images/Images/TempImage.h>
-#include <images/Images/SubImage.h>
+#include <casacore/casa/Containers/Record.h>
+#include <casacore/casa/OS/File.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/images/Images/SubImage.h>
 
-#include <images/Regions/ImageRegion.h>
-#include <images/Regions/WCBox.h>
-#include <lattices/LRegions/LCBox.h>
-#include <measures/Measures/Stokes.h>
-#include <tables/Tables/TableRecord.h>
+#include <casacore/images/Regions/ImageRegion.h>
+#include <casacore/images/Regions/WCBox.h>
+#include <casacore/lattices/LRegions/LCBox.h>
+#include <casacore/measures/Measures/Stokes.h>
+#include <casacore/tables/Tables/TableRecord.h>
 
 #include <imageanalysis/Annotations/AnnRegion.h>
 #include <imageanalysis/Annotations/RegionTextList.h>
 #include <imageanalysis/ImageAnalysis/ImageMetaData.h>
 #include <imageanalysis/ImageAnalysis/SubImageFactory.h>
 
-#include <lattices/LRegions/LCSlicer.h>
+#include <casacore/lattices/LRegions/LCSlicer.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 #include <memory>
 
-namespace casa { //# name space casa begins
+namespace casacore { //# name space casa begins
 
 const String CasacRegionManager::ALL = "ALL";
 
@@ -440,7 +440,7 @@ void CasacRegionManager::_setRegion(
 		String imagename, region;
 		if (regionName.matches(image)) {
 			String res[2];
-			casa::split(regionName, res, 2, ":");
+			casacore::split(regionName, res, 2, ":");
 			imagename = res[0];
 			region = res[1];
 		}

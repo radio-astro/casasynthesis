@@ -28,19 +28,19 @@
 
 //#include <stdio.h>
 //#include <complex.h>
-#include <casa/math.h>
+#include <casacore/casa/math.h>
 #include <math.h>
 //#include <stdlib.h>
 //#include <string.h>
-#include <images/Images/TempImage.h>
+#include <casacore/images/Images/TempImage.h>
 #include <imageanalysis/ImageAnalysis/AntennaResponses.h>
-#include <tables/Tables/TableProxy.h>
-#include <casa/Exceptions.h>
-#include <casa/Containers/ValueHolder.h>
-#include <casa/Arrays/Array.h>
+#include <casacore/tables/Tables/TableProxy.h>
+#include <casacore/casa/Exceptions.h>
+#include <casacore/casa/Containers/ValueHolder.h>
+#include <casacore/casa/Arrays/Array.h>
 #include <synthesis/TransformMachines/SynthesisError.h>
 #include <synthesis/TransformMachines/BeamCalc.h>
-#include <casa/OS/Timer.h>
+#include <casacore/casa/OS/Timer.h>
 #ifdef _OPENMP
 #include <omp.h>
 #endif

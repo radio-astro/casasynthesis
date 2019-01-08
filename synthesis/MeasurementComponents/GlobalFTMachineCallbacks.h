@@ -32,7 +32,7 @@
 #include <synthesis/TransformMachines/IlluminationConvFunc.h>
 
 #define NEED_UNDERSCORES
-namespace casa {
+namespace casacore {
   extern "C" 
   {
     //

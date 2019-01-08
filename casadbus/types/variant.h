@@ -33,7 +33,7 @@
 #include <vector>
 #include <complex>
 
-namespace casa {
+namespace casacore {
     namespace dbus {
 
 	class record;

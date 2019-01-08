@@ -28,11 +28,11 @@
 //# $Id: AsdmColumn.cc 19324 2011-11-21 07:29:55Z diepen $
 
 #include <asdmstman/AsdmColumn.h>
-#include <casa/Arrays/Array.h>
+#include <casacore/casa/Arrays/Array.h>
 
-using namespace casa;
+using namespace casacore;
 
-namespace casa {
+namespace casacore {
 
   AsdmColumn::~AsdmColumn()
   {}
@@ -64,7 +64,7 @@ namespace casa {
   }
 
   void AsdmDataColumn::getSliceComplexV (uInt rowNumber, const Slicer & slicer,
-                                         Array<casa::Complex> * destination)
+                                         Array<casacore::Complex> * destination)
   {
      // Create an array to hold the entire table cell.
 
@@ -99,7 +99,7 @@ namespace casa {
   }
 
   void AsdmFlagColumn::getSliceBoolV (uInt rowNumber, const Slicer & /* slicer */,
-                                       Array<casa::Bool> * destination)
+                                       Array<casacore::Bool> * destination)
   {
     * destination = False;
   }
@@ -116,7 +116,7 @@ namespace casa {
     *dataPtr = float(1);
   }
   void AsdmWeightColumn::getSlicefloatV (uInt rowNumber, const Slicer & /* slicer */,
-                                         Array<casa::Float> * destination)
+                                         Array<casacore::Float> * destination)
   {
     * destination = 1.0f;
   }
@@ -134,7 +134,7 @@ namespace casa {
   }
 
   void AsdmSigmaColumn::getSlicefloatV (uInt rowNumber, const Slicer & /* slicer */,
-                                        Array<casa::Float> * destination)
+                                        Array<casacore::Float> * destination)
   {
     * destination = 1.0f;
   }

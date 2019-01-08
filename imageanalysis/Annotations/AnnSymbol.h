@@ -28,9 +28,9 @@
 
 #include <imageanalysis/Annotations/AnnotationBase.h>
 
-#include <measures/Measures/MDirection.h>
+#include <casacore/measures/Measures/MDirection.h>
 
-namespace casa {
+namespace casacore {
 
 // <summary>Represents a symbol annotation</summary>
 

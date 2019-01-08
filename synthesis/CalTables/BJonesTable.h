@@ -32,7 +32,7 @@
 #include <synthesis/CalTables/SolvableVJTable.h>
 #include <synthesis/CalTables/BJonesDesc.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> 
 // BJonesTable: BJones calibration table access/creation
@@ -140,7 +140,7 @@ class BJonesPolyTable : public BJonesTable
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
    

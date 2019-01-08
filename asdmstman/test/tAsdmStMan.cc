@@ -28,27 +28,27 @@
 //# $Id: tAsdmStMan.cc 20942 2012-05-15 13:43:52Z diepen $
 
 #include <asdmstman/AsdmStMan.h>
-#include <tables/Tables/TableDesc.h>
-#include <tables/Tables/SetupNewTab.h>
-#include <tables/Tables/Table.h>
-#include <tables/DataMan/StandardStMan.h>
-#include <tables/DataMan/DataManAccessor.h>
-#include <tables/Tables/ScaColDesc.h>
-#include <tables/Tables/ArrColDesc.h>
-#include <tables/Tables/ScalarColumn.h>
-#include <tables/Tables/ArrayColumn.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/ArrayLogical.h>
-#include <casa/Arrays/ArrayIO.h>
-#include <casa/OS/RegularFile.h>
-#include <casa/IO/RegularFileIO.h>
-#include <casa/IO/AipsIO.h>
-#include <casa/Containers/BlockIO.h>
-#include <casa/iostream.h>
-#include <casa/sstream.h>
+#include <casacore/tables/Tables/TableDesc.h>
+#include <casacore/tables/Tables/SetupNewTab.h>
+#include <casacore/tables/Tables/Table.h>
+#include <casacore/tables/DataMan/StandardStMan.h>
+#include <casacore/tables/DataMan/DataManAccessor.h>
+#include <casacore/tables/Tables/ScaColDesc.h>
+#include <casacore/tables/Tables/ArrColDesc.h>
+#include <casacore/tables/Tables/ScalarColumn.h>
+#include <casacore/tables/Tables/ArrayColumn.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Arrays/ArrayIO.h>
+#include <casacore/casa/OS/RegularFile.h>
+#include <casacore/casa/IO/RegularFileIO.h>
+#include <casacore/casa/IO/AipsIO.h>
+#include <casacore/casa/Containers/BlockIO.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/sstream.h>
 
-using namespace casa;
+using namespace casacore;
 
 // This program tests the class AsdmStMan and related classes.
 // The results are written to stdout. The script executing this program,

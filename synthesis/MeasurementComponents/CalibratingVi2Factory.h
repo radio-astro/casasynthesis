@@ -33,7 +33,7 @@
 #include <synthesis/MeasurementComponents/CalibratingVi2.h>
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 namespace vi { //# NAMESPACE VI - BEGIN
 
 // <summary>
@@ -154,7 +154,7 @@ private:
 
 
 } //# NAMESPACE VI - END
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 
 #endif /* CalibratingVi2Factory_H_ */

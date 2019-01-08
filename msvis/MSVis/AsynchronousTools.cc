@@ -19,8 +19,8 @@
 #include <sys/syscall.h>
 #include <sys/time.h>
 
-#include <casa/Exceptions/Error.h>
-#include <casa/Logging/LogIO.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Logging/LogIO.h>
 
 #include <boost/thread/condition_variable.hpp>
 #include <boost/thread/mutex.hpp>
@@ -31,9 +31,9 @@
 #include "UtilJ.h"
 
 using namespace std;
-using namespace casa::utilj;
+using namespace casacore::utilj;
 
-namespace casa {
+namespace casacore {
 
 namespace async {
 

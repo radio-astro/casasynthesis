@@ -3,13 +3,13 @@
 
 #include "DBusBase.h"
 
-#include <casa/Containers/Record.h>
+#include <casacore/casa/Containers/Record.h>
 #include <casadbus/session/DBusSession.h>
 #include <casadbus/utilities/BusAccess.h>
 #include <boost/bind.hpp>
 #include <boost/date_time/posix_time/posix_time_types.hpp>
 
-namespace casa {
+namespace casacore {
 
   DBusThreadedBase::DBusThreadedBase():
     itsThread(NULL) 
@@ -29,7 +29,7 @@ namespace casa {
 
   void DBusThreadedBase::stopService() {
     std::cout << "Leaving dispatcher loop: " << time(0) << std::endl;
-    casa::DBusSession::instance().dispatcher( ).leave( );
+    casacore::DBusSession::instance().dispatcher( ).leave( );
     std::cout << "Waiting for timed join: " << time(0) <<std::endl;
     if (!itsThread->timed_join(boost::posix_time::time_duration(0,0,30,0))) {
       std::cout << "Error Closing service thread" << std::endl;
@@ -39,7 +39,7 @@ namespace casa {
   }
 
   void DBusThreadedBase::serviceLoop() {
-    casa::DBusSession::instance().dispatcher( ).enter( );
+    casacore::DBusSession::instance().dispatcher( ).enter( );
     std::cout << "Service Loop Exited: " << time(0) << std::endl;
     itsThread->detach();
   }

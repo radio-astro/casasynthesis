@@ -24,10 +24,10 @@
 #define SYNTHESIS_MINORCYCLECONTROLLER
 
 // .casarc interface
-#include <casa/System/AipsrcValue.h>
+#include <casacore/casa/System/AipsrcValue.h>
 
 // System utilities (for profiling macros)
-#include <casa/OS/HostInfo.h>
+#include <casacore/casa/OS/HostInfo.h>
 #include <sys/time.h>
 
 
@@ -38,7 +38,7 @@
 // Include files for the DBus Service
 //#include <casadbus/interfaces/SynthImager.adaptor.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   
   class Record;
 
@@ -143,6 +143,6 @@ namespace casa { //# NAMESPACE CASA - BEGIN
   };
 
     
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif /* SISUBITERBOT_H_ */

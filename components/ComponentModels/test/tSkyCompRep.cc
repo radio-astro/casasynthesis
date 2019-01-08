@@ -25,37 +25,37 @@
 //#
 //# $Id: tSkyCompRep.cc 21292 2012-11-28 14:58:19Z gervandiepen $
 
-#include <casa/aips.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Arrays/ArrayLogical.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/BasicSL/Constants.h>
-#include <casa/BasicMath/Math.h>
-#include <measures/Measures/MDirection.h>
-#include <measures/Measures/MFrequency.h>
-#include <casa/Quanta/MVDirection.h>
-#include <casa/Quanta/Quantum.h>
-#include <measures/Measures/Stokes.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/BasicSL/String.h>
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/BasicSL/Constants.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/measures/Measures/MDirection.h>
+#include <casacore/measures/Measures/MFrequency.h>
+#include <casacore/casa/Quanta/MVDirection.h>
+#include <casacore/casa/Quanta/Quantum.h>
+#include <casacore/measures/Measures/Stokes.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/BasicSL/String.h>
 #include <components/ComponentModels/ComponentShape.h>
 #include <components/ComponentModels/ConstantSpectrum.h>
 #include <components/ComponentModels/Flux.h>
 #include <components/ComponentModels/GaussianShape.h>
-#include <scimath/Mathematics/GaussianBeam.h>
+#include <casacore/scimath/Mathematics/GaussianBeam.h>
 #include <components/ComponentModels/PointShape.h>
 #include <components/ComponentModels/SkyCompRep.h>
 #include <components/ComponentModels/SpectralIndex.h>
 #include <components/ComponentModels/SpectralModel.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
 
-#include <casa/iostream.h>
+#include <casacore/casa/iostream.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 Bool pixelReflection (const SkyCompRep& sky, const CoordinateSystem& cSys,
                       const GaussianBeam& beam, const Unit& unit,
                       Double tol=1.0e-5);

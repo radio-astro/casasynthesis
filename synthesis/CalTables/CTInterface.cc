@@ -27,9 +27,9 @@
 //----------------------------------------------------------------------------
 
 #include <synthesis/CalTables/CTInterface.h>
-#include <ms/MeasurementSets/MSColumns.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
   //
   //----------------------------------------------------------------------------
@@ -125,5 +125,5 @@ namespace casa { //# NAMESPACE CASA - BEGIN
   //    throw(AipsError("Internal error: OBSERVATION sub-table for CalTables requested"));
   //  };
   //----------------------------------------------------------------------------
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

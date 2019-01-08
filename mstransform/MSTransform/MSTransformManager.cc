@@ -24,7 +24,7 @@
 
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 /////////////////////////////////////////////
 ////// MS Transform Framework utilities /////
@@ -411,13 +411,13 @@ void MSTransformManager::parseMsSpecParams(Record &configuration)
 		exists = configuration.fieldNumber ("tileshape");
 		if (exists >= 0)
 		{
-			if ( configuration.type(exists) == casa::TpInt )
+			if ( configuration.type(exists) == casacore::TpInt )
 			{
 				Int mode;
 				configuration.get (exists, mode);
 				tileShape_p = Vector<Int>(1,mode);
 			}
-			else if ( configuration.type(exists) == casa::TpArrayInt)
+			else if ( configuration.type(exists) == casacore::TpArrayInt)
 			{
 				configuration.get (exists, tileShape_p);
 			}
@@ -557,13 +557,13 @@ void MSTransformManager::parseChanAvgParams(Record &configuration)
 	exists = configuration.fieldNumber ("chanbin");
 	if (exists >= 0)
 	{
-		if ( configuration.type(exists) == casa::TpInt )
+		if ( configuration.type(exists) == casacore::TpInt )
 		{
 			Int freqbin;
 			configuration.get (exists, freqbin);
 			freqbin_p = Vector<Int>(1,freqbin);
 		}
-		else if ( configuration.type(exists) == casa::TpArrayInt)
+		else if ( configuration.type(exists) == casacore::TpArrayInt)
 		{
 			configuration.get (exists, freqbin_p);
 		}
@@ -3880,7 +3880,7 @@ void MSTransformManager::reindexGenericTimeDependentSubTable(const String& subta
 		}
 		else
 		{
-			if (subtabname == casa::String("FEED"))
+			if (subtabname == casacore::String("FEED"))
 			{
 		    	logger_p << LogIO::SEVERE << LogOrigin("MSTransformManager", __FUNCTION__)
 		    			<< subtabname << " sub-table found but has no valid content" << LogIO::POST;
@@ -3894,7 +3894,7 @@ void MSTransformManager::reindexGenericTimeDependentSubTable(const String& subta
 	}
 	else
 	{
-		if (subtabname == casa::String("FEED"))
+		if (subtabname == casacore::String("FEED"))
 		{
 	    	logger_p << LogIO::SEVERE << LogOrigin("MSTransformManager", __FUNCTION__)
 	    			<< subtabname << " sub-table not found" << LogIO::POST;
@@ -7813,4 +7813,4 @@ template <class T> void MSTransformManager::averageSmoothRegrid(Int inputSpw,
 	return;
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END

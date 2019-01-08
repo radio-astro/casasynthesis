@@ -26,11 +26,11 @@
 
 #include <imageanalysis/Annotations/RegionTextList.h>
 
-#include <casa/OS/File.h>
+#include <casacore/casa/OS/File.h>
 #include <imageanalysis/Annotations/AnnRegion.h>
-#include <images/Regions/WCDifference.h>
+#include <casacore/images/Regions/WCDifference.h>
 
-namespace casa {
+namespace casacore {
 
 RegionTextList::RegionTextList()
 	: _lines(),

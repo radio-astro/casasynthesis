@@ -29,19 +29,19 @@
 #ifndef SYNTHESIS_SDMASKHANDLER_H
 #define SYNTHESIS_SDMASKHANDLER_H
 
-#include <ms/MeasurementSets/MeasurementSet.h>
-#include <casa/Arrays/Matrix.h>
-#include <images/Images/ImageInterface.h>
-#include <images/Images/PagedImage.h>
-#include <images/Images/TempImage.h>
-#include <casa/Logging/LogMessage.h>
-#include <casa/Logging/LogSink.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/images/Images/ImageInterface.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging/LogSink.h>
 
 #include<synthesis/ImagerObjects/SIImageStore.h>
 #include<synthesis/ImagerObjects/SIImageStoreMultiTerm.h>
 #include <synthesis/ImagerObjects/InteractiveMasking.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 class SDMaskHandler 
 {
@@ -127,7 +127,7 @@ protected:
   InteractiveMasking *interactiveMasker_p;
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 
 #endif

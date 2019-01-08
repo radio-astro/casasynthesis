@@ -28,7 +28,7 @@
 
 #include <synthesis/CalTables/VisJonesMBuf.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------------
 
@@ -61,5 +61,5 @@ VisJonesMBuf::VisJonesMBuf (CalIterBase& calIter) : CalMainBuffer (calIter)
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

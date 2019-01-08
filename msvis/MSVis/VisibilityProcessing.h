@@ -8,9 +8,9 @@
 #ifndef VISIBILITYPROCESSING_H_
 #define VISIBILITYPROCESSING_H_
 
-#include <casa/aips.h>
-#include <casa/BasicSL/String.h>
-#include <casa/Exceptions/Error.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Exceptions/Error.h>
 #include "VisBuffer.h"
 #include "VisibilityIterator.h"
 #include "UtilJ.h"
@@ -55,7 +55,7 @@ VpData - A collection of visibility data; it works like an associative array
 
 */
 
-namespace casa {
+namespace casacore {
 
 namespace asyncio {
     class PrefetchColumns;
@@ -98,19 +98,19 @@ private:
     Int subChunkNumber_p;
 };
 
-class VbPtr : public boost::shared_ptr<casa::VisBuffer> {
+class VbPtr : public boost::shared_ptr<casacore::VisBuffer> {
 
 public:
 
-    VbPtr () : boost::shared_ptr<casa::VisBuffer> () {}
-    explicit VbPtr (casa::VisBuffer * vb) : boost::shared_ptr<casa::VisBuffer> (vb) {}
+    VbPtr () : boost::shared_ptr<casacore::VisBuffer> () {}
+    explicit VbPtr (casacore::VisBuffer * vb) : boost::shared_ptr<casacore::VisBuffer> (vb) {}
 
     // Assignment operator setting VbPtr to a normal pointer.  Ownership is passed to the
     // VbPtr so caller must ensure that delete is not called on the VisBuffer.
 
-    VbPtr & operator= (casa::VisBuffer * vb)
+    VbPtr & operator= (casacore::VisBuffer * vb)
     {
-        boost::shared_ptr<casa::VisBuffer>::operator= (VbPtr (vb));
+        boost::shared_ptr<casacore::VisBuffer>::operator= (VbPtr (vb));
         return * this;
     }
 };
@@ -306,7 +306,7 @@ public:
     // Returns the collection of columns that need to be prefetched if this node
     // is used with async I/O.
 
-    virtual casa::asyncio::PrefetchColumns getPrefetchColumns () const;
+    virtual casacore::asyncio::PrefetchColumns getPrefetchColumns () const;
 
     // Called by the framework when the processing is about to begin (i.e., prior
     // to the first VisBuffer being fed into the graph.
@@ -529,7 +529,7 @@ public:
 
     // Returns the columns that are required to be prefetched if async I/O is used.
 
-    virtual casa::asyncio::PrefetchColumns getPrefetchColumns () const;
+    virtual casacore::asyncio::PrefetchColumns getPrefetchColumns () const;
 
 protected:
 

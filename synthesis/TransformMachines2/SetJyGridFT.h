@@ -32,7 +32,7 @@
 #include <synthesis/TransformMachines2/GridFT.h>
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 namespace vi { class VisBuffer2;}
 
 namespace refim { //#namespace for imaging refactor
@@ -142,6 +142,6 @@ protected:
 
 };
 } //# end of namespace refim
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

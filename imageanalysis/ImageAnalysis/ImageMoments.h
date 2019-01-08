@@ -30,18 +30,18 @@
 
 
 //# Includes
-#include <casa/aips.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <casa/Quanta/QMath.h>
-#include <casa/Quanta/Quantum.h>
-#include <measures/Measures/MDoppler.h>
-#include <casa/System/PGPlotter.h>
-#include <casa/Logging/LogIO.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/iosfwd.h>
+#include <casacore/casa/aips.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/casa/Quanta/QMath.h>
+#include <casacore/casa/Quanta/Quantum.h>
+#include <casacore/measures/Measures/MDoppler.h>
+#include <casacore/casa/System/PGPlotter.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/iosfwd.h>
 #include <imageanalysis/ImageAnalysis/MomentsBase.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //# Forward Declarations
 template <class T> class Matrix;
@@ -393,7 +393,7 @@ protected:
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #ifndef CASACORE_NO_AUTO_TEMPLATES
 #include <imageanalysis/ImageAnalysis/ImageMoments.tcc>

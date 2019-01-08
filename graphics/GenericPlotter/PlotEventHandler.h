@@ -29,9 +29,9 @@
 
 #include <graphics/GenericPlotter/PlotEvent.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 // Base class for a handler for PlotSelectEvent.
 class PlotSelectEventHandler {

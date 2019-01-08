@@ -27,18 +27,18 @@
  *      Author: kgolap
  */
 
-#include <coordinates/Coordinates/CoordinateUtil.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
-#include <images/Images/TempImage.h>
-#include <images/Images/PagedImage.h>
-#include <images/Images/ImageRegrid.h>
-#include <images/Images/SubImage.h>
-#include <images/Regions/WCBox.h>
+#include <casacore/coordinates/Coordinates/CoordinateUtil.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/images/Images/ImageRegrid.h>
+#include <casacore/images/Images/SubImage.h>
+#include <casacore/images/Regions/WCBox.h>
 #include <synthesis/MeasurementEquations/LinearMosaic.h>
 using namespace std;
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 
 	LinearMosaic::LinearMosaic (): outImage_p(NULL), outWgt_p(NULL), outImName_p(""), outWgtName_p(""), weightType_p(1), linmosType_p(2){

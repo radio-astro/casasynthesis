@@ -26,27 +26,27 @@
 
 #include <synthesis/MeasurementComponents/EVLASwPow.h>
 
-#include <ms/MeasurementSets/MSColumns.h>
-#include <casa/BasicMath/Math.h>
-#include <tables/Tables/Table.h>
-#include <tables/Tables/TableIter.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/tables/Tables/Table.h>
+#include <casacore/tables/Tables/TableIter.h>
 #include <synthesis/CalTables/CTGlobals.h>
 
-#include <casa/BasicSL/String.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/Utilities/GenSort.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/System/Aipsrc.h>
-#include <casa/System/ProgressMeter.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/Utilities/GenSort.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/System/Aipsrc.h>
+#include <casacore/casa/System/ProgressMeter.h>
 
-#include <casa/sstream.h>
+#include <casacore/casa/sstream.h>
 
-#include <casa/Logging/LogMessage.h>
-#include <casa/Logging/LogSink.h>
+#include <casacore/casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging/LogSink.h>
 
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 
 // **********************************************************
@@ -539,4 +539,4 @@ void EVLASwPow::updateWt(Vector<Float>& wt,const Int& a1,const Int& a2) {
 }
 */
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END

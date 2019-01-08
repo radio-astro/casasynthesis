@@ -30,13 +30,13 @@
 
 #include <imageanalysis/ImageAnalysis/ImageTask.h>
 
-#include <images/Images/ImageStatistics.h>
-//#include <casa/Utilities/CountedPtr.h>
-#include <casa/namespace.h>
+#include <casacore/images/Images/ImageStatistics.h>
+//#include <casacore/casa/Utilities/CountedPtr.h>
+#include <casacore/casa/namespace.h>
 
 #include <memory>
 
-namespace casa {
+namespace casacore {
 
 template <class T> class CountedPtr;
 

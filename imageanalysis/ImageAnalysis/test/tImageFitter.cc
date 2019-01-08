@@ -27,23 +27,23 @@
 
 #include <imageanalysis/ImageAnalysis/ImageFitter.h>
 
-#include <casa/BasicMath/Math.h>
+#include <casacore/casa/BasicMath/Math.h>
 #include <components/ComponentModels/ComponentList.h>
 #include <components/ComponentModels/Flux.h>
-#include <measures/Measures/MDirection.h>
+#include <casacore/measures/Measures/MDirection.h>
 #include <components/ComponentModels/SpectralModel.h>
 #include <components/ComponentModels/ComponentShape.h>
 #include <components/ComponentModels/GaussianShape.h>
 #include <imageanalysis/ImageAnalysis/ImageAnalysis.h>
 #include <imageanalysis/ImageAnalysis/ImageMetaData.h>
 #include <imageanalysis/ImageAnalysis/ImageStatsCalculator.h>
-#include <images/Images/FITSImage.h>
-#include <images/Images/ImageUtilities.h>
-#include <images/Regions/RegionManager.h>
-#include <casa/BasicSL/Constants.h>
-#include <casa/OS/Directory.h>
-#include <casa/namespace.h>
-#include <casa/OS/EnvVar.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/images/Images/ImageUtilities.h>
+#include <casacore/images/Regions/RegionManager.h>
+#include <casacore/casa/BasicSL/Constants.h>
+#include <casacore/casa/OS/Directory.h>
+#include <casacore/casa/namespace.h>
+#include <casacore/casa/OS/EnvVar.h>
 
 #include <sys/types.h>
 #include <unistd.h>

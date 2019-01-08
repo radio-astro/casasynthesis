@@ -30,12 +30,12 @@
 #define CASA_VERSION_H
 
 //# Includes
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
 //# Forward declarations
-#include <casa/iosfwd.h>
+#include <casacore/casa/iosfwd.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary>
 // Version information for AIPS++
@@ -164,7 +164,7 @@ inline const char *VersionInfo::info()
 }
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
 

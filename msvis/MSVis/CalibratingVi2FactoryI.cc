@@ -21,9 +21,9 @@
 //# $Id: $
 
 #include <msvis/MSVis/CalibratingVi2FactoryI.h>
-#include <casa/Exceptions.h>
+#include <casacore/casa/Exceptions.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 namespace vi { //# NAMESPACE VI - BEGIN
 
 CalibratingVi2FactoryI::CalViFacGenerator CalibratingVi2FactoryI::generator_p=0;
@@ -55,6 +55,6 @@ CalibratingVi2FactoryI::setGenerator(CalViFacGenerator cvfg) {
 
 
 } //# NAMESPACE VI - END
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 

@@ -28,13 +28,13 @@
 #ifndef CALTABLES_RIORAPARRAY_H
 #define CALTABLES_RIORAPARRAY_H
 
-#include <casa/aips.h>
-#include <casa/BasicSL/Constants.h>
-#include <casa/Arrays/Array.h>
-#include <casa/Logging/LogMessage.h>
-#include <casa/Logging/LogSink.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/BasicSL/Constants.h>
+#include <casacore/casa/Arrays/Array.h>
+#include <casacore/casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging/LogSink.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN                                                   
+namespace casacore { //# NAMESPACE CASACORE - BEGIN                                                   
 
 
 class RIorAPArray
@@ -89,7 +89,7 @@ private:
 
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
 

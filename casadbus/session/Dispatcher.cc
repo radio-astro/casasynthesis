@@ -46,7 +46,7 @@
 #include <dbus/dbus.h>
 
 
-namespace casa {
+namespace casacore {
     namespace dbus {
 
 	inline double millis(timeval tv) {

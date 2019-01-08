@@ -10,7 +10,7 @@
 
 #include <cassert>
 
-namespace casa {
+namespace casacore {
 
 namespace ms {
 class Vbi2MsRow;

@@ -12,8 +12,8 @@
 #include <msvis/MSVis/VLAT.h>
 #include <msvis/MSVis/AsynchronousInterface.h>
 
-#include <ms/MeasurementSets/MSColumns.h>
-#include <casa/System/AipsrcValue.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
+#include <casacore/casa/System/AipsrcValue.h>
 
 #include <algorithm>
 #include <cstdarg>
@@ -24,9 +24,9 @@ using namespace boost;
 using namespace std;
 
 #include "UtilJ.h"
-using namespace casa::utilj;
+using namespace casacore::utilj;
 
-using namespace casa::asyncio;
+using namespace casacore::asyncio;
 
 #define Log(level, ...) \
         {if (VlaData::loggingInitialized_p && level <= VlaData::logLevel_p) \
@@ -42,7 +42,7 @@ using namespace casa::asyncio;
         ThrowIf (visBufferAsync_p == 0, "No VisBufferAsync attached to VI; try doing vi.origin() first.");
 
 
-namespace casa {
+namespace casacore {
 
 
 ViReadImplAsync::ViReadImplAsync (const Block<MeasurementSet> & mss,
@@ -238,7 +238,7 @@ ViReadImplAsync::construct(const Block<MeasurementSet> & mss,
 {
     AsynchronousInterface::initializeLogging();
 
-    casa::async::Logger::get()->registerName ("Main");
+    casacore::async::Logger::get()->registerName ("Main");
 
     visBufferAsync_p = NULL;
 

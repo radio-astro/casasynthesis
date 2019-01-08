@@ -26,29 +26,29 @@
 //# $Id$
 
 #include <msvis/MSVis/VisBuffer2.h>
-#include <images/Images/ImageInterface.h>
-#include <images/Images/PagedImage.h>
-#include <casa/Containers/Block.h>
-#include <casa/Containers/Record.h>
-#include <casa/Arrays/ArrayLogical.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/Array.h>
-#include <casa/Arrays/MaskedArray.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/Cube.h>
-#include <casa/BasicSL/String.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/OS/Timer.h>
-#include <casa/sstream.h>
+#include <casacore/images/Images/ImageInterface.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/casa/Containers/Block.h>
+#include <casacore/casa/Containers/Record.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/Array.h>
+#include <casacore/casa/Arrays/MaskedArray.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/Cube.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/casa/sstream.h>
 
 #include <synthesis/TransformMachines/StokesImageUtil.h>
 #include <synthesis/TransformMachines2/VisModelData.h>
-#include <images/Images/ImageInterface.h>
-#include <images/Images/SubImage.h>
+#include <casacore/images/Images/ImageInterface.h>
+#include <casacore/images/Images/SubImage.h>
 
-#include <scimath/Mathematics/MatrixMathLA.h>
+#include <casacore/scimath/Mathematics/MatrixMathLA.h>
 
 #include <synthesis/TransformMachines2/MultiTermFTNew.h>
 #include <synthesis/TransformMachines/Utils.h>
@@ -60,12 +60,12 @@
 
 #include<synthesis/ImagerObjects/SIImageStoreMultiTerm.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 namespace refim { // namespace for refactor
 
-using namespace casa;
-using namespace casa::refim;
-using namespace casa::vi;
+using namespace casacore;
+using namespace casacore::refim;
+using namespace casacore::vi;
 
 #define PSOURCE False
 #define psource (IPosition(4,1536,1536,0,0))
@@ -532,5 +532,5 @@ void MultiTermFTNew::finalizeToSkyNew(Bool dopsf,
   //---------------------------------------------------------------------------------------------------
   //---------------------------------------------------------------------------------------------------
 } // end namespace refim
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

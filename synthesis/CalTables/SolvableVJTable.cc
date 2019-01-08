@@ -28,7 +28,7 @@
 
 #include <synthesis/CalTables/SolvableVJTable.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------------
 
@@ -270,5 +270,5 @@ TJonesTable::TJonesTable (const String& tableName,
 //----------------------------------------------------------------------------
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

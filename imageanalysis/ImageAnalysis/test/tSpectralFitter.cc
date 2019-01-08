@@ -28,13 +28,13 @@
 #include <imageanalysis/ImageAnalysis/SpectralFitter.h>
 
 #include <imageanalysis/ImageAnalysis/ImageAnalysis.h>
-#include <images/Images/ImageUtilities.h>
-#include <images/Images/FITSImage.h>
-#include <images/Images/FITSQualityImage.h>
-#include <casa/OS/Directory.h>
-#include <casa/OS/EnvVar.h>
+#include <casacore/images/Images/ImageUtilities.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/images/Images/FITSQualityImage.h>
+#include <casacore/casa/OS/Directory.h>
+#include <casacore/casa/OS/EnvVar.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 #include <sys/types.h>
 

@@ -1,12 +1,12 @@
 #include <msvis/MSVis/ViFrequencySelection.h>
 #include <msvis/MSVis/UtilJ.h>
-#include <ms/MSSel/MSSelection.h>
+#include <casacore/ms/MSSel/MSSelection.h>
 
 #include <utility>
 
 using namespace std;
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 namespace vi {
 

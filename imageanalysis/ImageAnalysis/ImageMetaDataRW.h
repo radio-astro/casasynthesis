@@ -30,9 +30,9 @@
 
 #include <imageanalysis/ImageAnalysis/ImageMetaDataBase.h>
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
-namespace casa {
+namespace casacore {
 
 // <summary>
 // A class in which to store and allow read-write access to image metadata.
@@ -188,6 +188,6 @@ private:
 	Bool _isWritable() const;
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

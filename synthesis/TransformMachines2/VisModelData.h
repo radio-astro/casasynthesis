@@ -27,15 +27,15 @@
 //# $Id$
 #ifndef TRANSFORM2_VISMODELDATA_H
 #define TRANSFORM2_VISMODELDATA_H
-#include <casa/aips.h>
-#include <casa/Containers/Record.h>
-#include <casa/Containers/Block.h>
-#include <casa/Arrays/Cube.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Containers/Record.h>
+#include <casacore/casa/Containers/Block.h>
+#include <casacore/casa/Arrays/Cube.h>
 #include <synthesis/TransformMachines2/ComponentFTMachine.h>
 #include <msvis/MSVis/VisModelDataI.h>
 #include <msvis/MSVis/VisBuffer.h> //here only for the pure virtual function that uses this
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 //#forward
   namespace vi{class VisBuffer2;}
   class ComponentList;  

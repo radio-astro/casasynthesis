@@ -27,12 +27,12 @@
 
 #include <imageanalysis/ImageAnalysis/ImageProfileFitter.h>
 
-#include <casa/Quanta/MVAngle.h>
-#include <casa/Quanta/MVTime.h>
-#include <images/Images/ImageUtilities.h>
-#include <images/Images/PagedImage.h>
-#include <images/Images/TempImage.h>
-#include <scimath/Mathematics/Combinatorics.h>
+#include <casacore/casa/Quanta/MVAngle.h>
+#include <casacore/casa/Quanta/MVTime.h>
+#include <casacore/images/Images/ImageUtilities.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/scimath/Mathematics/Combinatorics.h>
 
 #include <imageanalysis/ImageAnalysis/ProfileFitResults.h>
 
@@ -42,9 +42,9 @@
 #include <imageanalysis/IO/ImageProfileFitterResults.h>
 
 // debug
-#include <casa/OS/PrecTimer.h>
+#include <casacore/casa/OS/PrecTimer.h>
 
-namespace casa {
+namespace casacore {
 
 const String ImageProfileFitter::_class = "ImageProfileFitter";
 
@@ -775,9 +775,9 @@ void ImageProfileFitter::_loopOverFits(
 	Bool abscissaSet = ! abscissaValues.empty();
 	if (_nLTPCoeffs > 0) {
 		if (! abscissaSet) {
-			xfunc = casa::log;
+			xfunc = casacore::log;
 		}
-		yfunc = casa::log;
+		yfunc = casacore::log;
 	}
 	if (abscissaSet) {
 		fitter.setAbscissa(abscissaValues);

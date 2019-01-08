@@ -26,27 +26,27 @@
 //# $Id$
 
 //# Includes
-#include <casa/aips.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/BasicSL/Constants.h>
-#include <measures/Measures/MDirection.h>
-#include <measures/Measures.h>
-#include <coordinates/Coordinates.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/ArrayMath.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/BasicSL/Constants.h>
+#include <casacore/measures/Measures/MDirection.h>
+#include <casacore/measures/Measures.h>
+#include <casacore/coordinates/Coordinates.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
 
-#include <images/Images/PagedImage.h>
-#include <images/Images/SubImage.h>
-#include <images/Images/TempImage.h>
-#include <images/Regions/ImageRegion.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/images/Images/SubImage.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/images/Regions/ImageRegion.h>
 
-#include <lattices/Lattices/LatticeIterator.h>
-#include <lattices/Lattices/LatticeStepper.h>
-#include <casa/Arrays/IPosition.h>
-#include <lattices/Lattices/TiledShape.h>
-#include <lattices/LRegions/LCRegion.h>
-#include <lattices/LRegions/LCSlicer.h>
-#include <casa/Arrays/Slicer.h>
+#include <casacore/lattices/Lattices/LatticeIterator.h>
+#include <casacore/lattices/Lattices/LatticeStepper.h>
+#include <casacore/casa/Arrays/IPosition.h>
+#include <casacore/lattices/Lattices/TiledShape.h>
+#include <casacore/lattices/LRegions/LCRegion.h>
+#include <casacore/lattices/LRegions/LCSlicer.h>
+#include <casacore/casa/Arrays/Slicer.h>
 
 #include <components/ComponentModels/ComponentType.h>
 #include <components/ComponentModels/Flux.h>
@@ -56,10 +56,10 @@
 
 #include <synthesis/MeasurementComponents/SkyJones.h>
 #include <synthesis/MeasurementComponents/PBMath.h>
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/BasicSL/String.h>
 
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 int main()
 {
   try {

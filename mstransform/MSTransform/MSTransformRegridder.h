@@ -24,22 +24,22 @@
 #define MSTransformRegridder_H_
 
 // Logging
-#include <casa/Logging/LogIO.h>
+#include <casacore/casa/Logging/LogIO.h>
 
 // Coordinate systems
-#include <measures/Measures/MeasTable.h>
+#include <casacore/measures/Measures/MeasTable.h>
 
 // MS handling
-#include <ms/MeasurementSets.h>
+#include <casacore/ms/MeasurementSets.h>
 
 // To use ostringstream
 #include <iomanip>
 
 // Enable record conversions
-#include <casa/Quanta/QuantumHolder.h>
+#include <casacore/casa/Quanta/QuantumHolder.h>
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //  MSTransformRegridder definition
 class MSTransformRegridder
@@ -145,6 +145,6 @@ public:
 	  static lDouble freq_from_lambda(const lDouble lambda){ return (C::c/lambda); };
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif /* MSTransformRegridder_H_ */

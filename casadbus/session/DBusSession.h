@@ -33,7 +33,7 @@
 #include <casadbus/session/DBusSession.proxy.h>
 #include <casadbus/session/Dispatcher.h>
 
-namespace casa {
+namespace casacore {
 
     class DBusSession :
 	private org::freedesktop::DBus_proxy,

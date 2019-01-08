@@ -1,6 +1,6 @@
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/ArrayPartMath.h>
-#include <casa/BasicMath/Functors.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayPartMath.h>
+#include <casacore/casa/BasicMath/Functors.h>
 #include <msvis/MSVis/AveragingTvi2.h>
 #include <msvis/MSVis/AveragingVi2Factory.h>
 #include <msvis/MSVis/MsRows.h>
@@ -15,13 +15,13 @@
 
 using std::set;
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 
 namespace avg {
 
-using casa::ms::MsRow;
+using casacore::ms::MsRow;
 
 
 ///////////////////////////////////////////////////////////
@@ -285,12 +285,12 @@ class CachedPlaneAvg : public ms::CachedArrayBase {
 
 public:
 
-typedef const Cube<T> & (casa::vi::avg::VbAvg::* Accessor) () const;
+typedef const Cube<T> & (casacore::vi::avg::VbAvg::* Accessor) () const;
 
 CachedPlaneAvg (Accessor accessor) : accessor_p (accessor) {}
 
 Matrix<T> &
-getCachedPlane (casa::vi::avg::VbAvg * vb, Int row)
+getCachedPlane (casacore::vi::avg::VbAvg * vb, Int row)
 {
     if (! isCached()){
 
@@ -315,7 +315,7 @@ private:
 
         T * storage = const_cast <T *> (& src (IPosition (3, 0, 0, row)));
 
-        cache.takeStorage (shape, storage, casa::SHARE);
+        cache.takeStorage (shape, storage, casacore::SHARE);
     }
 
     Accessor accessor_p;

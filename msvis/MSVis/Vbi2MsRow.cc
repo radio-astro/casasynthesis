@@ -5,8 +5,8 @@
  *      Author: jjacobs
  */
 
-#include <casa/Exceptions.h>
-#include <measures/Measures/MDirection.h>
+#include <casacore/casa/Exceptions.h>
+#include <casacore/measures/Measures/MDirection.h>
 #include <msvis/MSVis/Vbi2MsRow.h>
 #include <msvis/MSVis/VisibilityIterator2.h>
 #include <msvis/MSVis/VisModelDataI.h>
@@ -15,9 +15,9 @@
 
 #define AssertWritable() ThrowIf (! isWritable (), "Cannot write to this MsRow object")
 
-using casa::vi::VisBufferImpl2;
+using casacore::vi::VisBufferImpl2;
 
-namespace casa {
+namespace casacore {
 
 namespace ms {
 

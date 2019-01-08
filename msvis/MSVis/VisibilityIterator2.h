@@ -28,31 +28,31 @@
 #ifndef MSVIS_VISIBILITYITERATOR2_H
 #define MSVIS_VISIBILITYITERATOR2_H
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
-//#include <casa/Arrays/Cube.h>
-//#include <casa/Arrays/Matrix.h>
-//#include <casa/Arrays/Slicer.h>
-//#include <casa/BasicSL/String.h>
-//#include <casa/Containers/Stack.h>
-//#include <casa/Quanta/MVDoppler.h>
-//#include <measures/Measures/MCDoppler.h>
-//#include <measures/Measures/MDoppler.h>
-//#include <measures/Measures/MeasConvert.h>
-//#include <measures/Measures/Stokes.h>
-//#include <ms/MSOper/MSDerivedValues.h>
-#include <ms/MeasurementSets/MSIter.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
-//#include <ms/MSSel/MSSelection.h>
-//#include <scimath/Mathematics/RigidVector.h>
-//#include <scimath/Mathematics/SquareMatrix.h>
+//#include <casacore/casa/Arrays/Cube.h>
+//#include <casacore/casa/Arrays/Matrix.h>
+//#include <casacore/casa/Arrays/Slicer.h>
+//#include <casacore/casa/BasicSL/String.h>
+//#include <casacore/casa/Containers/Stack.h>
+//#include <casacore/casa/Quanta/MVDoppler.h>
+//#include <casacore/measures/Measures/MCDoppler.h>
+//#include <casacore/measures/Measures/MDoppler.h>
+//#include <casacore/measures/Measures/MeasConvert.h>
+//#include <casacore/measures/Measures/Stokes.h>
+//#include <casacore/ms/MSOper/MSDerivedValues.h>
+#include <casacore/ms/MeasurementSets/MSIter.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
+//#include <casacore/ms/MSSel/MSSelection.h>
+//#include <casacore/scimath/Mathematics/RigidVector.h>
+//#include <casacore/scimath/Mathematics/SquareMatrix.h>
 //#include <msvis/MSVis/StokesVector.h>
 //#include <msvis/MSVis/UtilJ.h>
 #include <msvis/MSVis/VisBufferComponents2.h>
 //#include <msvis/MSVis/ViFrequencySelection.h>
 //#include <msvis/MSVis/VisImagingWeight.h>
-//#include <tables/Tables/ArrayColumn.h>
-//#include <tables/Tables/ScalarColumn.h>
+//#include <casacore/tables/Tables/ArrayColumn.h>
+//#include <casacore/tables/Tables/ScalarColumn.h>
 
 #include <boost/noncopyable.hpp>
 #include <map>
@@ -60,7 +60,7 @@
 #include <utility>
 #include <vector>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //# forward decl
 
@@ -395,7 +395,7 @@ class VisibilityIterator2 : private boost::noncopyable
     friend class asyncio::VLAT; // allow VI lookahead thread class to access protected
                                 // functions VLAT should not access private parts,
                                 // especially variables
-    friend class casa::MSTransformIteratorFactory;
+    friend class casacore::MSTransformIteratorFactory;
 
 public:
 
@@ -1118,6 +1118,6 @@ private:
 
 } // end namespace vi
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

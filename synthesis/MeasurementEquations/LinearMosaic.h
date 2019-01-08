@@ -35,7 +35,7 @@
 #ifndef SYNTHESIS_LINEARMOSAIC_H
 #define SYNTHESIS_LINEARMOSAIC_H
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   //Forward declaration
   template<class T> class ImageInterface;
   template<class T> class Vector;
@@ -82,7 +82,7 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 
 

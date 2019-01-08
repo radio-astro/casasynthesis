@@ -1,41 +1,41 @@
 #include <msvis/MSVis/TransformingVi2.h>
 
-#include <measures/Measures/MDirection.h>
-#include <measures/Measures/MEpoch.h>
-#include <measures/Measures/MPosition.h>
+#include <casacore/measures/Measures/MDirection.h>
+#include <casacore/measures/Measures/MEpoch.h>
+#include <casacore/measures/Measures/MPosition.h>
 #include <msvis/MSVis/UtilJ.h>
 #include <msvis/MSVis/VisibilityIterator2.h>
 #include <msvis/MSVis/VisBuffer2.h>
 
-//#include <casa/Arrays/Cube.h>
-//#include <casa/Arrays/Matrix.h>
-//#include <casa/Arrays/Slicer.h>
-//#include <casa/BasicSL/String.h>
-//#include <casa/Containers/Stack.h>
-//#include <casa/Quanta/MVDoppler.h>
-//#include <casa/aips.h>
-//#include <measures/Measures/MCDoppler.h>
-//#include <measures/Measures/MDoppler.h>
-//#include <measures/Measures/MeasConvert.h>
-//#include <measures/Measures/Stokes.h>
-//#include <ms/MSOper/MSDerivedValues.h>
-//#include <ms/MeasurementSets/MSIter.h>
-//#include <ms/MeasurementSets/MSColumns.h>
-//#include <ms/MeasurementSets/MeasurementSet.h>
-//#include <scimath/Mathematics/RigidVector.h>
-//#include <scimath/Mathematics/SquareMatrix.h>
+//#include <casacore/casa/Arrays/Cube.h>
+//#include <casacore/casa/Arrays/Matrix.h>
+//#include <casacore/casa/Arrays/Slicer.h>
+//#include <casacore/casa/BasicSL/String.h>
+//#include <casacore/casa/Containers/Stack.h>
+//#include <casacore/casa/Quanta/MVDoppler.h>
+//#include <casacore/casa/aips.h>
+//#include <casacore/measures/Measures/MCDoppler.h>
+//#include <casacore/measures/Measures/MDoppler.h>
+//#include <casacore/measures/Measures/MeasConvert.h>
+//#include <casacore/measures/Measures/Stokes.h>
+//#include <casacore/ms/MSOper/MSDerivedValues.h>
+//#include <casacore/ms/MeasurementSets/MSIter.h>
+//#include <casacore/ms/MeasurementSets/MSColumns.h>
+//#include <casacore/ms/MeasurementSets/MeasurementSet.h>
+//#include <casacore/scimath/Mathematics/RigidVector.h>
+//#include <casacore/scimath/Mathematics/SquareMatrix.h>
 //#include <msvis/MSVis/StokesVector.h>
 //#include <msvis/MSVis/VisBufferComponents2.h>
 //#include <msvis/MSVis/VisImagingWeight.h>
 //#include <msvis/MSVis/VisibilityIterator2.h>
-//#include <tables/Tables/ArrayColumn.h>
-//#include <tables/Tables/ScalarColumn.h>
+//#include <casacore/tables/Tables/ArrayColumn.h>
+//#include <casacore/tables/Tables/ScalarColumn.h>
 
 #define Tvi2NotImplemented() {Throw ("Not implemented.");}
 
-using namespace casa::utilj;
+using namespace casacore::utilj;
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 
@@ -171,7 +171,7 @@ TransformingVi2::dataDescriptionId ()  const
 }
 
 void
-TransformingVi2::dataDescriptionIds(casa::Vector<int>& ddIds) const
+TransformingVi2::dataDescriptionIds(casacore::Vector<int>& ddIds) const
 {
     return getVii()->dataDescriptionIds (ddIds);
 }

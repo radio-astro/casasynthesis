@@ -29,9 +29,9 @@
 #include <synthesis/TransformMachines/SynthesisError.h>
 #include <synthesis/TransformMachines/ProtoVR.h>
 #include <synthesis/TransformMachines/Utils.h>
-#include <coordinates/Coordinates/SpectralCoordinate.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <casa/OS/Timer.h>
+#include <casacore/coordinates/Coordinates/SpectralCoordinate.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/casa/OS/Timer.h>
 #include <fstream>
 #include <iostream>
 #include <typeinfo>
@@ -40,7 +40,7 @@
 #ifdef _OPENMP
 #include <omp.h>
 #endif
-//#include <casa/BasicMath/Functors.h>
+//#include <casacore/casa/BasicMath/Functors.h>
 namespace casa{
 
   //

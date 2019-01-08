@@ -5,9 +5,9 @@
 
 #include <imageanalysis/ImageAnalysis/ImageCollapserData.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 template <class T> class TempImage;
 template <class T> class SubImage;

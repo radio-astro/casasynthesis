@@ -29,7 +29,7 @@
 #include <casadbus/utilities/BusAccess.h>
 #include <casadbus/utilities/Conversion.h>
 
-namespace casa {
+namespace casacore {
 
     std::list<std::string> ViewerProxy::execArgs( const std::list<std::string> &args ) {
 	std::list<std::string> result(args);

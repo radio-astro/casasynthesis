@@ -29,30 +29,30 @@
 
 #include <imageanalysis/ImageAnalysis/ImageSourceFinder.h>
 
-#include <casa/aips.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/BasicSL/Constants.h>
-#include <casa/BasicMath/Math.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Logging.h>
-#include <casa/Quanta/Quantum.h>
-#include <casa/Quanta/Unit.h>
-#include <casa/BasicSL/String.h>
-#include <images/Images/TempImage.h>
-#include <images/Images/PagedImage.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/BasicSL/Constants.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Logging.h>
+#include <casacore/casa/Quanta/Quantum.h>
+#include <casacore/casa/Quanta/Unit.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/images/Images/PagedImage.h>
 #include <imageanalysis/ImageAnalysis/ComponentImager.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <coordinates/Coordinates/DirectionCoordinate.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/coordinates/Coordinates/DirectionCoordinate.h>
 #include <components/ComponentModels/GaussianShape.h>
 #include <components/ComponentModels/ConstantSpectrum.h>
 #include <components/ComponentModels/Flux.h>
 #include <components/ComponentModels/SkyComponent.h>
 #include <components/ComponentModels/ComponentList.h>
 
-#include <casa/iostream.h>
+#include <casacore/casa/iostream.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 SkyComponent makeSkyComponent (const Vector<Double>& pixel, 
                                const Flux<Double>& flux,
                                const Quantum<Double>& maj,

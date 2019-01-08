@@ -27,21 +27,21 @@
 //
 #include <imageanalysis/ImageAnalysis/ImageConvolver.h>
 
-#include <casa/aips.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/OS/EnvVar.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Inputs/Input.h>
-#include <casa/Logging.h>
-#include <tables/Tables/Table.h>
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/OS/EnvVar.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Inputs/Input.h>
+#include <casacore/casa/Logging.h>
+#include <casacore/tables/Tables/Table.h>
+#include <casacore/casa/BasicSL/String.h>
 
 
-#include <images/Images/PagedImage.h>
-#include <casa/iostream.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/casa/iostream.h>
 
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 int main (int argc, const char* argv[])
 {
 

@@ -33,7 +33,7 @@
 #include <string>
 #include <casadbus/types/variant.h>
 
-namespace casa {
+namespace casacore {
     namespace dbus {
 
 	typedef std::map<std::string,variant> rec_map;

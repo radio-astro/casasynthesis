@@ -33,7 +33,7 @@
 #include <unistd.h>
 #include <stdexcept>
 
-namespace casa {
+namespace casacore {
     namespace dbus {	
 	// this function is a little odd... it gets a connection with a unique name
 	// (via a suffix) using 'name' and upon success returns 'path', otherwise

@@ -29,8 +29,8 @@
 #define GRAPHICS_X11UTIL_H
 
 
-#include <casa/aips.h>
-#include <casa/iosfwd.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/iosfwd.h>
 
 #include <graphics/X11/X_enter.h>
 #include <X11/Xlib.h>
@@ -41,7 +41,7 @@
 #include <X11/Xmu/StdCmap.h>
 #include <graphics/X11/X_exit.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary>
 // X Utilities to assist the X11 classes
@@ -140,7 +140,7 @@ Widget X11ContainingShell(Widget w);
 // function to print colormap information
 // ostream & operator << (ostream & os, Colormap cmap)
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #ifndef AIPS_NO_TEMPLATE_SRC
 #include <graphics/X11/X11Util.tcc>

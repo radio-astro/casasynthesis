@@ -26,11 +26,11 @@
 
 #include <imageanalysis/IO/OutputDestinationChecker.h>
 
-#include <casa/OS/File.h>
+#include <casacore/casa/OS/File.h>
 
 #include <stdcasa/cboost_foreach.h>
 
-namespace casa {
+namespace casacore {
 
 OutputDestinationChecker::OutputDestinationChecker() {}
 

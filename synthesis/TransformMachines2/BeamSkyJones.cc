@@ -26,18 +26,18 @@
 //#
 //# $Id$
 
-#include <casa/aips.h>
-#include <casa/BasicSL/Complex.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/BasicSL/Complex.h>
 
-#include <ms/MeasurementSets/MeasurementSet.h>
-#include <ms/MeasurementSets/MSColumns.h>
-#include <ms/MeasurementSets/MSObsColumns.h>
-#include <ms/MeasurementSets/MSSpWindowColumns.h>
-#include <tables/Tables.h>
-#include <measures/Measures/Stokes.h>
-#include <measures/Measures/MeasConvert.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
+#include <casacore/ms/MeasurementSets/MSObsColumns.h>
+#include <casacore/ms/MeasurementSets/MSSpWindowColumns.h>
+#include <casacore/tables/Tables.h>
+#include <casacore/measures/Measures/Stokes.h>
+#include <casacore/measures/Measures/MeasConvert.h>
 
-#include <casa/BasicSL/Constants.h>
+#include <casacore/casa/BasicSL/Constants.h>
 
 #include <components/ComponentModels/Flux.h>
 #include <components/ComponentModels/ComponentShape.h>
@@ -47,19 +47,19 @@
 
 #include <msvis/MSVis/VisBuffer2.h>
 #include <msvis/MSVis/VisibilityIterator2.h>
-#include <images/Images/ImageInterface.h>
-#include <images/Regions/ImageRegion.h>
+#include <casacore/images/Images/ImageInterface.h>
+#include <casacore/images/Regions/ImageRegion.h>
 
-#include <casa/Utilities/Assert.h>
+#include <casacore/casa/Utilities/Assert.h>
 /*
 // temporary, for debugging
-#include <casa/Quanta/MVAngle.h>
-void printDirection(std::ostream &os,const casa::MDirection &dir) throw (casa::AipsError) {
+#include <casacore/casa/Quanta/MVAngle.h>
+void printDirection(std::ostream &os,const casacore::MDirection &dir) throw (casacore::AipsError) {
   double lngbuf=dir.getValue().getLong("deg").getValue();
   if (lngbuf<0) lngbuf+=360.;
-  os<<(dir.getRefString()!="GALACTIC"?casa::MVAngle::Format(casa::MVAngle::TIME):
-  casa::MVAngle::Format(casa::MVAngle::ANGLE))<<casa::MVAngle(casa::Quantity(lngbuf,"deg"))<<" "
-    <<casa::MVAngle(dir.getValue().getLat("deg"))<<
+  os<<(dir.getRefString()!="GALACTIC"?casacore::MVAngle::Format(casacore::MVAngle::TIME):
+  casacore::MVAngle::Format(casacore::MVAngle::ANGLE))<<casacore::MVAngle(casacore::Quantity(lngbuf,"deg"))<<" "
+    <<casacore::MVAngle(dir.getValue().getLat("deg"))<<
     " ("<<dir.getRefString()<<")";
 }
 //
@@ -69,8 +69,8 @@ namespace casa{
 
 namespace refim{
 
-using namespace casa;
-using namespace casa::refim;
+using namespace casacore;
+using namespace casacore::refim;
 
 BeamSkyJones::BeamSkyJones( 
 			   const Quantity &parallacticAngleIncrement,
@@ -704,7 +704,7 @@ BeamSkyJones::extent (const ImageInterface<Complex>& im,
 		      const Int row,	
 		      const Float fPad,  
 		      const Int iChan, 
-		      const casa::SkyJones::SizeType sizeType)
+		      const casacore::SkyJones::SizeType sizeType)
 {
   if(changed(vb, row))  update(vb, row);
   DebugAssert(lastUpdateIndex1_p>=0,AipsError); // should be checked in changed/update
@@ -723,7 +723,7 @@ BeamSkyJones::extent (const ImageInterface<Float>& im,
 		      const Int row,
 		      const Float fPad,  
 		      const Int iChan,
-		      const casa::SkyJones::SizeType sizeType)
+		      const casacore::SkyJones::SizeType sizeType)
 { 
   if(changed(vb, row)) update(vb, row);
   DebugAssert(lastUpdateIndex1_p>=0,AipsError); // should be checked in changed/update
@@ -736,7 +736,7 @@ BeamSkyJones::extent (const ImageInterface<Float>& im,
   }   
 };
 
-Int BeamSkyJones::support(const vi::VisBuffer2& vb, const casa::CoordinateSystem& cs){
+Int BeamSkyJones::support(const vi::VisBuffer2& vb, const casacore::CoordinateSystem& cs){
   PBMath myPBMath;
 
   if(changed(vb, 0)) update(vb, 0);

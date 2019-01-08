@@ -34,7 +34,7 @@
 
 #include <synthesis/TransformMachines/AWProjectFT.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   
   class EPJones;
 
@@ -239,6 +239,6 @@ namespace casa { //# NAMESPACE CASA - BEGIN
     // 				   Int paIndex);
     Bool oneTimeMessage_p;
   };
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

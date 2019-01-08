@@ -29,17 +29,17 @@
 #include <vector>
 #include <string>
 #include <iostream>
-#include <casa/Containers/Record.h>
+#include <casacore/casa/Containers/Record.h>
 #include <casadbus/utilities/Conversion.h>
 #include <casadbus/utilities/BusAccess.h>
 #include <casadbus/types/variant.h>
 #include <dbus-c++/types.h>
 #include <dbus/dbus-shared.h>
 
-using casa::Record;
-using casa::Array;
-using casa::Bool;
-using casa::IPosition;
+using casacore::Record;
+using casacore::Array;
+using casacore::Bool;
+using casacore::IPosition;
 
 void show_variantmap( std::map<std::string, DBus::Variant> &variantmap );
 void show_variantvec( std::vector<DBus::Variant> &variantvec );
@@ -85,7 +85,7 @@ void show_variantvec( std::vector<DBus::Variant> &variantvec ) {
 class mycallback {
     public:
 	mycallback( ) { }
-	casa::dbus::variant result( ) { return casa::dbus::toVariant(result_); }
+	casacore::dbus::variant result( ) { return casacore::dbus::toVariant(result_); }
 	bool callback( const DBus::Message & msg );
     private:
 	DBus::Variant result_;
@@ -98,14 +98,14 @@ bool mycallback::callback( const DBus::Message &msg ) {
 	fprintf( stderr, "\tdestination: %s\n", msg.destination( ) );
 	DBus::MessageIter ri = msg.reader( );
 	ri >> result_;
-	casa::DBusSession::instance( ).dispatcher( ).leave( );
+	casacore::DBusSession::instance( ).dispatcher( ).leave( );
     }
     return true;
 }
 
 int main( int argc, const char *argv[ ] ) {
 
-    casa::ViewerProxy *vp = casa::dbus::launch<casa::ViewerProxy>( "view_server" );
+    casacore::ViewerProxy *vp = casacore::dbus::launch<casacore::ViewerProxy>( "view_server" );
 
     if ( vp == 0 ) {
 	fprintf( stderr, "\t(n) crap, couldn't start viewer service...\n" );
@@ -117,13 +117,13 @@ int main( int argc, const char *argv[ ] ) {
     cwd = vp->cwd( "/Users/drs/dev/viewer/code/display/apps/casaviewer/casapy_het_test" );
     fprintf( stdout, "    new directory: %s\n", cwd.c_str( ) );
 
-    casa::dbus::variant panel = vp->panel("clean");
-    if ( panel.type() != casa::dbus::variant::INT ) {
+    casacore::dbus::variant panel = vp->panel("clean");
+    if ( panel.type() != casacore::dbus::variant::INT ) {
 	fprintf( stderr, "error: wrong type for panel id" );
 	exit(1);
     }
-    casa::dbus::variant im3 = vp->load( "test4.image", "raster", panel.getInt( ) );
-    if ( im3.type() != casa::dbus::variant::INT ) {
+    casacore::dbus::variant im3 = vp->load( "test4.image", "raster", panel.getInt( ) );
+    if ( im3.type() != casacore::dbus::variant::INT ) {
 	fprintf( stderr, "error: wrong type for data id" );
 	exit(1);
     }
@@ -131,16 +131,16 @@ int main( int argc, const char *argv[ ] ) {
     mycallback *mycb = new mycallback( );
     DBus::MessageSlot filter;
     filter = new DBus::Callback<mycallback,bool,const DBus::Message &>( mycb, &mycallback::callback );
-    casa::DBusSession::instance( ).connection( ).add_filter( filter );
+    casacore::DBusSession::instance( ).connection( ).add_filter( filter );
 
     fprintf( stderr, "\t>>>>> ok, starting...\n" );
     sleep(5);
 
-    casa::dbus::variant res = vp->start_interact( panel, panel.getInt( ) );
-    casa::DBusSession::instance( ).connection( ).flush( );
-    casa::DBusSession::instance( ).dispatcher( ).enter( );
-    casa::dbus::variant interact_result = mycb->result( );
-    casa::dbus::show( interact_result );
+    casacore::dbus::variant res = vp->start_interact( panel, panel.getInt( ) );
+    casacore::DBusSession::instance( ).connection( ).flush( );
+    casacore::DBusSession::instance( ).dispatcher( ).enter( );
+    casacore::dbus::variant interact_result = mycb->result( );
+    casacore::dbus::show( interact_result );
 
     sleep(5);
 

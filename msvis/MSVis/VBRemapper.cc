@@ -28,12 +28,12 @@
 #include <msvis/MSVis/VisBuffer.h>
 #include <msvis/MSVis/VisBufferComponents.h>
 #include <msvis/MSVis/VisibilityIterator.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Logging/LogIO.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Logging/LogIO.h>
 #include <map>
 
-namespace casa {
+namespace casacore {
 
 VBRemapper::VBRemapper()// :
   //  inToOutMaps_p()

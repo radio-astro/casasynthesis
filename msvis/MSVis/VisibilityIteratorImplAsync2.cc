@@ -26,14 +26,14 @@
 //# $Id: VisibilityIterator2.cc,v 19.15 2006/02/01 01:25:14 kgolap Exp $
 
 #include <boost/tuple/tuple.hpp>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/BasicSL/Constants.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Quanta/MVTime.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/Utilities/Sort.h>
-#include <ms/MeasurementSets/MSColumns.h>
-#include <ms/MSSel/MSSpwIndex.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/BasicSL/Constants.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Quanta/MVTime.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/Utilities/Sort.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
+#include <casacore/ms/MSSel/MSSpwIndex.h>
 #include <msvis/MSVis/MSUtil.h>
 #include <msvis/MSVis/UtilJ.h>
 #include <msvis/MSVis/VisBuffer2.h>
@@ -49,10 +49,10 @@
 #include <map>
 
 using std::make_pair;
-using namespace casa::vi;
+using namespace casacore::vi;
 using namespace std;
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 namespace vi {
 
@@ -135,7 +135,7 @@ VisibilityIteratorImplAsync2::construct(const Block<MeasurementSet> & mss,
 {
     AsynchronousInterface::initializeLogging();
 
-    casa::async::Logger::get()->registerName ("Main");
+    casacore::async::Logger::get()->registerName ("Main");
 
     for (uint i = 0; i < mss.size(); i++){
         measurementSets_p.push_back (mss [i]);
@@ -2537,5 +2537,5 @@ VisibilityIteratorImplAsync2::PendingChanges::setNRowBlocking (Int nRowBlocking)
 
 } // end namespace vi
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

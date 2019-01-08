@@ -2,16 +2,16 @@
 #include "VisibilityIteratorImpl.h"
 #include "VisibilityIteratorImplAsync.h"
 #include "UtilJ.h"
-#include <casa/System/AipsrcValue.h>
+#include <casacore/casa/System/AipsrcValue.h>
 
-//#include <measures/Measures/MDoppler.h>
-//#include <measures/Measures/MRadialVelocity.h>
+//#include <casacore/measures/Measures/MDoppler.h>
+//#include <casacore/measures/Measures/MRadialVelocity.h>
 
 
 #define CheckImplementationPointerR() Assert (readImpl_p != NULL);
 #define CheckImplementationPointerW() Assert (writeImpl_p != NULL);
 
-namespace casa {
+namespace casacore {
 
 namespace asyncio {
 

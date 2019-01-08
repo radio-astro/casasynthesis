@@ -28,17 +28,17 @@
 #if ! defined (MSVIS_ViImplementation2_H_121115_0950)
 #define MSVIS_ViImplementation2_H_121115_0950
 
-#include <casa/aips.h>
-#include <casa/BasicSL.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/BasicSL.h>
 #include <msvis/MSVis/VisBufferComponents2.h>
-#include <measures/Measures/MFrequency.h>
-#include <measures/Measures/Stokes.h>
+#include <casacore/measures/Measures/MFrequency.h>
+#include <casacore/measures/Measures/Stokes.h>
 
 #include <boost/noncopyable.hpp>
 #include <map>
 #include <vector>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 template <typename T> class Array;
 template <typename T> class Block;
@@ -599,7 +599,7 @@ protected:
 
 } // end namespace vi
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif // ! defined (MSVIS_ViImplementation2_H_121115_0950)
 

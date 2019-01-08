@@ -27,11 +27,11 @@
 //----------------------------------------------------------------------------
 
 #include <msvis/MSVis/VisBuffGroupAcc.h>
-#include <ms/MeasurementSets/MSColumns.h>
-#include <ms/MSSel/MSSelection.h>
-#include <casa/Exceptions/Error.h>
+#include <casacore/ms/MeasurementSets/MSColumns.h>
+#include <casacore/ms/MSSel/MSSelection.h>
+#include <casacore/casa/Exceptions/Error.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------------
   
@@ -272,5 +272,5 @@ const Vector<Int>& VisBuffGroupAcc::outToInRow(const Int spw,
         "VisBuffGroupAcc outToInRow: (spw, fld) index out of range."));
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

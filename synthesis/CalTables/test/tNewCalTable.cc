@@ -30,14 +30,14 @@
 #include <synthesis/CalTables/CTMainRecord.h>
 #include <synthesis/CalTables/CTMainColumns.h>
 #include <synthesis/CalTables/CTColumns.h>
-#include <ms/MeasurementSets/MSAntennaColumns.h>
-#include <tables/Tables/ArrayColumn.h>
-#include <tables/Tables/TableCache.h>
-#include <casa/Containers/RecordField.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/iostream.h>
-#include <casa/BasicMath/Math.h>
-#include <casa/namespace.h>
+#include <casacore/ms/MeasurementSets/MSAntennaColumns.h>
+#include <casacore/tables/Tables/ArrayColumn.h>
+#include <casacore/tables/Tables/TableCache.h>
+#include <casacore/casa/Containers/RecordField.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/casa/namespace.h>
 // <summary>
 // Test program for NewCalTable class.
 // </summary>

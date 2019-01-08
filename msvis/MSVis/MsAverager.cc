@@ -29,11 +29,11 @@
 
 #include <msvis/MSVis/SelectAverageSpw.h>
 #include <msvis/MSVis/MsAverager.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/Slice.h>
-#include <casa/OS/Timer.h>
-#include <casa/iomanip.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/Slice.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/casa/iomanip.h>
 
 #include <graphics/X11/X_enter.h>
 #include <stdio.h>
@@ -52,7 +52,7 @@
 #define IfLog2(x) /*x*/
 #endif
 
-namespace casa { 
+namespace casacore { 
 
 const String MsAverager::clname = "MsAverager";
 
@@ -1245,7 +1245,7 @@ void MsAverager::showAveMap(Matrix<Int> &/*rMap*/, Matrix<Int> &/*cMap*/) {
    //cout << "aveChanMap=" << std::setprecision(12) << cMap;
 }
 
-Bool MsAverager::hasColumn(casa::String const& col) {
+Bool MsAverager::hasColumn(casacore::String const& col) {
     Vector<String> cols = pMS->tableDesc().columnNames();
     for (uInt i = 0; i < cols.nelements(); i++) {
        if (cols(i) == col)
@@ -1258,7 +1258,7 @@ Bool MsAverager::hasColumn(casa::String const& col) {
     return False;
 }
 
-Bool MsAverager::isDataColumn(casa::String const& col) {
+Bool MsAverager::isDataColumn(casacore::String const& col) {
     return col == "DATA" 
         || col == "CORRECTEDDATA"
         || col == "MODELDATA"
@@ -1287,7 +1287,7 @@ void MsAverager::getMS(MS& ms) {
     ms = MS(aMS);
 } 
 
-void MsAverager::getXY(Vector<Double>& x, casa::Vector<Double>& y, 
+void MsAverager::getXY(Vector<Double>& x, casacore::Vector<Double>& y, 
                        Vector<Int>& f, Int pol) {
 
   if (outputMode != MsAverager::ListBuffer) {

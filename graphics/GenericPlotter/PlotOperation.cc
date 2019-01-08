@@ -26,7 +26,7 @@
 //# $Id: $
 #include <graphics/GenericPlotter/PlotOperation.h>
 
-namespace casa {
+namespace casacore {
 
 ///////////////////////////////
 // PLOTOPERATION DEFINITIONS //

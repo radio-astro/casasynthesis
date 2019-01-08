@@ -23,10 +23,10 @@
 #ifndef IteratingParameters_H_
 #define IteratingParameters_H_
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <msvis/MSVis/VisibilityIterator2.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 namespace vi { //# NAMESPACE VI - BEGIN
 
 class IteratingParameters {
@@ -62,6 +62,6 @@ private:
 };
 
 } //# NAMESPACE VI - END
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif /* IteratingParameters_H_ */

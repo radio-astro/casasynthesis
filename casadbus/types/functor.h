@@ -32,7 +32,7 @@
 #include <string>
 #include <stdexcept>
 
-namespace casa {
+namespace casacore {
     namespace functor {
 
 	class args { 

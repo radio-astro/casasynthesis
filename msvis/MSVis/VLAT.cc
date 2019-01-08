@@ -30,13 +30,13 @@
 #include <time.h>
 #include <sys/time.h>
 
-#include <casa/Logging/LogIO.h>
-#include <casa/System/AipsrcValue.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/casa/System/AipsrcValue.h>
 #include <msvis/MSVis/VLAT.h>
 #include <msvis/MSVis/VisBufferAsync.h>
 
 #include "AsynchronousTools.h"
-using namespace casa::async;
+using namespace casacore::async;
 
 #include <algorithm>
 #include <cstdarg>
@@ -50,15 +50,15 @@ using namespace casa::async;
 #include "UtilJ.h"
 
 using namespace boost;
-using namespace casa::utilj;
+using namespace casacore::utilj;
 using namespace std;
-using namespace casa::asyncio;
+using namespace casacore::asyncio;
 
 #define Log(level, ...) \
         {if (AsynchronousInterface::logThis (level)) \
     Logger::get()->log (__VA_ARGS__);};
 
-namespace casa {
+namespace casacore {
 
 namespace asyncio {
 

@@ -28,9 +28,9 @@
 #ifndef IMAGES_IMAGEDECONVOLVER_H
 #define IMAGES_IMAGEDECONVOLVER_H
 
-#include <casa/aipstype.h>
+#include <casacore/casa/aipstype.h>
 
-namespace casa {
+namespace casacore {
 
 class GaussianBeam;
 
@@ -79,6 +79,6 @@ public:
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

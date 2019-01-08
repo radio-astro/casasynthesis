@@ -29,11 +29,11 @@
 
 #include <graphics/GenericPlotter/PlotFactory.h>
 
-#include <casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/Matrix.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 // SimplePlotter is a concrete class that uses the abstract plotting classes
 // to perform common tasks.  SimplePlotter is meant for users who won't need

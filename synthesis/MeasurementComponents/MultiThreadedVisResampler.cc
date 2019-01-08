@@ -466,7 +466,7 @@ namespace casa{
       {
 	//	Int workRequestDataToGrid=1;
 	Int workRequestDataToGrid=MThWorkID::DATATOGRID;
-	casa::utilj::ThreadTimes t1=casa::utilj::ThreadTimes::getTime();
+	casacore::utilj::ThreadTimes t1=casacore::utilj::ThreadTimes::getTime();
 	for(Int i=0; i < nelements(); i++) 
 	  {
 	    vbsVec_p(i,currentVBS_p).dopsf_p = dopsf;
@@ -488,19 +488,19 @@ namespace casa{
 	      }
 	  }
 
-	casa::utilj::ThreadTimes t2=casa::utilj::ThreadTimes::getTime();
+	casacore::utilj::ThreadTimes t2=casacore::utilj::ThreadTimes::getTime();
 	//	threadClerk_p->getToWork(&workRequestDataToGrid);
 	threadClerk_p->giveWorkToWorkers(&workRequestDataToGrid);
-	casa::utilj::ThreadTimes t3=casa::utilj::ThreadTimes::getTime();
+	casacore::utilj::ThreadTimes t3=casacore::utilj::ThreadTimes::getTime();
 	threadClerk_p->waitForWorkersToFinishTask();
-	casa::utilj::ThreadTimes t4=casa::utilj::ThreadTimes::getTime();
+	casacore::utilj::ThreadTimes t4=casacore::utilj::ThreadTimes::getTime();
 	
 	 tSetupG       += t2-t1;
 	 tSendDataG    += t3-t2;
 	 tWaitForWorkG += t4-t3;
 	 tOutsideG     += t1-t4G_p;
       }
-      t4G_p = casa::utilj::ThreadTimes::getTime();
+      t4G_p = casacore::utilj::ThreadTimes::getTime();
   }
   //
   //------------------------------------------------------------------------------

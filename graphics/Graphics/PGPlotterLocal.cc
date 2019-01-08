@@ -27,17 +27,17 @@
 //# $Id$
 
 #include <graphics/Graphics/PGPlotterLocal.h>
-#include <casa/BasicSL/String.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/Containers/Record.h>
-#include <casa/iostream.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/Containers/Record.h>
+#include <casacore/casa/iostream.h>
 
 #include <cpgplot.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // This helper class just avoids some repetitious typing in many functions.
 // It's purpose is to just call getstorage/freestorage.
@@ -823,5 +823,5 @@ void PGPlotterLocal::wedg(const String &side, Float disp, Float width,
     cpgwedg(side.chars(), disp, width, fg, bg, label.chars());
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

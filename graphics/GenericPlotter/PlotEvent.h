@@ -29,9 +29,9 @@
 
 #include <graphics/GenericPlotter/PlotOptions.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 //# Forward Declarations
 class Plotter;

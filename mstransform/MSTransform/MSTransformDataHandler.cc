@@ -21,12 +21,12 @@
 //# $Id: $
 
 #include <mstransform/MSTransform/MSTransformDataHandler.h>
-#include <tables/Tables/TableProxy.h>
-#include <tables/TaQL/TableParse.h>
-#include <ms/MSOper/MSMetaData.h>
+#include <casacore/tables/Tables/TableProxy.h>
+#include <casacore/tables/TaQL/TableParse.h>
+#include <casacore/ms/MSOper/MSMetaData.h>
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 /////////////////////////////////////////////
 /// MSTransformDataHandler implementation ///
@@ -2674,9 +2674,9 @@ Int MSTransformDataHandler::getProcessorId(Int dataDescriptionId, String msname)
     taql << " WHERE DATA_DESC_ID ==" << dataDescriptionId;
     taql << " LIMIT 1";
 
-    casa::TableProxy *firstSelectedRow = new TableProxy(tableCommand(taql.str()));
+    casacore::TableProxy *firstSelectedRow = new TableProxy(tableCommand(taql.str()));
     Record colWrapper = firstSelectedRow->getVarColumn(String("PROCESSOR_ID"),0,1,1);
-    casa::Vector<Int> processorId = colWrapper.asArrayInt("r1");
+    casacore::Vector<Int> processorId = colWrapper.asArrayInt("r1");
 
     delete firstSelectedRow;
     return processorId[0];
@@ -4266,4 +4266,4 @@ void MSTransformDataHandler::copyMainTableKeywords (TableRecord& outKeys,
 }
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END

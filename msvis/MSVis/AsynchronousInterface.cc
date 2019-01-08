@@ -3,7 +3,7 @@
 #include "VLAT.h"
 #include "UtilJ.h"
 
-#include <casa/System/AipsrcValue.h>
+#include <casacore/casa/System/AipsrcValue.h>
 #include <msvis/MSVis/VisBufferAsync.h>
 #include <msvis/MSVis/VisibilityIteratorImplAsync.h>
 
@@ -12,17 +12,17 @@
 #include <boost/lexical_cast.hpp>
 
 using namespace boost;
-using namespace casa::async;
-using namespace casa::utilj;
+using namespace casacore::async;
+using namespace casacore::utilj;
 using namespace std;
 
 #define Log(level, ...) \
         {if (AsynchronousInterface::logThis (level)) \
     Logger::get()->log (__VA_ARGS__);};
 
-using casa::async::Mutex;
+using casacore::async::Mutex;
 
-namespace casa {
+namespace casacore {
 
 namespace asyncio {
 

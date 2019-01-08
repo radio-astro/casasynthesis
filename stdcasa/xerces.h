@@ -36,7 +36,7 @@
 #include <xercesc/framework/Wrapper4InputSource.hpp>
 #include <xercesc/parsers/XercesDOMParser.hpp>
 
-namespace casa {
+namespace casacore {
      namespace xerces {
 #if XERCES_VERSION_MAJOR > 2
         typedef xercesc::DOMLSSerializer Writer;

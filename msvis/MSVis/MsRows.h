@@ -12,7 +12,7 @@
 #include <boost/noncopyable.hpp>
 #include <vector>
 
-namespace casa {
+namespace casacore {
 
 namespace vi{
 

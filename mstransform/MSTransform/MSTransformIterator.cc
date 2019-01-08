@@ -21,7 +21,7 @@
 //# $Id: $
 
 #include <mstransform/MSTransform/MSTransformIterator.h>
-#include <casa/Utilities/CountedPtr.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
 
 namespace casa
 {
@@ -305,6 +305,6 @@ void MSTransformIterator::propagateChanAvgFlags (const Cube<Bool> &avgFlagCube, 
 	return;
 }
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 

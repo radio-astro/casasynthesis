@@ -1,13 +1,13 @@
 #include <synthesis/Parallel/Applicator.h>
 #include <synthesis/Parallel/Algorithm.h>
 #include <synthesis/Parallel/PTransport.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/BasicSL/Complex.h>
-#include <casa/BasicSL/String.h>
-#include <casa/iostream.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/BasicSL/Complex.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/iostream.h>
 
-#include <casa/namespace.h>
-extern casa::Applicator casa::applicator;
+#include <casacore/casa/namespace.h>
+extern casacore::Applicator casacore::applicator;
 
 class TestAlgorithm : public Algorithm {
    public :
@@ -38,37 +38,37 @@ class TestAlgorithm : public Algorithm {
 void TestAlgorithm::get(){
 
       cout << "In TestAlgorithm::get" << endl;
-      casa::applicator.get(one);
+      casacore::applicator.get(one);
       cout << "got one " << one << endl;
-      casa::applicator.get(two);
+      casacore::applicator.get(two);
       cout << "got two " << two << endl;
-      casa::applicator.get(three);
+      casacore::applicator.get(three);
       cout << "got three " << three << endl;
-      casa::applicator.get(four);
+      casacore::applicator.get(four);
       cout << "got four " << four << endl;
-      casa::applicator.get(five);
+      casacore::applicator.get(five);
       cout << "got five " << five << endl;
-      casa::applicator.get(six);
+      casacore::applicator.get(six);
       cout << "got six " << six << endl;
-      casa::applicator.get(seven);
+      casacore::applicator.get(seven);
       cout << "got seven " << seven << endl;
 
-      casa::applicator.get(aOne);
+      casacore::applicator.get(aOne);
       cout << "got aOne " << endl;
-      casa::applicator.get(aTwo);
+      casacore::applicator.get(aTwo);
       cout << "got aTwo " << endl;
-      casa::applicator.get(aThree);
+      casacore::applicator.get(aThree);
       cout << "got aThree " << endl;
-      casa::applicator.get(aFour);
+      casacore::applicator.get(aFour);
       cout << "got aFour " << endl;
-      casa::applicator.get(aFive);
+      casacore::applicator.get(aFive);
       cout << "got aFive " << endl;
 
       return;
 }
 
 void TestAlgorithm::put(){
-      casa::applicator.put(True);
+      casacore::applicator.put(True);
       return;
 }
 
@@ -82,11 +82,11 @@ void TestAlgorithm::task(){
 int main(Int argc, Char *argv[]){
 
    TestAlgorithm testMe;
-   casa::applicator.defineAlgorithm(&testMe);
-   casa::applicator.init(argc, argv);
-   if(casa::applicator.isController()){
+   casacore::applicator.defineAlgorithm(&testMe);
+   casacore::applicator.init(argc, argv);
+   if(casacore::applicator.isController()){
       Int rank(1);
-      casa::applicator.nextAvailProcess(testMe, rank);
+      casacore::applicator.nextAvailProcess(testMe, rank);
 
       Int      one(1);
       Float    two(2.0f);
@@ -103,13 +103,13 @@ int main(Int argc, Char *argv[]){
       cout << "six " << six << endl;
       cout << "seven " << seven << endl;
 
-      casa::applicator.put(one);
-      casa::applicator.put(two);
-      casa::applicator.put(three);
-      casa::applicator.put(four);
-      casa::applicator.put(five);
-      casa::applicator.put(six);
-      casa::applicator.put(seven);
+      casacore::applicator.put(one);
+      casacore::applicator.put(two);
+      casacore::applicator.put(three);
+      casacore::applicator.put(four);
+      casacore::applicator.put(five);
+      casacore::applicator.put(six);
+      casacore::applicator.put(seven);
       
       Vector<Int>      aOne(3,one);
       Vector<Float>    aTwo(4,two);
@@ -117,15 +117,15 @@ int main(Int argc, Char *argv[]){
       Vector<Complex>  aFour(6,four);
       Vector<DComplex> aFive(7,five);
 
-      casa::applicator.put(aOne);
-      casa::applicator.put(aTwo);
-      casa::applicator.put(aThree);
-      casa::applicator.put(aFour);
-      casa::applicator.put(aFive);
+      casacore::applicator.put(aOne);
+      casacore::applicator.put(aTwo);
+      casacore::applicator.put(aThree);
+      casacore::applicator.put(aFour);
+      casacore::applicator.put(aFive);
 
-      casa::applicator.apply(testMe);
+      casacore::applicator.apply(testMe);
       Bool status;
-      casa::applicator.get(status);
+      casacore::applicator.get(status);
 /*
       Bool allDone;
       applicator.nextProcessDone(testMe, allDone);

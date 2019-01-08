@@ -27,18 +27,18 @@
 #ifndef SYNTHESIS_VB2_SIMAPPERMOSAIC_H
 #define SYNTHESIS_VB2_SIMAPPERMOSAIC_H
 
-#include <casa/aips.h>
-#include <casa/OS/Timer.h>
-#include <casa/Containers/Record.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
-#include <casa/Arrays/IPosition.h>
-#include <casa/Quanta/Quantum.h>
-#include <measures/Measures/MDirection.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/OS/Timer.h>
+#include <casacore/casa/Containers/Record.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/casa/Arrays/IPosition.h>
+#include <casacore/casa/Quanta/Quantum.h>
+#include <casacore/measures/Measures/MDirection.h>
 
 #include <synthesis/TransformMachines2/FTMachine.h>
 #include <synthesis/ImagerObjects2/SIMapper.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   namespace refim {
 
 // Forward declarations
@@ -95,6 +95,6 @@ protected:
 };
 
   } //# namespace refim
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

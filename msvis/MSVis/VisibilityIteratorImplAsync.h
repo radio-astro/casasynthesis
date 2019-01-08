@@ -18,7 +18,7 @@ using std::set;
 #define NotImplementedROVIA throw utilj::AipsErrorTrace (String ("Method not legal in ROVIA: ") + __PRETTY_FUNCTION__, __FILE__, __LINE__)
 #define NotPrefetched throw utilj::AipsErrorTrace (String ("Column not prefetched for async I/O: ") + __PRETTY_FUNCTION__, __FILE__, __LINE__)
 
-namespace casa {
+namespace casacore {
 
 
 class VisBufferAsync;
@@ -44,7 +44,7 @@ class ViReadImplAsync : public VisibilityIteratorReadImpl {
 
 public:
 
-    typedef casa::asyncio::PrefetchColumns PrefetchColumns;
+    typedef casacore::asyncio::PrefetchColumns PrefetchColumns;
 
 //    static VisibilityIteratorReadImpl *
 //    create (const ROVisibilityIterator &,
@@ -291,7 +291,7 @@ class ViWriteImplAsync : public VisibilityIteratorWriteImpl {
 
 public:
 
-    typedef casa::asyncio::PrefetchColumns PrefetchColumns;
+    typedef casacore::asyncio::PrefetchColumns PrefetchColumns;
 
     ViWriteImplAsync (VisibilityIterator * vi);
     ViWriteImplAsync (const PrefetchColumns & prefetchColumns,

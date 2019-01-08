@@ -27,11 +27,11 @@
 
 #include <imageanalysis/ImageAnalysis/SubImageFactory.h>
 
-#include <coordinates/Coordinates/CoordinateUtil.h>
-#include <images/Images/PagedImage.h>
-#include <lattices/LRegions/LCLELMask.h>
+#include <casacore/coordinates/Coordinates/CoordinateUtil.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/lattices/LRegions/LCLELMask.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 void testExtend() {
     CoordinateSystem cSys = CoordinateUtil::defaultCoords4D();

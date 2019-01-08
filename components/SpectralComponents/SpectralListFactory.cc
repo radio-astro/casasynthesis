@@ -33,7 +33,7 @@
 
 #include <stdcasa/StdCasa/CasacSupport.cc>
 
-namespace casa { 
+namespace casacore { 
 
 SpectralList SpectralListFactory::create(
 	LogIO& log, const variant& pampest,

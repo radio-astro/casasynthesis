@@ -4,23 +4,23 @@
 #include <fstream>
 #include <iostream>
 #include <map>
-#include <tables/Tables/Table.h>
+#include <casacore/tables/Tables/Table.h>
 #include <asdmstman/AsdmStMan.h>
 #include <asdmstman/AsdmIndex.h>
-#include <tables/Tables/ArrayColumn.h>
-#include <tables/Tables/ArrColDesc.h>
-#include <tables/DataMan/DataManAccessor.h>
-#include <casa/Arrays/Array.h>
-#include <casa/Arrays/ArrayIO.h>
-#include <casa/Arrays/ArrayUtil.h>
-#include <casa/Arrays/ArrayLogical.h>
-#include <casa/IO/AipsIO.h>
-#include <casa/Containers/BlockIO.h>
-#include <casa/Utilities/Assert.h>
-#include <casa/Exceptions/Error.h>
+#include <casacore/tables/Tables/ArrayColumn.h>
+#include <casacore/tables/Tables/ArrColDesc.h>
+#include <casacore/tables/DataMan/DataManAccessor.h>
+#include <casacore/casa/Arrays/Array.h>
+#include <casacore/casa/Arrays/ArrayIO.h>
+#include <casacore/casa/Arrays/ArrayUtil.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/IO/AipsIO.h>
+#include <casacore/casa/Containers/BlockIO.h>
+#include <casacore/casa/Utilities/Assert.h>
+#include <casacore/casa/Exceptions/Error.h>
 
 using namespace std;
-using namespace casa;
+using namespace casacore;
 
 // Write the index file in the same way as read by AsdmStMan.
 // The file name should asl obe that expected by AsdmStMan.

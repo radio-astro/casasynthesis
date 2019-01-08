@@ -27,15 +27,15 @@
 
 #include <imageanalysis/ImageAnalysis/ImageProfileFitter.h>
 
-#include <casa/IO/FiledesIO.h>
-#include <casa/OS/Directory.h>
-#include <casa/OS/EnvVar.h>
-#include <images/Images/FITSImage.h>
-#include <images/Images/ImageUtilities.h>
-#include <lattices/Lattices/LatticeUtilities.h>
+#include <casacore/casa/IO/FiledesIO.h>
+#include <casacore/casa/OS/Directory.h>
+#include <casacore/casa/OS/EnvVar.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/images/Images/ImageUtilities.h>
+#include <casacore/lattices/Lattices/LatticeUtilities.h>
 #include <imageanalysis/IO/ImageProfileFitterResults.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 #include <sys/types.h>
 

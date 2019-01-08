@@ -14,7 +14,7 @@
 #include <boost/tuple/tuple.hpp>
 #include <boost/tuple/tuple_comparison.hpp>
 
-#include <casa/System/AipsrcValue.h>
+#include <casacore/casa/System/AipsrcValue.h>
 
 #include <algorithm>
 #include <list>
@@ -23,13 +23,13 @@
 #include <memory>
 #include <numeric>
 
-using namespace casa;
-using namespace casa::asyncio;
-using namespace casa::utilj;
+using namespace casacore;
+using namespace casacore::asyncio;
+using namespace casacore::utilj;
 using namespace std;
 using boost::shared_ptr;
 
-namespace casa {
+namespace casacore {
 
 namespace vpf {
 
@@ -995,7 +995,7 @@ VpContainer::followsSet (const VisibilityProcessor * a, const VpSet & vpSet) con
     return result;
 }
 
-casa::asyncio::PrefetchColumns
+casacore::asyncio::PrefetchColumns
 VpContainer::getPrefetchColumns () const
 {
     PrefetchColumns result;
@@ -1148,7 +1148,7 @@ VpData::getNames () const
 {
     string names = join (begin(), end(),
                      compose (mem_fun_ref (& VpPort::getName),
-                              casa::utilj::firstFunctor<VpPort, VbPtr>()),
+                              casacore::utilj::firstFunctor<VpPort, VbPtr>()),
                      ",");
 
     return names;

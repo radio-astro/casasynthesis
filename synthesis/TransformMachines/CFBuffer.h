@@ -28,17 +28,17 @@
 #ifndef SYNTHESIS_CFBUFFER_H
 #define SYNTHESIS_CFBUFFER_H
 #include <synthesis/TransformMachines/SynthesisError.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
 #include <synthesis/TransformMachines/CFDefs.h>
 #include <synthesis/TransformMachines/CFCell.h>
 #include <synthesis/TransformMachines/Utils.h>
-#include <images/Images/ImageInterface.h>
-#include <casa/Utilities/CountedPtr.h>
-#include <casa/Utilities/Sort.h>
-#include <casa/Logging/LogOrigin.h>
+#include <casacore/images/Images/ImageInterface.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
+#include <casacore/casa/Utilities/Sort.h>
+#include <casacore/casa/Logging/LogOrigin.h>
 #include <msvis/MSVis/VisBuffer.h>
-#include <casa/Logging/LogSink.h>
-#include <casa/Logging/LogIO.h>
+#include <casacore/casa/Logging/LogSink.h>
+#include <casacore/casa/Logging/LogIO.h>
 
 //
 // <summary> defines interface for the storage for convolution functions </summary>
@@ -97,9 +97,9 @@
 //
 
 
-using namespace casa::CFDefs;
+using namespace casacore::CFDefs;
 using namespace std;
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   //  template <class T>
   typedef Complex TT;
 
@@ -397,5 +397,5 @@ namespace casa { //# NAMESPACE CASA - BEGIN
     void ASSIGNVVofI(Int** &target,Vector<Vector<Int> >& source, Bool& doAlloc);
   };
   
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 #endif

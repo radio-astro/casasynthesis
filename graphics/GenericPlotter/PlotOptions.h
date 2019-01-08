@@ -31,13 +31,13 @@
 #include <cctype>
 #include <vector>
 
-#include <casa/Utilities/CountedPtr.h>
-#include <casa/Containers/Record.h>
+#include <casacore/casa/Utilities/CountedPtr.h>
+#include <casacore/casa/Containers/Record.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 using namespace std;
 
-namespace casa {
+namespace casacore {
 
 
 // Typedef for range, which is two doubles (min and max).

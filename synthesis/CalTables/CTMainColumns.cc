@@ -28,10 +28,10 @@
 
 #include <synthesis/CalTables/CTMainColumns.h>
 #include <synthesis/CalTables/RIorAParray.h>
-#include <casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
 
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------------
 
@@ -147,7 +147,7 @@ Array<Float> ROCTMainColumns::phase() {
 
 void ROCTMainColumns::phase(Array<Float>& ph) {
   if (!cparam().isNull()) 
-    ph.assign(casa::phase(cparam().getColumn()));
+    ph.assign(casacore::phase(cparam().getColumn()));
   else
     throw(AipsError("ROCTMainColumns cannot extract phase without CPARAM column."));
 }
@@ -566,5 +566,5 @@ void ROCTMainColumns::attach (const NewCalTable& calTable,
   };
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

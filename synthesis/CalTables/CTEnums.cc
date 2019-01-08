@@ -28,7 +28,7 @@
 
 #include <synthesis/CalTables/CTEnums.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //----------------------------------------------------------------------------
 
@@ -157,5 +157,5 @@ DataType CTEnums::basicType (Int enumField)
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

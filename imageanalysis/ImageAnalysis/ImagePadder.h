@@ -30,11 +30,11 @@
 
 #include <imageanalysis/ImageAnalysis/ImageTask.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 class MDirection;
 
-namespace casa {
+namespace casacore {
 
 class ImagePadder : public ImageTask<Float> {
 	// <summary>

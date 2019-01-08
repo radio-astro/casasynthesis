@@ -27,19 +27,19 @@
 
 #include <synthesis/CalTables/RIorAParray.h>
 
-#include <casa/aips.h>
-#include <casa/BasicSL/Constants.h>
-#include <casa/Arrays/Array.h>
-#include <casa/Arrays/ArrayIO.h>
-#include <casa/Arrays/ArrayIter.h>
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Logging/LogMessage.h>
-#include <casa/Logging/LogSink.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/BasicSL/Constants.h>
+#include <casacore/casa/Arrays/Array.h>
+#include <casacore/casa/Arrays/ArrayIO.h>
+#include <casacore/casa/Arrays/ArrayIter.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging/LogSink.h>
 
 #define RIORAPVERB False
 
-namespace casa { //# NAMESPACE CASA - BEGIN                                                   
+namespace casacore { //# NAMESPACE CASACORE - BEGIN                                                   
 
 
 // Construct empty
@@ -303,4 +303,4 @@ void RIorAPArray::f(Array<Float>& f,Bool trackphase) {
 }
 */
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END

@@ -28,9 +28,9 @@
 
 #ifndef MSVIS_MSUTIL_H
 #define MSVIS_MSUTIL_H
-#include <casa/aips.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
-namespace casa { //# NAMESPACE CASA - BEGIN
+#include <casacore/casa/aips.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
   class MSUtil{
 
@@ -77,5 +77,5 @@ namespace casa { //# NAMESPACE CASA - BEGIN
     static void rejectConsecutive(const Vector<Double>& t, Vector<Double>& retval, Vector<Int>& indx);
 
   };
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 #endif

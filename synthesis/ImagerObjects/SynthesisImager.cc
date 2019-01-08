@@ -25,33 +25,33 @@
 //#
 //# $Id$
 
-#include <casa/Exceptions/Error.h>
-#include <casa/iostream.h>
-#include <casa/sstream.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/sstream.h>
 
-#include <casa/Arrays/Matrix.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <casa/Arrays/ArrayLogical.h>
+#include <casacore/casa/Arrays/Matrix.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/casa/Arrays/ArrayLogical.h>
 
-#include <casa/Logging.h>
-#include <casa/Logging/LogIO.h>
-#include <casa/Logging/LogMessage.h>
-#include <casa/Logging/LogSink.h>
-#include <casa/Logging/LogMessage.h>
-#include <casa/System/ProgressMeter.h>
+#include <casacore/casa/Logging.h>
+#include <casacore/casa/Logging/LogIO.h>
+#include <casacore/casa/Logging/LogMessage.h>
+#include <casacore/casa/Logging/LogSink.h>
+#include <casacore/casa/Logging/LogMessage.h>
+#include <casacore/casa/System/ProgressMeter.h>
 
-#include <casa/OS/DirectoryIterator.h>
-#include <casa/OS/File.h>
-#include <casa/OS/HostInfo.h>
-#include <casa/OS/Path.h>
+#include <casacore/casa/OS/DirectoryIterator.h>
+#include <casacore/casa/OS/File.h>
+#include <casacore/casa/OS/HostInfo.h>
+#include <casacore/casa/OS/Path.h>
 
-#include <lattices/LRegions/LCBox.h>
+#include <casacore/lattices/LRegions/LCBox.h>
 
-#include <measures/Measures/MeasTable.h>
+#include <casacore/measures/Measures/MeasTable.h>
 
-#include <ms/MeasurementSets/MSHistoryHandler.h>
-#include <ms/MeasurementSets/MeasurementSet.h>
-#include <ms/MSSel/MSSelection.h>
+#include <casacore/ms/MeasurementSets/MSHistoryHandler.h>
+#include <casacore/ms/MeasurementSets/MeasurementSet.h>
+#include <casacore/ms/MSSel/MSSelection.h>
 
 
 #include <synthesis/ImagerObjects/SIIterBot.h>
@@ -89,7 +89,7 @@
 #include <unistd.h>
 using namespace std;
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1666,5 +1666,5 @@ namespace casa { //# NAMESPACE CASA - BEGIN
  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 

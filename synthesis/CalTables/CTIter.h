@@ -28,13 +28,13 @@
 #ifndef CALIBRATION_CALTABITER_H
 #define CALIBRATION_CALTABITER_H
 
-#include <casa/aips.h>
-#include <tables/Tables/TableIter.h>
+#include <casacore/casa/aips.h>
+#include <casacore/tables/Tables/TableIter.h>
 #include <synthesis/CalTables/NewCalTable.h>
 #include <synthesis/CalTables/CTMainColumns.h>
 #include <synthesis/CalTables/CTColumns.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // <summary> 
 // ROCTIter: Read-only iterating interface to New Calibration tables
@@ -241,6 +241,6 @@ private:
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

@@ -25,7 +25,7 @@
 //#
 //# $Id$
 #include <synthesis/TransformMachines/CFCache.h>
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 int main(int argc, char **argv)
 {

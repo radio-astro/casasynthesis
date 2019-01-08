@@ -1,4 +1,4 @@
-#include <casa/stdio.h>
+#include <casacore/casa/stdio.h>
 #include <cstdlib>
 #include <stdcasa/variant.h>
 #include <stdcasa/record.h>

@@ -10,7 +10,7 @@
 #include <msvis/MSVis/VisBuffer2.h>
 #include <msvis/MSVis/VisBufferImpl2.h>
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 

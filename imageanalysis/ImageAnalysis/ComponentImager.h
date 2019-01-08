@@ -62,9 +62,9 @@
 #ifndef IMAGES_COMPONENTIMAGER_H
 #define IMAGES_COMPONENTIMAGER_H
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 template <class T> class ImageInterface;
 class ComponentList;
@@ -117,7 +117,7 @@ public:
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif
 

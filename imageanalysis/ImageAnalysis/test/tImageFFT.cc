@@ -26,24 +26,24 @@
 //# $Id: tImageFFT.cc 20567 2009-04-09 23:12:39Z gervandiepen $
 // 
 //
-#include <casa/aips.h>
-#include <casa/Arrays/MaskArrLogi.h>
-#include <casa/Arrays/ArrayMath.h>
-#include <scimath/Mathematics/FFTServer.h>
-#include <casa/BasicMath/Math.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Inputs/Input.h>
-#include <casa/Logging.h>
-#include <casa/BasicSL/String.h>
-#include <casa/OS/EnvVar.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Arrays/MaskArrLogi.h>
+#include <casacore/casa/Arrays/ArrayMath.h>
+#include <casacore/scimath/Mathematics/FFTServer.h>
+#include <casacore/casa/BasicMath/Math.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Inputs/Input.h>
+#include <casacore/casa/Logging.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/OS/EnvVar.h>
 #include <imageanalysis/ImageAnalysis/ImageFFT.h>
-#include <images/Regions/ImageRegion.h>
-#include <images/Images/PagedImage.h>
-#include <lattices/LRegions/LCPagedMask.h>
+#include <casacore/images/Regions/ImageRegion.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/lattices/LRegions/LCPagedMask.h>
 
-#include <casa/iostream.h>
+#include <casacore/casa/iostream.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 void checkNumbers (const ImageInterface<Float>& rIn,
                    const ImageInterface<Float>& rOut,
                    const ImageInterface<Float>& iOut,

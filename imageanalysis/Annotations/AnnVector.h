@@ -28,10 +28,10 @@
 
 #include <imageanalysis/Annotations/AnnotationBase.h>
 
-#include <casa/Arrays/Vector.h>
-#include <measures/Measures/MDirection.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/measures/Measures/MDirection.h>
 
-namespace casa {
+namespace casacore {
 
 // <summary>Represents a vector annotation which has a start and ending point.</summary>
 

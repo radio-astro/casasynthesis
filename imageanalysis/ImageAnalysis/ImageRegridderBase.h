@@ -27,11 +27,11 @@
 #define IMAGEANALYSIS_IMAGEREGRIDDERBASE_H
 
 #include <imageanalysis/ImageAnalysis/ImageTask.h>
-//#include <casa/Arrays/IPosition.h>
-#include <scimath/Mathematics/Interpolate2D.h>
-#include <casa/namespace.h>
+//#include <casacore/casa/Arrays/IPosition.h>
+#include <casacore/scimath/Mathematics/Interpolate2D.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 template <class T> class ImageRegridderBase : public ImageTask<T> {
 	// <summary>

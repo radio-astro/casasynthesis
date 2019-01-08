@@ -29,7 +29,7 @@
 #ifndef IMAGES_IMAGEMOMENTSPROGRESSMONITOR_H
 #define IMAGES_IMAGEMOMENTSPROGRESSMONITOR_H
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 //This is just an interface class for monitoring the progress of collapsing
 //and image through calculating a moment.
@@ -43,6 +43,6 @@ class ImageMomentsProgressMonitor {
 };
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

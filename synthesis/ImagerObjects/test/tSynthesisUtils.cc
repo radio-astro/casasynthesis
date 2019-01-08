@@ -32,32 +32,32 @@
 
 
 
-#include <casa/iostream.h>
-#include <casa/aips.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/BasicSL/String.h>
-#include <casa/Containers/Block.h>
-#include <measures/Measures/MRadialVelocity.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
-#include <casa/Logging/LogIO.h>
+#include <casacore/casa/iostream.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Containers/Block.h>
+#include <casacore/measures/Measures/MRadialVelocity.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/casa/Logging/LogIO.h>
 #include <synthesis/ImagerObjects/SynthesisImager.h>
 #include <synthesis/ImagerObjects/SIImageStore.h>
 #include <imageanalysis/Utilities/SpectralImageUtil.h>
-#include <lattices/Lattices/LatticeConcat.h>
-#include <images/Images/PagedImage.h>
-#include <images/Images/ImageConcat.h>
-#include <images/Images/SubImage.h>
-#include <casa/namespace.h>
-#include <images/Images/TempImage.h>
-#include <coordinates/Coordinates/CoordinateUtil.h>
-#include <ms/MSSel/MSSourceIndex.h>
+#include <casacore/lattices/Lattices/LatticeConcat.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/images/Images/ImageConcat.h>
+#include <casacore/images/Images/SubImage.h>
+#include <casacore/casa/namespace.h>
+#include <casacore/images/Images/TempImage.h>
+#include <casacore/coordinates/Coordinates/CoordinateUtil.h>
+#include <casacore/ms/MSSel/MSSourceIndex.h>
 #include <synthesis/ImagerObjects/SynthesisUtilMethods.h>
-#include <measures/Measures/VelocityMachine.h>
+#include <casacore/measures/Measures/VelocityMachine.h>
 
 int main(int argc, char **argv)
 {
   using namespace std;
-  using namespace casa;
+  using namespace casacore;
   try{
 
 

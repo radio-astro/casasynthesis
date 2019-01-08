@@ -28,13 +28,13 @@
 #ifndef SYNTHESIS_FEATHER_H
 #define SYNTHESIS_FEATHER_H
 
-#include <casa/BasicSL/String.h>
-#include <casa/BasicSL.h>
-#include <casa/Quanta/Quantum.h>
-#include <scimath/Mathematics/GaussianBeam.h>
-#include <coordinates/Coordinates/CoordinateSystem.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/BasicSL.h>
+#include <casacore/casa/Quanta/Quantum.h>
+#include <casacore/scimath/Mathematics/GaussianBeam.h>
+#include <casacore/coordinates/Coordinates/CoordinateSystem.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
   //Forward declaration
   template<class T> class ImageInterface;
   template<class T> class Vector;
@@ -131,6 +131,6 @@ namespace casa { //# NAMESPACE CASA - BEGIN
 
 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif

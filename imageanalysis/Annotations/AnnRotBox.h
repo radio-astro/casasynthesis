@@ -17,10 +17,10 @@
 #ifndef ANNOTATIONS_ANNROTBOX_H
 #define ANNOTATIONS_ANNROTBOX_H
 
-#include <casa/aips.h>
+#include <casacore/casa/aips.h>
 #include <imageanalysis/Annotations/AnnPolygon.h>
 
-namespace casa {
+namespace casacore {
 
 // <summary>
 // This class represents an annotation for rectangular (in position coordinates) region specified

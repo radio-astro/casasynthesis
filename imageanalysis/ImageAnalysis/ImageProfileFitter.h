@@ -32,11 +32,11 @@
 
 #include <components/SpectralComponents/GaussianMultipletSpectralElement.h>
 #include <imageanalysis/ImageAnalysis/ImageFit1D.h>
-#include <images/Images/TempImage.h>
+#include <casacore/images/Images/TempImage.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
-namespace casa {
+namespace casacore {
 
 class ProfileFitResults;
 

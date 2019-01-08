@@ -30,7 +30,7 @@
 #include <stdcasa/StdCasa/CasacSupport.h>
 
 // Measurement Set Selection
-#include <ms/MSSel/MSSelection.h>
+#include <casacore/ms/MSSel/MSSelection.h>
 
 // Data handling
 #include <mstransform/MSTransform/MSTransformDataHandler.h>
@@ -51,24 +51,24 @@
 #include <msvis/MSVis/LayeredVi2Factory.h>
 
 // To get observatory position from observatory name
-#include <measures/Measures/MeasTable.h>
+#include <casacore/measures/Measures/MeasTable.h>
 
 // To post formatted msgs via ostringstream
 #include <iomanip>
 
 // To apply hanning smooth
-#include <scimath/Mathematics/Smooth.h>
+#include <casacore/scimath/Mathematics/Smooth.h>
 
 // To apply fft shift
-#include <scimath/Mathematics/FFTServer.h>
+#include <casacore/scimath/Mathematics/FFTServer.h>
 
 // To apply 1D interpolations
-#include <scimath/Mathematics/InterpolateArray1D.h>
+#include <casacore/scimath/Mathematics/InterpolateArray1D.h>
 
 // to compute partial medians
-#include <casa/Arrays/ArrayPartMath.h>
+#include <casacore/casa/Arrays/ArrayPartMath.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 // Forward declarations
 class MSTransformBufferImpl;
@@ -666,13 +666,13 @@ protected:
 								ArrayColumn<Float> &outputDataCol,
 								ArrayColumn<Bool> *outputFlagCol,
 								const Cube<Float> &inputWeightCube);
-	void (casa::MSTransformManager::*transformCubeOfDataComplex_p)(	vi::VisBuffer2 *vb,
+	void (casacore::MSTransformManager::*transformCubeOfDataComplex_p)(	vi::VisBuffer2 *vb,
 																		RefRows &rowRef,
 																		const Cube<Complex> &inputDataCube,
 																		ArrayColumn<Complex> &outputDataCol,
 																		ArrayColumn<Bool> *outputFlagCol,
 																		const Cube<Float> &inputWeightCube);
-	void (casa::MSTransformManager::*transformCubeOfDataFloat_p)(	vi::VisBuffer2 *vb,
+	void (casacore::MSTransformManager::*transformCubeOfDataFloat_p)(	vi::VisBuffer2 *vb,
 																		RefRows &rowRef,
 																		const Cube<Float> &inputDataCube,
 																		ArrayColumn<Float> &outputDataCol,
@@ -705,7 +705,7 @@ protected:
 											uInt &inputChannel,
 											uInt &row,
 											const Cube<Float> &inputWeightsCube);
-	void (casa::MSTransformManager::*addWeightSpectrumContribution_p)(	Double &weight,
+	void (casacore::MSTransformManager::*addWeightSpectrumContribution_p)(	Double &weight,
 																			uInt &pol,
 																			uInt &inputChannel,
 																			uInt &row,
@@ -726,7 +726,7 @@ protected:
 								const Cube<Float> &,
 								Matrix<Float> &,
 								Double ) {return;}
-	void (casa::MSTransformManager::*fillWeightsPlane_p)(	uInt pol,
+	void (casacore::MSTransformManager::*fillWeightsPlane_p)(	uInt pol,
 																uInt inputChannel,
 																uInt outputChannel,
 																uInt inputRow,
@@ -742,7 +742,7 @@ protected:
 									uInt ,
 									Matrix<Float> &,
 									Matrix<Double> &) {return;}
-	void (casa::MSTransformManager::*normalizeWeightsPlane_p)(	uInt pol,
+	void (casacore::MSTransformManager::*normalizeWeightsPlane_p)(	uInt pol,
 																	uInt outputChannel,
 																	Matrix<Float> &inputPlaneWeights,
 																	Matrix<Double> &normalizingFactorPlane);
@@ -788,7 +788,7 @@ protected:
 	void dontsetWeightsPlaneByReference(	uInt ,
 											const Cube<Float> &,
 											Matrix<Float> &) {return;}
-	void (casa::MSTransformManager::*setWeightsPlaneByReference_p)(	uInt inputRow,
+	void (casacore::MSTransformManager::*setWeightsPlaneByReference_p)(	uInt inputRow,
 																		const Cube<Float> &inputWeightsCube,
 																		Matrix<Float> &inputWeightsPlane);
 
@@ -807,7 +807,7 @@ protected:
 	void dontSetWeightStripeByReference(	uInt ,
 											Matrix<Float> &,
 											Vector<Float> &) {return;}
-	void (casa::MSTransformManager::*setWeightStripeByReference_p)(	uInt corrIndex,
+	void (casacore::MSTransformManager::*setWeightStripeByReference_p)(	uInt corrIndex,
 																		Matrix<Float> &inputWeightsPlane,
 																		Vector<Float> &inputWeightsStripe);
 
@@ -835,12 +835,12 @@ protected:
 							Matrix<Bool> &outputFlagsPlane,
 							ArrayColumn<Float> &outputDataCol,
 							ArrayColumn<Bool> &outputFlagCol);
-	void (casa::MSTransformManager::*writeOutputPlanesComplex_p)(	uInt row,
+	void (casacore::MSTransformManager::*writeOutputPlanesComplex_p)(	uInt row,
 																		Matrix<Complex> &outputDataPlane,
 																		Matrix<Bool> &outputFlagsPlane,
 																		ArrayColumn<Complex> &outputDataCol,
 																		ArrayColumn<Bool> &outputFlagCol);
-	void (casa::MSTransformManager::*writeOutputPlanesFloat_p)(	uInt row,
+	void (casacore::MSTransformManager::*writeOutputPlanesFloat_p)(	uInt row,
 																	Matrix<Float> &outputDataPlane,
 																	Matrix<Bool> &outputFlagsPlane,
 																	ArrayColumn<Float> &outputDataCol,
@@ -851,7 +851,7 @@ protected:
 														Matrix<Bool> &outputFlagsPlane,
 														ArrayColumn<T> &outputDataCol,
 														ArrayColumn<Bool> &outputFlagCol);
-	void (casa::MSTransformManager::*writeOutputFlagsPlane_p)(	Matrix<Bool> &outputPlane,
+	void (casacore::MSTransformManager::*writeOutputFlagsPlane_p)(	Matrix<Bool> &outputPlane,
 																	ArrayColumn<Bool> &outputCol,
 																	IPosition &outputPlaneShape,
 																	uInt &outputRow);
@@ -881,7 +881,7 @@ protected:
 															Slice &sliceY,
 															IPosition &outputPlaneShape,
 															uInt &outputRow);
-	void (casa::MSTransformManager::*writeOutputFlagsPlaneSlices_p)(	Matrix<Bool> &outputPlane,
+	void (casacore::MSTransformManager::*writeOutputFlagsPlaneSlices_p)(	Matrix<Bool> &outputPlane,
 																			ArrayColumn<Bool> &outputCol,
 																			Slice &sliceX,
 																			Slice &sliceY,
@@ -899,7 +899,7 @@ protected:
 											Slice &,
 											IPosition &,
 											uInt &) {return;}
-	void (casa::MSTransformManager::*writeOutputFlagsPlaneReshapedSlices_p)(	Matrix<Bool> &outputPlane,
+	void (casacore::MSTransformManager::*writeOutputFlagsPlaneReshapedSlices_p)(	Matrix<Bool> &outputPlane,
 																					ArrayColumn<Bool> &outputCol,
 																					Slice &sliceX,
 																					Slice &sliceY,
@@ -930,13 +930,13 @@ protected:
 								Vector<Float> &inputWeightsStripe,
 								Vector<Float> &outputDataStripe,
 								Vector<Bool> &outputFlagsStripe);
-	void (casa::MSTransformManager::*transformStripeOfDataComplex_p)(	Int inputSpw,
+	void (casacore::MSTransformManager::*transformStripeOfDataComplex_p)(	Int inputSpw,
 																			Vector<Complex> &inputDataStripe,
 																			Vector<Bool> &inputFlagsStripe,
 																			Vector<Float> &inputWeightsStripe,
 																			Vector<Complex> &outputDataStripe,
 																			Vector<Bool> &outputFlagsStripe);
-	void (casa::MSTransformManager::*transformStripeOfDataFloat_p)(	Int inputSpw,
+	void (casacore::MSTransformManager::*transformStripeOfDataFloat_p)(	Int inputSpw,
 																		Vector<Float> &inputDataStripe,
 																		Vector<Bool> &inputFlagsStripe,
 																		Vector<Float> &inputWeightsStripe,
@@ -968,7 +968,7 @@ protected:
 						uInt startInputPos,
 						uInt outputPos,
 						uInt width);
-	void (casa::MSTransformManager::*averageKernelComplex_p)(	Vector<Complex> &inputData,
+	void (casacore::MSTransformManager::*averageKernelComplex_p)(	Vector<Complex> &inputData,
 																	Vector<Bool> &inputFlags,
 																	Vector<Float> &inputWeights,
 																	Vector<Complex> &outputData,
@@ -976,7 +976,7 @@ protected:
 																	uInt startInputPos,
 																	uInt outputPos,
 																	uInt width);
-	void (casa::MSTransformManager::*averageKernelFloat_p)(		Vector<Float> &inputData,
+	void (casacore::MSTransformManager::*averageKernelFloat_p)(		Vector<Float> &inputData,
 																	Vector<Bool> &inputFlags,
 																	Vector<Float> &inputWeights,
 																	Vector<Float> &outputData,
@@ -1085,13 +1085,13 @@ protected:
 						Vector<Float> &outputDataStripe,
 						Vector<Bool> &outputFlagsStripe);
 
-	void (casa::MSTransformManager::*regridCoreComplex_p)(		Int inputSpw,
+	void (casacore::MSTransformManager::*regridCoreComplex_p)(		Int inputSpw,
 																	Vector<Complex> &inputDataStripe,
 																	Vector<Bool> &inputFlagsStripe,
 																	Vector<Float> &inputWeightsStripe,
 																	Vector<Complex> &outputDataStripe,
 																	Vector<Bool> &outputFlagsStripe);
-	void (casa::MSTransformManager::*regridCoreFloat_p)(	Int inputSpw,
+	void (casacore::MSTransformManager::*regridCoreFloat_p)(	Int inputSpw,
 																Vector<Float> &inputDataStripe,
 																Vector<Bool> &inputFlagsStripe,
 																Vector<Float> &inputWeightsStripe,
@@ -1321,6 +1321,6 @@ protected:
 	LogIO logger_p;
 };
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
 #endif /* MSTransformManager_H_ */

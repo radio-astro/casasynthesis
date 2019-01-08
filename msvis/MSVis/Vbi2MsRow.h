@@ -8,12 +8,12 @@
 #ifndef VBI2MSROW_H_
 #define VBI2MSROW_H_
 
-#include <casa/Arrays/Array.h>
+#include <casacore/casa/Arrays/Array.h>
 #include <msvis/MSVis/MsRows.h>
 
 // Forward Decls
 
-namespace casa {
+namespace casacore {
 
 namespace vi {
 
@@ -23,7 +23,7 @@ class VisBufferImpl2;
 
 }
 
-namespace casa {
+namespace casacore {
 
 namespace ms {
 
@@ -51,12 +51,12 @@ class CachedPlane : public CachedArrayBase {
 
 public:
 
-typedef const Cube<T> & (casa::vi::VisBufferImpl2::* Accessor) () const;
+typedef const Cube<T> & (casacore::vi::VisBufferImpl2::* Accessor) () const;
 
 CachedPlane (Accessor accessor) : accessor_p (accessor) {}
 
 Matrix<T> &
-getCachedPlane (casa::vi::VisBufferImpl2 * vb, Int row)
+getCachedPlane (casacore::vi::VisBufferImpl2 * vb, Int row)
 {
     if (! isCached()){
 
@@ -81,7 +81,7 @@ private:
 
         T * storage = const_cast <T *> (& src (IPosition (3, 0, 0, row)));
 
-        cache.takeStorage (shape, storage, casa::SHARE);
+        cache.takeStorage (shape, storage, casacore::SHARE);
     }
 
     Accessor accessor_p;
@@ -93,12 +93,12 @@ class CachedColumn : public CachedArrayBase {
 
 public:
 
-typedef const Matrix<T> & (casa::vi::VisBufferImpl2::* Accessor) () const;
+typedef const Matrix<T> & (casacore::vi::VisBufferImpl2::* Accessor) () const;
 
 CachedColumn (Accessor accessor) : accessor_p (accessor) {}
 
 Vector<T> &
-getCachedColumn (casa::vi::VisBufferImpl2 * vb, Int row)
+getCachedColumn (casacore::vi::VisBufferImpl2 * vb, Int row)
 {
     if (! isCached()){
 
@@ -122,7 +122,7 @@ private:
 
         T * storage = const_cast <T *> (& src (IPosition (2, 0, row)));
 
-        cache.takeStorage (shape, storage, casa::SHARE);
+        cache.takeStorage (shape, storage, casacore::SHARE);
     }
 
     Accessor accessor_p;

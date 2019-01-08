@@ -160,27 +160,27 @@
 //            The default is to not save the smoothed image.
 //
 //
-#include <casa/aips.h>
-#include <casa/Arrays/Vector.h>
-#include <casa/Exceptions/Error.h>
-#include <casa/Inputs/Input.h>
-#include <casa/Logging.h>
-#include <casa/Utilities/DataType.h>
-#include <casa/BasicSL/String.h>
-#include <casa/Utilities/Regex.h>
+#include <casacore/casa/aips.h>
+#include <casacore/casa/Arrays/Vector.h>
+#include <casacore/casa/Exceptions/Error.h>
+#include <casacore/casa/Inputs/Input.h>
+#include <casacore/casa/Logging.h>
+#include <casacore/casa/Utilities/DataType.h>
+#include <casacore/casa/BasicSL/String.h>
+#include <casacore/casa/Utilities/Regex.h>
 
 #include <imageanalysis/ImageAnalysis/ImageMoments.h>
-#include <images/Images/PagedImage.h>
-#include <images/Images/SubImage.h>
-#include <images/Regions/ImageRegion.h>
-#include <casa/System/PGPlotter.h>
-#include <lattices/LRegions/LCSlicer.h>
-#include <lattices/LRegions/LCBox.h>
-#include <scimath/Mathematics/VectorKernel.h>
+#include <casacore/images/Images/PagedImage.h>
+#include <casacore/images/Images/SubImage.h>
+#include <casacore/images/Regions/ImageRegion.h>
+#include <casacore/casa/System/PGPlotter.h>
+#include <casacore/lattices/LRegions/LCSlicer.h>
+#include <casacore/lattices/LRegions/LCBox.h>
+#include <casacore/scimath/Mathematics/VectorKernel.h>
 
-#include <casa/iostream.h>
+#include <casacore/casa/iostream.h>
 
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 enum defaults {IN, MOMENTS, AXIS, REGION, METHOD, SMOOTH, RANGE, SNR, OUT, SMOUT, 
                PLOTTING, NDEFAULTS};
 

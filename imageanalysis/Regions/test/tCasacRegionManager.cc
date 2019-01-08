@@ -27,12 +27,12 @@
 
 #include <imageanalysis/Regions/CasacRegionManager.h>
 
-#include <casa/OS/EnvVar.h>
+#include <casacore/casa/OS/EnvVar.h>
 
-#include <images/Images/FITSImage.h>
+#include <casacore/images/Images/FITSImage.h>
 
 #include <iostream>
-#include <casa/namespace.h>
+#include <casacore/casa/namespace.h>
 
 void writeTestString(const String& test) {
     cout << "\n" << "*** " << test << " ***" << endl;

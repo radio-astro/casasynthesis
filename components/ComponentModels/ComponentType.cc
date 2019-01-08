@@ -26,9 +26,9 @@
 //# $Id: ComponentType.cc 21130 2011-10-18 07:39:05Z gervandiepen $
 
 #include <components/ComponentModels/ComponentType.h>
-#include <casa/BasicSL/String.h>
+#include <casacore/casa/BasicSL/String.h>
 
-namespace casa { //# NAMESPACE CASA - BEGIN
+namespace casacore { //# NAMESPACE CASACORE - BEGIN
 
 String ComponentType::name(ComponentType::Shape shapeEnum) {
   switch (shapeEnum) {
@@ -121,5 +121,5 @@ ComponentType::SpectralShape ComponentType::spectralShape(const String &
 // compile-command: "gmake OPTLIB=1 ComponentType"
 // End: 
 
-} //# NAMESPACE CASA - END
+} //# NAMESPACE CASACORE - END
 
