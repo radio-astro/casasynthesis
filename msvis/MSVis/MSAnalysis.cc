@@ -40,7 +40,7 @@
 #include <casacore/tables/Tables/RefRows.h>
 #include <casacore/casa/Utilities/CountedPtr.h>
 
-namespace casacore { // namespace casa begins
+namespace casacore { // namespace casacore begins
 
 MSAnalysis::MSAnalysis( const MeasurementSet *inMS )
   : ms_p( 0 ),

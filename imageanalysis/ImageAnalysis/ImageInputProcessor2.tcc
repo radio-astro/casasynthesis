@@ -26,19 +26,19 @@
 
 #include <imageanalysis/ImageAnalysis/ImageInputProcessor.h>
 
-#include <casa/Containers/HashMap.h>
-#include <casa/Utilities/Sort.h>
-#include <casa/iostream.h>
+#include <casacore/casa/Containers/HashMap.h>
+#include <casacore/casa/Utilities/Sort.h>
+#include <casacore/casa/iostream.h>
 
-#include <images/Images/FITSImage.h>
-#include <images/Images/ImageUtilities.h>
-#include <images/Images/MIRIADImage.h>
-#include <images/Regions/WCBox.h>
+#include <casacore/images/Images/FITSImage.h>
+#include <casacore/images/Images/ImageUtilities.h>
+#include <casacore/images/Images/MIRIADImage.h>
+#include <casacore/images/Regions/WCBox.h>
 #include <imageanalysis/ImageAnalysis/ImageMetaData.h>
 
-#include <measures/Measures/Stokes.h>
+#include <casacore/measures/Measures/Stokes.h>
 
-namespace casa {
+namespace casacore {
 
 template<class T> void ImageInputProcessor::process(
 	SPIIT image, Record& regionRecord,
@@ -159,7 +159,7 @@ template<class T> void ImageInputProcessor::_setRegion(
 			String imagename;
 			if (regionName.matches(otherImage)) {
 				String res[2];
-				casa::split(regionName, res, 2, ":");
+				casacore::split(regionName, res, 2, ":");
 				imagename = res[0];
 				PagedImage<Float> other(imagename);
 				imRegion = other.getRegion(res[1]);
